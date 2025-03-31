@@ -15,6 +15,7 @@ import 'package:islami_tabu/domain/usecases/get_words_usecase.dart';
 import 'package:islami_tabu/domain/usecases/save_game_settings_usecase.dart';
 import 'package:islami_tabu/domain/usecases/update_word_usecase.dart';
 import 'package:islami_tabu/presentation/viewmodels/game_viewmodel.dart';
+import 'package:islami_tabu/presentation/viewmodels/settings_viewmodel.dart';
 import 'package:islami_tabu/presentation/viewmodels/word_viewmodel.dart';
 
 final GetIt locator = GetIt.instance;
@@ -68,5 +69,10 @@ Future<void> setupServiceLocator() async {
   locator.registerFactory<GameViewModel>(() => GameViewModel(
         locator<GetGameSettingsUseCase>(),
         locator<GetRandomWordsUseCase>(),
+      ));
+
+  locator.registerFactory<SettingsViewModel>(() => SettingsViewModel(
+        locator<GetGameSettingsUseCase>(),
+        locator<SaveGameSettingsUseCase>(),
       ));
 }
