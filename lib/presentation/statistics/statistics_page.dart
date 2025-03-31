@@ -1,18 +1,11 @@
+import 'package:flutter/material.dart';
+import 'statistics_screen.dart';
 
-
-  import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-class StatisticsPage extends ConsumerStatefulWidget {
+class StatisticsPage extends StatelessWidget {
   const StatisticsPage({super.key});
 
   @override
-  ConsumerState<StatisticsPage> createState() => _StatisticsPageState();
-}
-
-class _StatisticsPageState extends ConsumerState<StatisticsPage> {
-  @override
   Widget build(BuildContext context) {
-    return Container();
+    return const StatisticsScreen();
   }
 }

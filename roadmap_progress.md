@@ -219,15 +219,73 @@
 ---
 
 ### 🏆 6. Puanlama Sistemi  
-- [ ] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
-- [ ] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
-- [ ] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
-- [ ] Ekipler için skor tablosu ekle  
-- [ ] UI testleri ve hata ayıklamaları yap  
+- [x] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
+- [x] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
+- [x] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
+- [x] Ekipler için skor tablosu ekle  
+- [x] UI testleri ve hata ayıklamaları yap  
+
+**Yapılan İşlemler (Tarih: 05.04.2024):**
+- Puan sisteminin mantığı iyileştirildi:
+  - Her doğru kelime için 1 puan
+  - Pas geçmek için maksimum hak sınırlaması
+  - Pas geçme cezası olarak süre kesintisi
+  - Süre bitiminde otomatik olarak diğer takıma geçiş
+- Oyun sonu ekranı tasarlandı:
+  - Takım puanlarını gösteren tablo
+  - Skorlara göre sıralanmış takımlar
+  - Kazanan takım vurgusu
+  - Yeniden oynama seçeneği
 
 ---
 
-### 📚 7. Kategori Seçimi  
+### 📊 7. İstatistikler
+- [x] Oyun sonunda ekiplerin performanslarını kaydet
+- [x] İstatistik ekranı oluştur
+- [x] Oyun geçmişini görüntüle
+- [x] Detaylı istatistikleri görüntüle (doğru/yanlış kelime oranları, en çok bilinen kelimeler vb.)
+- [x] İstatistikleri silme seçeneği ekle
+
+**Yapılan İşlemler (Tarih: 10.04.2024):**
+- Clean Architecture prensiplerine uygun olarak istatistik sistemi oluşturuldu:
+  - GameStatisticsEntity: Oyun istatistiklerini temsil eden domain entity
+  - GameStatisticsModel: Hive ile persistence için model sınıfı
+  - GameStatisticsRepository: Veri erişim arayüzü
+  - GameStatisticsRepositoryImpl: Hive ile repository implementasyonu
+- İstatistik verilerini yönetmek için use case'ler eklendi:
+  - GetGameStatisticsUseCase: Tüm oyun istatistiklerini getirme
+  - SaveGameStatisticsUseCase: Oyun istatistiklerini kaydetme
+  - DeleteGameStatisticsUseCase: İstatistik silme
+- UI bileşenleri oluşturuldu:
+  - StatisticsViewModel: İstatistik verilerini ve state'i yöneten ViewModel
+  - StatisticsScreen: İstatistikleri görüntüleyen ana ekran
+  - Boş durum yönetimi
+  - Silme onayı dialog'u
+  - İstatistik kartları ve detaylı istatistik görünümü
+- Oyun sonunda istatistiklerin otomatik kaydedilmesi sağlandı:
+  - GameViewModel'e _saveStatistics metodu eklendi
+  - Oyun bitiminde istatistikleri kaydedecek mantık eklendi
+  - UUID ile benzersiz istatistik ID'leri
+- Detaylı istatistikler:
+  - Doğru bilme/pas geçme oranları
+  - Takım bazlı performans göstergeleri
+  - Doğru bilinen kelimeler listesi
+  - Pas geçilen kelimeler listesi
+  - Zaman damgalı oyun geçmişi
+- Hive entegrasyonu:
+  - TeamModel ve GameStatisticsModel için Hive adapter'ları oluşturuldu
+  - TypeId çakışmalarını önlemek için benzersiz ID'ler atandı
+  - Box oluşturma ve servis locator kaydı yapıldı
+- Kullanıcı deneyimi iyileştirmeleri:
+  - Yenileme için RefreshIndicator
+  - Silme işlemleri için onay
+  - Detaylı istatistikler için modal bottom sheet
+  - İslami tema ile uyumlu tasarım
+  - Kazanan takım vurgusu
+
+---
+
+### 📚 8. Kategori Seçimi  
 - [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
 - [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
 - [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
@@ -235,7 +293,7 @@
 
 ---
 
-### 📱 8. Offline Oynanabilirlik  
+### 📱 9. Offline Oynanabilirlik  
 - [x] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
 - [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
 - [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
@@ -244,8 +302,7 @@
 - Hive veritabanı ile kelime yönetimi için offline depolama uygulandı
 - UUID kullanılarak benzersiz kelime ID'leri oluşturuldu
 - GameSettings için Hive box oluşturuldu ve ayarlar lokal olarak saklandı
-
----
+- Oyun istatistikleri için Hive box oluşturuldu
 
 ## 📄 Yeni Eklenen Belgeler
 

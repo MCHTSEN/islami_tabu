@@ -1,12 +1,15 @@
 import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:uuid/uuid.dart';
 import '../../core/di/service_locator.dart';
 import '../../domain/entities/game_settings_entity.dart';
 import '../../domain/entities/game_state_entity.dart';
+import '../../domain/entities/game_statistics_entity.dart';
 import '../../domain/entities/word_entity.dart';
 import '../../domain/entities/team_entity.dart';
 import '../../domain/usecases/get_game_settings_usecase.dart';
 import '../../domain/usecases/get_random_words_usecase.dart';
+import '../../domain/usecases/save_game_statistics_usecase.dart';
 
 final gameViewModelProvider =
     StateNotifierProvider<GameViewModel, AsyncValue<GameStateEntity>>((ref) {
@@ -16,6 +19,8 @@ final gameViewModelProvider =
 class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
   final GetGameSettingsUseCase _getGameSettingsUseCase;
   final GetRandomWordsUseCase _getRandomWordsUseCase;
+  final SaveGameStatisticsUseCase _saveGameStatisticsUseCase;
+  final Uuid _uuid = const Uuid();
 
   Timer? _gameTimer;
   GameSettingsEntity? _settings;
@@ -23,6 +28,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
   GameViewModel(
     this._getGameSettingsUseCase,
     this._getRandomWordsUseCase,
+    this._saveGameStatisticsUseCase,
   ) : super(const AsyncValue.loading()) {
     initialize();
   }
@@ -213,6 +219,11 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       final nextTeamIndex = gameState.nextTeamIndex;
       final isLastTeam = nextTeamIndex == 0;
 
+      // Check if this is the last team and save game statistics if finished
+      if (isLastTeam) {
+        _saveStatistics(gameState);
+      }
+
       // Always reset and shuffle the word queue for the next team
       List<WordEntity> newWordsQueue = [];
 
@@ -245,6 +256,22 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       state = AsyncValue.data(newState);
       _stopTimer();
     });
+  }
+
+  Future<void> _saveStatistics(GameStateEntity gameState) async {
+    try {
+      final statistics = GameStatisticsEntity.fromGameState(
+        id: '',
+        timestamp: DateTime.now(),
+        gameDuration: _settings!.gameDuration,
+        teams: gameState.teams,
+      );
+
+      await _saveGameStatisticsUseCase(statistics);
+    } catch (e) {
+      // Silently handle error, don't interrupt game flow
+      print('Error saving game statistics: $e');
+    }
   }
 
   void restartGame() async {
