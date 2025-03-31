@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
+import 'team_setup_screen.dart';
 
 class GameScreen extends ConsumerStatefulWidget {
   const GameScreen({super.key});
@@ -64,6 +65,11 @@ class _GameScreenState extends ConsumerState<GameScreen>
         ),
         child: gameState.when(
           data: (state) {
+            // Show team setup screen if in setup status
+            if (state.status == GameStatus.setup) {
+              return const TeamSetupScreen();
+            }
+
             // Set animation state based on game status
             if (state.status == GameStatus.playing) {
               _animationController.repeat(reverse: true);
@@ -136,12 +142,16 @@ class _GameScreenState extends ConsumerState<GameScreen>
     Color statusColor;
 
     switch (state.status) {
+      case GameStatus.setup:
+        statusText = 'Takım Seçimi';
+        statusColor = Colors.blue;
+        break;
       case GameStatus.ready:
-        statusText = 'Hazır';
+        statusText = '${state.currentTeam.name} Hazır';
         statusColor = Colors.amber;
         break;
       case GameStatus.playing:
-        statusText = 'Oyun Devam Ediyor';
+        statusText = '${state.currentTeam.name} Oynuyor';
         statusColor = Colors.green;
         break;
       case GameStatus.paused:
@@ -326,7 +336,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
           ),
         ),
 
-        // Score
+        // Current Team Score
         const SizedBox(height: 16),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -344,7 +354,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
               ),
               const SizedBox(width: 8),
               Text(
-                'Puan: ${state.score}',
+                'Puan: ${state.currentTeam.score}',
                 style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -359,6 +369,10 @@ class _GameScreenState extends ConsumerState<GameScreen>
   }
 
   Widget _buildGameOverSection(GameStateEntity state, double screenWidth) {
+    // Sort teams by score in descending order
+    final sortedTeams = List.from(state.teams)
+      ..sort((a, b) => b.score.compareTo(a.score));
+
     return Center(
       child: Card(
         color: Colors.blueGrey.shade900.withOpacity(0.7),
@@ -380,26 +394,34 @@ class _GameScreenState extends ConsumerState<GameScreen>
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 8),
-              Text(
-                'Toplam Puan: ${state.score}',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.amber.shade300,
-                ),
-              ),
               const SizedBox(height: 24),
 
-              // Game Stats
-              _buildStatRow('Doğru Bilinen', state.completedWords.length,
-                  Colors.green.shade400),
-              const SizedBox(height: 8),
-              _buildStatRow('Pas Geçilen', state.skippedWords.length,
-                  Colors.orange.shade400),
-              const SizedBox(height: 8),
-              _buildStatRow('Kalan Kelimeler', state.wordsQueue.length,
-                  Colors.blue.shade400),
+              // Team Scores
+              ...sortedTeams.map((team) => Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          team.name,
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.grey.shade300,
+                          ),
+                        ),
+                        Text(
+                          '${team.score} puan',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: team == sortedTeams.first
+                                ? Colors.amber.shade300
+                                : Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),
 
               const SizedBox(height: 24),
               ElevatedButton(
@@ -427,29 +449,6 @@ class _GameScreenState extends ConsumerState<GameScreen>
     );
   }
 
-  Widget _buildStatRow(String label, int value, Color color) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          label,
-          style: TextStyle(
-            color: Colors.grey.shade300,
-            fontSize: 16,
-          ),
-        ),
-        Text(
-          '$value',
-          style: TextStyle(
-            color: color,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ],
-    );
-  }
-
   Widget _buildGameControls(GameStateEntity state, double screenWidth) {
     if (state.status == GameStatus.finished) {
       return const SizedBox.shrink();
@@ -457,22 +456,37 @@ class _GameScreenState extends ConsumerState<GameScreen>
 
     if (state.status == GameStatus.ready) {
       return Center(
-        child: ElevatedButton(
-          onPressed: () {
-            ref.read(gameViewModelProvider.notifier).startGame();
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.green.shade700,
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              '${state.currentTeam.name} Hazır mısın?',
+              style: TextStyle(
+                color: Colors.amber.shade300,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          child: const Text(
-            'Oyunu Başlat',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).startGame();
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green.shade700,
+                foregroundColor: Colors.white,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Text(
+                'Başla',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
         ),
       );
     }

@@ -1,6 +1,8 @@
 import 'word_entity.dart';
+import 'team_entity.dart';
 
 enum GameStatus {
+  setup,
   ready,
   playing,
   paused,
@@ -10,7 +12,8 @@ enum GameStatus {
 class GameStateEntity {
   final GameStatus status;
   final int remainingTime;
-  final int score;
+  final List<TeamEntity> teams;
+  final int currentTeamIndex;
   final int passesUsed;
   final List<WordEntity> wordsQueue;
   final WordEntity? currentWord;
@@ -20,7 +23,8 @@ class GameStateEntity {
   const GameStateEntity({
     required this.status,
     required this.remainingTime,
-    required this.score,
+    required this.teams,
+    required this.currentTeamIndex,
     required this.passesUsed,
     required this.wordsQueue,
     this.currentWord,
@@ -33,9 +37,10 @@ class GameStateEntity {
     required List<WordEntity> words,
   }) {
     return GameStateEntity(
-      status: GameStatus.ready,
+      status: GameStatus.setup,
       remainingTime: initialGameDuration,
-      score: 0,
+      teams: [],
+      currentTeamIndex: 0,
       passesUsed: 0,
       wordsQueue: words,
       currentWord: words.isNotEmpty ? words.first : null,
@@ -44,10 +49,15 @@ class GameStateEntity {
     );
   }
 
+  TeamEntity get currentTeam => teams[currentTeamIndex];
+
+  int get nextTeamIndex => (currentTeamIndex + 1) % teams.length;
+
   GameStateEntity copyWith({
     GameStatus? status,
     int? remainingTime,
-    int? score,
+    List<TeamEntity>? teams,
+    int? currentTeamIndex,
     int? passesUsed,
     List<WordEntity>? wordsQueue,
     WordEntity? currentWord,
@@ -57,7 +67,8 @@ class GameStateEntity {
     return GameStateEntity(
       status: status ?? this.status,
       remainingTime: remainingTime ?? this.remainingTime,
-      score: score ?? this.score,
+      teams: teams ?? this.teams,
+      currentTeamIndex: currentTeamIndex ?? this.currentTeamIndex,
       passesUsed: passesUsed ?? this.passesUsed,
       wordsQueue: wordsQueue ?? this.wordsQueue,
       currentWord: currentWord ?? this.currentWord,

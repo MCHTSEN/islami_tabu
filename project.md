@@ -39,6 +39,8 @@ islami_tabu/
 - **Riverpod: Durum yönetimi için.
 - **SQLite / Hive**: Oyun içi kelimelerin ve kullanıcı ayarlarının saklanması için.
 - **MVVM, Clean Arch
+** Navigator olarak flutter kendisi sınıfını kullan
+** freezed kullanma 
 
 
 
