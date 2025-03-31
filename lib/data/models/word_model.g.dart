@@ -20,22 +20,19 @@ class WordModelAdapter extends TypeAdapter<WordModel> {
       id: fields[0] as String,
       word: fields[1] as String,
       forbiddenWords: (fields[2] as List).cast<String>(),
-      category: fields[3] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, WordModel obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
       ..write(obj.word)
       ..writeByte(2)
-      ..write(obj.forbiddenWords)
-      ..writeByte(3)
-      ..write(obj.category);
+      ..write(obj.forbiddenWords);
   }
 
   @override

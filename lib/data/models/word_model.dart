@@ -14,14 +14,10 @@ class WordModel extends HiveObject {
   @HiveField(2)
   late List<String> forbiddenWords;
 
-  @HiveField(3)
-  late String category;
-
   WordModel({
     required this.id,
     required this.word,
     required this.forbiddenWords,
-    required this.category,
   });
 
   // Factory to create a WordModel from a WordEntity
@@ -30,7 +26,6 @@ class WordModel extends HiveObject {
       id: entity.id,
       word: entity.word,
       forbiddenWords: entity.forbiddenWords,
-      category: entity.category,
     );
   }
 
@@ -40,7 +35,6 @@ class WordModel extends HiveObject {
       id: id,
       word: word,
       forbiddenWords: forbiddenWords,
-      category: category,
     );
   }
 }

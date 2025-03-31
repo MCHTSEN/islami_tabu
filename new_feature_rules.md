@@ -94,3 +94,6 @@ Uygulama Clean Architecture prensiplerine sadık kalarak geliştirilmelidir:
 - Formlar validation içermelidir
 - Yükleme durumları ve boş durumlar ele alınmalıdır
 - İnternet bağlantısı olmadan oynanabilirlik sağlanmalıdır
+
+## Paketler
+- freezed kullanma 

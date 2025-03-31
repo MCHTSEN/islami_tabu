@@ -176,47 +176,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                       );
                 },
               ),
-              const SizedBox(height: 16),
-              DropdownButtonFormField<String>(
-                value: settings.selectedCategory,
-                decoration: const InputDecoration(
-                  labelText: 'Kategori',
-                  labelStyle: TextStyle(color: Colors.white70),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white70),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.amber),
-                  ),
-                ),
-                dropdownColor: Colors.blueGrey.shade900,
-                style: const TextStyle(color: Colors.white),
-                items: const [
-                  DropdownMenuItem(
-                    value: 'Tümü',
-                    child: Text('Tümü'),
-                  ),
-                  DropdownMenuItem(
-                    value: 'Peygamberler',
-                    child: Text('Peygamberler'),
-                  ),
-                  DropdownMenuItem(
-                    value: 'Sureler',
-                    child: Text('Sureler'),
-                  ),
-                  DropdownMenuItem(
-                    value: 'Hadisler',
-                    child: Text('Hadisler'),
-                  ),
-                ],
-                onChanged: (value) {
-                  if (value != null) {
-                    ref.read(settingsViewModelProvider.notifier).updateCategory(
-                          value,
-                        );
-                  }
-                },
-              ),
             ],
           ),
         ),

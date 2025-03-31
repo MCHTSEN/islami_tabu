@@ -38,15 +38,13 @@ class WordViewModel extends StateNotifier<AsyncValue<List<WordEntity>>> {
     }
   }
 
-  Future<void> addWord(
-      String word, List<String> forbiddenWords, String category) async {
+  Future<void> addWord(String word, List<String> forbiddenWords) async {
     try {
       state = const AsyncValue.loading();
       final newWord = WordEntity(
         id: '',
         word: word,
         forbiddenWords: forbiddenWords,
-        category: category,
       );
       await _addWordUseCase(newWord);
       await loadWords();

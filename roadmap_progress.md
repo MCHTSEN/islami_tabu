@@ -146,7 +146,79 @@
 
 ---
 
-### 🏆 5. Puanlama Sistemi  
+### ✅ 5. Düzeltme - game_screen.dart
+- [x] game_screen.dart deki oyunu tek kişilik yapmıştık ama bu yanlış. Şu şekilde düzeltildi:
+- [x] game_screen.dart açılınca kaç kişi oynanacağı seçilmeli (min 2 takım, max 8 takım)
+- [x] yeni bir ekran oluşturma. game_screen.dart üzerinden devam et, gerekli değişiklikleri yap.
+- [x] girilen takımların adlarını sistem otomatik olarak 1.takım, 2.takım, ... diye sırala
+- [x] Ekipler arasında kelimeleri paylaşacak bir mekanizma hazırla
+- [x] süresi bitince diğer takımın sırası gelsin. oyunu bitir gibi bir butona tıklayana kadar devam etsin.
+- [x] oyun sonunda ekiplerin skorlarını göster
+- [x] oyun sonuçlarını kaydet
+
+**Yapılan İşlemler (Tarih: 03.04.2024):**
+- Clean Architecture prensiplerine uygun olarak yeni entity'ler ve state yönetimi eklendi:
+  - TeamEntity: Takım bilgilerini tutan entity
+  - GameStateEntity: Çoklu takım desteği için güncellendi
+  - GameStatus: Yeni setup durumu eklendi
+- Takım kurulumu için yeni ekran oluşturuldu:
+  - TeamSetupScreen: Takım sayısı ve isimlerini yönetme
+  - Min 2, max 8 takım seçimi
+  - Otomatik takım isimlendirme (1.Takım, 2.Takım, ...)
+- Oyun mantığı çoklu takım için güncellendi:
+  - GameViewModel: Takım bazlı puan ve kelime yönetimi
+  - Sıralı takım geçişi
+  - Süre bitiminde otomatik takım değişimi
+  - Pas geçme ve doğru bilme işlemleri takım bazlı
+- UI geliştirmeleri:
+  - Aktif takım gösterimi
+  - Takım puanları
+  - Oyun sonu sıralaması
+  - Responsive tasarım
+  - Animasyonlu geçişler
+- Hata yönetimi ve edge case'ler:
+  - Oyun bitişi kontrolü
+  - Süre kontrolü
+  - Pas hakkı kontrolü
+  - Kelime tükenmesi durumu
+
+**Yapılan İyileştirmeler (Tarih: 03.04.2024 - 2):**
+- Oyun akışı düzeltildi:
+  - Her takım kendi süresini tam olarak kullanabilecek şekilde güncellendi
+  - Süre bitiminde otomatik olarak sıradaki takıma geçiş eklendi
+  - Her takım için "Hazır mısın?" ekranı eklendi
+  - Takım geçişlerinde kelime havuzu korundu
+- GameViewModel iyileştirmeleri:
+  - moveToNextTeam metodu eklendi
+  - Süre bitiminde otomatik takım geçişi
+  - Her takım için pas hakları sıfırlama
+  - Kelimeler bittiğinde karıştırılıp yeniden kullanma
+- UI/UX geliştirmeleri:
+  - Her takım için özel "Hazır mısın?" ekranı
+  - Takım adı ve başlatma butonu
+  - Oyun kontrollerinde iyileştirmeler
+  - Daha net takım geçiş akışı
+- Hata düzeltmeleri:
+  - HomePage'e dönüş sorunu giderildi
+  - Erken oyun bitirme sorunu çözüldü
+  - Takım sırası karışması engellendi
+  - Kelime havuzu yönetimi iyileştirildi
+
+**Yapılan İyileştirmeler (Tarih: 03.04.2024 - 3):**
+- Kategori sistemi kaldırıldı:
+  - GameSettingsEntity'den selectedCategory alanı kaldırıldı
+  - WordEntity ve WordModel'den category alanı kaldırıldı
+  - GetRandomWordsUseCase'den kategori filtreleme kaldırıldı
+  - Settings ekranından kategori seçimi kaldırıldı
+  - WordManagementScreen'den kategori girişi kaldırıldı
+  - GetAvailableCategoriesUseCase ve ilgili repository metodları kaldırıldı
+  - Kelime yönetimi arayüzü sadeleştirildi
+  - Tüm kelimeler tek bir havuzda toplanacak şekilde güncellendi
+  - Gereksiz kod ve bağımlılıklar temizlendi
+
+---
+
+### 🏆 6. Puanlama Sistemi  
 - [ ] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
 - [ ] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
 - [ ] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
@@ -155,7 +227,7 @@
 
 ---
 
-### 📚 6. Kategori Seçimi  
+### 📚 7. Kategori Seçimi  
 - [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
 - [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
 - [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
@@ -163,7 +235,7 @@
 
 ---
 
-### 📱 7. Offline Oynanabilirlik  
+### 📱 8. Offline Oynanabilirlik  
 - [x] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
 - [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
 - [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  

@@ -41,26 +41,27 @@
 
 ---
 
-#### 📌 5. Puanlama Sistemi  
-- [ ] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
-- [ ] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
-- [ ] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
-- [ ] Ekipler için skor tablosu ekle  
-- [ ] UI testleri ve hata ayıklamaları yap  
+#### 📌 5. Düzeltme - game_screen.dart
+- [ ] game_screen.dart deki oyunu tek kişilik yapmıştık ama bu yanlış. Şu şekilde düzeltilecek:
+- [ ] game_screen.dart açılınca kaç kişi oynanacağı seçilmeli (min 2 takım, max 8 takım)
+- [ ] yeni bir ekran oluşturma. game_screen.dart üzerinden devam et, gerekli değişiklikleri yap.
+- [ ] girilen takımların adlarını sistem otomatik olarak 1.takım, 2.takım, ... diye sırala
+- [ ] Ekipler arasında kelimeleri paylaşacak bir mekanizma hazırla
+- [ ] süresi bitince diğer takımın sırası gelsin. oyunu bitir gibi bir butona tıklayana kadar devam etsin.
+- [ ] oyun sonunda ekiplerin skorlarını göster
+- [ ] oyun sonuçlarını kaydet
+- [ ] roadmap_progress.md dosyasından önceden yapılan yanlış işlemlere bak ve bunları düzelt
 
 ---
 
-#### 📌 6. Kategori Seçimi  
-- [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
-- [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
-- [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
-- [ ] UI testleri gerçekleştir  
+#### 📌 6. Kategori Kaldırma  
+- [ ] kategori seçimi kaldırılacak.
+- [ ] kelimelerin kategorileri kaldırılacak.
+- [ ] roadmap.md vs roadmap_progress.md dosyalarını incele ve kategori ile ilgili her şeyi kaldır.
+
 
 ---
 
 #### 📌 7. Offline Oynanabilirlik  
 - [x] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
-- [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
 - [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
-
-Bu yol haritası ile proje adım adım geliştirilebilir. Her maddeyi tamamladıkça ✅ işareti ekleyerek ilerlemeyi takip edebilirsin! 🚀  
