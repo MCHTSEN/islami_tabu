@@ -1,0 +1,66 @@
+İşte her bir MVP özelliği için detaylı bir yol haritası:
+
+### 🔹 MVP (Minimum Viable Product) Yol Haritası
+
+#### 📌 1. Ana Ekran Tasarımı ve Navigasyon
+- [ ] Ana ekranın temel tasarımını oluştur  
+- [ ] Oyun, Ayarlar ve Kelime Yönetimi sayfalarına yönlendiren butonlar ekle  
+- [ ] Sayfalar arası geçiş için `GoRouter` veya `Navigator` kullan  
+- [ ] Kullanıcı dostu bir arayüz tasarla   
+- [ ] UI testleri gerçekleştir  
+
+---
+
+#### 📌 2. Yeni Kelime Ekleme ve Yönetim Paneli
+- [ ] Kullanıcıların yeni kelimeler ekleyebileceği bir form tasarla  
+- [ ] Kelimeye ait yasaklı kelimelerin eklenmesini sağla  
+- [ ] Hive kullanarak kelimeleri lokal olarak sakla  
+- [ ] Kelime listesini görüntüleme ve düzenleme seçenekleri ekle  
+- [ ] Silme ve güncelleme fonksiyonlarını oluştur  
+- [ ] UI testleri ve hata ayıklamaları yap  
+
+---
+
+#### 📌 3. Oyun Ekranı (Kelime Gösterimi, Yasaklı Kelimeler, Süre)  
+- [ ] Oyun ekranının temel tasarımını oluştur  
+- [ ] Rastgele kelime seçimi için bir mekanizma hazırla  
+- [ ] Yasaklı kelimeleri ekrana listele  
+- [ ] Süre sayacı entegre et  
+- [ ] Oyuncuların geçme, doğru bilme gibi işlemleri yapabilmesi için butonlar ekle  
+- [ ] UI testleri ve hata ayıklamaları yap  
+
+---
+
+#### 📌 4. Oyun Ayarları  
+- [ ] Kullanıcının oyun süresini ayarlayabilmesi için seçenekler ekle  
+- [ ] Yasaklı kelime sayısını ayarlayabileceği bir seçenek sun  
+- [ ] Kullanıcıların kendi kelime havuzlarını oluşturmasına izin ver  
+- [ ] Tema ayarlarını (Dark/Light Mode) oyun içinde değiştirme imkanı tanı  
+- [ ] Ayarları lokal veritabanına kaydet  
+- [ ] UI testleri gerçekleştir  
+
+---
+
+#### 📌 5. Puanlama Sistemi  
+- [ ] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
+- [ ] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
+- [ ] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
+- [ ] Ekipler için skor tablosu ekle  
+- [ ] UI testleri ve hata ayıklamaları yap  
+
+---
+
+#### 📌 6. Kategori Seçimi  
+- [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
+- [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
+- [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
+- [ ] UI testleri gerçekleştir  
+
+---
+
+#### 📌 7. Offline Oynanabilirlik  
+- [ ] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
+- [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
+- [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
+
+Bu yol haritası ile proje adım adım geliştirilebilir. Her maddeyi tamamladıkça ✅ işareti ekleyerek ilerlemeyi takip edebilirsin! 🚀  
