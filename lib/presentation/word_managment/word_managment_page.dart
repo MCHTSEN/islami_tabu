@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'dart:convert';
 import '../../domain/entities/word_entity.dart';
 import '../../presentation/viewmodels/word_viewmodel.dart';
 
@@ -16,6 +18,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
   final TextEditingController _wordController = TextEditingController();
   final TextEditingController _forbiddenWordController =
       TextEditingController();
+  final TextEditingController _bulkImportController = TextEditingController();
   final FocusNode _wordFocusNode = FocusNode();
   final FocusNode _forbiddenWordFocusNode = FocusNode();
 
@@ -30,6 +33,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
   void dispose() {
     _wordController.dispose();
     _forbiddenWordController.dispose();
+    _bulkImportController.dispose();
     _wordFocusNode.dispose();
     _forbiddenWordFocusNode.dispose();
     super.dispose();
@@ -135,6 +139,144 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
     _wordFocusNode.requestFocus();
   }
 
+  void _showBulkImportDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Row(
+          children: [
+            Icon(Icons.file_upload, color: Colors.amber.shade700),
+            const SizedBox(width: 8),
+            const Text('Toplu Kelime Yükleme'),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'JSON formatında kelime listesi yapıştırın:',
+              style: TextStyle(fontSize: 14),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Örnek format:\n[{"word": "kelime", "forbiddenWords": ["yasak1", "yasak2"]}]',
+              style: TextStyle(fontSize: 12, color: Colors.grey),
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _bulkImportController,
+              maxLines: 8,
+              decoration: InputDecoration(
+                helper: IconButton(
+                  onPressed: () {
+                    Clipboard.setData(
+                        ClipboardData(text: _bulkImportController.text));
+                  },
+                  icon: const Icon(
+                    Icons.paste,
+                    color: Colors.black,
+                  ),
+                ),
+                hintText: 'JSON verisini buraya yapıştırın...',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                filled: true,
+                fillColor: Colors.grey.shade100,
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('İptal'),
+          ),
+          ElevatedButton.icon(
+            icon: const Icon(Icons.upload_file),
+            label: const Text('İçe Aktar'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.amber.shade700,
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () {
+              _importWords();
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _importWords() {
+    try {
+      final String jsonStr = _bulkImportController.text.trim();
+      if (jsonStr.isEmpty) {
+        _showErrorSnackBar('JSON verisi boş olamaz');
+        return;
+      }
+
+      final List<dynamic> jsonList = json.decode(jsonStr);
+      int successCount = 0;
+      int errorCount = 0;
+
+      for (var item in jsonList) {
+        try {
+          if (item is Map<String, dynamic> &&
+              item.containsKey('word') &&
+              item.containsKey('forbiddenWords')) {
+            final String word = item['word'];
+            final List<String> forbiddenWords = (item['forbiddenWords'] as List)
+                .map((e) => e.toString())
+                .toList();
+
+            if (word.isNotEmpty && forbiddenWords.isNotEmpty) {
+              ref
+                  .read(wordViewModelProvider.notifier)
+                  .addWord(word, forbiddenWords);
+              successCount++;
+            } else {
+              errorCount++;
+            }
+          } else {
+            errorCount++;
+          }
+        } catch (e) {
+          errorCount++;
+        }
+      }
+
+      _bulkImportController.clear();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+              '$successCount kelime başarıyla eklendi${errorCount > 0 ? ', $errorCount kelime eklenemedi' : ''}'),
+          behavior: SnackBarBehavior.floating,
+          backgroundColor:
+              successCount > 0 ? Colors.green.shade800 : Colors.orange.shade800,
+          margin: const EdgeInsets.all(16),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        ),
+      );
+    } catch (e) {
+      _showErrorSnackBar('Geçersiz JSON formatı');
+    }
+  }
+
+  void _showErrorSnackBar(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: Colors.red.shade800,
+        margin: const EdgeInsets.all(16),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final wordsState = ref.watch(wordViewModelProvider);
@@ -144,6 +286,13 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
         title: const Text('Kelime Yönetimi'),
         backgroundColor: Colors.teal,
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.upload_file),
+            tooltip: 'Toplu Kelime Yükle',
+            onPressed: _showBulkImportDialog,
+          ),
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -176,9 +325,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                         Row(
                           children: [
                             Icon(
-                              _isEditMode
-                                  ? Icons.edit_note
-                                  : Icons.add_circle,
+                              _isEditMode ? Icons.edit_note : Icons.add_circle,
                               color: Colors.amber.shade300,
                               size: 20,
                             ),
@@ -204,8 +351,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                           textCapitalization: TextCapitalization.sentences,
                           decoration: InputDecoration(
                             labelText: 'Kelime',
-                            labelStyle:
-                                TextStyle(color: Colors.amber.shade200),
+                            labelStyle: TextStyle(color: Colors.amber.shade200),
                             prefixIcon: Icon(Icons.text_fields,
                                 color: Colors.teal.shade300),
                             enabledBorder: OutlineInputBorder(
@@ -238,24 +384,23 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                     TextCapitalization.sentences,
                                 decoration: InputDecoration(
                                   labelText: 'Yasaklı Kelime',
-                                  labelStyle: TextStyle(
-                                      color: Colors.amber.shade200),
+                                  labelStyle:
+                                      TextStyle(color: Colors.amber.shade200),
                                   prefixIcon: Icon(Icons.block,
                                       color: Colors.red.shade300),
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Colors.teal.shade700),
+                                    borderSide:
+                                        BorderSide(color: Colors.teal.shade700),
                                     borderRadius: BorderRadius.circular(12),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                        color: Colors.amber.shade400,
-                                        width: 2),
+                                        color: Colors.amber.shade400, width: 2),
                                     borderRadius: BorderRadius.circular(12),
                                   ),
                                   filled: true,
-                                  fillColor: Colors.blueGrey.shade900
-                                      .withOpacity(0.3),
+                                  fillColor:
+                                      Colors.blueGrey.shade900.withOpacity(0.3),
                                 ),
                                 onSubmitted: (_) => _addForbiddenWord(),
                               ),
@@ -287,8 +432,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                         const SizedBox(height: 8),
                         Container(
                           decoration: BoxDecoration(
-                            color:
-                                Colors.blueGrey.shade900.withOpacity(0.5),
+                            color: Colors.blueGrey.shade900.withOpacity(0.5),
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(color: Colors.teal.shade700),
                           ),
@@ -323,12 +467,10 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                               fontSize: 14,
                                             ),
                                           ),
-                                          backgroundColor: Colors
-                                              .red.shade900
+                                          backgroundColor: Colors.red.shade900
                                               .withOpacity(0.6),
-                                          deleteIcon: const Icon(
-                                              Icons.close,
-                                              size: 18),
+                                          deleteIcon:
+                                              const Icon(Icons.close, size: 18),
                                           deleteIconColor: Colors.white70,
                                           onDeleted: () =>
                                               _removeForbiddenWord(index),
@@ -360,8 +502,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.amber.shade700,
                             foregroundColor: Colors.white,
-                            padding:
-                                const EdgeInsets.symmetric(vertical: 16),
+                            padding: const EdgeInsets.symmetric(vertical: 16),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
@@ -411,8 +552,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                           data: (words) => words.isEmpty
                               ? Center(
                                   child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(
                                         Icons.note_add,
@@ -436,11 +576,9 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                     final word = words[index];
                                     return Card(
                                       color: Colors.blueGrey.shade800,
-                                      margin:
-                                          const EdgeInsets.only(bottom: 8),
+                                      margin: const EdgeInsets.only(bottom: 8),
                                       shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(12),
+                                        borderRadius: BorderRadius.circular(12),
                                       ),
                                       elevation: 2,
                                       child: ExpansionTile(
@@ -458,8 +596,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                         ),
                                         children: [
                                           Padding(
-                                            padding:
-                                                const EdgeInsets.all(16.0),
+                                            padding: const EdgeInsets.all(16.0),
                                             child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
@@ -468,17 +605,15 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                                   children: [
                                                     Icon(
                                                       Icons.block,
-                                                      color: Colors
-                                                          .red.shade300,
+                                                      color:
+                                                          Colors.red.shade300,
                                                       size: 20,
                                                     ),
-                                                    const SizedBox(
-                                                        width: 8),
+                                                    const SizedBox(width: 8),
                                                     const Text(
                                                       'Yasaklı Kelimeler:',
                                                       style: TextStyle(
-                                                        color:
-                                                            Colors.white70,
+                                                        color: Colors.white70,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -490,16 +625,14 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                                     .map((forbiddenWord) {
                                                   return Padding(
                                                     padding:
-                                                        const EdgeInsets
-                                                            .only(
+                                                        const EdgeInsets.only(
                                                       left: 16.0,
                                                       bottom: 4.0,
                                                     ),
                                                     child: Row(
                                                       children: [
                                                         Icon(
-                                                          Icons
-                                                              .remove_circle,
+                                                          Icons.remove_circle,
                                                           color: Colors
                                                               .red.shade300,
                                                           size: 16,
@@ -510,8 +643,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                                           forbiddenWord,
                                                           style:
                                                               const TextStyle(
-                                                            color: Colors
-                                                                .white70,
+                                                            color:
+                                                                Colors.white70,
                                                           ),
                                                         ),
                                                       ],
@@ -527,10 +660,10 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                                     TextButton.icon(
                                                       icon: const Icon(
                                                           Icons.edit),
-                                                      label: const Text(
-                                                          'Düzenle'),
-                                                      style: TextButton
-                                                          .styleFrom(
+                                                      label:
+                                                          const Text('Düzenle'),
+                                                      style:
+                                                          TextButton.styleFrom(
                                                         foregroundColor:
                                                             Colors.amber,
                                                         padding:
@@ -546,10 +679,9 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                                     TextButton.icon(
                                                       icon: const Icon(
                                                           Icons.delete),
-                                                      label:
-                                                          const Text('Sil'),
-                                                      style: TextButton
-                                                          .styleFrom(
+                                                      label: const Text('Sil'),
+                                                      style:
+                                                          TextButton.styleFrom(
                                                         foregroundColor:
                                                             Colors.red,
                                                         padding:
@@ -562,9 +694,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                                       onPressed: () {
                                                         showDialog(
                                                           context: context,
-                                                          builder:
-                                                              (context) =>
-                                                                  AlertDialog(
+                                                          builder: (context) =>
+                                                              AlertDialog(
                                                             title: const Text(
                                                                 'Kelimeyi Sil'),
                                                             content: Text(
@@ -572,17 +703,18 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                                             ),
                                                             actions: [
                                                               TextButton(
-                                                                child: const Text(
-                                                                    'İptal'),
+                                                                child:
+                                                                    const Text(
+                                                                        'İptal'),
                                                                 onPressed: () =>
                                                                     Navigator.pop(
                                                                         context),
                                                               ),
                                                               TextButton(
-                                                                child: const Text(
-                                                                    'Sil'),
-                                                                onPressed:
-                                                                    () {
+                                                                child:
+                                                                    const Text(
+                                                                        'Sil'),
+                                                                onPressed: () {
                                                                   Navigator.pop(
                                                                       context);
                                                                   ref
@@ -595,12 +727,15 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                                                       .showSnackBar(
                                                                     SnackBar(
                                                                       content:
-                                                                          const Text('Kelime başarıyla silindi'),
+                                                                          const Text(
+                                                                              'Kelime başarıyla silindi'),
                                                                       behavior:
-                                                                          SnackBarBehavior.floating,
-                                                                      backgroundColor: Colors
-                                                                          .red
-                                                                          .shade800,
+                                                                          SnackBarBehavior
+                                                                              .floating,
+                                                                      backgroundColor:
+                                                                          Colors
+                                                                              .red
+                                                                              .shade800,
                                                                       margin: const EdgeInsets
                                                                           .all(
                                                                           16),
@@ -630,8 +765,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                                 ),
                           loading: () => const Center(
                             child: CircularProgressIndicator(
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                  Colors.amber),
+                              valueColor:
+                                  AlwaysStoppedAnimation<Color>(Colors.amber),
                             ),
                           ),
                           error: (error, stackTrace) => Center(
