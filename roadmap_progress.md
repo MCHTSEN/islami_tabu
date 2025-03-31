@@ -110,13 +110,39 @@
 
 ---
 
-### ⚙️ 4. Oyun Ayarları  
-- [ ] Kullanıcının oyun süresini ayarlayabilmesi için seçenekler ekle  
-- [ ] Yasaklı kelime sayısını ayarlayabileceği bir seçenek sun  
-- [ ] Kullanıcıların kendi kelime havuzlarını oluşturmasına izin ver  
-- [ ] Tema ayarlarını (Dark/Light Mode) oyun içinde değiştirme imkanı tanı  
-- [ ] Ayarları lokal veritabanına kaydet  
-- [ ] UI testleri gerçekleştir  
+### ✅ 4. Oyun Ayarları  
+- [x] Kullanıcının oyun süresini ayarlayabilmesi için seçenekler ekle  
+- [x] Yasaklı kelime sayısını ayarlayabileceği bir seçenek sun  
+- [x] Kullanıcıların kendi kelime havuzlarını oluşturmasına izin ver  
+- [x] Tema ayarlarını (Dark/Light Mode) oyun içinde değiştirme imkanı tanı  
+- [x] Ayarları lokal veritabanına kaydet  
+- [x] UI testleri gerçekleştir  
+
+**Yapılan İşlemler (Tarih: 02.04.2024):**
+- Settings ekranı oluşturuldu:
+  - Oyun süresi ayarı (30-180 saniye arası)
+  - Pas geçme limiti (1-5 arası)
+  - Pas cezası süresi (0-10 saniye arası)
+  - Kelime karıştırma seçeneği
+  - Kategori seçimi
+- SettingsViewModel implementasyonu:
+  - GetGameSettingsUseCase ve SaveGameSettingsUseCase entegrasyonu
+  - AsyncValue ile state yönetimi
+  - Tüm ayarlar için update metodları
+- GetIt ile dependency injection:
+  - SettingsViewModel factory olarak kaydedildi
+  - Gerekli use case'ler inject edildi
+- UI/UX özellikleri:
+  - Slider'lar ile kolay ayar yapma
+  - Switch ile boolean ayarlar
+  - Dropdown ile kategori seçimi
+  - İslami tema ile uyumlu tasarım
+  - Responsive layout
+  - Error handling ve loading states
+- Hive ile lokal depolama:
+  - GameSettingsModel adapter'ı
+  - Otomatik kayıt ve yükleme
+  - Default değerler
 
 ---
 

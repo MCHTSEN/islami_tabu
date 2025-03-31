@@ -5,6 +5,7 @@ import 'dart:math' as math;
 
 import 'package:islami_tabu/presentation/game_screen/game_screen.dart';
 import 'package:islami_tabu/presentation/settings/settings_page.dart';
+import 'package:islami_tabu/presentation/settings/settings_screen.dart';
 import 'package:islami_tabu/presentation/statistics/statistics_page.dart';
 import 'package:islami_tabu/presentation/word_managment/word_managment.dart';
 
@@ -15,7 +16,8 @@ class HomePage extends ConsumerStatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderStateMixin {
+class _HomePageState extends ConsumerState<HomePage>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _rippleAnimation;
 
@@ -62,7 +64,7 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
               builder: (context, child) {
                 return CustomPaint(
                   painter: IslamicRipplePainter(_rippleAnimation.value),
-                  child: SizedBox.expand(),
+                  child: const SizedBox.expand(),
                 );
               },
             ),
@@ -75,7 +77,7 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   // Title: "Kelime Yolculuğu" at the top
-                  AnimatedText().withPadding(top: screenHeight * 0.09),
+                  const AnimatedText().withPadding(top: screenHeight * 0.09),
                   Expanded(
                     child: Center(
                       child: Column(
@@ -86,7 +88,8 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => GameScreen()),
+                                MaterialPageRoute(
+                                    builder: (context) => const GameScreen()),
                               );
                             },
                             size: screenWidth * 0.3, // Responsive button size
@@ -100,7 +103,9 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
                                 onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => SettingsPage()),
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const SettingsScreen()),
                                   );
                                 },
                                 size: screenWidth * 0.3,
@@ -111,7 +116,9 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
                                 onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => WordManagementScreen()),
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const WordManagementScreen()),
                                   );
                                 },
                                 size: screenWidth * 0.3,
@@ -124,7 +131,9 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => StatisticsPage()),
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const StatisticsPage()),
                               );
                             },
                             size: screenWidth * 0.3,
@@ -142,11 +151,14 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
     );
   }
 
-  Widget _buildOrbButton({required String text, required VoidCallback onTap, required double size}) {
+  Widget _buildOrbButton(
+      {required String text,
+      required VoidCallback onTap,
+      required double size}) {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 300),
         width: size, // Dynamic size based on screen width
         height: size,
         decoration: BoxDecoration(
@@ -160,12 +172,12 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
             BoxShadow(
               color: Colors.amber.withOpacity(0.5),
               blurRadius: 20,
-              offset: Offset(0, 10),
+              offset: const Offset(0, 10),
             ),
             BoxShadow(
               color: Colors.teal.withOpacity(0.5),
               blurRadius: 20,
-              offset: Offset(0, -10),
+              offset: const Offset(0, -10),
             ),
           ],
         ),
@@ -182,7 +194,8 @@ class _HomePageState extends ConsumerState<HomePage> with SingleTickerProviderSt
                     height: size * 0.85,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white.withOpacity(0.3), width: 2),
+                      border: Border.all(
+                          color: Colors.white.withOpacity(0.3), width: 2),
                     ),
                     child: ClipOval(
                       child: Align(
@@ -250,11 +263,14 @@ class IslamicRipplePainter extends CustomPainter {
 
 // Animated Holographic Title with Islamic Flair
 class AnimatedText extends StatefulWidget {
+  const AnimatedText({super.key});
+
   @override
   _AnimatedTextState createState() => _AnimatedTextState();
 }
 
-class _AnimatedTextState extends State<AnimatedText> with SingleTickerProviderStateMixin {
+class _AnimatedTextState extends State<AnimatedText>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _opacity;
 
@@ -262,7 +278,7 @@ class _AnimatedTextState extends State<AnimatedText> with SingleTickerProviderSt
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: const Duration(seconds: 2),
       vsync: this,
     )..repeat(reverse: true);
     _opacity = Tween<double>(begin: 0.5, end: 1.0).animate(_controller);
@@ -286,19 +302,20 @@ class _AnimatedTextState extends State<AnimatedText> with SingleTickerProviderSt
             'İslami Tabu',
             style: TextStyle(
               fontSize: screenWidth * 0.1, // Responsive font size
-              fontFamily: 'Amiri', // Suggest an Arabic-style font via pubspec.yaml
+              fontFamily:
+                  'Amiri', // Suggest an Arabic-style font via pubspec.yaml
               fontWeight: FontWeight.bold,
               color: Colors.white,
               shadows: [
                 Shadow(
                   color: Colors.amber.shade600.withOpacity(0.8),
                   blurRadius: 20,
-                  offset: Offset(0, 0),
+                  offset: const Offset(0, 0),
                 ),
                 Shadow(
                   color: Colors.teal.shade600.withOpacity(0.8),
                   blurRadius: 20,
-                  offset: Offset(0, 0),
+                  offset: const Offset(0, 0),
                 ),
               ],
             ),

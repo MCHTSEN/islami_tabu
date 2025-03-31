@@ -32,12 +32,12 @@
 ---
 
 #### 📌 4. Oyun Ayarları  
-- [ ] Kullanıcının oyun süresini ayarlayabilmesi için seçenekler ekle  
-- [ ] Yasaklı kelime sayısını ayarlayabileceği bir seçenek sun  
-- [ ] Kullanıcıların kendi kelime havuzlarını oluşturmasına izin ver  
-- [ ] Tema ayarlarını (Dark/Light Mode) oyun içinde değiştirme imkanı tanı  
-- [ ] Ayarları lokal veritabanına kaydet  
-- [ ] UI testleri gerçekleştir  
+- [x] Kullanıcının oyun süresini ayarlayabilmesi için seçenekler ekle  
+- [x] Yasaklı kelime sayısını ayarlayabileceği bir seçenek sun  
+- [x] Kullanıcıların kendi kelime havuzlarını oluşturmasına izin ver  
+- [x] Tema ayarlarını (Dark/Light Mode) oyun içinde değiştirme imkanı tanı  
+- [x] Ayarları lokal veritabanına kaydet  
+- [x] UI testleri gerçekleştir  
 
 ---
 
