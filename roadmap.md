@@ -3,31 +3,31 @@
 ### 🔹 MVP (Minimum Viable Product) Yol Haritası
 
 #### 📌 1. Ana Ekran Tasarımı ve Navigasyon
-- [ ] Ana ekranın temel tasarımını oluştur  
-- [ ] Oyun, Ayarlar ve Kelime Yönetimi sayfalarına yönlendiren butonlar ekle  
-- [ ] Sayfalar arası geçiş için `GoRouter` veya `Navigator` kullan  
-- [ ] Kullanıcı dostu bir arayüz tasarla   
-- [ ] UI testleri gerçekleştir  
+- [x] Ana ekranın temel tasarımını oluştur  
+- [x] Oyun, Ayarlar ve Kelime Yönetimi sayfalarına yönlendiren butonlar ekle  
+- [x] Sayfalar arası geçiş için `GoRouter` veya `Navigator` kullan  
+- [x] Kullanıcı dostu bir arayüz tasarla   
+- [x] UI testleri gerçekleştir  
 
 ---
 
 #### 📌 2. Yeni Kelime Ekleme ve Yönetim Paneli
-- [ ] Kullanıcıların yeni kelimeler ekleyebileceği bir form tasarla  
-- [ ] Kelimeye ait yasaklı kelimelerin eklenmesini sağla  
-- [ ] Hive kullanarak kelimeleri lokal olarak sakla  
-- [ ] Kelime listesini görüntüleme ve düzenleme seçenekleri ekle  
-- [ ] Silme ve güncelleme fonksiyonlarını oluştur  
-- [ ] UI testleri ve hata ayıklamaları yap  
+- [x] Kullanıcıların yeni kelimeler ekleyebileceği bir form tasarla  
+- [x] Kelimeye ait yasaklı kelimelerin eklenmesini sağla  
+- [x] Hive kullanarak kelimeleri lokal olarak sakla  
+- [x] Kelime listesini görüntüleme ve düzenleme seçenekleri ekle  
+- [x] Silme ve güncelleme fonksiyonlarını oluştur  
+- [x] UI testleri ve hata ayıklamaları yap  
 
 ---
 
 #### 📌 3. Oyun Ekranı (Kelime Gösterimi, Yasaklı Kelimeler, Süre)  
-- [ ] Oyun ekranının temel tasarımını oluştur  
-- [ ] Rastgele kelime seçimi için bir mekanizma hazırla  
-- [ ] Yasaklı kelimeleri ekrana listele  
-- [ ] Süre sayacı entegre et  
-- [ ] Oyuncuların geçme, doğru bilme gibi işlemleri yapabilmesi için butonlar ekle  
-- [ ] UI testleri ve hata ayıklamaları yap  
+- [x] Oyun ekranının temel tasarımını oluştur  
+- [x] Rastgele kelime seçimi için bir mekanizma hazırla  
+- [x] Yasaklı kelimeleri ekrana listele  
+- [x] Süre sayacı entegre et  
+- [x] Oyuncuların geçme, doğru bilme gibi işlemleri yapabilmesi için butonlar ekle  
+- [x] UI testleri ve hata ayıklamaları yap  
 
 ---
 
@@ -59,7 +59,7 @@
 ---
 
 #### 📌 7. Offline Oynanabilirlik  
-- [ ] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
+- [x] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
 - [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
 - [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
 
