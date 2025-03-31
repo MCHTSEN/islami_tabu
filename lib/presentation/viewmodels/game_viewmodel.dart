@@ -213,11 +213,21 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       final nextTeamIndex = gameState.nextTeamIndex;
       final isLastTeam = nextTeamIndex == 0;
 
-      // Reset words queue for next team if needed
-      List<WordEntity> newWordsQueue = gameState.wordsQueue;
-      if (newWordsQueue.isEmpty) {
-        newWordsQueue = List<WordEntity>.from(gameState.completedWords)
-          ..addAll(gameState.skippedWords);
+      // Always reset and shuffle the word queue for the next team
+      List<WordEntity> newWordsQueue = [];
+
+      // Add completed and skipped words back to the queue
+      newWordsQueue.addAll(gameState.completedWords);
+      newWordsQueue.addAll(gameState.skippedWords);
+
+      // Add remaining words from the current queue
+      if (gameState.currentWord != null) {
+        newWordsQueue.add(gameState.currentWord!);
+      }
+      newWordsQueue.addAll(gameState.wordsQueue);
+
+      // Shuffle the queue if enabled in settings
+      if (_settings?.shuffleWords ?? true) {
         newWordsQueue.shuffle();
       }
 
@@ -228,8 +238,8 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         passesUsed: 0, // Reset passes for next team
         wordsQueue: newWordsQueue,
         currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
-        completedWords: [],
-        skippedWords: [],
+        completedWords: [], // Clear completed words for next team
+        skippedWords: [], // Clear skipped words for next team
       );
 
       state = AsyncValue.data(newState);
