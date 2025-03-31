@@ -1,0 +1,164 @@
+# İslami Tabu Uygulaması - İlerleme Takibi
+
+## 📊 MVP (Minimum Viable Product) Yol Haritası İlerlemesi
+
+### ✅ 1. Ana Ekran Tasarımı ve Navigasyon
+- [x] Ana ekranın temel tasarımını oluştur  
+- [x] Oyun, Ayarlar ve Kelime Yönetimi sayfalarına yönlendiren butonlar ekle  
+- [x] Sayfalar arası geçiş için `Navigator` kullan  
+- [x] Kullanıcı dostu bir arayüz tasarla   
+- [x] UI testleri gerçekleştir  
+
+**Yapılan İşlemler:**
+- Görsel açıdan etkileyici, koyu tonlarda bir ana ekran tasarlandı
+- Animasyonlu orb butonlar ile sayfalara geçiş sağlandı
+- Islamic ve holographic temalar birleştirilerek özgün bir tasarım ortaya çıkarıldı
+- Responsive tasarım ile farklı ekran boyutlarına uyumlu hale getirildi
+- Dinamik renk geçişleri ve animasyonlar eklendi
+
+---
+
+### ✅ 2. Yeni Kelime Ekleme ve Yönetim Paneli
+- [x] Kullanıcıların yeni kelimeler ekleyebileceği bir form tasarla  
+- [x] Kelimeye ait yasaklı kelimelerin eklenmesini sağla  
+- [x] Hive kullanarak kelimeleri lokal olarak sakla  
+- [x] Kelime listesini görüntüleme ve düzenleme seçenekleri ekle  
+- [x] Silme ve güncelleme fonksiyonlarını oluştur  
+- [x] UI testleri ve hata ayıklamaları yap  
+
+**Yapılan İşlemler (Tarih: 31.03.2024):**
+- Clean Architecture prensiplerine uygun kod yapısı kuruldu:
+  - Domain katmanı (entity, repository interfaces, use cases)
+  - Data katmanı (models, repository implementations)
+  - Presentation katmanı (viewmodels, UI widgets)
+- Hive veritabanı entegrasyonu yapıldı:
+  - WordEntity domain modeli oluşturuldu
+  - WordModel Hive adapteri ile uygulandı
+  - TypeAdapter otomatik olarak oluşturuldu (build_runner)
+- CRUD işlemleri için tüm gerekli use case'ler oluşturuldu:
+  - GetWordsUseCase
+  - AddWordUseCase
+  - UpdateWordUseCase
+  - DeleteWordUseCase
+- Kelime yönetim ekranı için kullanıcı dostu arayüz tasarlandı:
+  - Yeni kelime ve yasaklı kelimeler ekleme formu
+  - Mevcut kelimeleri listeleme, düzenleme ve silme
+  - Chip widget'ları ile yasaklı kelimelerin görsel sunumu
+  - ExpansionTile ile kelime detaylarına erişim
+  - RefreshIndicator ile verileri yenileme özelliği
+- Error state'lerinde SelectableText.rich ile hata görüntüleme
+- Riverpod StateNotifier kullanılarak state yönetimi sağlandı
+- Kelimeler kategorilere göre organize edildi
+- Form validasyon ile gerekli alanların doldurulması kontrolü eklendi
+- Silme işlemleri için onay dialogu eklendi
+
+**Güncellemeler (Tarih: 01.04.2024):**
+- GetIt kütüphanesi ile dependency injection yapısı kuruldu:
+  - ServiceLocator sınıfı oluşturuldu
+  - Tüm bağımlılıklar merkezi olarak kayıt altına alındı
+  - Singleton, LazySingleton ve Factory kayıt türleri kullanıldı
+  - Repository'ler singleton olarak tanımlandı
+  - Use case'ler lazy singleton olarak tanımlandı
+  - ViewModel'ler factory olarak tanımlandı
+- Riverpod provider'ları GetIt ile entegre edildi
+- Daha temiz ve modüler bir yapı oluşturuldu
+- Dependency injection testleri yapıldı
+
+---
+
+### ✅ 3. Oyun Ekranı (Kelime Gösterimi, Yasaklı Kelimeler, Süre)  
+- [x] Oyun ekranının temel tasarımını oluştur  
+- [x] Rastgele kelime seçimi için bir mekanizma hazırla  
+- [x] Yasaklı kelimeleri ekrana listele  
+- [x] Süre sayacı entegre et  
+- [x] Oyuncuların geçme, doğru bilme gibi işlemleri yapabilmesi için butonlar ekle  
+- [x] UI testleri ve hata ayıklamaları yap  
+
+**Yapılan İşlemler (Tarih: 01.04.2024):**
+- Oyun ekranı için domain entityleri oluşturuldu:
+  - GameSettingsEntity: Oyun ayarlarını temsil eden entity
+  - GameStateEntity: Oyun durumunu temsil eden entity
+  - GameStatus enum: Hazır, oynuyor, duraklatıldı, bitti durumları
+- Oyun için use caseler eklendi:
+  - GetRandomWordsUseCase: Rastgele kelimeler getirme
+  - GetAvailableCategoriesUseCase: Mevcut kategorileri getirme
+  - GetGameSettingsUseCase ve SaveGameSettingsUseCase: Oyun ayarlarını yönetme
+- Repository pattern uygulandı:
+  - GameSettingsRepository: Oyun ayarlarını persist etme
+  - GameSettingsRepositoryImpl: Hive ile implementasyon
+- Riverpod state management:
+  - GameViewModel: Tüm oyun mantığını ve state'i yöneten ViewModel
+  - AsyncValue ile loading, error ve data durumları yönetildi
+  - Zamanlayıcı, puan hesaplama, doğru/pas geçme işlemleri
+- Görsel tasarım:
+  - İslami tema ile uyumlu gradient arkaplan
+  - Animasyonlu kelime gösterimi
+  - Yasaklı kelimeler listesi
+  - Süre sayacı ve durum göstergesi
+  - Doğru/Pas butonları
+  - Sonuç ekranı
+- Özel özellikler:
+  - Kelime pulser animasyonu (scale)
+  - Süre cezaları ve sınırlı geçiş hakkı
+  - Oyunun duraklatılabilmesi ve devam ettirilebilmesi
+  - Oyun bittikten sonra detaylı istatistikler
+  - Oyun tekrar başlatma mekanizması
+- GetIt ile dependency injection:
+  - GameSettingsModel için Hive adapter oluşturuldu
+  - ServiceLocator'a yeni dependency'ler eklendi
+  - Oyun ile ilgili tüm dependency'ler için uygun lifetime'lar ayarlandı
+
+---
+
+### ⚙️ 4. Oyun Ayarları  
+- [ ] Kullanıcının oyun süresini ayarlayabilmesi için seçenekler ekle  
+- [ ] Yasaklı kelime sayısını ayarlayabileceği bir seçenek sun  
+- [ ] Kullanıcıların kendi kelime havuzlarını oluşturmasına izin ver  
+- [ ] Tema ayarlarını (Dark/Light Mode) oyun içinde değiştirme imkanı tanı  
+- [ ] Ayarları lokal veritabanına kaydet  
+- [ ] UI testleri gerçekleştir  
+
+---
+
+### 🏆 5. Puanlama Sistemi  
+- [ ] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
+- [ ] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
+- [ ] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
+- [ ] Ekipler için skor tablosu ekle  
+- [ ] UI testleri ve hata ayıklamaları yap  
+
+---
+
+### 📚 6. Kategori Seçimi  
+- [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
+- [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
+- [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
+- [ ] UI testleri gerçekleştir  
+
+---
+
+### 📱 7. Offline Oynanabilirlik  
+- [x] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
+- [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
+- [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
+
+**Yapılan İşlemler:**
+- Hive veritabanı ile kelime yönetimi için offline depolama uygulandı
+- UUID kullanılarak benzersiz kelime ID'leri oluşturuldu
+- GameSettings için Hive box oluşturuldu ve ayarlar lokal olarak saklandı
+
+---
+
+## 📄 Yeni Eklenen Belgeler
+
+### new_feature_rules.md
+- Yeni özellikler geliştirirken uyulması gereken kurallar tanımlandı
+- Clean Architecture prensipleri detaylandırıldı
+- Kod yazım ve isimlendirme kuralları belirlendi
+- Hive ve Riverpod kullanımına dair standartlar açıklandı
+- UI/UX standartları dokümante edildi
+
+### roadmap_progress.md
+- Proje ilerlemesini takip etmek için oluşturuldu
+- Yapılan işlemlerin ayrıntılı dökümü sağlandı
+- Kalan görevlerin takibi için yapılandırıldı
