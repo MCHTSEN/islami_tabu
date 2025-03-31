@@ -14,9 +14,6 @@ class GameSettingsModel extends HiveObject {
   @HiveField(2)
   late int maxPasses;
 
-  @HiveField(3)
-  late String selectedCategory;
-
   @HiveField(4)
   late bool shuffleWords;
 
@@ -24,7 +21,6 @@ class GameSettingsModel extends HiveObject {
     required this.gameDuration,
     required this.passPenalty,
     required this.maxPasses,
-    required this.selectedCategory,
     required this.shuffleWords,
   });
 
@@ -34,7 +30,6 @@ class GameSettingsModel extends HiveObject {
       gameDuration: entity.gameDuration,
       passPenalty: entity.passPenalty,
       maxPasses: entity.maxPasses,
-      selectedCategory: entity.selectedCategory,
       shuffleWords: entity.shuffleWords,
     );
   }
@@ -45,7 +40,6 @@ class GameSettingsModel extends HiveObject {
       gameDuration: gameDuration,
       passPenalty: passPenalty,
       maxPasses: maxPasses,
-      selectedCategory: selectedCategory,
       shuffleWords: shuffleWords,
     );
   }

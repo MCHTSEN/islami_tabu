@@ -7,7 +7,7 @@ import 'package:islami_tabu/presentation/game_screen/game_screen.dart';
 import 'package:islami_tabu/presentation/settings/settings_page.dart';
 import 'package:islami_tabu/presentation/settings/settings_screen.dart';
 import 'package:islami_tabu/presentation/statistics/statistics_page.dart';
-import 'package:islami_tabu/presentation/word_managment/word_managment.dart';
+import 'package:islami_tabu/presentation/word_managment/word_managment_page.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});

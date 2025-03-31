@@ -54,11 +54,11 @@
 
 ---
 
-#### 📌 6. Kategori Seçimi  
-- [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
-- [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
-- [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
-- [ ] UI testleri gerçekleştir  
+#### 📌 6. Kategori Kaldırma  
+- [ ] kategori seçimi kaldırılacak.
+- [ ] kelimelerin kategorileri kaldırılacak.
+- [ ] roadmap.md vs roadmap_progress.md dosyalarını incele ve kategori ile ilgili her şeyi kaldır.
+
 
 ---
 

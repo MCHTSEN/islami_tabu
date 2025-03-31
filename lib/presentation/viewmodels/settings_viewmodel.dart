@@ -31,24 +31,14 @@ class SettingsViewModel extends StateNotifier<AsyncValue<GameSettingsEntity>> {
     }
   }
 
-  Future<void> _updateSettings(GameSettingsEntity newSettings) async {
-    try {
-      await _saveGameSettingsUseCase(newSettings);
-      state = AsyncValue.data(newSettings);
-    } catch (e, stackTrace) {
-      state = AsyncValue.error(e, stackTrace);
-    }
+  void _updateSettings(GameSettingsEntity settings) {
+    state = AsyncValue.data(settings);
+    _saveGameSettingsUseCase(settings);
   }
 
   void updateGameDuration(int duration) {
     state.whenData((settings) {
       _updateSettings(settings.copyWith(gameDuration: duration));
-    });
-  }
-
-  void updateMaxPasses(int maxPasses) {
-    state.whenData((settings) {
-      _updateSettings(settings.copyWith(maxPasses: maxPasses));
     });
   }
 
@@ -58,15 +48,15 @@ class SettingsViewModel extends StateNotifier<AsyncValue<GameSettingsEntity>> {
     });
   }
 
-  void updateShuffleWords(bool shuffle) {
+  void updateMaxPasses(int maxPasses) {
     state.whenData((settings) {
-      _updateSettings(settings.copyWith(shuffleWords: shuffle));
+      _updateSettings(settings.copyWith(maxPasses: maxPasses));
     });
   }
 
-  void updateCategory(String category) {
+  void updateShuffleWords(bool shuffle) {
     state.whenData((settings) {
-      _updateSettings(settings.copyWith(selectedCategory: category));
+      _updateSettings(settings.copyWith(shuffleWords: shuffle));
     });
   }
 }

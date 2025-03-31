@@ -36,7 +36,6 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
 
       // Get random words for the game
       final words = await _getRandomWordsUseCase(
-        category: _settings!.selectedCategory,
         count: 20,
         shuffle: _settings!.shuffleWords,
       );

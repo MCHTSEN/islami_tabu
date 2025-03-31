@@ -204,6 +204,18 @@
   - Takım sırası karışması engellendi
   - Kelime havuzu yönetimi iyileştirildi
 
+**Yapılan İyileştirmeler (Tarih: 03.04.2024 - 3):**
+- Kategori sistemi kaldırıldı:
+  - GameSettingsEntity'den selectedCategory alanı kaldırıldı
+  - WordEntity ve WordModel'den category alanı kaldırıldı
+  - GetRandomWordsUseCase'den kategori filtreleme kaldırıldı
+  - Settings ekranından kategori seçimi kaldırıldı
+  - WordManagementScreen'den kategori girişi kaldırıldı
+  - GetAvailableCategoriesUseCase ve ilgili repository metodları kaldırıldı
+  - Kelime yönetimi arayüzü sadeleştirildi
+  - Tüm kelimeler tek bir havuzda toplanacak şekilde güncellendi
+  - Gereksiz kod ve bağımlılıklar temizlendi
+
 ---
 
 ### 🏆 6. Puanlama Sistemi  

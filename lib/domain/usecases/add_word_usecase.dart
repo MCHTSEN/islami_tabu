@@ -6,7 +6,7 @@ class AddWordUseCase {
 
   AddWordUseCase(this._repository);
 
-  Future<String> call(WordEntity word) {
+  Future<void> call(WordEntity word) {
     return _repository.addWord(word);
   }
 }
