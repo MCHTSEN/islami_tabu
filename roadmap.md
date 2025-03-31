@@ -62,6 +62,7 @@
 
 ---
 
-#### 📌 7. Offline Oynanabilirlik  
-- [x] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
-- [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
+#### 📌 7. İstatistikler
+- [ ] Oynanan oyunların history'ini görüntüleme
+- [ ] Oynanan oyunların skorlarını görüntüleme
+- [ ] Minimalist ve app'in geri kalanına uygun bir ui ux tasarla
