@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(fontSize: 18, color: Colors.white),
         ),
       ),
+      debugShowCheckedModeBanner: kDebugMode,
       home: const HomePage(),
     );
   }
