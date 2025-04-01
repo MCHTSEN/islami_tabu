@@ -214,6 +214,31 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
     });
   }
 
+  void tabuWord() {
+    state.whenData((gameState) {
+      if (gameState.status != GameStatus.playing ||
+          gameState.currentWord == null) {
+        return;
+      }
+
+      // Get current team
+      final currentTeam = gameState.currentTeam;
+
+      // Update team's score by decreasing 2 points
+      final updatedTeams = List<TeamEntity>.from(gameState.teams);
+      updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
+        score: currentTeam.score - 2,
+      );
+
+      // Create new state
+      final newState = gameState.copyWith(
+        teams: updatedTeams,
+      );
+
+      state = AsyncValue.data(newState);
+    });
+  }
+
   void moveToNextTeam() {
     state.whenData((gameState) {
       final nextTeamIndex = gameState.nextTeamIndex;
@@ -243,7 +268,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       }
 
       final newState = gameState.copyWith(
-        status: isLastTeam ? GameStatus.finished : GameStatus.ready,
+        status: GameStatus.ready, // Always set to ready, never to finished
         remainingTime: _settings!.gameDuration,
         currentTeamIndex: nextTeamIndex,
         passesUsed: 0, // Reset passes for next team
@@ -251,6 +276,19 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
         completedWords: [], // Clear completed words for next team
         skippedWords: [], // Clear skipped words for next team
+      );
+
+      state = AsyncValue.data(newState);
+      _stopTimer();
+    });
+  }
+
+  void exitGame() {
+    state.whenData((gameState) {
+      _saveStatistics(gameState);
+
+      final newState = gameState.copyWith(
+        status: GameStatus.finished,
       );
 
       state = AsyncValue.data(newState);

@@ -558,77 +558,151 @@ class _GameScreenState extends ConsumerState<GameScreen>
     }
 
     // Playing state controls
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        // Skip Button
-        ElevatedButton(
-          onPressed: () {
-            ref.read(gameViewModelProvider.notifier).skipWord();
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.orange.shade700,
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(Icons.skip_next, size: 24),
-              const SizedBox(width: 8),
-              Text(
-                'Pas (${state.passesUsed}/3)',
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+        // Exit button
+        Align(
+          alignment: Alignment.centerRight,
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 16.0),
+            child: ElevatedButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).exitGame();
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red.shade700,
+                foregroundColor: Colors.white,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
-            ],
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.exit_to_app, size: 20),
+                  SizedBox(width: 8),
+                  Text(
+                    'Çıkış',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
 
-        // Pause Button
-        IconButton(
-          onPressed: () {
-            ref.read(gameViewModelProvider.notifier).pauseGame();
-          },
-          icon: const Icon(
-            Icons.pause_circle_filled,
-            size: 40,
-            color: Colors.white70,
-          ),
-        ),
-
-        // Correct Button
-        ElevatedButton(
-          onPressed: () {
-            ref.read(gameViewModelProvider.notifier).correctWord();
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.green.shade700,
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-          child: const Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(Icons.check, size: 24),
-              SizedBox(width: 8),
-              Text(
-                'Doğru',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+        // Game control buttons
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            // Skip Button
+            ElevatedButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).skipWord();
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange.shade700,
+                foregroundColor: Colors.white,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
-            ],
-          ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.skip_next, size: 20),
+                  const SizedBox(width: 4),
+                  Text(
+                    'Pas (${state.passesUsed}/3)',
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Tabu Button
+            ElevatedButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).tabuWord();
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple.shade700,
+                foregroundColor: Colors.white,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.block, size: 20),
+                  SizedBox(width: 4),
+                  Text(
+                    'Tabu',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Pause Button
+            IconButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).pauseGame();
+              },
+              icon: const Icon(
+                Icons.pause_circle_filled,
+                size: 36,
+                color: Colors.white70,
+              ),
+            ),
+
+            // Correct Button
+            ElevatedButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).correctWord();
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green.shade700,
+                foregroundColor: Colors.white,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.check, size: 20),
+                  SizedBox(width: 4),
+                  Text(
+                    'Doğru',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ],
     );

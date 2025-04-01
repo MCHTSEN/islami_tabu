@@ -218,28 +218,15 @@
 
 ---
 
-### 🏆 6. Puanlama Sistemi  
-- [x] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
-- [x] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
-- [x] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
-- [x] Ekipler için skor tablosu ekle  
-- [x] UI testleri ve hata ayıklamaları yap  
-
-**Yapılan İşlemler (Tarih: 05.04.2024):**
-- Puan sisteminin mantığı iyileştirildi:
-  - Her doğru kelime için 1 puan
-  - Pas geçmek için maksimum hak sınırlaması
-  - Pas geçme cezası olarak süre kesintisi
-  - Süre bitiminde otomatik olarak diğer takıma geçiş
-- Oyun sonu ekranı tasarlandı:
-  - Takım puanlarını gösteren tablo
-  - Skorlara göre sıralanmış takımlar
-  - Kazanan takım vurgusu
-  - Yeniden oynama seçeneği
+### ✅ 6. Kategori Kaldırma  
+- [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
+- [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
+- [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
+- [ ] UI testleri gerçekleştir  
 
 ---
 
-### 📊 7. İstatistikler
+### ✅ 7. İstatistikler
 - [x] Oyun sonunda ekiplerin performanslarını kaydet
 - [x] İstatistik ekranı oluştur
 - [x] Oyun geçmişini görüntüle
@@ -285,24 +272,34 @@
 
 ---
 
-### 📚 8. Kategori Seçimi  
-- [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
-- [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
-- [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
-- [ ] UI testleri gerçekleştir  
+### ✅ 8. Oyun Mantığı Değişimi
+- [x] Oyun ekranında 'tabu'  düğmesi eklendi
+- [x] 'tabu' düğmesine tıklandığında, o takımın skoru 2 azaltıldı 
+- [x] Oyundan çıkış için 'çıkış' düğmesi eklendi
+- [x] 'çıkış' düğmesine tıklandığında, oyun sonuçları gösteriliyor
+- [x] 'çıkış' düğmesine basılmadığı sürece oyun devam ediyor, sürekli olarak oyun ekranı gösteriliyor ve takımlar oyuna devam ediyor
 
----
-
-### 📱 9. Offline Oynanabilirlik  
-- [x] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
-- [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
-- [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
-
-**Yapılan İşlemler:**
-- Hive veritabanı ile kelime yönetimi için offline depolama uygulandı
-- UUID kullanılarak benzersiz kelime ID'leri oluşturuldu
-- GameSettings için Hive box oluşturuldu ve ayarlar lokal olarak saklandı
-- Oyun istatistikleri için Hive box oluşturuldu
+**Yapılan İşlemler (Tarih: 30.05.2024):**
+- GameViewModel'e yeni metodlar eklendi:
+  - `tabuWord()`: Yasaklı kelimenin kullanılması durumunda takım skorunu 2 puan azaltır
+  - `exitGame()`: Oyunu bitirip istatistikleri kaydeder
+- moveToNextTeam metodu güncellendi:
+  - Oyun artık çıkış düğmesine basılana kadar bitmeyecek şekilde değiştirildi
+  - Takım geçişleri sırasında status her zaman "ready" olarak ayarlandı
+- GameScreen'deki oyun kontrolleri güncellendi:
+  - Tabu düğmesi eklendi (mor renk ve "block" ikonu ile)
+  - Çıkış düğmesi eklendi (kırmızı renk ve "exit_to_app" ikonu ile)
+  - Butonların yerleşimi ve boyutları optimize edildi
+  - Bütün butonlar tek bir satırda ve eşit aralıklarla yerleştirildi
+- Kullanıcı deneyimi iyileştirmeleri:
+  - Çıkış butonu üst kısımda konumlandırıldı
+  - Buton boyutları ve içerikler daha kompakt hale getirildi
+  - İkon boyutları düşürüldü
+  - Metinler ve boşluklar küçültüldü
+- Clean Architecture prensiplerine bağlı kalındı:
+  - UI değişiklikleri presentation katmanında yapıldı
+  - İş mantığı değişiklikleri ViewModel içerisinde gerçekleştirildi
+  - Domain entity'leri değiştirilmedi
 
 ## 📄 Yeni Eklenen Belgeler
 
