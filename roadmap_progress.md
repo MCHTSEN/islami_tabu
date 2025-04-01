@@ -218,16 +218,7 @@
 
 ---
 
-### 🏆 6. Puanlama Sistemi  
-- [ ] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
-- [ ] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
-- [ ] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
-- [ ] Ekipler için skor tablosu ekle  
-- [ ] UI testleri ve hata ayıklamaları yap  
-
----
-
-### 📚 7. Kategori Seçimi  
+### ✅ 6. Kategori Kaldırma  
 - [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
 - [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
 - [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
@@ -235,17 +226,80 @@
 
 ---
 
-### 📱 8. Offline Oynanabilirlik  
-- [x] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
-- [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
-- [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
+### ✅ 7. İstatistikler
+- [x] Oyun sonunda ekiplerin performanslarını kaydet
+- [x] İstatistik ekranı oluştur
+- [x] Oyun geçmişini görüntüle
+- [x] Detaylı istatistikleri görüntüle (doğru/yanlış kelime oranları, en çok bilinen kelimeler vb.)
+- [x] İstatistikleri silme seçeneği ekle
 
-**Yapılan İşlemler:**
-- Hive veritabanı ile kelime yönetimi için offline depolama uygulandı
-- UUID kullanılarak benzersiz kelime ID'leri oluşturuldu
-- GameSettings için Hive box oluşturuldu ve ayarlar lokal olarak saklandı
+**Yapılan İşlemler (Tarih: 10.04.2024):**
+- Clean Architecture prensiplerine uygun olarak istatistik sistemi oluşturuldu:
+  - GameStatisticsEntity: Oyun istatistiklerini temsil eden domain entity
+  - GameStatisticsModel: Hive ile persistence için model sınıfı
+  - GameStatisticsRepository: Veri erişim arayüzü
+  - GameStatisticsRepositoryImpl: Hive ile repository implementasyonu
+- İstatistik verilerini yönetmek için use case'ler eklendi:
+  - GetGameStatisticsUseCase: Tüm oyun istatistiklerini getirme
+  - SaveGameStatisticsUseCase: Oyun istatistiklerini kaydetme
+  - DeleteGameStatisticsUseCase: İstatistik silme
+- UI bileşenleri oluşturuldu:
+  - StatisticsViewModel: İstatistik verilerini ve state'i yöneten ViewModel
+  - StatisticsScreen: İstatistikleri görüntüleyen ana ekran
+  - Boş durum yönetimi
+  - Silme onayı dialog'u
+  - İstatistik kartları ve detaylı istatistik görünümü
+- Oyun sonunda istatistiklerin otomatik kaydedilmesi sağlandı:
+  - GameViewModel'e _saveStatistics metodu eklendi
+  - Oyun bitiminde istatistikleri kaydedecek mantık eklendi
+  - UUID ile benzersiz istatistik ID'leri
+- Detaylı istatistikler:
+  - Doğru bilme/pas geçme oranları
+  - Takım bazlı performans göstergeleri
+  - Doğru bilinen kelimeler listesi
+  - Pas geçilen kelimeler listesi
+  - Zaman damgalı oyun geçmişi
+- Hive entegrasyonu:
+  - TeamModel ve GameStatisticsModel için Hive adapter'ları oluşturuldu
+  - TypeId çakışmalarını önlemek için benzersiz ID'ler atandı
+  - Box oluşturma ve servis locator kaydı yapıldı
+- Kullanıcı deneyimi iyileştirmeleri:
+  - Yenileme için RefreshIndicator
+  - Silme işlemleri için onay
+  - Detaylı istatistikler için modal bottom sheet
+  - İslami tema ile uyumlu tasarım
+  - Kazanan takım vurgusu
 
 ---
+
+### ✅ 8. Oyun Mantığı Değişimi
+- [x] Oyun ekranında 'tabu'  düğmesi eklendi
+- [x] 'tabu' düğmesine tıklandığında, o takımın skoru 2 azaltıldı 
+- [x] Oyundan çıkış için 'çıkış' düğmesi eklendi
+- [x] 'çıkış' düğmesine tıklandığında, oyun sonuçları gösteriliyor
+- [x] 'çıkış' düğmesine basılmadığı sürece oyun devam ediyor, sürekli olarak oyun ekranı gösteriliyor ve takımlar oyuna devam ediyor
+
+**Yapılan İşlemler (Tarih: 30.05.2024):**
+- GameViewModel'e yeni metodlar eklendi:
+  - `tabuWord()`: Yasaklı kelimenin kullanılması durumunda takım skorunu 2 puan azaltır
+  - `exitGame()`: Oyunu bitirip istatistikleri kaydeder
+- moveToNextTeam metodu güncellendi:
+  - Oyun artık çıkış düğmesine basılana kadar bitmeyecek şekilde değiştirildi
+  - Takım geçişleri sırasında status her zaman "ready" olarak ayarlandı
+- GameScreen'deki oyun kontrolleri güncellendi:
+  - Tabu düğmesi eklendi (mor renk ve "block" ikonu ile)
+  - Çıkış düğmesi eklendi (kırmızı renk ve "exit_to_app" ikonu ile)
+  - Butonların yerleşimi ve boyutları optimize edildi
+  - Bütün butonlar tek bir satırda ve eşit aralıklarla yerleştirildi
+- Kullanıcı deneyimi iyileştirmeleri:
+  - Çıkış butonu üst kısımda konumlandırıldı
+  - Buton boyutları ve içerikler daha kompakt hale getirildi
+  - İkon boyutları düşürüldü
+  - Metinler ve boşluklar küçültüldü
+- Clean Architecture prensiplerine bağlı kalındı:
+  - UI değişiklikleri presentation katmanında yapıldı
+  - İş mantığı değişiklikleri ViewModel içerisinde gerçekleştirildi
+  - Domain entity'leri değiştirilmedi
 
 ## 📄 Yeni Eklenen Belgeler
 
