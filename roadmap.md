@@ -3,64 +3,77 @@
 ### 🔹 MVP (Minimum Viable Product) Yol Haritası
 
 #### 📌 1. Ana Ekran Tasarımı ve Navigasyon
-- [ ] Ana ekranın temel tasarımını oluştur  
-- [ ] Oyun, Ayarlar ve Kelime Yönetimi sayfalarına yönlendiren butonlar ekle  
-- [ ] Sayfalar arası geçiş için `GoRouter` veya `Navigator` kullan  
-- [ ] Kullanıcı dostu bir arayüz tasarla   
-- [ ] UI testleri gerçekleştir  
+- [x] Ana ekranın temel tasarımını oluştur  
+- [x] Oyun, Ayarlar ve Kelime Yönetimi sayfalarına yönlendiren butonlar ekle  
+- [x] Sayfalar arası geçiş için `GoRouter` veya `Navigator` kullan  
+- [x] Kullanıcı dostu bir arayüz tasarla   
+- [x] UI testleri gerçekleştir  
 
 ---
 
 #### 📌 2. Yeni Kelime Ekleme ve Yönetim Paneli
-- [ ] Kullanıcıların yeni kelimeler ekleyebileceği bir form tasarla  
-- [ ] Kelimeye ait yasaklı kelimelerin eklenmesini sağla  
-- [ ] Hive kullanarak kelimeleri lokal olarak sakla  
-- [ ] Kelime listesini görüntüleme ve düzenleme seçenekleri ekle  
-- [ ] Silme ve güncelleme fonksiyonlarını oluştur  
-- [ ] UI testleri ve hata ayıklamaları yap  
+- [x] Kullanıcıların yeni kelimeler ekleyebileceği bir form tasarla  
+- [x] Kelimeye ait yasaklı kelimelerin eklenmesini sağla  
+- [x] Hive kullanarak kelimeleri lokal olarak sakla  
+- [x] Kelime listesini görüntüleme ve düzenleme seçenekleri ekle  
+- [x] Silme ve güncelleme fonksiyonlarını oluştur  
+- [x] UI testleri ve hata ayıklamaları yap  
 
 ---
 
 #### 📌 3. Oyun Ekranı (Kelime Gösterimi, Yasaklı Kelimeler, Süre)  
-- [ ] Oyun ekranının temel tasarımını oluştur  
-- [ ] Rastgele kelime seçimi için bir mekanizma hazırla  
-- [ ] Yasaklı kelimeleri ekrana listele  
-- [ ] Süre sayacı entegre et  
-- [ ] Oyuncuların geçme, doğru bilme gibi işlemleri yapabilmesi için butonlar ekle  
-- [ ] UI testleri ve hata ayıklamaları yap  
+- [x] Oyun ekranının temel tasarımını oluştur  
+- [x] Rastgele kelime seçimi için bir mekanizma hazırla  
+- [x] Yasaklı kelimeleri ekrana listele  
+- [x] Süre sayacı entegre et  
+- [x] Oyuncuların geçme, doğru bilme gibi işlemleri yapabilmesi için butonlar ekle  
+- [x] UI testleri ve hata ayıklamaları yap  
 
 ---
 
 #### 📌 4. Oyun Ayarları  
-- [ ] Kullanıcının oyun süresini ayarlayabilmesi için seçenekler ekle  
-- [ ] Yasaklı kelime sayısını ayarlayabileceği bir seçenek sun  
-- [ ] Kullanıcıların kendi kelime havuzlarını oluşturmasına izin ver  
-- [ ] Tema ayarlarını (Dark/Light Mode) oyun içinde değiştirme imkanı tanı  
-- [ ] Ayarları lokal veritabanına kaydet  
-- [ ] UI testleri gerçekleştir  
+- [x] Kullanıcının oyun süresini ayarlayabilmesi için seçenekler ekle  
+- [x] Yasaklı kelime sayısını ayarlayabileceği bir seçenek sun  
+- [x] Kullanıcıların kendi kelime havuzlarını oluşturmasına izin ver  
+- [x] Tema ayarlarını (Dark/Light Mode) oyun içinde değiştirme imkanı tanı  
+- [x] Ayarları lokal veritabanına kaydet  
+- [x] UI testleri gerçekleştir  
 
 ---
 
-#### 📌 5. Puanlama Sistemi  
-- [ ] Doğru bilinen kelimeler için puan hesaplamasını oluştur  
-- [ ] Yanlış veya pas geçilen kelimeler için puan kaybı mekanizması geliştir  
-- [ ] Oyun sonunda toplam puanı hesaplayan bir ekran tasarla  
-- [ ] Ekipler için skor tablosu ekle  
-- [ ] UI testleri ve hata ayıklamaları yap  
+#### 📌 5. Düzeltme - game_screen.dart
+- [ ] game_screen.dart deki oyunu tek kişilik yapmıştık ama bu yanlış. Şu şekilde düzeltilecek:
+- [ ] game_screen.dart açılınca kaç kişi oynanacağı seçilmeli (min 2 takım, max 8 takım)
+- [ ] yeni bir ekran oluşturma. game_screen.dart üzerinden devam et, gerekli değişiklikleri yap.
+- [ ] girilen takımların adlarını sistem otomatik olarak 1.takım, 2.takım, ... diye sırala
+- [ ] Ekipler arasında kelimeleri paylaşacak bir mekanizma hazırla
+- [ ] süresi bitince diğer takımın sırası gelsin. oyunu bitir gibi bir butona tıklayana kadar devam etsin.
+- [ ] oyun sonunda ekiplerin skorlarını göster
+- [ ] oyun sonuçlarını kaydet
+- [ ] roadmap_progress.md dosyasından önceden yapılan yanlış işlemlere bak ve bunları düzelt
 
 ---
 
-#### 📌 6. Kategori Seçimi  
-- [ ] Ön tanımlı kategorileri (Peygamberler, Sureler, Hadisler vb.) oluştur  
-- [ ] Kullanıcının kategori seçmesine imkan tanıyan bir ekran ekle  
-- [ ] Kategorilere göre kelime seçimi yapacak bir mekanizma hazırla  
-- [ ] UI testleri gerçekleştir  
+#### 📌 6. Kategori Kaldırma  
+- [ ] kategori seçimi kaldırılacak.
+- [ ] kelimelerin kategorileri kaldırılacak.
+- [ ] roadmap.md vs roadmap_progress.md dosyalarını incele ve kategori ile ilgili her şeyi kaldır.
+
 
 ---
 
-#### 📌 7. Offline Oynanabilirlik  
-- [ ] Oyunun tüm verilerini lokal veritabanında saklayacak şekilde düzenle  
-- [ ] İnternet bağlantısı olmadan tüm fonksiyonların çalıştığını test et  
-- [ ] Kullanıcı deneyimini artırmak için gerekli optimizasyonları yap  
+#### 📌 7. İstatistikler
+- [ ] Oynanan oyunların history'ini görüntüleme
+- [ ] Oynanan oyunların skorlarını görüntüleme
+- [ ] Minimalist ve app'in geri kalanına uygun bir ui ux tasarla
 
-Bu yol haritası ile proje adım adım geliştirilebilir. Her maddeyi tamamladıkça ✅ işareti ekleyerek ilerlemeyi takip edebilirsin! 🚀  
+
+---
+
+#### 📌 8. Oyun Mantığı Değişimi
+- [x] Oyun ekranında 'tabu'  düğmesi olmalı. 
+- [x] 'tabu' düğmesine tıklandığında,o takımın skoru 2 azalt 
+- [x] ekstra olarak, oyundan çıkış için 'çıkış' düğmesi olmalı. 
+- [x] 'çıkış' düğmesine tıklandığında, oyun sonuçları gösterilmeli.
+- [x] 'çıkış' düğmesine basılmadığı sürece oyun devam etmeli. sürekli olarak oyun ekranı gösterilmeli. ve takımlar oyuna devam etmeli.
+
