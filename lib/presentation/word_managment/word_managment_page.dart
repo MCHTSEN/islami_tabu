@@ -227,28 +227,28 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.blueGrey.shade900.withOpacity(0.6),
-        borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.teal.shade700.withOpacity(0.5)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
+                    ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
           // Word Input
-          TextField(
-            controller: _wordController,
-            focusNode: _wordFocusNode,
+                            TextField(
+                              controller: _wordController,
+                              focusNode: _wordFocusNode,
             style: const TextStyle(color: Colors.white, fontSize: 16),
-            decoration: InputDecoration(
-              labelText: 'Kelime',
+                              decoration: InputDecoration(
+                                labelText: 'Kelime',
               labelStyle: TextStyle(color: Colors.teal.shade200),
               filled: true,
               fillColor: Colors.blueGrey.shade800.withOpacity(0.5),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
+                                  borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide.none,
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide(color: Colors.teal.shade300, width: 2),
               ),
               suffixIcon: _isEditMode
@@ -262,13 +262,13 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
             ),
-          ),
-          const SizedBox(height: 16),
+                            ),
+                            const SizedBox(height: 16),
 
           // Use ForbiddenWordInput widget
           ForbiddenWordInput(
-            controller: _forbiddenWordController,
-            focusNode: _forbiddenWordFocusNode,
+                                    controller: _forbiddenWordController,
+                                    focusNode: _forbiddenWordFocusNode,
             onAdd: _addForbiddenWord,
           ),
 
@@ -280,26 +280,26 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
           const SizedBox(height: 20),
 
           // Submit Button
-          ElevatedButton.icon(
+                            ElevatedButton.icon(
             onPressed: _submitForm,
-            icon: Icon(
+                              icon: Icon(
                 _isEditMode ? Icons.save_alt_rounded : Icons.add_task_rounded,
                 size: 20),
             label: Text(_isEditMode ? 'Güncelle' : 'Kaydet'),
-            style: ElevatedButton.styleFrom(
+                              style: ElevatedButton.styleFrom(
               backgroundColor:
                   _isEditMode ? Colors.amber.shade800 : Colors.green.shade700,
-              foregroundColor: Colors.white,
+                                foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(vertical: 14),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
               textStyle:
                   const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
+                              ),
+                            ),
+                          ],
+                        ),
     );
   }
 
@@ -321,59 +321,59 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
         }
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
+                            children: [
+                              Text(
               'Kaydedilmiş Kelimeler (${words.length})',
-              style: TextStyle(
+                                style: TextStyle(
                 color: Colors.teal.shade200,
                 fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
             const SizedBox(height: 12),
             ListView.builder(
-              shrinkWrap: true,
+                                      shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: words.length,
-              itemBuilder: (context, index) {
-                final word = words[index];
+                                      itemCount: words.length,
+                                      itemBuilder: (context, index) {
+                                        final word = words[index];
                 // Use WordListItem widget
                 return WordListItem(
                   word: word,
                   onEdit: _editWord,
                   onDeleteConfirmed:
                       _deleteWordConfirmed, // Pass confirmation handler
-                );
-              },
-            ),
-          ],
+                                                            );
+                                                          },
+                                                        ),
+                                                      ],
         );
       },
-      loading: () => const Center(
+                              loading: () => const Center(
           child: Padding(
         padding: EdgeInsets.symmetric(vertical: 40.0),
         child: CircularProgressIndicator(color: Colors.amber),
       )),
-      error: (error, stackTrace) => Center(
+                              error: (error, stackTrace) => Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 16),
           child: SelectableText.rich(
             TextSpan(
-              children: [
+                                  children: [
                 TextSpan(
                   text: 'Kelimeler yüklenirken hata oluştu: \n',
                   style: TextStyle(color: Colors.red.shade300, fontSize: 16),
                 ),
                 TextSpan(
                   text: '$error',
-                  style: TextStyle(
+                                      style: TextStyle(
                     color: Colors.red.shade400,
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
-                  ),
-                ),
-              ],
-            ),
+                            ),
+                          ),
+                        ],
+                      ),
             textAlign: TextAlign.center,
           ),
         ),

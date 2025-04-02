@@ -58,6 +58,14 @@ Uygulama Clean Architecture prensiplerine sadık kalarak geliştirilmelidir:
 - Hata durumları SelectableText.rich ile görüntülenmelidir
 - Görsel öğeler temaya uygun olmalıdır
 
+### Atomik Tasarım ile Widget Organizasyonu
+- UI bileşenleri `lib/widgets` dizini altında atomik tasarım prensiplerine benzer bir yaklaşımla organize edilmelidir.
+- Widget'lar, mümkün olan en küçük, yeniden kullanılabilir parçalara (atomlar) ayrılmalıdır.
+- Bu küçük parçalar birleştirilerek daha karmaşık bileşenler (moleküller, organizmalar) oluşturulabilir.
+- Widget'lar işlevlerine veya ait oldukları özelliğe göre alt dizinlerde gruplandırılmalıdır (örn: `lib/widgets/buttons`, `lib/widgets/game`, `lib/widgets/dialogs`, `lib/widgets/statistics`).
+- Amaç, kod tekrarını azaltmak, yeniden kullanılabilirliği artırmak ve UI kodunu daha yönetilebilir hale getirmektir.
+- Ekran (`Screen`) dosyaları, bu küçük, yeniden kullanılabilir widget'ları bir araya getirmekten sorumlu olmalıdır. Ekran dosyaları içindeki özel `_buildXYZ` metodları yerine bu widget'lar tercih edilmelidir.
+
 ## Veri Tabanı Kuralları
 
 ### Hive Kullanımı
