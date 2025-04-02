@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/word_entity.dart';
-import '../../presentation/viewmodels/word_viewmodel.dart';
 
 class WordListItem extends ConsumerWidget {
   final WordEntity word;

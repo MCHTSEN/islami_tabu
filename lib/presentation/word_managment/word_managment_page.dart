@@ -3,7 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 // import 'dart:convert'; // No longer needed here
 import '../../domain/entities/word_entity.dart';
-import '../../presentation/viewmodels/word_viewmodel.dart';
+// Remove WordViewModel import
+// import '../../presentation/viewmodels/word_viewmodel.dart';
+// Import the new provider
+import '../../providers/in_memory_word_provider.dart';
 
 // Import new widgets
 import 'package:islami_tabu/widgets/dialogs/bulk_import_dialog.dart';
@@ -110,7 +113,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
         word: word,
         forbiddenWords: _forbiddenWords,
       );
-      ref.read(wordViewModelProvider.notifier).updateWord(updatedWord);
+      // Call updateWord on the inMemoryWordProvider notifier
+      ref.read(inMemoryWordProvider.notifier).updateWord(updatedWord);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: const Text('Kelime başarıyla güncellendi'),
@@ -121,7 +125,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
         ),
       );
     } else {
-      ref.read(wordViewModelProvider.notifier).addWord(word, _forbiddenWords);
+      // Call addWord on the inMemoryWordProvider notifier
+      ref.read(inMemoryWordProvider.notifier).addWord(word, _forbiddenWords);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: const Text('Yeni kelime başarıyla eklendi'),
@@ -148,7 +153,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
 
   // Method to handle confirmed deletion from WordListItem
   void _deleteWordConfirmed(String wordId) {
-    ref.read(wordViewModelProvider.notifier).deleteWord(wordId);
+    // Call deleteWord on the inMemoryWordProvider notifier
+    ref.read(inMemoryWordProvider.notifier).deleteWord(wordId);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: const Text('Kelime başarıyla silindi'),
@@ -168,7 +174,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final wordState = ref.watch(wordViewModelProvider);
+    // Watch the inMemoryWordProvider directly
+    final wordState = ref.watch(inMemoryWordProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -191,16 +198,19 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
           // Refresh Button
           IconButton(
             icon: const Icon(Icons.refresh_rounded),
-            tooltip: 'Yenile',
+            tooltip: 'Listeyi Sıfırla', // Updated tooltip
+            // Call refreshWords on the provider notifier (resets to hardcoded)
             onPressed: () =>
-                ref.read(wordViewModelProvider.notifier).loadWords(),
+                ref.read(inMemoryWordProvider.notifier).refreshWords(),
           ),
         ],
       ),
       body: BackgroundGradient(
         // Add background gradient
         child: RefreshIndicator(
-          onRefresh: () => ref.read(wordViewModelProvider.notifier).loadWords(),
+          // Refresh action now calls the provider's refresh method
+          onRefresh: () async =>
+              ref.read(inMemoryWordProvider.notifier).refreshWords(),
           color: Colors.amber.shade700,
           backgroundColor: Colors.blueGrey.shade800,
           child: ListView(
@@ -227,28 +237,28 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.blueGrey.shade900.withOpacity(0.6),
-                      borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.teal.shade700.withOpacity(0.5)),
-                    ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
           // Word Input
-                            TextField(
-                              controller: _wordController,
-                              focusNode: _wordFocusNode,
+          TextField(
+            controller: _wordController,
+            focusNode: _wordFocusNode,
             style: const TextStyle(color: Colors.white, fontSize: 16),
-                              decoration: InputDecoration(
-                                labelText: 'Kelime',
+            decoration: InputDecoration(
+              labelText: 'Kelime',
               labelStyle: TextStyle(color: Colors.teal.shade200),
               filled: true,
               fillColor: Colors.blueGrey.shade800.withOpacity(0.5),
               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide.none,
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide(color: Colors.teal.shade300, width: 2),
               ),
               suffixIcon: _isEditMode
@@ -262,13 +272,13 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
               contentPadding:
                   const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
             ),
-                            ),
-                            const SizedBox(height: 16),
+          ),
+          const SizedBox(height: 16),
 
           // Use ForbiddenWordInput widget
           ForbiddenWordInput(
-                                    controller: _forbiddenWordController,
-                                    focusNode: _forbiddenWordFocusNode,
+            controller: _forbiddenWordController,
+            focusNode: _forbiddenWordFocusNode,
             onAdd: _addForbiddenWord,
           ),
 
@@ -280,26 +290,26 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
           const SizedBox(height: 20),
 
           // Submit Button
-                            ElevatedButton.icon(
+          ElevatedButton.icon(
             onPressed: _submitForm,
-                              icon: Icon(
+            icon: Icon(
                 _isEditMode ? Icons.save_alt_rounded : Icons.add_task_rounded,
                 size: 20),
             label: Text(_isEditMode ? 'Güncelle' : 'Kaydet'),
-                              style: ElevatedButton.styleFrom(
+            style: ElevatedButton.styleFrom(
               backgroundColor:
                   _isEditMode ? Colors.amber.shade800 : Colors.green.shade700,
-                                foregroundColor: Colors.white,
+              foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(vertical: 14),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
               textStyle:
                   const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ],
-                        ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -321,59 +331,59 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
         }
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
+          children: [
+            Text(
               'Kaydedilmiş Kelimeler (${words.length})',
-                                style: TextStyle(
+              style: TextStyle(
                 color: Colors.teal.shade200,
                 fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             const SizedBox(height: 12),
             ListView.builder(
-                                      shrinkWrap: true,
+              shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-                                      itemCount: words.length,
-                                      itemBuilder: (context, index) {
-                                        final word = words[index];
+              itemCount: words.length,
+              itemBuilder: (context, index) {
+                final word = words[index];
                 // Use WordListItem widget
                 return WordListItem(
                   word: word,
                   onEdit: _editWord,
                   onDeleteConfirmed:
                       _deleteWordConfirmed, // Pass confirmation handler
-                                                            );
-                                                          },
-                                                        ),
-                                                      ],
+                );
+              },
+            ),
+          ],
         );
       },
-                              loading: () => const Center(
+      loading: () => const Center(
           child: Padding(
         padding: EdgeInsets.symmetric(vertical: 40.0),
         child: CircularProgressIndicator(color: Colors.amber),
       )),
-                              error: (error, stackTrace) => Center(
+      error: (error, stackTrace) => Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 16),
           child: SelectableText.rich(
             TextSpan(
-                                  children: [
+              children: [
                 TextSpan(
                   text: 'Kelimeler yüklenirken hata oluştu: \n',
                   style: TextStyle(color: Colors.red.shade300, fontSize: 16),
                 ),
                 TextSpan(
                   text: '$error',
-                                      style: TextStyle(
+                  style: TextStyle(
                     color: Colors.red.shade400,
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
-                            ),
-                          ),
-                        ],
-                      ),
+                  ),
+                ),
+              ],
+            ),
             textAlign: TextAlign.center,
           ),
         ),
