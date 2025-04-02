@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/core/helper/gap.dart';
 import 'dart:ui';
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
@@ -52,10 +53,66 @@ class _GameScreenState extends ConsumerState<GameScreen>
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
-            'İslami Tabu Oyunu',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
+          title: gameState.whenData((state) {
+                if (state.status == GameStatus.playing ||
+                    state.status == GameStatus.paused) {
+                  // Show team name and score in playing mode
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // Team name
+                      Expanded(
+                        child: Text(
+                          state.currentTeam.name,
+                          style: const TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+
+                      // Score badge
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: Colors.amber.shade700,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              color: Colors.white,
+                              size: 16,
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              '${state.currentTeam.score}',
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  );
+                } else {
+                  // Default title
+                  return const Text(
+                    'İslami Tabu Oyunu',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  );
+                }
+              }).value ??
+              const Text(
+                'İslami Tabu Oyunu',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
           backgroundColor: Colors.teal.shade900,
           elevation: 0,
           iconTheme: const IconThemeData(color: Colors.white),
@@ -117,7 +174,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
                             ? _buildGameOverSection(state, screenWidth)
                             : _buildGamePlaySection(state, screenWidth),
                       ),
-
+                      Gap.normal,
                       // Game Controls
                       _buildGameControls(state, screenWidth),
                     ],
@@ -398,35 +455,6 @@ class _GameScreenState extends ConsumerState<GameScreen>
             ],
           ),
         ),
-
-        // Current Team Score
-        const SizedBox(height: 16),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-          decoration: BoxDecoration(
-            color: Colors.blueGrey.shade800.withOpacity(0.7),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(
-                Icons.star,
-                color: Colors.amber,
-                size: 20,
-              ),
-              const SizedBox(width: 8),
-              Text(
-                'Puan: ${state.currentTeam.score}',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ),
-              ),
-            ],
-          ),
-        ),
       ],
     );
   }
@@ -450,7 +478,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
             mainAxisSize: MainAxisSize.min,
             children: [
               const Text(
-                'Oyun Bitti',
+                'Puan Tablosu',
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -487,23 +515,57 @@ class _GameScreenState extends ConsumerState<GameScreen>
                   )),
 
               const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: () {
-                  ref.read(gameViewModelProvider.notifier).restartGame();
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.amber.shade700,
-                  foregroundColor: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+
+              // Action buttons
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  // Exit Button
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      ref.read(gameViewModelProvider.notifier).restartGame();
+                    },
+                    icon: const Icon(Icons.exit_to_app),
+                    label: const Text('Çıkış'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red.shade700,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      textStyle: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                ),
-                child: const Text(
-                  'Yeniden Oyna',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+
+                  // Continue Button
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      ref
+                          .read(gameViewModelProvider.notifier)
+                          .continueGameAfterScores();
+                    },
+                    icon: const Icon(Icons.play_arrow),
+                    label: const Text('Devam Et'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green.shade700,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      textStyle: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -576,92 +638,51 @@ class _GameScreenState extends ConsumerState<GameScreen>
       );
     }
 
-    // Playing state controls - new layout using Grid
-    return Column(
-      mainAxisSize: MainAxisSize.min,
+    // Playing state controls - row of three buttons
+    return Row(
       children: [
-        // Exit button in its own row
-        Align(
-          alignment: Alignment.centerRight,
+        // Skip Button
+        Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: ElevatedButton.icon(
-              onPressed: () async {
-                final shouldExit = await _showExitConfirmationDialog(context);
-                if (shouldExit) {
-                  ref.read(gameViewModelProvider.notifier).exitGame();
-                }
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: _buildControlButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).skipWord();
               },
-              icon: const Icon(Icons.exit_to_app, size: 18),
-              label: const Text('Çıkış'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red.shade700,
-                foregroundColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                textStyle: const TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              icon: Icons.skip_next,
+              label: 'Pas (${state.passesUsed}/3)',
+              color: Colors.orange.shade700,
             ),
           ),
         ),
 
-        // Game control buttons in a grid layout
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: GridView.count(
-            shrinkWrap: true,
-            crossAxisCount: 2,
-            crossAxisSpacing: 8,
-            mainAxisSpacing: 8,
-            childAspectRatio: 2.5,
-            physics: const NeverScrollableScrollPhysics(),
-            children: [
-              // Skip Button
-              _buildControlButton(
-                onPressed: () {
-                  ref.read(gameViewModelProvider.notifier).skipWord();
-                },
-                icon: Icons.skip_next,
-                label: 'Pas (${state.passesUsed}/3)',
-                color: Colors.orange.shade700,
-              ),
+        // Tabu Button
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: _buildControlButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).tabuWord();
+              },
+              icon: Icons.block,
+              label: 'Tabu',
+              color: Colors.purple.shade700,
+            ),
+          ),
+        ),
 
-              // Correct Button
-              _buildControlButton(
-                onPressed: () {
-                  ref.read(gameViewModelProvider.notifier).correctWord();
-                },
-                icon: Icons.check,
-                label: 'Doğru',
-                color: Colors.green.shade700,
-              ),
-
-              // Tabu Button
-              _buildControlButton(
-                onPressed: () {
-                  ref.read(gameViewModelProvider.notifier).tabuWord();
-                },
-                icon: Icons.block,
-                label: 'Tabu',
-                color: Colors.purple.shade700,
-              ),
-
-              // Pause Button
-              _buildControlButton(
-                onPressed: () {
-                  ref.read(gameViewModelProvider.notifier).pauseGame();
-                },
-                icon: Icons.pause_circle_filled,
-                label: 'Duraklat',
-                color: Colors.blueGrey.shade700,
-              ),
-            ],
+        // Correct Button
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: _buildControlButton(
+              onPressed: () {
+                ref.read(gameViewModelProvider.notifier).correctWord();
+              },
+              icon: Icons.check,
+              label: 'Doğru',
+              color: Colors.green.shade700,
+            ),
           ),
         ),
       ],

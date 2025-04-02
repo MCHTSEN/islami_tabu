@@ -296,9 +296,21 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       final nextTeamIndex = gameState.nextTeamIndex;
       final isLastTeam = nextTeamIndex == 0;
 
-      // Check if this is the last team and save game statistics if finished
+      // Check if this is the last team and show score table
       if (isLastTeam) {
+        // Save statistics but don't end the game
         _saveStatistics(gameState);
+
+        // Set the game to a temporary finished state to show scores
+        final scoreState = gameState.copyWith(
+          status: GameStatus.finished,
+        );
+
+        state = AsyncValue.data(scoreState);
+        _stopTimer();
+
+        // Return early to prevent further processing
+        return;
       }
 
       // Always reset and shuffle the word queue for the next team
@@ -418,5 +430,45 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
   void dispose() {
     _stopTimer();
     super.dispose();
+  }
+
+  // Add a new method to continue the game after showing scores
+  void continueGameAfterScores() {
+    state.whenData((gameState) {
+      if (gameState.status != GameStatus.finished) {
+        return;
+      }
+
+      // Reset to the first team
+      const nextTeamIndex = 0;
+
+      // Prepare a fresh word queue
+      List<WordEntity> newWordsQueue = [];
+
+      // Add all words back to the queue
+      newWordsQueue.addAll(gameState.completedWords);
+      newWordsQueue.addAll(gameState.skippedWords);
+
+      if (gameState.currentWord != null) {
+        newWordsQueue.add(gameState.currentWord!);
+      }
+      newWordsQueue.addAll(gameState.wordsQueue);
+
+      // Shuffle all words
+      newWordsQueue.shuffle();
+
+      final newState = gameState.copyWith(
+        status: GameStatus.ready,
+        remainingTime: _settings!.gameDuration,
+        currentTeamIndex: nextTeamIndex,
+        passesUsed: 0,
+        wordsQueue: newWordsQueue,
+        currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
+        completedWords: [],
+        skippedWords: [],
+      );
+
+      state = AsyncValue.data(newState);
+    });
   }
 }
