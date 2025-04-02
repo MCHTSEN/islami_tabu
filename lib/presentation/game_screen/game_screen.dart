@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/core/helper/gap.dart';
 import 'dart:ui';
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
@@ -42,93 +43,168 @@ class _GameScreenState extends ConsumerState<GameScreen>
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'İslami Tabu Oyunu',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-        backgroundColor: Colors.teal.shade900,
-        elevation: 0,
-        iconTheme: const IconThemeData(color: Colors.white),
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.teal.shade900,
-              Colors.blueGrey.shade900,
-              Colors.indigo.shade900,
-            ],
+    return WillPopScope(
+      onWillPop: () async {
+        final shouldPop = await _showExitConfirmationDialog(context);
+        if (shouldPop) {
+          ref.read(gameViewModelProvider.notifier).restartGame();
+        }
+        return shouldPop;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: gameState.whenData((state) {
+                if (state.status == GameStatus.playing ||
+                    state.status == GameStatus.paused) {
+                  // Show team name and score in playing mode
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // Team name
+                      Expanded(
+                        child: Text(
+                          state.currentTeam.name,
+                          style: const TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+
+                      // Score badge
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: Colors.amber.shade700,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(
+                              Icons.star,
+                              color: Colors.white,
+                              size: 16,
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              '${state.currentTeam.score}',
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  );
+                } else {
+                  // Default title
+                  return const Text(
+                    'İslami Tabu Oyunu',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  );
+                }
+              }).value ??
+              const Text(
+                'İslami Tabu Oyunu',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+          backgroundColor: Colors.teal.shade900,
+          elevation: 0,
+          iconTheme: const IconThemeData(color: Colors.white),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () async {
+              final shouldExit = await _showExitConfirmationDialog(context);
+              if (shouldExit) {
+                ref.read(gameViewModelProvider.notifier).restartGame();
+                Navigator.of(context).pop();
+              }
+            },
           ),
         ),
-        child: gameState.when(
-          data: (state) {
-            // Show team setup screen if in setup status
-            if (state.status == GameStatus.setup) {
-              return const TeamSetupScreen();
-            }
-
-            // Set animation state based on game status
-            if (state.status == GameStatus.playing) {
-              _animationController.repeat(reverse: true);
-            } else {
-              _animationController.stop();
-              if (state.status == GameStatus.paused ||
-                  state.status == GameStatus.finished) {
-                _animationController.value = 1.0;
-              } else {
-                _animationController.value = 0.0;
-              }
-            }
-
-            return SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    // Game Status and Timer
-                    _buildGameStatusHeader(state, screenWidth),
-                    SizedBox(height: screenHeight * 0.03),
-
-                    // Main Game Content
-                    Expanded(
-                      child: state.status == GameStatus.finished
-                          ? _buildGameOverSection(state, screenWidth)
-                          : _buildGamePlaySection(state, screenWidth),
-                    ),
-
-                    // Game Controls
-                    _buildGameControls(state, screenWidth),
-                  ],
-                ),
-              ),
-            );
-          },
-          loading: () => const Center(
-            child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.amber),
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.teal.shade900,
+                Colors.blueGrey.shade900,
+                Colors.indigo.shade900,
+              ],
             ),
           ),
-          error: (error, stackTrace) => Center(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: SelectableText.rich(
-                TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Bir hata oluştu: ',
-                      style: TextStyle(color: Colors.red.shade300),
-                    ),
-                    TextSpan(
-                      text: '$error',
-                      style: TextStyle(
-                          color: Colors.red.shade300,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
+          child: gameState.when(
+            data: (state) {
+              // Show team setup screen if in setup status
+              if (state.status == GameStatus.setup) {
+                return const TeamSetupScreen();
+              }
+
+              // Set animation state based on game status
+              if (state.status == GameStatus.playing) {
+                _animationController.repeat(reverse: true);
+              } else {
+                _animationController.stop();
+                if (state.status == GameStatus.paused ||
+                    state.status == GameStatus.finished) {
+                  _animationController.value = 1.0;
+                } else {
+                  _animationController.value = 0.0;
+                }
+              }
+
+              return SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      // Game Status and Timer
+                      _buildGameStatusHeader(state, screenWidth),
+                      SizedBox(height: screenHeight * 0.03),
+
+                      // Main Game Content
+                      Expanded(
+                        child: state.status == GameStatus.finished
+                            ? _buildGameOverSection(state, screenWidth)
+                            : _buildGamePlaySection(state, screenWidth),
+                      ),
+                      Gap.normal,
+                      // Game Controls
+                      _buildGameControls(state, screenWidth),
+                    ],
+                  ),
+                ),
+              );
+            },
+            loading: () => const Center(
+              child: CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.amber),
+              ),
+            ),
+            error: (error, stackTrace) => Center(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: SelectableText.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Bir hata oluştu: ',
+                        style: TextStyle(color: Colors.red.shade300),
+                      ),
+                      TextSpan(
+                        text: '$error',
+                        style: TextStyle(
+                            color: Colors.red.shade300,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -379,35 +455,6 @@ class _GameScreenState extends ConsumerState<GameScreen>
             ],
           ),
         ),
-
-        // Current Team Score
-        const SizedBox(height: 16),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-          decoration: BoxDecoration(
-            color: Colors.blueGrey.shade800.withOpacity(0.7),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(
-                Icons.star,
-                color: Colors.amber,
-                size: 20,
-              ),
-              const SizedBox(width: 8),
-              Text(
-                'Puan: ${state.currentTeam.score}',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ),
-              ),
-            ],
-          ),
-        ),
       ],
     );
   }
@@ -431,7 +478,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
             mainAxisSize: MainAxisSize.min,
             children: [
               const Text(
-                'Oyun Bitti',
+                'Puan Tablosu',
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -468,23 +515,57 @@ class _GameScreenState extends ConsumerState<GameScreen>
                   )),
 
               const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: () {
-                  ref.read(gameViewModelProvider.notifier).restartGame();
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.amber.shade700,
-                  foregroundColor: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+
+              // Action buttons
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  // Exit Button
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      ref.read(gameViewModelProvider.notifier).restartGame();
+                    },
+                    icon: const Icon(Icons.exit_to_app),
+                    label: const Text('Çıkış'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red.shade700,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      textStyle: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                ),
-                child: const Text(
-                  'Yeniden Oyna',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+
+                  // Continue Button
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      ref
+                          .read(gameViewModelProvider.notifier)
+                          .continueGameAfterScores();
+                    },
+                    icon: const Icon(Icons.play_arrow),
+                    label: const Text('Devam Et'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green.shade700,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      textStyle: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -557,154 +638,124 @@ class _GameScreenState extends ConsumerState<GameScreen>
       );
     }
 
-    // Playing state controls
-    return Column(
-      mainAxisSize: MainAxisSize.min,
+    // Playing state controls - row of three buttons
+    return Row(
       children: [
-        // Exit button
-        Align(
-          alignment: Alignment.centerRight,
+        // Skip Button
+        Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 16.0),
-            child: ElevatedButton(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: _buildControlButton(
               onPressed: () {
-                ref.read(gameViewModelProvider.notifier).exitGame();
+                ref.read(gameViewModelProvider.notifier).skipWord();
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red.shade700,
-                foregroundColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              child: const Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.exit_to_app, size: 20),
-                  SizedBox(width: 8),
-                  Text(
-                    'Çıkış',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+              icon: Icons.skip_next,
+              label: 'Pas (${state.passesUsed}/3)',
+              color: Colors.orange.shade700,
             ),
           ),
         ),
 
-        // Game control buttons
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            // Skip Button
-            ElevatedButton(
-              onPressed: () {
-                ref.read(gameViewModelProvider.notifier).skipWord();
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange.shade700,
-                foregroundColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.skip_next, size: 20),
-                  const SizedBox(width: 4),
-                  Text(
-                    'Pas (${state.passesUsed}/3)',
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            // Tabu Button
-            ElevatedButton(
+        // Tabu Button
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: _buildControlButton(
               onPressed: () {
                 ref.read(gameViewModelProvider.notifier).tabuWord();
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple.shade700,
-                foregroundColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              child: const Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.block, size: 20),
-                  SizedBox(width: 4),
-                  Text(
-                    'Tabu',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+              icon: Icons.block,
+              label: 'Tabu',
+              color: Colors.purple.shade700,
             ),
+          ),
+        ),
 
-            // Pause Button
-            IconButton(
-              onPressed: () {
-                ref.read(gameViewModelProvider.notifier).pauseGame();
-              },
-              icon: const Icon(
-                Icons.pause_circle_filled,
-                size: 36,
-                color: Colors.white70,
-              ),
-            ),
-
-            // Correct Button
-            ElevatedButton(
+        // Correct Button
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: _buildControlButton(
               onPressed: () {
                 ref.read(gameViewModelProvider.notifier).correctWord();
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green.shade700,
-                foregroundColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              child: const Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.check, size: 20),
-                  SizedBox(width: 4),
-                  Text(
-                    'Doğru',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
+              icon: Icons.check,
+              label: 'Doğru',
+              color: Colors.green.shade700,
             ),
-          ],
+          ),
         ),
       ],
     );
+  }
+
+  Widget _buildControlButton({
+    required VoidCallback onPressed,
+    required IconData icon,
+    required String label,
+    required Color color,
+  }) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: color,
+        foregroundColor: Colors.white,
+        padding: EdgeInsets.zero,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, size: 18),
+          const SizedBox(width: 6),
+          Text(
+            label,
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Show exit confirmation dialog
+  Future<bool> _showExitConfirmationDialog(BuildContext context) async {
+    return await showDialog<bool>(
+          context: context,
+          builder: (context) => AlertDialog(
+            backgroundColor: Colors.blueGrey.shade900,
+            title: const Text(
+              'Oyundan Çıkış',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+            content: const Text(
+              'Oyundan çıkmak istediğinize emin misiniz? Tüm oyun parametreleri sıfırlanacak.',
+              style: TextStyle(color: Colors.white),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: Text(
+                  'Hayır',
+                  style: TextStyle(color: Colors.amber.shade300),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(true),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red.shade700,
+                  foregroundColor: Colors.white,
+                ),
+                child: const Text('Evet, Çık'),
+              ),
+            ],
+          ),
+        ) ??
+        false;
   }
 }
