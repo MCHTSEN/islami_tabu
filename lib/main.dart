@@ -7,7 +7,6 @@ import 'package:islami_tabu/core/di/service_locator.dart';
 import 'package:islami_tabu/data/models/game_settings_model.dart';
 import 'package:islami_tabu/data/models/game_statistics_model.dart';
 import 'package:islami_tabu/data/models/team_model.dart';
-import 'package:islami_tabu/data/models/word_model.dart';
 import 'package:islami_tabu/presentation/home/home_page.dart';
 
 void main() async {
@@ -18,7 +17,6 @@ void main() async {
   await Hive.initFlutter(appDocumentDirectory.path);
 
   // Register adapters
-  Hive.registerAdapter(WordModelAdapter());
   Hive.registerAdapter(GameSettingsModelAdapter());
   Hive.registerAdapter(TeamModelAdapter());
   Hive.registerAdapter(GameStatisticsModelAdapter());

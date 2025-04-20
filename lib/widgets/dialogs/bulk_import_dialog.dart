@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/word_entity.dart';
-import '../../presentation/viewmodels/word_viewmodel.dart';
+import '../../providers/in_memory_word_provider.dart';
 
 Future<void> showBulkImportDialog(BuildContext context) async {
   await showDialog(
@@ -23,9 +23,11 @@ class _BulkImportDialogContent extends ConsumerStatefulWidget {
 class _BulkImportDialogContentState
     extends ConsumerState<_BulkImportDialogContent> {
   final TextEditingController _bulkImportController = TextEditingController();
+  bool _isMounted = true;
 
   @override
   void dispose() {
+    _isMounted = false;
     _bulkImportController.dispose();
     super.dispose();
   }
@@ -33,6 +35,7 @@ class _BulkImportDialogContentState
   Future<void> _importWords() async {
     final jsonData = _bulkImportController.text.trim();
     if (jsonData.isEmpty) {
+      if (!_isMounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: const Text('Lütfen JSON verisini girin.'),
@@ -63,23 +66,26 @@ class _BulkImportDialogContentState
       }).toList();
 
       int successCount = 0;
+      int errorCount = 0;
       for (final word in wordsToImport) {
         try {
-          await ref
-              .read(wordViewModelProvider.notifier)
+          ref
+              .read(inMemoryWordProvider.notifier)
               .addWord(word.word, word.forbiddenWords);
           successCount++;
         } catch (e) {
-          print('Error adding word "${word.word}": $e');
+          errorCount++;
         }
       }
 
+      if (!_isMounted) return;
       Navigator.pop(context);
 
+      if (!_isMounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-              '$successCount / ${wordsToImport.length} kelime başarıyla içe aktarıldı.'),
+              '$successCount kelime başarıyla, $errorCount kelime hatayla içe aktarıldı.'),
           behavior: SnackBarBehavior.floating,
           backgroundColor: successCount == wordsToImport.length
               ? Colors.green.shade800
@@ -89,6 +95,7 @@ class _BulkImportDialogContentState
         ),
       );
     } on FormatException catch (e) {
+      if (!_isMounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('JSON Format Hatası: ${e.message}'),
@@ -99,6 +106,7 @@ class _BulkImportDialogContentState
         ),
       );
     } catch (e) {
+      if (!_isMounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('İçe aktarma sırasında bir hata oluştu: $e'),
@@ -130,7 +138,7 @@ class _BulkImportDialogContentState
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Colors.amber.shade700.withOpacity(0.2),
+                    color: Colors.amber.shade700.withAlpha((255 * 0.2).round()),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(
@@ -190,7 +198,8 @@ class _BulkImportDialogContentState
                   suffixIcon: Container(
                     margin: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
-                      color: Colors.amber.shade700.withOpacity(0.2),
+                      color:
+                          Colors.amber.shade700.withAlpha((255 * 0.2).round()),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: IconButton(

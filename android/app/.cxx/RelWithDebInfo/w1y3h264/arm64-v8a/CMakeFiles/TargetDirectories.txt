@@ -1,0 +1,2 @@
+/Users/mucahitsen/islami_tabu/android/app/.cxx/RelWithDebInfo/w1y3h264/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/mucahitsen/islami_tabu/android/app/.cxx/RelWithDebInfo/w1y3h264/arm64-v8a/CMakeFiles/edit_cache.dir

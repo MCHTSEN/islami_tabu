@@ -3,7 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 // import 'dart:convert'; // No longer needed here
 import '../../domain/entities/word_entity.dart';
-import '../../presentation/viewmodels/word_viewmodel.dart';
+// Remove WordViewModel import
+// import '../../presentation/viewmodels/word_viewmodel.dart';
+// Import the new provider
+import '../../providers/in_memory_word_provider.dart';
 
 // Import new widgets
 import 'package:islami_tabu/widgets/dialogs/bulk_import_dialog.dart';
@@ -110,7 +113,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
         word: word,
         forbiddenWords: _forbiddenWords,
       );
-      ref.read(wordViewModelProvider.notifier).updateWord(updatedWord);
+      // Call updateWord on the inMemoryWordProvider notifier
+      ref.read(inMemoryWordProvider.notifier).updateWord(updatedWord);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: const Text('Kelime başarıyla güncellendi'),
@@ -121,7 +125,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
         ),
       );
     } else {
-      ref.read(wordViewModelProvider.notifier).addWord(word, _forbiddenWords);
+      // Call addWord on the inMemoryWordProvider notifier
+      ref.read(inMemoryWordProvider.notifier).addWord(word, _forbiddenWords);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: const Text('Yeni kelime başarıyla eklendi'),
@@ -148,7 +153,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
 
   // Method to handle confirmed deletion from WordListItem
   void _deleteWordConfirmed(String wordId) {
-    ref.read(wordViewModelProvider.notifier).deleteWord(wordId);
+    // Call deleteWord on the inMemoryWordProvider notifier
+    ref.read(inMemoryWordProvider.notifier).deleteWord(wordId);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: const Text('Kelime başarıyla silindi'),
@@ -168,7 +174,8 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final wordState = ref.watch(wordViewModelProvider);
+    // Watch the inMemoryWordProvider directly
+    final wordState = ref.watch(inMemoryWordProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -191,16 +198,19 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
           // Refresh Button
           IconButton(
             icon: const Icon(Icons.refresh_rounded),
-            tooltip: 'Yenile',
+            tooltip: 'Listeyi Sıfırla', // Updated tooltip
+            // Call refreshWords on the provider notifier (resets to hardcoded)
             onPressed: () =>
-                ref.read(wordViewModelProvider.notifier).loadWords(),
+                ref.read(inMemoryWordProvider.notifier).refreshWords(),
           ),
         ],
       ),
       body: BackgroundGradient(
         // Add background gradient
         child: RefreshIndicator(
-          onRefresh: () => ref.read(wordViewModelProvider.notifier).loadWords(),
+          // Refresh action now calls the provider's refresh method
+          onRefresh: () async =>
+              ref.read(inMemoryWordProvider.notifier).refreshWords(),
           color: Colors.amber.shade700,
           backgroundColor: Colors.blueGrey.shade800,
           child: ListView(
