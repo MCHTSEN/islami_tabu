@@ -1,4 +1,4 @@
-package com.example.islami_tabu
+package com.mucahitsen.islami_tabu
 
 import io.flutter.embedding.android.FlutterActivity
 
