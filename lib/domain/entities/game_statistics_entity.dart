@@ -10,6 +10,8 @@ class GameStatisticsEntity {
   final List<TeamEntity> teams;
   final String winningTeam;
   final int highestScore;
+  final List<String> correctWords;
+  final List<String> skippedWords;
 
   const GameStatisticsEntity({
     required this.id,
@@ -21,6 +23,8 @@ class GameStatisticsEntity {
     required this.teams,
     required this.winningTeam,
     required this.highestScore,
+    this.correctWords = const [],
+    this.skippedWords = const [],
   });
 
   // Convert an existing GameStateEntity to GameStatisticsEntity
@@ -35,14 +39,20 @@ class GameStatisticsEntity {
     int totalSkipped = 0;
     String winningTeam = "";
     int highestScore = 0;
+    List<String> allCorrectWords = [];
+    List<String> allSkippedWords = [];
 
     for (final team in teams) {
-      totalCorrect += team.correctWords.length;
-      totalSkipped += team.skippedWords.length;
+      totalCorrect += team.correctCount;
+      totalSkipped += team.passCount;
+      allCorrectWords.addAll(team.correctWords);
+      allSkippedWords.addAll(team.skippedWords);
 
       if (team.score > highestScore) {
         highestScore = team.score;
         winningTeam = team.name;
+      } else if (team.score == highestScore) {
+        winningTeam += ", ${team.name}";
       }
     }
 
@@ -54,8 +64,12 @@ class GameStatisticsEntity {
       totalCorrectWords: totalCorrect,
       totalSkippedWords: totalSkipped,
       teams: teams,
-      winningTeam: winningTeam,
+      winningTeam: winningTeam.isEmpty && teams.isNotEmpty
+          ? teams.first.name
+          : winningTeam,
       highestScore: highestScore,
+      correctWords: allCorrectWords,
+      skippedWords: allSkippedWords,
     );
   }
 
@@ -69,6 +83,8 @@ class GameStatisticsEntity {
     List<TeamEntity>? teams,
     String? winningTeam,
     int? highestScore,
+    List<String>? correctWords,
+    List<String>? skippedWords,
   }) {
     return GameStatisticsEntity(
       id: id ?? this.id,
@@ -80,6 +96,8 @@ class GameStatisticsEntity {
       teams: teams ?? this.teams,
       winningTeam: winningTeam ?? this.winningTeam,
       highestScore: highestScore ?? this.highestScore,
+      correctWords: correctWords ?? this.correctWords,
+      skippedWords: skippedWords ?? this.skippedWords,
     );
   }
 }

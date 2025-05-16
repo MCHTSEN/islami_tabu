@@ -43,3 +43,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Custom Ignores
+/lib/presentation/easter_egg/
+/lib/presentation/home/widgets/animated_title.dart
+.cursor/

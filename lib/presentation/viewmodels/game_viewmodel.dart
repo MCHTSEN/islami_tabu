@@ -1,24 +1,40 @@
 import 'dart:async';
+import 'dart:math'; // Import for Random
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
-import '../../core/di/service_locator.dart';
+// Remove GetIt locator import if ViewModel is created directly in provider
+// import '../../core/di/service_locator.dart';
 import '../../domain/entities/game_settings_entity.dart';
 import '../../domain/entities/game_state_entity.dart';
 import '../../domain/entities/game_statistics_entity.dart';
 import '../../domain/entities/word_entity.dart';
 import '../../domain/entities/team_entity.dart';
 import '../../domain/usecases/get_game_settings_usecase.dart';
-import '../../domain/usecases/get_random_words_usecase.dart';
+// Remove GetRandomWordsUseCase import
+// import '../../domain/usecases/get_random_words_usecase.dart';
 import '../../domain/usecases/save_game_statistics_usecase.dart';
+// Import the in-memory word provider
+import '../../providers/in_memory_word_provider.dart';
+// Import GetIt for accessing other use cases if needed
+import 'package:get_it/get_it.dart';
 
 final gameViewModelProvider =
     StateNotifierProvider<GameViewModel, AsyncValue<GameStateEntity>>((ref) {
-  return locator<GameViewModel>();
+  // Get dependencies from GetIt
+  final locator = GetIt.instance;
+  // Pass the ref to the constructor
+  return GameViewModel(
+    ref,
+    locator<GetGameSettingsUseCase>(),
+    locator<SaveGameStatisticsUseCase>(),
+  );
 });
 
 class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
+  final Ref _ref; // Store Ref to read other providers
   final GetGameSettingsUseCase _getGameSettingsUseCase;
-  final GetRandomWordsUseCase _getRandomWordsUseCase;
+  // Remove GetRandomWordsUseCase dependency
+  // final GetRandomWordsUseCase _getRandomWordsUseCase;
   final SaveGameStatisticsUseCase _saveGameStatisticsUseCase;
   final Uuid _uuid = const Uuid();
 
@@ -26,9 +42,10 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
   GameSettingsEntity? _settings;
 
   GameViewModel(
+    this._ref,
     this._getGameSettingsUseCase,
-    this._getRandomWordsUseCase,
     this._saveGameStatisticsUseCase,
+    // Remove GetRandomWordsUseCase from constructor
   ) : super(const AsyncValue.loading()) {
     initialize();
   }
@@ -40,31 +57,55 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       // Get game settings
       _settings = await _getGameSettingsUseCase();
 
-      // Get random words for the game
-      final words = await _getRandomWordsUseCase(
-        count: 50, // Increased from 20 to 50 to ensure more words are available
-        shuffle: true, // Always shuffle initially
+      // Get words from the in-memory provider
+      final wordListState = _ref.read(inMemoryWordProvider);
+
+      // Handle state from the word provider
+      await wordListState.when(
+        data: (words) async {
+          if (words.isEmpty) {
+            state = AsyncValue.error(
+              'Kelime bulunamadı. Lütfen kelime yönetimi sayfasından kelime ekleyin.',
+              StackTrace.current,
+            );
+            return; // Exit if no words
+          }
+
+          // Ensure words are shuffled (use a copy)
+          final shuffledWords = List<WordEntity>.from(words);
+          shuffledWords.shuffle();
+
+          // Initialize game state
+          final gameState = GameStateEntity.initial(
+            initialGameDuration: _settings!.gameDuration,
+            words: shuffledWords,
+          );
+          state = AsyncValue.data(gameState);
+        },
+        loading: () async {
+          // If words are still loading, wait briefly and retry or show loading
+          // For simplicity, we'll just wait a moment and re-read.
+          // A better approach might involve listening or using future providers.
+          await Future.delayed(const Duration(milliseconds: 100));
+          // Re-trigger initialize or handle loading state appropriately
+          // Re-reading directly might cause loops if provider is still loading.
+          // Let's assume for now the provider loads quickly or handle error.
+          // Re-read after delay:
+          final freshWordState = _ref.read(inMemoryWordProvider);
+          if (freshWordState is AsyncData<List<WordEntity>>) {
+            await initialize(); // Re-run initialize with loaded data
+          } else {
+            state =
+                AsyncValue.error('Kelimeler yüklenemedi.', StackTrace.current);
+          }
+        },
+        error: (error, stackTrace) {
+          state = AsyncValue.error(
+            'Kelimeler yüklenirken hata oluştu: $error',
+            stackTrace,
+          );
+        },
       );
-
-      if (words.isEmpty) {
-        state = AsyncValue.error(
-          'Kelime bulunamadı. Lütfen kelime yönetimi sayfasından kelime ekleyin.',
-          StackTrace.current,
-        );
-        return;
-      }
-
-      // Ensure words are shuffled
-      final shuffledWords = List<WordEntity>.from(words);
-      shuffledWords.shuffle();
-
-      // Initialize game state
-      final gameState = GameStateEntity.initial(
-        initialGameDuration: _settings!.gameDuration,
-        words: shuffledWords,
-      );
-
-      state = AsyncValue.data(gameState);
     } catch (e, stackTrace) {
       state = AsyncValue.error(e, stackTrace);
     }
@@ -75,17 +116,26 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       if (gameState.status != GameStatus.setup) {
         return;
       }
-
+      // Reset remaining time based on initial settings when setting up teams
       final newState = gameState.copyWith(
         status: GameStatus.ready,
         teams: teams,
+        remainingTime: _settings?.gameDuration ?? 60, // Use loaded settings
       );
-
       state = AsyncValue.data(newState);
     });
   }
 
-  void startGame() {
+  Future<void> startGame() async {
+    // Fetch the latest settings first
+    try {
+      _settings = await _getGameSettingsUseCase();
+    } catch (e) {
+      // Handle error fetching settings if necessary, maybe use defaults
+      print('Error fetching settings in startGame: $e');
+      // Optionally set state to error or use default settings
+    }
+
     state.whenData((gameState) {
       if (gameState.status != GameStatus.ready &&
           gameState.status != GameStatus.paused) {
@@ -95,6 +145,11 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       // Start or resume the game
       final newState = gameState.copyWith(
         status: GameStatus.playing,
+        // Ensure remainingTime is correctly set based on LATEST settings
+        // If resuming from pause, keep current time, else use full duration
+        remainingTime: gameState.status == GameStatus.paused
+            ? gameState.remainingTime
+            : _settings?.gameDuration ?? 60,
       );
 
       state = AsyncValue.data(newState);
@@ -129,42 +184,60 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         return;
       }
 
-      // Get current word and team
       final currentWord = gameState.currentWord!;
       final currentTeam = gameState.currentTeam;
 
-      // Update team's score and correct words
       final updatedTeams = List<TeamEntity>.from(gameState.teams);
       updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
         score: currentTeam.score + 1,
         correctWords: [...currentTeam.correctWords, currentWord.word],
       );
 
-      // Get remaining words
-      final remainingWords = List<WordEntity>.from(gameState.wordsQueue);
+      List<WordEntity> remainingWords =
+          List<WordEntity>.from(gameState.wordsQueue);
+      List<WordEntity> completedWords =
+          List<WordEntity>.from(gameState.completedWords);
+      List<WordEntity> skippedWords =
+          List<WordEntity>.from(gameState.skippedWords);
+
       if (remainingWords.isNotEmpty) {
         remainingWords.removeAt(0);
       }
+      completedWords.add(currentWord);
 
-      // Add current word to completed words
-      final completedWords = List<WordEntity>.from(gameState.completedWords)
-        ..add(currentWord);
-
-      // Check if we need more words
-      if (remainingWords.isEmpty && completedWords.isNotEmpty) {
-        // If we run out of words in the queue but have completed words,
-        // shuffle completed words and add them back to the queue
-        final recycledWords = List<WordEntity>.from(completedWords);
-        recycledWords.shuffle();
-        remainingWords.addAll(recycledWords);
-        completedWords.clear();
+      // --- Refill logic updated ---
+      if (remainingWords.isEmpty) {
+        print("Word queue empty in correctWord. Refilling...");
+        // Fetch the LATEST full list from the provider
+        final fullWordListState = _ref.read(inMemoryWordProvider);
+        fullWordListState.whenData((fullList) {
+          if (fullList.isNotEmpty) {
+            final Set<String> usedWordIds = {
+              ...completedWords.map((w) => w.id),
+              ...skippedWords.map((w) => w.id)
+            };
+            // Filter out words already used in this specific game round if desired,
+            // or just shuffle the full list again.
+            // Shuffling the full list ensures newly added words are included.
+            final availableWords = List<WordEntity>.from(fullList);
+            availableWords.shuffle(Random()); // Ensure good shuffling
+            remainingWords.addAll(availableWords);
+            print("Refilled queue with ${availableWords.length} words.");
+          } else {
+            print("Cannot refill queue: Full word list is empty.");
+            // Handle case where even the full list is empty (maybe show error)
+          }
+        });
+        // If the provider was loading/error, remainingWords might still be empty.
+        // The game might get stuck here if refilling fails.
       }
+      // --- End of updated refill logic ---
 
-      // Create new state
       final newState = gameState.copyWith(
         wordsQueue: remainingWords,
         currentWord: remainingWords.isNotEmpty ? remainingWords.first : null,
-        completedWords: completedWords,
+        completedWords:
+            completedWords, // Still track completed for stats if needed
         teams: updatedTeams,
       );
 
@@ -179,63 +252,75 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         return;
       }
 
-      // Get remaining passes
       final maxPasses = _settings?.maxPasses ?? 3;
       if (gameState.passesUsed >= maxPasses) {
-        return; // No more passes available
+        return;
       }
 
-      // Get current word and team
       final currentWord = gameState.currentWord!;
       final currentTeam = gameState.currentTeam;
 
-      // Update team's skipped words
       final updatedTeams = List<TeamEntity>.from(gameState.teams);
       updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
         skippedWords: [...currentTeam.skippedWords, currentWord.word],
       );
 
-      // Get remaining words
-      final remainingWords = List<WordEntity>.from(gameState.wordsQueue);
+      List<WordEntity> remainingWords =
+          List<WordEntity>.from(gameState.wordsQueue);
+      List<WordEntity> completedWords =
+          List<WordEntity>.from(gameState.completedWords);
+      List<WordEntity> skippedWords =
+          List<WordEntity>.from(gameState.skippedWords);
+
       if (remainingWords.isNotEmpty) {
         remainingWords.removeAt(0);
       }
+      skippedWords.add(currentWord);
 
-      // Add current word to skipped words
-      final skippedWords = List<WordEntity>.from(gameState.skippedWords)
-        ..add(currentWord);
-
-      // Check if we need more words
-      if (remainingWords.isEmpty &&
-          (gameState.completedWords.isNotEmpty || skippedWords.isNotEmpty)) {
-        // If we run out of words in the queue but have other words,
-        // shuffle and add them back to the queue
-        final recycledWords = <WordEntity>[];
-        recycledWords.addAll(gameState.completedWords);
-        recycledWords.addAll(skippedWords);
-        recycledWords.shuffle();
-        remainingWords.addAll(recycledWords);
-        skippedWords.clear();
+      // --- Refill logic updated ---
+      if (remainingWords.isEmpty) {
+        print("Word queue empty in skipWord. Refilling...");
+        // Fetch the LATEST full list from the provider
+        final fullWordListState = _ref.read(inMemoryWordProvider);
+        fullWordListState.whenData((fullList) {
+          if (fullList.isNotEmpty) {
+            final Set<String> usedWordIds = {
+              ...completedWords.map((w) => w.id),
+              ...skippedWords.map((w) => w.id)
+            };
+            final availableWords = List<WordEntity>.from(fullList);
+            availableWords.shuffle(Random()); // Ensure good shuffling
+            remainingWords.addAll(availableWords);
+            print("Refilled queue with ${availableWords.length} words.");
+          } else {
+            print("Cannot refill queue: Full word list is empty.");
+          }
+        });
       }
+      // --- End of updated refill logic ---
 
-      // Update passes used
       final newPassesUsed = gameState.passesUsed + 1;
-
-      // Apply time penalty if applicable
       final passPenalty = _settings?.passPenalty ?? 5;
       final newRemainingTime = gameState.remainingTime - passPenalty;
 
-      // Create new state
       final newState = gameState.copyWith(
-        remainingTime: newRemainingTime,
+        remainingTime: newRemainingTime > 0
+            ? newRemainingTime
+            : 0, // Prevent negative time
         passesUsed: newPassesUsed,
         wordsQueue: remainingWords,
         currentWord: remainingWords.isNotEmpty ? remainingWords.first : null,
-        skippedWords: skippedWords,
+        skippedWords: skippedWords, // Still track skipped for stats if needed
         teams: updatedTeams,
       );
 
-      state = AsyncValue.data(newState);
+      // Handle timer update if penalty applied and time runs out
+      if (newRemainingTime <= 0) {
+        _stopTimer();
+        moveToNextTeam(); // Move to next team immediately if time is up due to penalty
+      } else {
+        state = AsyncValue.data(newState);
+      }
     });
   }
 
@@ -246,102 +331,92 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         return;
       }
 
-      // Get current word and team
-      final currentWord = gameState.currentWord!;
       final currentTeam = gameState.currentTeam;
+      final passPenalty =
+          _settings?.passPenalty ?? 5; // Use pass penalty for tabu as well?
 
-      // Update team's score by decreasing 2 points
+      // Update team score (decrease by 2)
       final updatedTeams = List<TeamEntity>.from(gameState.teams);
       updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
-        score: currentTeam.score - 2,
+        score: currentTeam.score - 2, // Penalty of 2 points
+        // Optionally track tabu words if needed for stats
+        // tabuWords: [...currentTeam.tabuWords, currentWord.word],
       );
 
-      // Get remaining words
-      final remainingWords = List<WordEntity>.from(gameState.wordsQueue);
+      // Apply time penalty
+      final newRemainingTime = gameState.remainingTime - passPenalty;
+
+      // Move to the next word immediately (similar to skip, but with score penalty)
+      List<WordEntity> remainingWords =
+          List<WordEntity>.from(gameState.wordsQueue);
+      List<WordEntity> completedWords =
+          List<WordEntity>.from(gameState.completedWords);
+      List<WordEntity> skippedWords =
+          List<WordEntity>.from(gameState.skippedWords);
+
       if (remainingWords.isNotEmpty) {
         remainingWords.removeAt(0);
       }
+      // Add the tabu word to skipped or a new list? Let's add to skipped for now.
+      skippedWords.add(gameState.currentWord!);
 
-      // Add current word to skipped words
-      final skippedWords = List<WordEntity>.from(gameState.skippedWords)
-        ..add(currentWord);
-
-      // Check if we need more words
-      if (remainingWords.isEmpty &&
-          (gameState.completedWords.isNotEmpty || skippedWords.isNotEmpty)) {
-        // If we run out of words in the queue but have other words,
-        // shuffle and add them back to the queue
-        final recycledWords = <WordEntity>[];
-        recycledWords.addAll(gameState.completedWords);
-        recycledWords.addAll(skippedWords);
-        recycledWords.shuffle();
-        remainingWords.addAll(recycledWords);
-        skippedWords.clear();
+      // Refill logic if needed
+      if (remainingWords.isEmpty) {
+        print("Word queue empty in tabuWord. Refilling...");
+        final fullWordListState = _ref.read(inMemoryWordProvider);
+        fullWordListState.whenData((fullList) {
+          if (fullList.isNotEmpty) {
+            final availableWords = List<WordEntity>.from(fullList);
+            availableWords.shuffle(Random());
+            remainingWords.addAll(availableWords);
+            print("Refilled queue with ${availableWords.length} words.");
+          } else {
+            print("Cannot refill queue: Full word list is empty.");
+          }
+        });
       }
 
-      // Create new state
       final newState = gameState.copyWith(
-        teams: updatedTeams,
+        remainingTime: newRemainingTime > 0 ? newRemainingTime : 0,
         wordsQueue: remainingWords,
         currentWord: remainingWords.isNotEmpty ? remainingWords.first : null,
         skippedWords: skippedWords,
+        teams: updatedTeams,
       );
 
-      state = AsyncValue.data(newState);
+      // Handle timer update if penalty applied and time runs out
+      if (newRemainingTime <= 0) {
+        _stopTimer();
+        moveToNextTeam();
+      } else {
+        state = AsyncValue.data(newState);
+      }
     });
   }
 
-  void moveToNextTeam() {
+  Future<void> moveToNextTeam() async {
+    _stopTimer();
+
+    // Fetch latest settings before moving to next team
+    try {
+      _settings = await _getGameSettingsUseCase();
+    } catch (e) {
+      print('Error fetching settings in moveToNextTeam: $e');
+      // Handle error if needed
+    }
+
     state.whenData((gameState) {
-      final nextTeamIndex = gameState.nextTeamIndex;
-      final isLastTeam = nextTeamIndex == 0;
-
-      // Check if this is the last team and show score table
-      if (isLastTeam) {
-        // Save statistics but don't end the game
-        _saveStatistics(gameState);
-
-        // Set the game to a temporary finished state to show scores
-        final scoreState = gameState.copyWith(
-          status: GameStatus.finished,
-        );
-
-        state = AsyncValue.data(scoreState);
-        _stopTimer();
-
-        // Return early to prevent further processing
-        return;
-      }
-
-      // Always reset and shuffle the word queue for the next team
-      List<WordEntity> newWordsQueue = [];
-
-      // Add completed and skipped words back to the queue
-      newWordsQueue.addAll(gameState.completedWords);
-      newWordsQueue.addAll(gameState.skippedWords);
-
-      // Add remaining words from the current queue
-      if (gameState.currentWord != null) {
-        newWordsQueue.add(gameState.currentWord!);
-      }
-      newWordsQueue.addAll(gameState.wordsQueue);
-
-      // Always shuffle the queue for better randomization
-      newWordsQueue.shuffle();
+      final nextTeamIndex =
+          (gameState.currentTeamIndex + 1) % gameState.teams.length;
 
       final newState = gameState.copyWith(
-        status: GameStatus.ready, // Always set to ready, never to finished
-        remainingTime: _settings!.gameDuration,
+        status: GameStatus.ready, // Set to ready for the next team
         currentTeamIndex: nextTeamIndex,
-        passesUsed: 0, // Reset passes for next team
-        wordsQueue: newWordsQueue,
-        currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
-        completedWords: [], // Clear completed words for next team
-        skippedWords: [], // Clear skipped words for next team
+        passesUsed: 0, // Reset passes for the new team
+        remainingTime: _settings?.gameDuration ??
+            60, // Reset time based on LATEST settings
       );
-
       state = AsyncValue.data(newState);
-      _stopTimer();
     });
   }
 
@@ -367,63 +442,45 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
   Future<void> _saveStatistics(GameStateEntity gameState) async {
     try {
       final statistics = GameStatisticsEntity.fromGameState(
-        id: '',
+        id: _uuid.v4(),
         timestamp: DateTime.now(),
-        gameDuration: _settings!.gameDuration,
-        teams: gameState.teams,
+        gameDuration: _settings?.gameDuration ?? 60,
+        teams: List<TeamEntity>.from(gameState.teams),
       );
-
       await _saveGameStatisticsUseCase(statistics);
-    } catch (e) {
-      // Silently handle error, don't interrupt game flow
+    } catch (e, stackTrace) {
       print('Error saving game statistics: $e');
+      // Optionally inform the user or log the error
     }
   }
 
-  void restartGame() async {
-    try {
-      _stopTimer();
-      state = const AsyncValue.loading();
-
-      // Re-initialize the game with new words and reset teams
-      await initialize();
-    } catch (e, stackTrace) {
-      state = AsyncValue.error(e, stackTrace);
-    }
+  Future<void> restartGame() async {
+    _stopTimer();
+    await initialize(); // Re-initialize everything, including fetching settings
   }
 
   void _startTimer() {
-    _stopTimer(); // Stop any existing timer
-
+    _gameTimer?.cancel();
     _gameTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
       state.whenData((gameState) {
         if (gameState.status != GameStatus.playing) {
-          _stopTimer();
+          timer.cancel();
           return;
         }
 
-        // Decrement time
-        final newRemainingTime = gameState.remainingTime - 1;
-
-        // Check if time is up
-        if (newRemainingTime <= 0) {
-          moveToNextTeam();
-          return;
+        final newTime = gameState.remainingTime - 1;
+        if (newTime <= 0) {
+          timer.cancel();
+          moveToNextTeam(); // Automatically move to the next team when time runs out
+        } else {
+          state = AsyncValue.data(gameState.copyWith(remainingTime: newTime));
         }
-
-        // Update state with new time
-        final newState = gameState.copyWith(
-          remainingTime: newRemainingTime,
-        );
-
-        state = AsyncValue.data(newState);
       });
     });
   }
 
   void _stopTimer() {
     _gameTimer?.cancel();
-    _gameTimer = null;
   }
 
   @override
@@ -432,42 +489,32 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
     super.dispose();
   }
 
-  // Add a new method to continue the game after showing scores
-  void continueGameAfterScores() {
+  // Make continueGameAfterScores async
+  Future<void> continueGameAfterScores() async {
+    _stopTimer(); // Ensure timer is stopped
+
+    // Fetch latest settings
+    try {
+      _settings = await _getGameSettingsUseCase();
+    } catch (e) {
+      print('Error fetching settings in continueGameAfterScores: $e');
+    }
+
     state.whenData((gameState) {
-      if (gameState.status != GameStatus.finished) {
-        return;
-      }
+      final nextTeamIndex =
+          (gameState.currentTeamIndex + 1) % gameState.teams.length;
 
-      // Reset to the first team
-      const nextTeamIndex = 0;
-
-      // Prepare a fresh word queue
-      List<WordEntity> newWordsQueue = [];
-
-      // Add all words back to the queue
-      newWordsQueue.addAll(gameState.completedWords);
-      newWordsQueue.addAll(gameState.skippedWords);
-
-      if (gameState.currentWord != null) {
-        newWordsQueue.add(gameState.currentWord!);
-      }
-      newWordsQueue.addAll(gameState.wordsQueue);
-
-      // Shuffle all words
-      newWordsQueue.shuffle();
-
+      // Prepare for the next round
       final newState = gameState.copyWith(
         status: GameStatus.ready,
-        remainingTime: _settings!.gameDuration,
         currentTeamIndex: nextTeamIndex,
         passesUsed: 0,
-        wordsQueue: newWordsQueue,
-        currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
-        completedWords: [],
-        skippedWords: [],
+        remainingTime: _settings?.gameDuration ?? 60, // Reset time
+        // Optionally shuffle words again if setting is enabled
+        wordsQueue: (_settings?.shuffleWords ?? true)
+            ? (List<WordEntity>.from(gameState.wordsQueue)..shuffle())
+            : gameState.wordsQueue,
       );
-
       state = AsyncValue.data(newState);
     });
   }
