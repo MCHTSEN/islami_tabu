@@ -47,3 +47,4 @@ app.*.map.json
 # Custom Ignores
 /lib/presentation/easter_egg/
 /lib/presentation/home/widgets/animated_title.dart
+.cursor/
