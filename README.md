@@ -2,6 +2,24 @@
 
 A modern Flutter-based word guessing game with Islamic themes, implementing Clean Architecture principles and state-of-the-art state management.
 
+## 📷 Screen Shots
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/514d9206-e6a9-4dc1-9db5-7c023188571f" width="30%" />
+  <img src="https://github.com/user-attachments/assets/7a03f7c3-ff88-444f-9fce-4400f58396bf" width="30%" />
+  <img src="https://github.com/user-attachments/assets/0c10fb0d-87c3-4fb2-9094-c644bb871ca9" width="30%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a2d58333-d092-42f0-a360-0aaf79b4c7c5" width="30%" />
+  <img src="https://github.com/user-attachments/assets/37ed30e9-d69a-436c-8860-7a80c8a5ff79" width="30%" />
+  <img src="https://github.com/user-attachments/assets/a0354237-ca0b-4c1f-b170-bf5214c6b82a" width="30%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/58958331-7795-48ee-bb4a-f4ad3194a8ce" width="30%" />
+  <img src="https://github.com/user-attachments/assets/a1f9be7a-e13f-4374-8d00-0ff0683d457d" width="30%" />
+</p>
+
+
 ## 🌟 Features
 
 ### Game Mechanics
