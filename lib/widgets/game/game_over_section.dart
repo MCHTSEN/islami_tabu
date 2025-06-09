@@ -74,7 +74,7 @@ class GameOverSection extends ConsumerWidget {
                   // Exit Button
                   ElevatedButton.icon(
                     onPressed: () {
-                      ref.read(gameViewModelProvider.notifier).restartGame();
+                      ref.read(gameViewModelProvider.notifier).exitGame();
                       // Optionally navigate back or handle exit differently
                       Navigator.of(context).popUntil((route) => route.isFirst);
                     },
