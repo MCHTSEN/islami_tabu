@@ -45,7 +45,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
   Future<bool> _onWillPop() async {
     final shouldPop = await showExitConfirmationDialog(context);
     if (shouldPop) {
-      ref.read(gameViewModelProvider.notifier).restartGame();
+      ref.read(gameViewModelProvider.notifier).exitGame();
     }
     return shouldPop;
   }
@@ -59,65 +59,66 @@ class _GameScreenState extends ConsumerState<GameScreen>
       onWillPop: _onWillPop,
       child: Scaffold(
         appBar: AppBar(
-          title: gameState.whenData((state) {
-                if (state.status == GameStatus.playing ||
-                    state.status == GameStatus.paused) {
-                  return Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          state.currentTeam.name,
-                          style: const TextStyle(
+          title: gameState.when(
+            data: (state) {
+              if (state.status != GameStatus.setup) {
+                return Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      state.currentTeam.name,
+                      style: const TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(width: 10),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 5),
+                      decoration: BoxDecoration(
+                        color: Colors.amber.shade700,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(
+                            Icons.star_rounded,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            size: 18,
                           ),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 5),
-                        decoration: BoxDecoration(
-                          color: Colors.amber.shade700,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Icon(
-                              Icons.star_rounded,
+                          const SizedBox(width: 5),
+                          Text(
+                            '${state.currentTeam.score}',
+                            style: const TextStyle(
                               color: Colors.white,
-                              size: 18,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
                             ),
-                            const SizedBox(width: 5),
-                            Text(
-                              '${state.currentTeam.score}',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  );
-                } else {
-                  return const Text(
-                    'İslami Tabu Oyunu',
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  );
-                }
-              }).value ??
-              const Text(
-                'İslami Tabu Oyunu',
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ),
+                    ),
+                  ],
+                );
+              } else {
+                return const Text(
+                  'İslami Tabu Oyunu',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                );
+              }
+            },
+            loading: () => const Text(
+              'İslami Tabu Oyunu',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+            error: (_, __) => const Text(
+              'İslami Tabu Oyunu',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
           backgroundColor: Colors.teal.shade900,
           elevation: 2,
           iconTheme: const IconThemeData(color: Colors.white),
@@ -127,7 +128,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
             onPressed: () async {
               final shouldExit = await showExitConfirmationDialog(context);
               if (shouldExit) {
-                ref.read(gameViewModelProvider.notifier).restartGame();
+                ref.read(gameViewModelProvider.notifier).exitGame();
                 Navigator.of(context).pop();
               }
             },
