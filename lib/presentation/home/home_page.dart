@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:islami_tabu/core/extension/ui_helper_extensions.dart';
-
 import 'package:islami_tabu/presentation/game_screen/game_screen.dart';
-import 'package:islami_tabu/presentation/settings/settings_page.dart';
 import 'package:islami_tabu/presentation/settings/settings_screen.dart';
 import 'package:islami_tabu/presentation/statistics/statistics_page.dart';
 import 'package:islami_tabu/presentation/word_managment/word_managment_page.dart';
-import 'package:islami_tabu/presentation/home/widgets/animated_title.dart';
-
 import 'package:islami_tabu/widgets/buttons/orb_button.dart';
 import 'package:islami_tabu/widgets/decorations/home_background.dart';
 
@@ -56,7 +51,6 @@ class _HomePageState extends ConsumerState<HomePage>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // Title at the top
-                const AnimatedTitle().withPadding(top: screenHeight * 0.09),
                 Expanded(
                   child: Center(
                     child: Column(

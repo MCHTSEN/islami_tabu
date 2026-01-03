@@ -2,7 +2,6 @@ import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import '../../data/models/game_settings_model.dart';
 import '../../data/models/game_statistics_model.dart';
-import '../../data/models/team_model.dart';
 import '../../data/repositories/game_settings_repository_impl.dart';
 import '../../data/repositories/game_statistics_repository_impl.dart';
 import '../../domain/repositories/game_settings_repository.dart';
@@ -12,7 +11,6 @@ import '../../domain/usecases/get_game_settings_usecase.dart';
 import '../../domain/usecases/get_game_statistics_usecase.dart';
 import '../../domain/usecases/save_game_settings_usecase.dart';
 import '../../domain/usecases/save_game_statistics_usecase.dart';
-import '../../presentation/viewmodels/game_viewmodel.dart';
 import '../../presentation/viewmodels/settings_viewmodel.dart';
 import '../../presentation/viewmodels/statistics_viewmodel.dart';
 
