@@ -1401,12 +1401,12 @@ final List<WordEntity> initialHardcodedWords = [
   ),
   WordEntity(
     id: '286',
-    word: 'Ric'at',
+    word: 'Ricat',
     forbiddenWords: ['Geri', 'Dönmek', 'Boşanma', 'Evlilik', 'İddet'],
   ),
   WordEntity(
     id: '287',
-    word: 'Hul'',
+    word: 'Hulu',
     forbiddenWords: ['Boşanma', 'Kadın', 'İstemek', 'Mehr', 'İade'],
   ),
   WordEntity(
