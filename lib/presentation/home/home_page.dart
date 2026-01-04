@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:islami_tabu/presentation/game_screen/game_screen.dart';
@@ -19,14 +21,38 @@ class _HomePageState extends ConsumerState<HomePage>
   late AnimationController _controller;
   late Animation<double> _rippleAnimation;
 
+  // Entrance animations
+  late Animation<double> _fadeAnimation;
+  late Animation<Offset> _slideAnimation;
+
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 10),
+      duration: const Duration(seconds: 15),
       vsync: this,
     )..repeat();
-    _rippleAnimation = Tween<double>(begin: 0, end: 1).animate(_controller);
+
+    _rippleAnimation = Tween<double>(begin: 0, end: 1).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.linear),
+    );
+
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.0, 0.1, curve: Curves.easeIn),
+      ),
+    );
+
+    _slideAnimation = Tween<Offset>(
+      begin: const Offset(0, 0.1),
+      end: Offset.zero,
+    ).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.0, 0.1, curve: Curves.easeOutCubic),
+      ),
+    );
   }
 
   @override
@@ -37,92 +63,102 @@ class _HomePageState extends ConsumerState<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    // Get screen dimensions for responsive design
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       body: HomeBackground(
         rippleAnimation: _rippleAnimation,
-        child: SingleChildScrollView(
-          child: SizedBox(
-            height: screenHeight, // Ensure full height for scrolling
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // Title at the top
-                Expanded(
-                  child: Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
+        child: FadeTransition(
+          opacity: _fadeAnimation,
+          child: SlideTransition(
+            position: _slideAnimation,
+            child: SingleChildScrollView(
+              child: SizedBox(
+                height: screenHeight,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _buildFloatingButton(
+                      child: OrbButton(
+                        text: 'Oyunu Başlat',
+                        onTap: () => _navigateTo(context, const GameScreen()),
+                        size: screenWidth * 0.35,
+                        controller: _controller,
+                      ),
+                      offset: 0.0,
+                    ),
+                    SizedBox(height: screenHeight * 0.04),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        OrbButton(
-                          text: 'Oyunu Başlat',
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const GameScreen()),
-                            );
-                          },
-                          size: screenWidth * 0.3, // Responsive button size
-                          controller: _controller,
+                        _buildFloatingButton(
+                          child: OrbButton(
+                            text: 'Ayarlar',
+                            onTap: () =>
+                                _navigateTo(context, const SettingsScreen()),
+                            size: screenWidth * 0.28,
+                            controller: _controller,
+                          ),
+                          offset: 0.5,
                         ),
-                        SizedBox(height: screenHeight * 0.05),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            OrbButton(
-                              text: 'Ayarlar',
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SettingsScreen()),
-                                );
-                              },
-                              size: screenWidth * 0.3,
-                              controller: _controller,
-                            ),
-                            SizedBox(width: screenWidth * 0.1),
-                            OrbButton(
-                              text: 'Kelime Yönetimi',
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const WordManagementScreen()),
-                                );
-                              },
-                              size: screenWidth * 0.3,
-                              controller: _controller,
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: screenHeight * 0.05),
-                        OrbButton(
-                          text: 'İstatistikler',
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const StatisticsPage()),
-                            );
-                          },
-                          size: screenWidth * 0.3,
-                          controller: _controller,
+                        SizedBox(width: screenWidth * 0.08),
+                        _buildFloatingButton(
+                          child: OrbButton(
+                            text: 'Kelimeler',
+                            onTap: () => _navigateTo(
+                                context, const WordManagementScreen()),
+                            size: screenWidth * 0.28,
+                            controller: _controller,
+                          ),
+                          offset: 1.0,
                         ),
                       ],
                     ),
-                  ),
+                    SizedBox(height: screenHeight * 0.04),
+                    _buildFloatingButton(
+                      child: OrbButton(
+                        text: 'İstatistikler',
+                        onTap: () =>
+                            _navigateTo(context, const StatisticsPage()),
+                        size: screenWidth * 0.32,
+                        controller: _controller,
+                      ),
+                      offset: 1.5,
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
         ),
       ),
+    );
+  }
+
+  void _navigateTo(BuildContext context, Widget page) {
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => page,
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+      ),
+    );
+  }
+
+  Widget _buildFloatingButton({required Widget child, required double offset}) {
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, _) {
+        final double wave =
+            math.sin((_controller.value * 2 * math.pi * 2) + offset);
+        return Transform.translate(
+          offset: Offset(0, wave * 10),
+          child: child,
+        );
+      },
     );
   }
 }

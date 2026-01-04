@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../domain/entities/game_state_entity.dart';
 
 class GameStatusHeader extends StatelessWidget {
@@ -34,56 +35,55 @@ class GameStatusHeader extends StatelessWidget {
         break;
     }
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
       children: [
-        // Game Status
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-          decoration: BoxDecoration(
-            color: Colors.blueGrey.shade800.withOpacity(0.7),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: statusColor.withOpacity(0.7),
-              width: 2,
-            ),
-          ),
-          child: Text(
-            statusText,
-            style: TextStyle(
-              color: statusColor,
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            ),
+        Text(
+          state.currentTeam.name.toUpperCase(),
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 2,
+            shadows: [
+              Shadow(
+                  color: Colors.black26, blurRadius: 10, offset: Offset(0, 4)),
+            ],
           ),
         ),
-
-        // Timer
+        const SizedBox(height: 8),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
           decoration: BoxDecoration(
-            color: Colors.blueGrey.shade800.withOpacity(0.7),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: Colors.amber.withOpacity(0.7),
-              width: 2,
-            ),
+            color: statusColor.withOpacity(0.1),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: statusColor.withOpacity(0.2)),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(
-                Icons.timer,
-                color: Colors.amber,
-                size: 20,
+              Container(
+                width: 6,
+                height: 6,
+                decoration: BoxDecoration(
+                  color: statusColor,
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                        color: statusColor, blurRadius: 8, spreadRadius: 1),
+                  ],
+                ),
               ),
               const SizedBox(width: 8),
               Text(
-                '${state.remainingTime}',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                statusText
+                    .split(' ')
+                    .last
+                    .toUpperCase(), // e.g., "OYNANIYOR" or "HAZIR"
+                style: TextStyle(
+                  color: statusColor,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 10,
+                  letterSpacing: 2,
                 ),
               ),
             ],

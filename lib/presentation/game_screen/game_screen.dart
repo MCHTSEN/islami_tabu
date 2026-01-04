@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:islami_tabu/core/helper/gap.dart';
+import 'package:islami_tabu/widgets/decorations/premium_game_background.dart';
+import 'package:islami_tabu/widgets/dialogs/exit_confirmation_dialog.dart';
+import 'package:islami_tabu/widgets/game/game_controls.dart';
+import 'package:islami_tabu/widgets/game/game_over_section.dart';
+import 'package:islami_tabu/widgets/game/game_play_section.dart';
+import 'package:islami_tabu/widgets/game/game_ready_section.dart';
+
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
-import 'package:islami_tabu/widgets/dialogs/exit_confirmation_dialog.dart';
-import 'package:islami_tabu/widgets/game/game_status_header.dart';
-import 'package:islami_tabu/widgets/game/game_play_section.dart';
-import 'package:islami_tabu/widgets/game/game_over_section.dart';
-import 'package:islami_tabu/widgets/game/game_controls.dart';
-import 'package:islami_tabu/widgets/decorations/background_gradient.dart';
 import 'team_setup_screen.dart';
 
 class GameScreen extends ConsumerStatefulWidget {
@@ -42,105 +42,28 @@ class _GameScreenState extends ConsumerState<GameScreen>
     super.dispose();
   }
 
-  Future<bool> _onWillPop() async {
-    final shouldPop = await showExitConfirmationDialog(context);
-    if (shouldPop) {
-      ref.read(gameViewModelProvider.notifier).exitGame();
-    }
-    return shouldPop;
-  }
-
   @override
   Widget build(BuildContext context) {
     final gameState = ref.watch(gameViewModelProvider);
     final screenHeight = MediaQuery.of(context).size.height;
 
-    return WillPopScope(
-      onWillPop: _onWillPop,
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (didPop) async {
+        if (didPop) return;
+        final shouldPop = await showExitConfirmationDialog(context);
+        if (shouldPop) {
+          ref.read(gameViewModelProvider.notifier).exitGame();
+          if (context.mounted) {
+            Navigator.of(context).pop();
+          }
+        }
+      },
       child: Scaffold(
-        appBar: AppBar(
-          title: gameState.when(
-            data: (state) {
-              if (state.status != GameStatus.setup) {
-                return Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      state.currentTeam.name,
-                      style: const TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(width: 10),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 5),
-                      decoration: BoxDecoration(
-                        color: Colors.amber.shade700,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(
-                            Icons.star_rounded,
-                            color: Colors.white,
-                            size: 18,
-                          ),
-                          const SizedBox(width: 5),
-                          Text(
-                            '${state.currentTeam.score}',
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                );
-              } else {
-                return const Text(
-                  'İslami Tabu Oyunu',
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold),
-                );
-              }
-            },
-            loading: () => const Text(
-              'İslami Tabu Oyunu',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-            error: (_, __) => const Text(
-              'İslami Tabu Oyunu',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
-          ),
-          backgroundColor: Colors.teal.shade900,
-          elevation: 2,
-          iconTheme: const IconThemeData(color: Colors.white),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_ios_new_rounded),
-            tooltip: 'Geri Dön',
-            onPressed: () async {
-              final shouldExit = await showExitConfirmationDialog(context);
-              if (shouldExit) {
-                ref.read(gameViewModelProvider.notifier).exitGame();
-                Navigator.of(context).pop();
-              }
-            },
-          ),
-        ),
-        body: BackgroundGradient(
+        backgroundColor: Colors.transparent,
+        body: PremiumGameBackground(
           child: gameState.when(
             data: (state) {
-              if (state.status == GameStatus.setup) {
-                return const TeamSetupScreen();
-              }
-
               if (state.status == GameStatus.playing) {
                 _animationController.repeat(reverse: true);
               } else {
@@ -154,30 +77,63 @@ class _GameScreenState extends ConsumerState<GameScreen>
               }
 
               return SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    children: [
-                      GameStatusHeader(state: state),
-                      Gap.normal,
-                      Expanded(
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 12.0, horizontal: 8.0),
-                          decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: state.status == GameStatus.finished
-                              ? GameOverSection(state: state)
-                              : GamePlaySection(
-                                  state: state, animation: _animation),
-                        ),
-                      ),
-                      Gap.normal,
-                      GameControls(state: state),
-                    ],
-                  ),
+                child: Column(
+                  children: [
+                    _buildCustomAppBar(context, state),
+                    Expanded(
+                      child: state.status == GameStatus.setup
+                          ? const TeamSetupScreen()
+                          : Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20.0),
+                              child: Column(
+                                children: [
+                                  const SizedBox(height: 5),
+                                  Expanded(
+                                    child: AnimatedSwitcher(
+                                      duration:
+                                          const Duration(milliseconds: 400),
+                                      transitionBuilder: (Widget child,
+                                          Animation<double> animation) {
+                                        return FadeTransition(
+                                          opacity: animation,
+                                          child: ScaleTransition(
+                                            scale: Tween<double>(
+                                                    begin: 0.95, end: 1.0)
+                                                .animate(animation),
+                                            child: child,
+                                          ),
+                                        );
+                                      },
+                                      child: () {
+                                        if (state.status ==
+                                            GameStatus.finished) {
+                                          return GameOverSection(
+                                              state: state,
+                                              key: const ValueKey('finished'));
+                                        } else if (state.status ==
+                                            GameStatus.ready) {
+                                          return GameReadySection(
+                                              state: state,
+                                              key: const ValueKey('ready'));
+                                        } else {
+                                          return GamePlaySection(
+                                            key: const ValueKey('playing'),
+                                            state: state,
+                                            animation: _animation,
+                                          );
+                                        }
+                                      }(),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 12),
+                                  GameControls(state: state),
+                                  const SizedBox(height: 10),
+                                ],
+                              ),
+                            ),
+                    ),
+                  ],
                 ),
               );
             },
@@ -207,6 +163,86 @@ class _GameScreenState extends ConsumerState<GameScreen>
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildCustomAppBar(BuildContext context, GameStateEntity state) {
+    return Container(
+      padding: const EdgeInsets.only(
+        top: 10,
+        bottom: 10,
+        left: 16,
+        right: 16,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Left: Back Button
+          IconButton(
+            icon: const Icon(Icons.arrow_back_ios_new_rounded,
+                color: Colors.white70),
+            onPressed: () async {
+              final shouldExit = await showExitConfirmationDialog(context);
+              if (shouldExit) {
+                ref.read(gameViewModelProvider.notifier).exitGame();
+                Navigator.of(context).pop();
+              }
+            },
+          ),
+
+          // Center: Title based on State
+          if (state.status == GameStatus.setup)
+            const Text(
+              'YENİ OYUN',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 2,
+              ),
+            )
+          else if (state.status == GameStatus.finished)
+            const Text(
+              'OYUN BİTTİ',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 2,
+              ),
+            )
+          else
+            const SizedBox.shrink(),
+
+          // Right: Score
+          if (state.status != GameStatus.setup)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Colors.white.withOpacity(0.1)),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.stars_rounded,
+                      color: Colors.amber, size: 20),
+                  const SizedBox(width: 8),
+                  Text(
+                    '${state.currentTeam.score}',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ],
+              ),
+            )
+          else
+            const SizedBox(width: 48),
+        ],
       ),
     );
   }

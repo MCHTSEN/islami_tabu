@@ -2,12 +2,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:islami_tabu/core/di/service_locator.dart';
 import 'package:islami_tabu/data/models/game_settings_model.dart';
 import 'package:islami_tabu/data/models/game_statistics_model.dart';
 import 'package:islami_tabu/data/models/team_model.dart';
 import 'package:islami_tabu/presentation/home/home_page.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

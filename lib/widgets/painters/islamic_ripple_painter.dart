@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-// Custom Painter for Islamic Ripple Effect
+import 'package:flutter/material.dart';
+
 class IslamicRipplePainter extends CustomPainter {
   final double animationValue;
 
@@ -9,41 +9,42 @@ class IslamicRipplePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.white.withOpacity(0.1)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 2.0;
-
     final center = Offset(size.width / 2, size.height / 2);
     final maxRadius =
-        math.sqrt(size.width * size.width + size.height * size.height);
-    final currentRadius = maxRadius * animationValue;
+        math.sqrt(size.width * size.width + size.height * size.height) * 0.8;
 
-    // Draw multiple expanding ripples
-    for (int i = 1; i <= 5; i++) {
-      final rippleRadius = currentRadius * (i / 5.0);
-      final opacity = (1.0 - (rippleRadius / maxRadius)) * 0.5;
-      paint.color = Colors.white.withOpacity(opacity.clamp(0.0, 0.5));
+    for (int i = 1; i <= 8; i++) {
+      final double progress = (animationValue + (i / 8)) % 1.0;
+      final double rippleRadius = maxRadius * progress;
+      final double opacity = math.sin(progress * math.pi) * 0.2;
 
-      // Draw an octagon shape instead of a circle
-      final path = Path();
-      const sides = 8; // Octagon
-      const angle = (math.pi * 2) / sides;
+      final paint = Paint()
+        ..color = Colors.amber.withOpacity(opacity.clamp(0.0, 0.2))
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.0 + (1.0 - progress) * 2.0;
 
-      final startPoint = Offset(
-        center.dx + rippleRadius * math.cos(0),
-        center.dy + rippleRadius * math.sin(0),
-      );
-      path.moveTo(startPoint.dx, startPoint.dy);
+      _drawStarPattern(
+          canvas, center, rippleRadius, progress * math.pi / 4, paint);
+    }
+  }
 
-      for (int j = 1; j <= sides; j++) {
-        final x = center.dx + rippleRadius * math.cos(angle * j);
-        final y = center.dy + rippleRadius * math.sin(angle * j);
+  void _drawStarPattern(Canvas canvas, Offset center, double radius,
+      double rotation, Paint paint) {
+    final path = Path();
+    const int points = 8;
+    for (int i = 0; i < points * 2; i++) {
+      final double angle = (i * math.pi / points) + rotation;
+      final double r = i.isEven ? radius : radius * 0.8;
+      final x = center.dx + r * math.cos(angle);
+      final y = center.dy + r * math.sin(angle);
+      if (i == 0) {
+        path.moveTo(x, y);
+      } else {
         path.lineTo(x, y);
       }
-      path.close();
-      canvas.drawPath(path, paint);
     }
+    path.close();
+    canvas.drawPath(path, paint);
   }
 
   @override
