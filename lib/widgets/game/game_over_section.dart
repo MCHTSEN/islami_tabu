@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../domain/entities/game_state_entity.dart';
 import '../../domain/entities/team_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
+import '../buttons/app_3d_buton.dart';
 
 class GameOverSection extends ConsumerWidget {
   final GameStateEntity state;
@@ -112,57 +113,51 @@ class GameOverSection extends ConsumerWidget {
               Row(
                 children: [
                   Expanded(
-                    child: _buildActionButton(
-                      label: 'ÇIKIŞ',
-                      color: Colors.red.shade900.withOpacity(0.5),
+                    child: App3DButton(
+                      text: 'ÇIKIŞ',
+                      primaryColor: const Color(0xFFFA5C5C),
+                      secondaryColor: const Color(0xFFE04444),
+                      shadowColor: const Color(0xFFB03030),
                       onTap: () {
                         ref.read(gameViewModelProvider.notifier).exitGame();
                         Navigator.of(context)
                             .popUntil((route) => route.isFirst);
                       },
+                      height: 56,
+                      borderRadius: 16,
+                      icon: Icons.exit_to_app_rounded,
+                      textStyle: const TextStyle(
+                        color: Color(0xFFF9F5FF),
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 2,
+                      ),
                     ),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
-                    child: _buildActionButton(
-                      label: 'BİR DAHA',
-                      color: Colors.green.shade900.withOpacity(0.8),
+                    child: App3DButton(
+                      text: 'BİR DAHA',
+                      primaryColor: const Color(0xFF14248A),
+                      secondaryColor: const Color(0xFF0D1B63),
+                      shadowColor: const Color(0xFF081140),
                       onTap: () {
                         ref
                             .read(gameViewModelProvider.notifier)
                             .continueGameAfterScores();
                       },
+                      height: 56,
+                      borderRadius: 16,
+                      icon: Icons.replay_rounded,
+                      textStyle: const TextStyle(
+                        color: Color(0xFFF9F5FF),
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 2,
+                      ),
                     ),
                   ),
                 ],
               ),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildActionButton(
-      {required String label,
-      required Color color,
-      required VoidCallback onTap}) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 16),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: Colors.white.withOpacity(0.1)),
-        ),
-        child: Text(
-          label,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w900,
-            letterSpacing: 2,
           ),
         ),
       ),

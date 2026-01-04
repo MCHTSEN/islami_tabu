@@ -1,22 +1,25 @@
 import 'dart:async';
 import 'dart:math'; // Import for Random
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+// Import GetIt for accessing other use cases if needed
+import 'package:get_it/get_it.dart';
 import 'package:uuid/uuid.dart';
+
+import '../../core/utils/sound_service.dart';
 // Remove GetIt locator import if ViewModel is created directly in provider
 // import '../../core/di/service_locator.dart';
 import '../../domain/entities/game_settings_entity.dart';
 import '../../domain/entities/game_state_entity.dart';
 import '../../domain/entities/game_statistics_entity.dart';
-import '../../domain/entities/word_entity.dart';
 import '../../domain/entities/team_entity.dart';
+import '../../domain/entities/word_entity.dart';
 import '../../domain/usecases/get_game_settings_usecase.dart';
 // Remove GetRandomWordsUseCase import
 // import '../../domain/usecases/get_random_words_usecase.dart';
 import '../../domain/usecases/save_game_statistics_usecase.dart';
 // Import the in-memory word provider
 import '../../providers/in_memory_word_provider.dart';
-// Import GetIt for accessing other use cases if needed
-import 'package:get_it/get_it.dart';
 
 final gameViewModelProvider =
     StateNotifierProvider<GameViewModel, AsyncValue<GameStateEntity>>((ref) {
@@ -193,6 +196,8 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         correctWords: [...currentTeam.correctWords, currentWord.word],
       );
 
+      _ref.read(soundServiceProvider).playCorrect();
+
       List<WordEntity> remainingWords =
           List<WordEntity>.from(gameState.wordsQueue);
       List<WordEntity> completedWords =
@@ -343,6 +348,8 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         // tabuWords: [...currentTeam.tabuWords, currentWord.word],
       );
 
+      _ref.read(soundServiceProvider).playWrong();
+
       // Apply time penalty
       final newRemainingTime = gameState.remainingTime - passPenalty;
 
@@ -396,6 +403,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
 
   Future<void> moveToNextTeam() async {
     _stopTimer();
+    _ref.read(soundServiceProvider).playNextTeam();
 
     // Fetch latest settings before moving to next team
     try {

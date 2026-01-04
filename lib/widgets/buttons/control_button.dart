@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'app_3d_buton.dart';
+
 class ControlButton extends StatelessWidget {
   final VoidCallback onPressed;
   final IconData icon;
@@ -16,53 +18,31 @@ class ControlButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return App3DButton(
+      text: label.toUpperCase(),
+      onTap: onPressed,
+      primaryColor: color,
+      secondaryColor: _getDarkerColor(color),
+      shadowColor: _getShadowColor(color),
+      icon: icon,
       height: 60,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: color.withOpacity(0.3),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: color,
-          foregroundColor: Colors.white,
-          padding: const EdgeInsets.symmetric(horizontal: 12),
-          elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          shadowColor: Colors.transparent,
-        ).copyWith(
-          backgroundColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.pressed)) {
-              return color.withOpacity(0.8);
-            }
-            return color;
-          }),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 20),
-            const SizedBox(height: 2),
-            Text(
-              label.toUpperCase(),
-              style: const TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w900,
-                letterSpacing: 0.5,
-              ),
-            ),
-          ],
-        ),
+      borderRadius: 20,
+      textStyle: const TextStyle(
+        fontSize: 10,
+        fontWeight: FontWeight.w900,
+        color: Colors.white,
+        letterSpacing: 0.5,
       ),
     );
+  }
+
+  Color _getDarkerColor(Color color) {
+    final hsl = HSLColor.fromColor(color);
+    return hsl.withLightness((hsl.lightness - 0.1).clamp(0.0, 1.0)).toColor();
+  }
+
+  Color _getShadowColor(Color color) {
+    final hsl = HSLColor.fromColor(color);
+    return hsl.withLightness((hsl.lightness - 0.2).clamp(0.0, 1.0)).toColor();
   }
 }

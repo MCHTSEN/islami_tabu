@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
+import '../buttons/app_3d_buton.dart';
 import '../buttons/control_button.dart';
 
 class GameControls extends ConsumerWidget {
@@ -22,21 +23,22 @@ class GameControls extends ConsumerWidget {
 
     if (state.status == GameStatus.paused) {
       return Center(
-        child: ElevatedButton(
-          onPressed: () {
+        child: App3DButton(
+          onTap: () {
             ref.read(gameViewModelProvider.notifier).startGame();
           },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.amber.shade700,
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-          child: const Text(
-            'Devam Et',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          text: 'DEVAM ET',
+          primaryColor: const Color(0xFF14248A),
+          secondaryColor: const Color(0xFF0D1B63),
+          shadowColor: const Color(0xFF081140),
+          width: 200,
+          height: 60,
+          icon: Icons.play_arrow_rounded,
+          textStyle: const TextStyle(
+            color: Color(0xFFF9F5FF),
+            fontSize: 18,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 1.5,
           ),
         ),
       );
@@ -55,7 +57,7 @@ class GameControls extends ConsumerWidget {
               },
               icon: Icons.skip_next,
               label: 'Pas (${state.passesUsed}/3)',
-              color: Colors.orange.shade700,
+              color: const Color(0xFFFFA000),
             ),
           ),
         ),
@@ -70,7 +72,7 @@ class GameControls extends ConsumerWidget {
               },
               icon: Icons.block,
               label: 'Tabu',
-              color: Colors.purple.shade700,
+              color: const Color(0xFFFA5C5C),
             ),
           ),
         ),
@@ -85,7 +87,7 @@ class GameControls extends ConsumerWidget {
               },
               icon: Icons.check,
               label: 'Doğru',
-              color: Colors.green.shade700,
+              color: const Color(0xFF14248A),
             ),
           ),
         ),

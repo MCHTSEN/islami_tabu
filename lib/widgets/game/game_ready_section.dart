@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
+import '../buttons/app_3d_buton.dart';
 
 class GameReadySection extends ConsumerWidget {
   final GameStateEntity state;
@@ -149,34 +150,20 @@ class GameReadySection extends ConsumerWidget {
         const SizedBox(height: 32),
 
         // Start Button
-        GestureDetector(
+        App3DButton(
           onTap: () => ref.read(gameViewModelProvider.notifier).startGame(),
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 18),
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Colors.green, Color(0xFF1B5E20)],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.green.withOpacity(0.3),
-                  blurRadius: 20,
-                  offset: const Offset(0, 8),
-                ),
-              ],
-            ),
-            child: const Text(
-              'BAŞLA',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.w900,
-                letterSpacing: 4,
-              ),
-            ),
+          text: 'BAŞLA',
+          primaryColor: const Color(0xFF14248A),
+          secondaryColor: const Color(0xFF0D1B63),
+          shadowColor: const Color(0xFF081140),
+          width: 250,
+          height: 60,
+          icon: Icons.play_arrow_rounded,
+          textStyle: const TextStyle(
+            color: Color(0xFFF9F5FF),
+            fontSize: 22,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 4,
           ),
         ),
         const SizedBox(height: 16),

@@ -1,5 +1,3 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:islami_tabu/presentation/game_screen/game_screen.dart';
@@ -149,16 +147,6 @@ class _HomePageState extends ConsumerState<HomePage>
   }
 
   Widget _buildFloatingButton({required Widget child, required double offset}) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (context, _) {
-        final double wave =
-            math.sin((_controller.value * 2 * math.pi * 2) + offset);
-        return Transform.translate(
-          offset: Offset(0, wave * 10),
-          child: child,
-        );
-      },
-    );
+    return child;
   }
 }
