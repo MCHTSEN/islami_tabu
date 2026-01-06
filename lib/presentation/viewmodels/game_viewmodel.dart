@@ -418,12 +418,20 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       final nextTeamIndex =
           (gameState.currentTeamIndex + 1) % gameState.teams.length;
 
+      // Prepare new words queue (optionally shuffled)
+      final newWordsQueue = (_settings?.shuffleWords ?? true)
+          ? (List<WordEntity>.from(gameState.wordsQueue)..shuffle())
+          : gameState.wordsQueue;
+
       final newState = gameState.copyWith(
         status: GameStatus.ready, // Set to ready for the next team
         currentTeamIndex: nextTeamIndex,
         passesUsed: 0, // Reset passes for the new team
         remainingTime: _settings?.gameDuration ??
             60, // Reset time based on LATEST settings
+        wordsQueue: newWordsQueue,
+        // Set current word to first word in new queue
+        currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
       );
       state = AsyncValue.data(newState);
     });
