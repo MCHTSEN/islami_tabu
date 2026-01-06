@@ -194,6 +194,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
         score: currentTeam.score + 1,
         correctWords: [...currentTeam.correctWords, currentWord.word],
+        correctCount: currentTeam.correctCount + 1,
       );
 
       _ref.read(soundServiceProvider).playCorrect();
@@ -268,6 +269,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       final updatedTeams = List<TeamEntity>.from(gameState.teams);
       updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
         skippedWords: [...currentTeam.skippedWords, currentWord.word],
+        passCount: currentTeam.passCount + 1,
       );
 
       List<WordEntity> remainingWords =
@@ -344,8 +346,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       final updatedTeams = List<TeamEntity>.from(gameState.teams);
       updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
         score: currentTeam.score - 2, // Penalty of 2 points
-        // Optionally track tabu words if needed for stats
-        // tabuWords: [...currentTeam.tabuWords, currentWord.word],
+        tabuCount: currentTeam.tabuCount + 1,
       );
 
       _ref.read(soundServiceProvider).playWrong();
@@ -512,16 +513,20 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       final nextTeamIndex =
           (gameState.currentTeamIndex + 1) % gameState.teams.length;
 
+      // Prepare new words queue (optionally shuffled)
+      final newWordsQueue = (_settings?.shuffleWords ?? true)
+          ? (List<WordEntity>.from(gameState.wordsQueue)..shuffle())
+          : gameState.wordsQueue;
+
       // Prepare for the next round
       final newState = gameState.copyWith(
         status: GameStatus.ready,
         currentTeamIndex: nextTeamIndex,
         passesUsed: 0,
         remainingTime: _settings?.gameDuration ?? 60, // Reset time
-        // Optionally shuffle words again if setting is enabled
-        wordsQueue: (_settings?.shuffleWords ?? true)
-            ? (List<WordEntity>.from(gameState.wordsQueue)..shuffle())
-            : gameState.wordsQueue,
+        wordsQueue: newWordsQueue,
+        // Set current word to first word in new queue
+        currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
       );
       state = AsyncValue.data(newState);
     });
