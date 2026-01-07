@@ -19,6 +19,7 @@ dependencies:
   intl: ^0.20.2
   flutter_animate: ^4.2.0
   audioplayers: ^6.5.1
+  upgrader: ^12.3.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

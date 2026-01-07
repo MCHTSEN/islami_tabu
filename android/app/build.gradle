@@ -32,7 +32,7 @@ def kotlin_version = '1.8.10'
 
 android {
     namespace "com.mucahitsen.islami_tabu"
-    compileSdk 35
+    compileSdk 36
     ndkVersion flutter.ndkVersion
 
     signingConfigs {

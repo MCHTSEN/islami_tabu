@@ -6,6 +6,7 @@ import 'package:islami_tabu/presentation/statistics/statistics_page.dart';
 import 'package:islami_tabu/presentation/word_managment/word_managment_page.dart';
 import 'package:islami_tabu/widgets/buttons/orb_button.dart';
 import 'package:islami_tabu/widgets/decorations/home_background.dart';
+import 'package:upgrader/upgrader.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -64,7 +65,18 @@ class _HomePageState extends ConsumerState<HomePage>
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
-    return Scaffold(
+    return UpgradeAlert(
+      dialogStyle: UpgradeDialogStyle.cupertino,
+      showIgnore: false,
+      showLater: true,
+      upgrader: Upgrader(
+        languageCode: 'tr',
+        messages: UpgraderMessages(
+          code: 'tr',
+        ),
+        durationUntilAlertAgain: const Duration(days: 1),
+      ),
+      child: Scaffold(
       body: HomeBackground(
         rippleAnimation: _rippleAnimation,
         child: FadeTransition(
@@ -131,6 +143,7 @@ class _HomePageState extends ConsumerState<HomePage>
           ),
         ),
       ),
+    ),
     );
   }
 
