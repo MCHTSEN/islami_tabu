@@ -17,11 +17,23 @@ class TeamModel extends HiveObject {
   @HiveField(3)
   late List<String> skippedWords;
 
+  @HiveField(4)
+  late int correctCount;
+
+  @HiveField(5)
+  late int passCount;
+
+  @HiveField(6)
+  late int tabuCount;
+
   TeamModel({
     required this.name,
     required this.score,
     required this.correctWords,
     required this.skippedWords,
+    required this.correctCount,
+    required this.passCount,
+    required this.tabuCount,
   });
 
   // Factory to create a TeamModel from a TeamEntity
@@ -31,6 +43,9 @@ class TeamModel extends HiveObject {
       score: entity.score,
       correctWords: List<String>.from(entity.correctWords),
       skippedWords: List<String>.from(entity.skippedWords),
+      correctCount: entity.correctCount,
+      passCount: entity.passCount,
+      tabuCount: entity.tabuCount,
     );
   }
 
@@ -41,6 +56,9 @@ class TeamModel extends HiveObject {
       score: score,
       correctWords: List<String>.from(correctWords),
       skippedWords: List<String>.from(skippedWords),
+      correctCount: correctCount,
+      passCount: passCount,
+      tabuCount: tabuCount,
     );
   }
 }

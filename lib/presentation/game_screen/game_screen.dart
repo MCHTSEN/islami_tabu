@@ -34,6 +34,11 @@ class _GameScreenState extends ConsumerState<GameScreen>
       parent: _animationController,
       curve: Curves.easeInOut,
     );
+
+    // Oyun ekranı açıldığında game state'i sıfırla
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(gameViewModelProvider.notifier).restartGame();
+    });
   }
 
   @override
@@ -51,12 +56,13 @@ class _GameScreenState extends ConsumerState<GameScreen>
       canPop: false,
       onPopInvoked: (didPop) async {
         if (didPop) return;
-        final shouldPop = await showExitConfirmationDialog(context);
+        final viewModel = ref.read(gameViewModelProvider.notifier);
+        final shouldPop = await showExitConfirmationDialog(
+          context,
+          hasEqualRounds: viewModel.hasEqualRounds(),
+        );
         if (shouldPop) {
-          ref.read(gameViewModelProvider.notifier).exitGame();
-          if (context.mounted) {
-            Navigator.of(context).pop();
-          }
+          viewModel.exitGame(); // Shows score table (finished state)
         }
       },
       child: Scaffold(
@@ -183,10 +189,13 @@ class _GameScreenState extends ConsumerState<GameScreen>
             icon: const Icon(Icons.arrow_back_ios_new_rounded,
                 color: Colors.white70),
             onPressed: () async {
-              final shouldExit = await showExitConfirmationDialog(context);
+              final viewModel = ref.read(gameViewModelProvider.notifier);
+              final shouldExit = await showExitConfirmationDialog(
+                context,
+                hasEqualRounds: viewModel.hasEqualRounds(),
+              );
               if (shouldExit) {
-                ref.read(gameViewModelProvider.notifier).exitGame();
-                Navigator.of(context).pop();
+                viewModel.exitGame(); // Shows score table (finished state)
               }
             },
           ),

@@ -432,6 +432,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         wordsQueue: newWordsQueue,
         // Set current word to first word in new queue
         currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
+        turnsCompleted: gameState.turnsCompleted + 1,
       );
       state = AsyncValue.data(newState);
     });
@@ -441,18 +442,13 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
     state.whenData((gameState) {
       _saveStatistics(gameState);
 
-      // First set game to finished state
+      // Set game to finished state to show score table
       final newState = gameState.copyWith(
         status: GameStatus.finished,
       );
 
       state = AsyncValue.data(newState);
       _stopTimer();
-
-      // Then restart the game after a short delay to allow UI to update
-      Future.delayed(const Duration(milliseconds: 100), () {
-        restartGame();
-      });
     });
   }
 
@@ -535,8 +531,29 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         wordsQueue: newWordsQueue,
         // Set current word to first word in new queue
         currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
+        turnsCompleted: gameState.turnsCompleted + 1,
       );
       state = AsyncValue.data(newState);
     });
+  }
+
+  /// Her takımın eşit sayıda tur oynayıp oynamadığını kontrol eder
+  bool hasEqualRounds() {
+    final gameState = state.valueOrNull;
+    if (gameState == null || gameState.teams.isEmpty) return true;
+
+    // Oyun setup veya finished durumundaysa eşit kabul et
+    if (gameState.status == GameStatus.setup ||
+        gameState.status == GameStatus.finished) {
+      return true;
+    }
+
+    // Oyun aktifken turnsCompleted 0 ise henüz kimse tur bitirmemiş
+    // Bu durumda eşit değil (ilk takım oynuyor/oynamaya hazır)
+    if (gameState.turnsCompleted == 0) {
+      return false;
+    }
+
+    return gameState.turnsCompleted % gameState.teams.length == 0;
   }
 }

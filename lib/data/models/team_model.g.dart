@@ -21,13 +21,16 @@ class TeamModelAdapter extends TypeAdapter<TeamModel> {
       score: fields[1] as int,
       correctWords: (fields[2] as List).cast<String>(),
       skippedWords: (fields[3] as List).cast<String>(),
+      correctCount: fields[4] as int,
+      passCount: fields[5] as int,
+      tabuCount: fields[6] as int,
     );
   }
 
   @override
   void write(BinaryWriter writer, TeamModel obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(7)
       ..writeByte(0)
       ..write(obj.name)
       ..writeByte(1)
@@ -35,7 +38,13 @@ class TeamModelAdapter extends TypeAdapter<TeamModel> {
       ..writeByte(2)
       ..write(obj.correctWords)
       ..writeByte(3)
-      ..write(obj.skippedWords);
+      ..write(obj.skippedWords)
+      ..writeByte(4)
+      ..write(obj.correctCount)
+      ..writeByte(5)
+      ..write(obj.passCount)
+      ..writeByte(6)
+      ..write(obj.tabuCount);
   }
 
   @override

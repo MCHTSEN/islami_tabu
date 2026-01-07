@@ -19,6 +19,7 @@ class GameStateEntity {
   final WordEntity? currentWord;
   final List<WordEntity> completedWords;
   final List<WordEntity> skippedWords;
+  final int turnsCompleted;
 
   const GameStateEntity({
     required this.status,
@@ -30,6 +31,7 @@ class GameStateEntity {
     this.currentWord,
     required this.completedWords,
     required this.skippedWords,
+    this.turnsCompleted = 0,
   });
 
   factory GameStateEntity.initial({
@@ -46,6 +48,7 @@ class GameStateEntity {
       currentWord: words.isNotEmpty ? words.first : null,
       completedWords: [],
       skippedWords: [],
+      turnsCompleted: 0,
     );
   }
 
@@ -63,6 +66,7 @@ class GameStateEntity {
     WordEntity? currentWord,
     List<WordEntity>? completedWords,
     List<WordEntity>? skippedWords,
+    int? turnsCompleted,
   }) {
     return GameStateEntity(
       status: status ?? this.status,
@@ -74,6 +78,7 @@ class GameStateEntity {
       currentWord: currentWord ?? this.currentWord,
       completedWords: completedWords ?? this.completedWords,
       skippedWords: skippedWords ?? this.skippedWords,
+      turnsCompleted: turnsCompleted ?? this.turnsCompleted,
     );
   }
 }
