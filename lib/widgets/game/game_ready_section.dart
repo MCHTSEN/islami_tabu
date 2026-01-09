@@ -137,7 +137,7 @@ class GameReadySection extends ConsumerWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              state.currentTeam.name.toUpperCase(),
+              state.currentTeam!.name.toUpperCase(),
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 28,

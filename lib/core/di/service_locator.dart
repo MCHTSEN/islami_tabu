@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import '../../data/models/game_settings_model.dart';
@@ -22,7 +23,15 @@ Future<void> setupServiceLocator() async {
   final settingsBox = await Hive.openBox<GameSettingsModel>('settings');
   locator.registerSingleton<Box<GameSettingsModel>>(settingsBox);
 
-  final statisticsBox = await Hive.openBox<GameStatisticsModel>('statistics');
+  // Handle statistics box migration - delete corrupted data from old schema
+  Box<GameStatisticsModel> statisticsBox;
+  try {
+    statisticsBox = await Hive.openBox<GameStatisticsModel>('statistics');
+  } catch (e) {
+    debugPrint('Statistics box corrupted, deleting and recreating: $e');
+    await Hive.deleteBoxFromDisk('statistics');
+    statisticsBox = await Hive.openBox<GameStatisticsModel>('statistics');
+  }
   locator.registerSingleton<Box<GameStatisticsModel>>(statisticsBox);
 
   // Repositories

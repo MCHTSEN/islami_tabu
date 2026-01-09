@@ -151,7 +151,7 @@ class GamePlaySection extends StatelessWidget {
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
-                    state.currentTeam.name.toUpperCase(),
+                    state.currentTeam!.name.toUpperCase(),
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 12,

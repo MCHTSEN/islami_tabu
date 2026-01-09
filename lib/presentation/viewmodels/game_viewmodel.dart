@@ -188,7 +188,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       }
 
       final currentWord = gameState.currentWord!;
-      final currentTeam = gameState.currentTeam;
+      final currentTeam = gameState.currentTeam!;
 
       final updatedTeams = List<TeamEntity>.from(gameState.teams);
       updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
@@ -264,7 +264,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
       }
 
       final currentWord = gameState.currentWord!;
-      final currentTeam = gameState.currentTeam;
+      final currentTeam = gameState.currentTeam!;
 
       final updatedTeams = List<TeamEntity>.from(gameState.teams);
       updatedTeams[gameState.currentTeamIndex] = currentTeam.copyWith(
@@ -338,7 +338,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         return;
       }
 
-      final currentTeam = gameState.currentTeam;
+      final currentTeam = gameState.currentTeam!;
       final passPenalty =
           _settings?.passPenalty ?? 5; // Use pass penalty for tabu as well?
 
@@ -514,24 +514,35 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
     }
 
     state.whenData((gameState) {
-      final nextTeamIndex =
-          (gameState.currentTeamIndex + 1) % gameState.teams.length;
+      // Reset all team scores and stats
+      final resetTeams = gameState.teams
+          .map((team) => team.copyWith(
+                score: 0,
+                correctWords: [],
+                skippedWords: [],
+                correctCount: 0,
+                passCount: 0,
+                tabuCount: 0,
+              ))
+          .toList();
 
       // Prepare new words queue (optionally shuffled)
       final newWordsQueue = (_settings?.shuffleWords ?? true)
           ? (List<WordEntity>.from(gameState.wordsQueue)..shuffle())
           : gameState.wordsQueue;
 
-      // Prepare for the next round
+      // Prepare for the next round with reset scores
       final newState = gameState.copyWith(
         status: GameStatus.ready,
-        currentTeamIndex: nextTeamIndex,
+        teams: resetTeams,
+        currentTeamIndex: 0, // Start from first team
         passesUsed: 0,
-        remainingTime: _settings?.gameDuration ?? 60, // Reset time
+        remainingTime: _settings?.gameDuration ?? 60,
         wordsQueue: newWordsQueue,
-        // Set current word to first word in new queue
         currentWord: newWordsQueue.isNotEmpty ? newWordsQueue.first : null,
-        turnsCompleted: gameState.turnsCompleted + 1,
+        completedWords: [],
+        skippedWords: [],
+        turnsCompleted: 0, // Reset turns
       );
       state = AsyncValue.data(newState);
     });

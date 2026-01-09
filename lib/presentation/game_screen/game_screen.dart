@@ -225,7 +225,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
             const SizedBox.shrink(),
 
           // Right: Score
-          if (state.status != GameStatus.setup)
+          if (state.status != GameStatus.setup && state.teams.isNotEmpty)
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
               decoration: BoxDecoration(
@@ -239,7 +239,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
                       color: Colors.amber, size: 20),
                   const SizedBox(width: 8),
                   Text(
-                    '${state.currentTeam.score}',
+                    '${state.currentTeam!.score}',
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16,

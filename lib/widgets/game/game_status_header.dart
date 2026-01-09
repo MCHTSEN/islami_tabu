@@ -18,11 +18,11 @@ class GameStatusHeader extends StatelessWidget {
         statusColor = Colors.blue;
         break;
       case GameStatus.ready:
-        statusText = '${state.currentTeam.name} Hazır';
+        statusText = '${state.currentTeam!.name} Hazır';
         statusColor = Colors.amber;
         break;
       case GameStatus.playing:
-        statusText = '${state.currentTeam.name} Oynuyor';
+        statusText = '${state.currentTeam!.name} Oynuyor';
         statusColor = Colors.green;
         break;
       case GameStatus.paused:
@@ -38,7 +38,7 @@ class GameStatusHeader extends StatelessWidget {
     return Column(
       children: [
         Text(
-          state.currentTeam.name.toUpperCase(),
+          (state.currentTeam?.name ?? '').toUpperCase(),
           style: const TextStyle(
             color: Colors.white,
             fontSize: 24,

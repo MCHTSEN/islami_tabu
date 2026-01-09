@@ -16,6 +16,17 @@ void main() async {
   final appDocumentDirectory = await getApplicationDocumentsDirectory();
   await Hive.initFlutter(appDocumentDirectory.path);
 
+  // Migration: Delete old statistics box with incompatible schema (one-time)
+  // This is needed because TeamModel added new fields (correctCount, passCount, tabuCount)
+  // that don't exist in old stored data
+  final migrationBox = await Hive.openBox('migrations');
+  const migrationKey = 'statistics_v2_migrated';
+  if (migrationBox.get(migrationKey) != true) {
+    await Hive.deleteBoxFromDisk('statistics');
+    await migrationBox.put(migrationKey, true);
+  }
+  await migrationBox.close();
+
   // Register adapters
   Hive.registerAdapter(GameSettingsModelAdapter());
   Hive.registerAdapter(TeamModelAdapter());

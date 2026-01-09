@@ -52,7 +52,7 @@ class GameStateEntity {
     );
   }
 
-  TeamEntity get currentTeam => teams[currentTeamIndex];
+  TeamEntity? get currentTeam => teams.isNotEmpty ? teams[currentTeamIndex] : null;
 
   int get nextTeamIndex => (currentTeamIndex + 1) % teams.length;
 
