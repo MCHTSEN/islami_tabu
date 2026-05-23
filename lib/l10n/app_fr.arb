@@ -1,0 +1,180 @@
+{
+  "@@locale": "fr",
+  "appTitle": "Tabubu",
+  "@appTitle": {"description": "App display title"},
+
+  "homeStartGame": "Commencer la partie",
+  "homeSettings": "Paramètres",
+  "homeWords": "Mots",
+  "homeStatistics": "Statistiques",
+
+  "settingsTitle": "Paramètres du jeu",
+  "settingsLoadError": "Échec du chargement des paramètres : ",
+  "settingsGameDuration": "Durée du tour",
+  "settingsMaxPasses": "Passes maximum : {count}",
+  "@settingsMaxPasses": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassesLabel": "{count} passes",
+  "@settingsPassesLabel": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassSettings": "Paramètres de passage",
+  "settingsPassPenalty": "Pénalité par passe : {seconds} secondes",
+  "@settingsPassPenalty": {
+    "placeholders": {"seconds": {"type": "int"}}
+  },
+  "settingsWordSettings": "Paramètres des mots",
+  "settingsShuffleWords": "Mélanger les mots",
+  "settingsShuffleHint": "L'ordre des mots est aléatoire au début de chaque partie.",
+  "settingsLanguage": "Langue",
+  "settingsLanguageTurkish": "Turc",
+  "settingsLanguageEnglish": "Anglais",
+  "settingsLanguageArabic": "Arabe",
+  "settingsLanguageGerman": "Allemand",
+  "settingsLanguageFrench": "Français",
+  "settingsLanguageIndonesian": "Indonésien",
+
+  "statisticsTitle": "Statistiques",
+  "statisticsLoadError": "Échec du chargement des statistiques : ",
+  "statisticsEmptyTitle": "Aucune statistique",
+  "statisticsEmptySubtitle": "Les statistiques apparaîtront ici après une partie",
+  "statisticsDeleteTitle": "Supprimer la statistique",
+  "statisticsDeleteSuccess": "Statistique supprimée avec succès",
+  "statisticsDeleteConfirm": "Voulez-vous vraiment supprimer la statistique du {date} ?",
+  "@statisticsDeleteConfirm": {
+    "placeholders": {"date": {"type": "String"}}
+  },
+  "statisticsDetailedTitle": "Statistiques détaillées",
+  "statisticsCorrectWords": "Mots devinés correctement",
+  "statisticsCorrect": "Corrects",
+  "statisticsPassedWords": "Mots passés",
+  "statisticsPassed": "Passés",
+  "statisticsHighScore": "Meilleur score",
+  "statisticsTime": "Durée",
+  "statisticsTeamScores": "Scores des équipes",
+  "statisticsWinnerTeam": "Équipe gagnante",
+  "statisticsTeamPerformance": "Performances des équipes",
+  "statisticsWordDetails": "Détails des mots",
+  "statisticsCorrectCount": "Corrects",
+  "statisticsPassCount": "Passés",
+  "statisticsTabuCount": "Tabous",
+  "statisticsGameDate": "Date de la partie",
+  "statisticsScore": "Score",
+  "statisticsNone": "Aucun",
+  "statisticsDurationSeconds": "{count} secondes",
+  "@statisticsDurationSeconds": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "commonClose": "Fermer",
+
+  "teamSetupTitle": "CRÉEZ VOS ÉQUIPES",
+  "teamSetupHowMany": "Combien d'équipes participent ?",
+  "teamSetupDefaultName": "Équipe {index}",
+  "@teamSetupDefaultName": {
+    "placeholders": {"index": {"type": "int"}}
+  },
+
+  "gameErrorOccurred": "Une erreur s'est produite :\n\n",
+  "gameNewGame": "NOUVELLE PARTIE",
+  "gameOver": "FIN DE PARTIE",
+  "gameOverHero": "QUEL MATCH !",
+  "gameOverExit": "QUITTER",
+  "gameOverAgain": "REJOUER",
+  "gameReadyHeader": "SCORES ACTUELS",
+  "gameReadyNextTeam": "ÉQUIPE SUIVANTE",
+  "gameReadyStart": "COMMENCER",
+  "gameTeamReady": "{teamName} est prête",
+  "@gameTeamReady": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameTeamPlaying": "{teamName} joue",
+  "@gameTeamPlaying": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameStatusFinished": "Partie terminée",
+  "gameTeamSelection": "Choisir l'équipe",
+  "gamePaused": "En pause",
+  "gameCorrect": "Correct",
+  "gamePass": "Passer",
+  "gameTabu": "Tabou",
+  "gameResume": "REPRENDRE",
+  "gamePassCount": "Passer ({used}/{max})",
+  "@gamePassCount": {
+    "placeholders": {
+      "used": {"type": "int"},
+      "max": {"type": "int"}
+    }
+  },
+  "gameForbiddenHeader": "MOTS INTERDITS",
+  "gameNoWordsFound": "Aucun mot trouvé.",
+  "gameWordsLoadFail": "Impossible de charger les mots.",
+  "gameWordsLoadError": "Erreur lors du chargement des mots : {error}",
+  "@gameWordsLoadError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "gameNoWordsAddPrompt": "Aucun mot trouvé. Veuillez ajouter des mots depuis la page de gestion des mots.",
+
+  "exitConfirmExitTitle": "Voulez-vous vraiment terminer la partie et aller au tableau des scores ?",
+  "exitConfirmUnevenTitle": "Toutes les équipes n'ont pas joué le même nombre de tours. Voulez-vous vraiment quitter ?",
+
+  "wordsTitle": "Gestion des mots",
+  "wordsEditTitle": "Modifier le mot",
+  "wordsResetList": "Réinitialiser la liste",
+  "wordsBulkImport": "Importation groupée",
+  "wordsBulkImportTitle": "Importation groupée de mots",
+  "wordsLabel": "Mot",
+  "wordsCancelEdit": "Annuler la modification",
+  "wordsSave": "Enregistrer",
+  "wordsUpdate": "Mettre à jour",
+  "wordsEdit": "Modifier",
+  "wordsAddButton": "Ajouter",
+  "wordsForbiddenLabel": "Mot interdit",
+  "wordsForbiddenList": "Mots interdits :",
+  "wordsForbiddenEmpty": "Aucun mot interdit ajouté.",
+  "wordsForbiddenCount": "{count, plural, =1{{count} mot interdit} other{{count} mots interdits}}",
+  "@wordsForbiddenCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "wordsAddPrompt": "Entrez un mot et ajoutez au moins un mot interdit",
+  "wordsAddSuccess": "Nouveau mot ajouté avec succès",
+  "wordsUpdateSuccess": "Mot mis à jour avec succès",
+  "wordsDeleteSuccess": "Mot supprimé avec succès",
+  "wordsDeleteConfirm": "Voulez-vous vraiment supprimer ce mot ? Cette action est irréversible.",
+  "wordsForbiddenDuplicate": "Ce mot interdit est déjà ajouté",
+  "wordsEmpty": "Aucun mot enregistré.",
+  "wordsSavedCount": "Mots enregistrés ({count})",
+  "@wordsSavedCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+
+  "bulkPasteHint": "Collez vos données JSON ici...",
+  "bulkPaste": "Coller",
+  "bulkCancel": "Annuler",
+  "bulkImport": "Importer",
+  "bulkEmpty": "Veuillez saisir des données JSON.",
+  "bulkInvalidFormat": "Format JSON invalide. Chaque élément doit contenir \"word\" et \"forbiddenWords\" (liste).",
+  "bulkJsonError": "Erreur de format JSON : {message}",
+  "@bulkJsonError": {
+    "placeholders": {"message": {"type": "String"}}
+  },
+  "bulkImportError": "Une erreur s'est produite lors de l'importation : {error}",
+  "@bulkImportError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "bulkImportResult": "{success} mots importés avec succès, {errors} échec(s).",
+  "@bulkImportResult": {
+    "placeholders": {
+      "success": {"type": "int"},
+      "errors": {"type": "int"}
+    }
+  },
+
+  "dialogConfirmDelete": "Oui, supprimer",
+  "dialogCancel": "Annuler",
+  "dialogWarning": "Attention !",
+  "dialogYes": "OUI",
+  "dialogNo": "NON",
+
+  "easterEggSurprise": "Surprise !"
+}

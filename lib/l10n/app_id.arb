@@ -1,0 +1,179 @@
+{
+  "@@locale": "id",
+  "appTitle": "Tabubu",
+
+  "homeStartGame": "Mulai Permainan",
+  "homeSettings": "Pengaturan",
+  "homeWords": "Kata-kata",
+  "homeStatistics": "Statistik",
+
+  "settingsTitle": "Pengaturan Permainan",
+  "settingsLoadError": "Gagal memuat pengaturan: ",
+  "settingsGameDuration": "Durasi Ronde",
+  "settingsMaxPasses": "Maksimal Lewat: {count}",
+  "@settingsMaxPasses": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassesLabel": "{count} lewatan",
+  "@settingsPassesLabel": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassSettings": "Pengaturan Lewat",
+  "settingsPassPenalty": "Penalti lewat: {seconds} detik",
+  "@settingsPassPenalty": {
+    "placeholders": {"seconds": {"type": "int"}}
+  },
+  "settingsWordSettings": "Pengaturan Kata",
+  "settingsShuffleWords": "Acak Kata",
+  "settingsShuffleHint": "Urutan kata diacak di awal setiap permainan.",
+  "settingsLanguage": "Bahasa",
+  "settingsLanguageTurkish": "Turki",
+  "settingsLanguageEnglish": "Inggris",
+  "settingsLanguageArabic": "Arab",
+  "settingsLanguageGerman": "Jerman",
+  "settingsLanguageFrench": "Prancis",
+  "settingsLanguageIndonesian": "Indonesia",
+
+  "statisticsTitle": "Statistik",
+  "statisticsLoadError": "Gagal memuat statistik: ",
+  "statisticsEmptyTitle": "Belum Ada Statistik",
+  "statisticsEmptySubtitle": "Statistik akan muncul di sini setelah permainan selesai",
+  "statisticsDeleteTitle": "Hapus Statistik",
+  "statisticsDeleteSuccess": "Statistik berhasil dihapus",
+  "statisticsDeleteConfirm": "Apakah Anda yakin ingin menghapus statistik permainan tanggal {date}?",
+  "@statisticsDeleteConfirm": {
+    "placeholders": {"date": {"type": "String"}}
+  },
+  "statisticsDetailedTitle": "Statistik Terperinci",
+  "statisticsCorrectWords": "Kata yang Ditebak dengan Benar",
+  "statisticsCorrect": "Benar",
+  "statisticsPassedWords": "Kata yang Dilewati",
+  "statisticsPassed": "Dilewati",
+  "statisticsHighScore": "Skor Tertinggi",
+  "statisticsTime": "Waktu",
+  "statisticsTeamScores": "Skor Tim",
+  "statisticsWinnerTeam": "Tim Pemenang",
+  "statisticsTeamPerformance": "Performa Tim",
+  "statisticsWordDetails": "Detail Kata",
+  "statisticsCorrectCount": "Benar",
+  "statisticsPassCount": "Lewat",
+  "statisticsTabuCount": "Tabu",
+  "statisticsGameDate": "Tanggal Permainan",
+  "statisticsScore": "Skor",
+  "statisticsNone": "Tidak ada",
+  "statisticsDurationSeconds": "{count} detik",
+  "@statisticsDurationSeconds": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "commonClose": "Tutup",
+
+  "teamSetupTitle": "BUAT TIM ANDA",
+  "teamSetupHowMany": "Berapa tim yang akan bermain?",
+  "teamSetupDefaultName": "Tim {index}",
+  "@teamSetupDefaultName": {
+    "placeholders": {"index": {"type": "int"}}
+  },
+
+  "gameErrorOccurred": "Terjadi kesalahan:\n\n",
+  "gameNewGame": "PERMAINAN BARU",
+  "gameOver": "PERMAINAN SELESAI",
+  "gameOverHero": "PERMAINAN YANG SERU!",
+  "gameOverExit": "KELUAR",
+  "gameOverAgain": "MAIN LAGI",
+  "gameReadyHeader": "SKOR SAAT INI",
+  "gameReadyNextTeam": "TIM BERIKUTNYA",
+  "gameReadyStart": "MULAI",
+  "gameTeamReady": "{teamName} Siap",
+  "@gameTeamReady": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameTeamPlaying": "{teamName} Sedang Bermain",
+  "@gameTeamPlaying": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameStatusFinished": "Permainan Selesai",
+  "gameTeamSelection": "Pilih Tim",
+  "gamePaused": "Dijeda",
+  "gameCorrect": "Benar",
+  "gamePass": "Lewat",
+  "gameTabu": "Tabu",
+  "gameResume": "LANJUTKAN",
+  "gamePassCount": "Lewat ({used}/{max})",
+  "@gamePassCount": {
+    "placeholders": {
+      "used": {"type": "int"},
+      "max": {"type": "int"}
+    }
+  },
+  "gameForbiddenHeader": "KATA TERLARANG",
+  "gameNoWordsFound": "Tidak ada kata yang ditemukan.",
+  "gameWordsLoadFail": "Gagal memuat kata-kata.",
+  "gameWordsLoadError": "Kesalahan saat memuat kata: {error}",
+  "@gameWordsLoadError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "gameNoWordsAddPrompt": "Tidak ada kata yang ditemukan. Silakan tambahkan kata dari halaman manajemen kata.",
+
+  "exitConfirmExitTitle": "Apakah Anda yakin ingin mengakhiri permainan dan pergi ke papan skor?",
+  "exitConfirmUnevenTitle": "Tidak semua tim telah bermain dengan jumlah ronde yang sama. Apakah Anda tetap ingin keluar?",
+
+  "wordsTitle": "Manajemen Kata",
+  "wordsEditTitle": "Edit Kata",
+  "wordsResetList": "Atur Ulang Daftar",
+  "wordsBulkImport": "Impor Massal",
+  "wordsBulkImportTitle": "Impor Kata Massal",
+  "wordsLabel": "Kata",
+  "wordsCancelEdit": "Batalkan Edit",
+  "wordsSave": "Simpan",
+  "wordsUpdate": "Perbarui",
+  "wordsEdit": "Edit",
+  "wordsAddButton": "Tambah",
+  "wordsForbiddenLabel": "Kata Terlarang",
+  "wordsForbiddenList": "Kata-kata Terlarang:",
+  "wordsForbiddenEmpty": "Belum ada kata terlarang yang ditambahkan.",
+  "wordsForbiddenCount": "{count, plural, =1{{count} kata terlarang} other{{count} kata terlarang}}",
+  "@wordsForbiddenCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "wordsAddPrompt": "Masukkan kata dan tambahkan setidaknya satu kata terlarang",
+  "wordsAddSuccess": "Kata baru berhasil ditambahkan",
+  "wordsUpdateSuccess": "Kata berhasil diperbarui",
+  "wordsDeleteSuccess": "Kata berhasil dihapus",
+  "wordsDeleteConfirm": "Apakah Anda yakin ingin menghapus kata ini? Tindakan ini tidak dapat dibatalkan.",
+  "wordsForbiddenDuplicate": "Kata terlarang ini sudah ditambahkan",
+  "wordsEmpty": "Belum ada kata yang tersimpan.",
+  "wordsSavedCount": "Kata Tersimpan ({count})",
+  "@wordsSavedCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+
+  "bulkPasteHint": "Tempel data JSON Anda di sini...",
+  "bulkPaste": "Tempel",
+  "bulkCancel": "Batal",
+  "bulkImport": "Impor",
+  "bulkEmpty": "Silakan masukkan data JSON.",
+  "bulkInvalidFormat": "Format JSON tidak valid. Setiap item harus mengandung \"word\" dan \"forbiddenWords\" (daftar).",
+  "bulkJsonError": "Kesalahan format JSON: {message}",
+  "@bulkJsonError": {
+    "placeholders": {"message": {"type": "String"}}
+  },
+  "bulkImportError": "Terjadi kesalahan saat mengimpor: {error}",
+  "@bulkImportError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "bulkImportResult": "{success} kata berhasil diimpor, {errors} gagal.",
+  "@bulkImportResult": {
+    "placeholders": {
+      "success": {"type": "int"},
+      "errors": {"type": "int"}
+    }
+  },
+
+  "dialogConfirmDelete": "Ya, Hapus",
+  "dialogCancel": "Batal",
+  "dialogWarning": "Peringatan!",
+  "dialogYes": "YA",
+  "dialogNo": "TIDAK",
+
+  "easterEggSurprise": "Kejutan!"
+}

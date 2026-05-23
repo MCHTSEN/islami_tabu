@@ -1,0 +1,5419 @@
+{
+  "version": 1,
+  "locale": "en",
+  "count": 492,
+  "words": [
+    {
+      "id": "en-1",
+      "word": "Salah",
+      "forbiddenWords": [
+        "Prayer",
+        "Five",
+        "Rakat",
+        "Wudu",
+        "Qiblah"
+      ]
+    },
+    {
+      "id": "en-2",
+      "word": "Fasting",
+      "forbiddenWords": [
+        "Ramadan",
+        "Suhoor",
+        "Iftar",
+        "Hunger",
+        "Sunset"
+      ]
+    },
+    {
+      "id": "en-3",
+      "word": "Zakat",
+      "forbiddenWords": [
+        "Charity",
+        "Wealth",
+        "Poor",
+        "Percent",
+        "Obligatory"
+      ]
+    },
+    {
+      "id": "en-4",
+      "word": "Hajj",
+      "forbiddenWords": [
+        "Mecca",
+        "Pilgrimage",
+        "Kaaba",
+        "Ihram",
+        "Tawaf"
+      ]
+    },
+    {
+      "id": "en-5",
+      "word": "Prophet",
+      "forbiddenWords": [
+        "Messenger",
+        "Muhammad",
+        "Revelation",
+        "Allah",
+        "Mission"
+      ]
+    },
+    {
+      "id": "en-6",
+      "word": "Quran",
+      "forbiddenWords": [
+        "Book",
+        "Revelation",
+        "Verses",
+        "Allah",
+        "Recite"
+      ]
+    },
+    {
+      "id": "en-7",
+      "word": "Allah",
+      "forbiddenWords": [
+        "God",
+        "Creator",
+        "Lord",
+        "One",
+        "Worship"
+      ]
+    },
+    {
+      "id": "en-8",
+      "word": "Masjid",
+      "forbiddenWords": [
+        "Mosque",
+        "Prayer",
+        "Minaret",
+        "Imam",
+        "Friday"
+      ]
+    },
+    {
+      "id": "en-9",
+      "word": "Wudu",
+      "forbiddenWords": [
+        "Ablution",
+        "Water",
+        "Hands",
+        "Face",
+        "Prayer"
+      ]
+    },
+    {
+      "id": "en-10",
+      "word": "Hadith",
+      "forbiddenWords": [
+        "Prophet",
+        "Saying",
+        "Bukhari",
+        "Muslim",
+        "Sunnah"
+      ]
+    },
+    {
+      "id": "en-11",
+      "word": "Sunnah",
+      "forbiddenWords": [
+        "Prophet",
+        "Tradition",
+        "Practice",
+        "Follow",
+        "Hadith"
+      ]
+    },
+    {
+      "id": "en-12",
+      "word": "Shaytan",
+      "forbiddenWords": [
+        "Satan",
+        "Devil",
+        "Whisper",
+        "Evil",
+        "Iblis"
+      ]
+    },
+    {
+      "id": "en-13",
+      "word": "Angel",
+      "forbiddenWords": [
+        "Wings",
+        "Gabriel",
+        "Light",
+        "Heaven",
+        "Worship"
+      ]
+    },
+    {
+      "id": "en-14",
+      "word": "Jannah",
+      "forbiddenWords": [
+        "Paradise",
+        "Heaven",
+        "Reward",
+        "Eternal",
+        "Garden"
+      ]
+    },
+    {
+      "id": "en-15",
+      "word": "Jahannam",
+      "forbiddenWords": [
+        "Hell",
+        "Fire",
+        "Punishment",
+        "Eternal",
+        "Sinner"
+      ]
+    },
+    {
+      "id": "en-16",
+      "word": "Ramadan",
+      "forbiddenWords": [
+        "Month",
+        "Fasting",
+        "Quran",
+        "Iftar",
+        "Lunar"
+      ]
+    },
+    {
+      "id": "en-17",
+      "word": "Eid al-Fitr",
+      "forbiddenWords": [
+        "Ramadan",
+        "End",
+        "Celebration",
+        "Sweets",
+        "Family"
+      ]
+    },
+    {
+      "id": "en-18",
+      "word": "Eid al-Adha",
+      "forbiddenWords": [
+        "Sacrifice",
+        "Hajj",
+        "Ibrahim",
+        "Sheep",
+        "Festival"
+      ]
+    },
+    {
+      "id": "en-19",
+      "word": "Iftar",
+      "forbiddenWords": [
+        "Sunset",
+        "Break",
+        "Date",
+        "Ramadan",
+        "Meal"
+      ]
+    },
+    {
+      "id": "en-20",
+      "word": "Suhoor",
+      "forbiddenWords": [
+        "Dawn",
+        "Meal",
+        "Ramadan",
+        "Before",
+        "Fasting"
+      ]
+    },
+    {
+      "id": "en-21",
+      "word": "Adhan",
+      "forbiddenWords": [
+        "Call",
+        "Prayer",
+        "Minaret",
+        "Muezzin",
+        "Loud"
+      ]
+    },
+    {
+      "id": "en-22",
+      "word": "Imam",
+      "forbiddenWords": [
+        "Leader",
+        "Prayer",
+        "Mosque",
+        "Front",
+        "Follow"
+      ]
+    },
+    {
+      "id": "en-23",
+      "word": "Khutbah",
+      "forbiddenWords": [
+        "Sermon",
+        "Friday",
+        "Imam",
+        "Minbar",
+        "Speech"
+      ]
+    },
+    {
+      "id": "en-24",
+      "word": "Qiblah",
+      "forbiddenWords": [
+        "Direction",
+        "Mecca",
+        "Kaaba",
+        "Compass",
+        "Face"
+      ]
+    },
+    {
+      "id": "en-25",
+      "word": "Kaaba",
+      "forbiddenWords": [
+        "Black",
+        "Cube",
+        "Mecca",
+        "Tawaf",
+        "Hajj"
+      ]
+    },
+    {
+      "id": "en-26",
+      "word": "Mecca",
+      "forbiddenWords": [
+        "Holy",
+        "City",
+        "Saudi",
+        "Pilgrimage",
+        "Kaaba"
+      ]
+    },
+    {
+      "id": "en-27",
+      "word": "Medina",
+      "forbiddenWords": [
+        "Prophet",
+        "City",
+        "Migration",
+        "Mosque",
+        "Grave"
+      ]
+    },
+    {
+      "id": "en-28",
+      "word": "Friday",
+      "forbiddenWords": [
+        "Jumu'ah",
+        "Salah",
+        "Sermon",
+        "Gathering",
+        "Weekly"
+      ]
+    },
+    {
+      "id": "en-29",
+      "word": "Ibrahim",
+      "forbiddenWords": [
+        "Abraham",
+        "Fire",
+        "Kaaba",
+        "Test",
+        "Son"
+      ]
+    },
+    {
+      "id": "en-30",
+      "word": "Ismail",
+      "forbiddenWords": [
+        "Ishmael",
+        "Son",
+        "Ibrahim",
+        "Zamzam",
+        "Sacrifice"
+      ]
+    },
+    {
+      "id": "en-31",
+      "word": "Musa",
+      "forbiddenWords": [
+        "Moses",
+        "Pharaoh",
+        "Staff",
+        "Egypt",
+        "Sea"
+      ]
+    },
+    {
+      "id": "en-32",
+      "word": "Isa",
+      "forbiddenWords": [
+        "Jesus",
+        "Miracles",
+        "Gospel",
+        "Mary",
+        "Return"
+      ]
+    },
+    {
+      "id": "en-33",
+      "word": "Nuh",
+      "forbiddenWords": [
+        "Noah",
+        "Ark",
+        "Flood",
+        "Animals",
+        "Build"
+      ]
+    },
+    {
+      "id": "en-34",
+      "word": "Adam",
+      "forbiddenWords": [
+        "First",
+        "Human",
+        "Garden",
+        "Eve",
+        "Creation"
+      ]
+    },
+    {
+      "id": "en-35",
+      "word": "Maryam",
+      "forbiddenWords": [
+        "Mary",
+        "Mother",
+        "Isa",
+        "Virgin",
+        "Surah"
+      ]
+    },
+    {
+      "id": "en-36",
+      "word": "Khadijah",
+      "forbiddenWords": [
+        "Wife",
+        "First",
+        "Support",
+        "Merchant",
+        "Revelation"
+      ]
+    },
+    {
+      "id": "en-37",
+      "word": "Aisha",
+      "forbiddenWords": [
+        "Wife",
+        "Scholar",
+        "Hadith",
+        "Young",
+        "Beloved"
+      ]
+    },
+    {
+      "id": "en-38",
+      "word": "Abu Bakr",
+      "forbiddenWords": [
+        "Caliph",
+        "First",
+        "Companion",
+        "Cave",
+        "Siddiq"
+      ]
+    },
+    {
+      "id": "en-39",
+      "word": "Umar",
+      "forbiddenWords": [
+        "Caliph",
+        "Second",
+        "Strong",
+        "Justice",
+        "Convert"
+      ]
+    },
+    {
+      "id": "en-40",
+      "word": "Ali",
+      "forbiddenWords": [
+        "Caliph",
+        "Fourth",
+        "Cousin",
+        "Lion",
+        "Imam"
+      ]
+    },
+    {
+      "id": "en-41",
+      "word": "Bilal",
+      "forbiddenWords": [
+        "Ethiopia",
+        "Freed",
+        "Adhan",
+        "First",
+        "Slave"
+      ]
+    },
+    {
+      "id": "en-42",
+      "word": "Jibreel",
+      "forbiddenWords": [
+        "Gabriel",
+        "Angel",
+        "Revelation",
+        "Trusted",
+        "Quran"
+      ]
+    },
+    {
+      "id": "en-43",
+      "word": "Iman",
+      "forbiddenWords": [
+        "Faith",
+        "Belief",
+        "Six",
+        "Pillars",
+        "Heart"
+      ]
+    },
+    {
+      "id": "en-44",
+      "word": "Islam",
+      "forbiddenWords": [
+        "Religion",
+        "Submission",
+        "Five",
+        "Pillars",
+        "Peace"
+      ]
+    },
+    {
+      "id": "en-45",
+      "word": "Tawheed",
+      "forbiddenWords": [
+        "Oneness",
+        "Allah",
+        "Monotheism",
+        "Unity",
+        "Core"
+      ]
+    },
+    {
+      "id": "en-46",
+      "word": "Shahada",
+      "forbiddenWords": [
+        "Declaration",
+        "Faith",
+        "Witness",
+        "Two",
+        "Parts"
+      ]
+    },
+    {
+      "id": "en-47",
+      "word": "Halal",
+      "forbiddenWords": [
+        "Permissible",
+        "Allowed",
+        "Food",
+        "Lawful",
+        "Islam"
+      ]
+    },
+    {
+      "id": "en-48",
+      "word": "Haram",
+      "forbiddenWords": [
+        "Forbidden",
+        "Prohibited",
+        "Sin",
+        "Avoid",
+        "Unlawful"
+      ]
+    },
+    {
+      "id": "en-49",
+      "word": "Dua",
+      "forbiddenWords": [
+        "Supplication",
+        "Ask",
+        "Allah",
+        "Hands",
+        "Pray"
+      ]
+    },
+    {
+      "id": "en-50",
+      "word": "Dhikr",
+      "forbiddenWords": [
+        "Remembrance",
+        "Allah",
+        "Tongue",
+        "Repeat",
+        "Beads"
+      ]
+    },
+    {
+      "id": "en-51",
+      "word": "Tasbih",
+      "forbiddenWords": [
+        "SubhanAllah",
+        "Beads",
+        "Count",
+        "Glorify",
+        "Ninety"
+      ]
+    },
+    {
+      "id": "en-52",
+      "word": "Sajdah",
+      "forbiddenWords": [
+        "Prostration",
+        "Forehead",
+        "Floor",
+        "Prayer",
+        "Worship"
+      ]
+    },
+    {
+      "id": "en-53",
+      "word": "Ruku",
+      "forbiddenWords": [
+        "Bow",
+        "Waist",
+        "Prayer",
+        "Down",
+        "Back"
+      ]
+    },
+    {
+      "id": "en-54",
+      "word": "Tawaf",
+      "forbiddenWords": [
+        "Circle",
+        "Kaaba",
+        "Seven",
+        "Times",
+        "Hajj"
+      ]
+    },
+    {
+      "id": "en-55",
+      "word": "Ihram",
+      "forbiddenWords": [
+        "White",
+        "Cloth",
+        "Pilgrim",
+        "State",
+        "Hajj"
+      ]
+    },
+    {
+      "id": "en-56",
+      "word": "Arafat",
+      "forbiddenWords": [
+        "Plain",
+        "Wuquf",
+        "Hajj",
+        "Day",
+        "Standing"
+      ]
+    },
+    {
+      "id": "en-57",
+      "word": "Mina",
+      "forbiddenWords": [
+        "Tent",
+        "City",
+        "Hajj",
+        "Stoning",
+        "Stay"
+      ]
+    },
+    {
+      "id": "en-58",
+      "word": "Jamarat",
+      "forbiddenWords": [
+        "Pillars",
+        "Stones",
+        "Throw",
+        "Devil",
+        "Mina"
+      ]
+    },
+    {
+      "id": "en-59",
+      "word": "Sacrifice",
+      "forbiddenWords": [
+        "Animal",
+        "Slaughter",
+        "Eid",
+        "Ibrahim",
+        "Qurbani"
+      ]
+    },
+    {
+      "id": "en-60",
+      "word": "Qurbani",
+      "forbiddenWords": [
+        "Sacrifice",
+        "Eid",
+        "Adha",
+        "Animal",
+        "Share"
+      ]
+    },
+    {
+      "id": "en-61",
+      "word": "Ihsan",
+      "forbiddenWords": [
+        "Excellence",
+        "Worship",
+        "Allah",
+        "See",
+        "Perfection"
+      ]
+    },
+    {
+      "id": "en-62",
+      "word": "Sabr",
+      "forbiddenWords": [
+        "Patience",
+        "Endure",
+        "Trial",
+        "Reward",
+        "Test"
+      ]
+    },
+    {
+      "id": "en-63",
+      "word": "Shukr",
+      "forbiddenWords": [
+        "Gratitude",
+        "Thankful",
+        "Allah",
+        "Blessings",
+        "Increase"
+      ]
+    },
+    {
+      "id": "en-64",
+      "word": "Tawakkul",
+      "forbiddenWords": [
+        "Trust",
+        "Allah",
+        "Rely",
+        "Effort",
+        "Then"
+      ]
+    },
+    {
+      "id": "en-65",
+      "word": "Ikhlas",
+      "forbiddenWords": [
+        "Sincerity",
+        "Allah",
+        "Alone",
+        "Pure",
+        "Intention"
+      ]
+    },
+    {
+      "id": "en-66",
+      "word": "Niyyah",
+      "forbiddenWords": [
+        "Intention",
+        "Before",
+        "Act",
+        "Heart",
+        "Worship"
+      ]
+    },
+    {
+      "id": "en-67",
+      "word": "Tawbah",
+      "forbiddenWords": [
+        "Repentance",
+        "Return",
+        "Allah",
+        "Sin",
+        "Forgive"
+      ]
+    },
+    {
+      "id": "en-68",
+      "word": "Istighfar",
+      "forbiddenWords": [
+        "Seek",
+        "Forgiveness",
+        "Astaghfirullah",
+        "Say",
+        "Often"
+      ]
+    },
+    {
+      "id": "en-69",
+      "word": "Hijab",
+      "forbiddenWords": [
+        "Veil",
+        "Modest",
+        "Cover",
+        "Woman",
+        "Head"
+      ]
+    },
+    {
+      "id": "en-70",
+      "word": "Sadaqah",
+      "forbiddenWords": [
+        "Voluntary",
+        "Charity",
+        "Give",
+        "Poor",
+        "Reward"
+      ]
+    },
+    {
+      "id": "en-71",
+      "word": "Jihad",
+      "forbiddenWords": [
+        "Struggle",
+        "Effort",
+        "Inner",
+        "Path",
+        "Strive"
+      ]
+    },
+    {
+      "id": "en-72",
+      "word": "Akhirah",
+      "forbiddenWords": [
+        "Hereafter",
+        "After",
+        "Death",
+        "Eternal",
+        "Life"
+      ]
+    },
+    {
+      "id": "en-73",
+      "word": "Qiyamah",
+      "forbiddenWords": [
+        "Resurrection",
+        "Day",
+        "Judgment",
+        "Rise",
+        "Final"
+      ]
+    },
+    {
+      "id": "en-74",
+      "word": "Mizan",
+      "forbiddenWords": [
+        "Scale",
+        "Balance",
+        "Deeds",
+        "Weigh",
+        "Judgment"
+      ]
+    },
+    {
+      "id": "en-75",
+      "word": "Sirat",
+      "forbiddenWords": [
+        "Bridge",
+        "Over",
+        "Hell",
+        "Cross",
+        "Thin"
+      ]
+    },
+    {
+      "id": "en-76",
+      "word": "Mihrab",
+      "forbiddenWords": [
+        "Niche",
+        "Mosque",
+        "Qiblah",
+        "Imam",
+        "Pray"
+      ]
+    },
+    {
+      "id": "en-77",
+      "word": "Minbar",
+      "forbiddenWords": [
+        "Pulpit",
+        "Steps",
+        "Khutbah",
+        "Imam",
+        "Friday"
+      ]
+    },
+    {
+      "id": "en-78",
+      "word": "Minaret",
+      "forbiddenWords": [
+        "Tower",
+        "Mosque",
+        "Adhan",
+        "Call",
+        "High"
+      ]
+    },
+    {
+      "id": "en-79",
+      "word": "Ayah",
+      "forbiddenWords": [
+        "Verse",
+        "Quran",
+        "Surah",
+        "Sign",
+        "Read"
+      ]
+    },
+    {
+      "id": "en-80",
+      "word": "Surah",
+      "forbiddenWords": [
+        "Chapter",
+        "Quran",
+        "114",
+        "Recite",
+        "Name"
+      ]
+    },
+    {
+      "id": "en-81",
+      "word": "Al-Fatihah",
+      "forbiddenWords": [
+        "Opening",
+        "First",
+        "Surah",
+        "Seven",
+        "Prayer"
+      ]
+    },
+    {
+      "id": "en-82",
+      "word": "Hafiz",
+      "forbiddenWords": [
+        "Memorize",
+        "Quran",
+        "Heart",
+        "By",
+        "Recite"
+      ]
+    },
+    {
+      "id": "en-83",
+      "word": "Tajweed",
+      "forbiddenWords": [
+        "Rules",
+        "Recitation",
+        "Pronunciation",
+        "Quran",
+        "Correct"
+      ]
+    },
+    {
+      "id": "en-84",
+      "word": "Tafsir",
+      "forbiddenWords": [
+        "Commentary",
+        "Quran",
+        "Explain",
+        "Scholar",
+        "Meaning"
+      ]
+    },
+    {
+      "id": "en-85",
+      "word": "Fiqh",
+      "forbiddenWords": [
+        "Jurisprudence",
+        "Islamic",
+        "Law",
+        "Rulings",
+        "Scholar"
+      ]
+    },
+    {
+      "id": "en-86",
+      "word": "Sahabah",
+      "forbiddenWords": [
+        "Companions",
+        "Prophet",
+        "Lived",
+        "Saw",
+        "Followed"
+      ]
+    },
+    {
+      "id": "en-87",
+      "word": "Caliph",
+      "forbiddenWords": [
+        "Successor",
+        "Leader",
+        "Muslim",
+        "State",
+        "Four"
+      ]
+    },
+    {
+      "id": "en-88",
+      "word": "Ummah",
+      "forbiddenWords": [
+        "Muslim",
+        "Community",
+        "Nation",
+        "Worldwide",
+        "One"
+      ]
+    },
+    {
+      "id": "en-89",
+      "word": "Brotherhood",
+      "forbiddenWords": [
+        "Muslim",
+        "Bond",
+        "Fellow",
+        "Love",
+        "Together"
+      ]
+    },
+    {
+      "id": "en-90",
+      "word": "Marriage",
+      "forbiddenWords": [
+        "Nikah",
+        "Contract",
+        "Husband",
+        "Wife",
+        "Halal"
+      ]
+    },
+    {
+      "id": "en-91",
+      "word": "Mahr",
+      "forbiddenWords": [
+        "Dowry",
+        "Gift",
+        "Bride",
+        "Marriage",
+        "Obligatory"
+      ]
+    },
+    {
+      "id": "en-92",
+      "word": "Modesty",
+      "forbiddenWords": [
+        "Hayaa",
+        "Dress",
+        "Behavior",
+        "Lower",
+        "Gaze"
+      ]
+    },
+    {
+      "id": "en-93",
+      "word": "Backbiting",
+      "forbiddenWords": [
+        "Ghibah",
+        "Absent",
+        "Talk",
+        "Bad",
+        "Sin"
+      ]
+    },
+    {
+      "id": "en-94",
+      "word": "Lying",
+      "forbiddenWords": [
+        "False",
+        "Truth",
+        "Forbidden",
+        "Sin",
+        "Tongue"
+      ]
+    },
+    {
+      "id": "en-95",
+      "word": "Honesty",
+      "forbiddenWords": [
+        "Truth",
+        "Sidq",
+        "Trust",
+        "Speak",
+        "Always"
+      ]
+    },
+    {
+      "id": "en-96",
+      "word": "Justice",
+      "forbiddenWords": [
+        "Adl",
+        "Fair",
+        "Equal",
+        "Right",
+        "Treat"
+      ]
+    },
+    {
+      "id": "en-97",
+      "word": "Mercy",
+      "forbiddenWords": [
+        "Rahma",
+        "Kind",
+        "Forgive",
+        "Allah",
+        "Show"
+      ]
+    },
+    {
+      "id": "en-98",
+      "word": "Orphan",
+      "forbiddenWords": [
+        "Child",
+        "Parents",
+        "Care",
+        "Right",
+        "Protect"
+      ]
+    },
+    {
+      "id": "en-99",
+      "word": "Neighbor",
+      "forbiddenWords": [
+        "Next",
+        "Door",
+        "Rights",
+        "Kind",
+        "Care"
+      ]
+    },
+    {
+      "id": "en-100",
+      "word": "Parents",
+      "forbiddenWords": [
+        "Mother",
+        "Father",
+        "Obey",
+        "Honor",
+        "Respect"
+      ]
+    },
+    {
+      "id": "en-101",
+      "word": "Muezzin",
+      "forbiddenWords": [
+        "Call",
+        "Prayer",
+        "Adhan",
+        "Minaret",
+        "Announce"
+      ]
+    },
+    {
+      "id": "en-102",
+      "word": "Prayer Rug",
+      "forbiddenWords": [
+        "Sajjadah",
+        "Spread",
+        "Direction",
+        "Clean",
+        "Pray"
+      ]
+    },
+    {
+      "id": "en-103",
+      "word": "Prayer Beads",
+      "forbiddenWords": [
+        "Tasbih",
+        "Count",
+        "Dhikr",
+        "Ninety-nine",
+        "Round"
+      ]
+    },
+    {
+      "id": "en-104",
+      "word": "Zamzam",
+      "forbiddenWords": [
+        "Well",
+        "Mecca",
+        "Sacred",
+        "Drink",
+        "Hagar"
+      ]
+    },
+    {
+      "id": "en-105",
+      "word": "Itikaf",
+      "forbiddenWords": [
+        "Retreat",
+        "Mosque",
+        "Ten",
+        "Days",
+        "Seclude"
+      ]
+    },
+    {
+      "id": "en-106",
+      "word": "Laylatul Qadr",
+      "forbiddenWords": [
+        "Night",
+        "Power",
+        "Better",
+        "Thousand",
+        "Ramadan"
+      ]
+    },
+    {
+      "id": "en-107",
+      "word": "Taraweeh",
+      "forbiddenWords": [
+        "Night",
+        "Prayer",
+        "Ramadan",
+        "Congregation",
+        "Twenty"
+      ]
+    },
+    {
+      "id": "en-108",
+      "word": "Janazah",
+      "forbiddenWords": [
+        "Funeral",
+        "Prayer",
+        "Dead",
+        "Bury",
+        "Wash"
+      ]
+    },
+    {
+      "id": "en-109",
+      "word": "Ghusl",
+      "forbiddenWords": [
+        "Full",
+        "Body",
+        "Wash",
+        "Ritual",
+        "Bath"
+      ]
+    },
+    {
+      "id": "en-110",
+      "word": "Salam",
+      "forbiddenWords": [
+        "Peace",
+        "Greeting",
+        "Alaikum",
+        "Reply",
+        "Muslim"
+      ]
+    },
+    {
+      "id": "en-111",
+      "word": "Basmalah",
+      "forbiddenWords": [
+        "Bismillah",
+        "Start",
+        "Begin",
+        "Name",
+        "Recite"
+      ]
+    },
+    {
+      "id": "en-112",
+      "word": "Takbir",
+      "forbiddenWords": [
+        "Allahu",
+        "Akbar",
+        "Greatness",
+        "Say",
+        "Begin"
+      ]
+    },
+    {
+      "id": "en-113",
+      "word": "Yusuf",
+      "forbiddenWords": [
+        "Joseph",
+        "Egypt",
+        "Well",
+        "Brothers",
+        "Surah"
+      ]
+    },
+    {
+      "id": "en-114",
+      "word": "Dawud",
+      "forbiddenWords": [
+        "David",
+        "Psalms",
+        "King",
+        "Iron",
+        "Goliath"
+      ]
+    },
+    {
+      "id": "en-115",
+      "word": "Sulayman",
+      "forbiddenWords": [
+        "Solomon",
+        "King",
+        "Wisdom",
+        "Animals",
+        "Jinn"
+      ]
+    },
+    {
+      "id": "en-116",
+      "word": "Hawwa",
+      "forbiddenWords": [
+        "Eve",
+        "Adam",
+        "First",
+        "Woman",
+        "Paradise"
+      ]
+    },
+    {
+      "id": "en-117",
+      "word": "Fitrah",
+      "forbiddenWords": [
+        "Nature",
+        "Born",
+        "Pure",
+        "Innate",
+        "Islam"
+      ]
+    },
+    {
+      "id": "en-118",
+      "word": "Barakah",
+      "forbiddenWords": [
+        "Blessing",
+        "Increase",
+        "Allah",
+        "Goodness",
+        "Food"
+      ]
+    },
+    {
+      "id": "en-119",
+      "word": "Rizq",
+      "forbiddenWords": [
+        "Provision",
+        "Sustenance",
+        "Allah",
+        "Wealth",
+        "Food"
+      ]
+    },
+    {
+      "id": "en-120",
+      "word": "Ajr",
+      "forbiddenWords": [
+        "Reward",
+        "Allah",
+        "Hereafter",
+        "Deed",
+        "Multiply"
+      ]
+    },
+    {
+      "id": "en-121",
+      "word": "Rakat",
+      "forbiddenWords": [
+        "Unit",
+        "Prayer",
+        "Bow",
+        "Prostrate",
+        "Cycle"
+      ]
+    },
+    {
+      "id": "en-122",
+      "word": "Fard Prayer",
+      "forbiddenWords": [
+        "Obligatory",
+        "Duty",
+        "Prayer",
+        "Mandatory",
+        "Missed"
+      ]
+    },
+    {
+      "id": "en-123",
+      "word": "Asr Prayer",
+      "forbiddenWords": [
+        "Afternoon",
+        "Third",
+        "Prayer",
+        "Time",
+        "Sun"
+      ]
+    },
+    {
+      "id": "en-124",
+      "word": "Fajr Prayer",
+      "forbiddenWords": [
+        "Dawn",
+        "Morning",
+        "Prayer",
+        "Two",
+        "Sunrise"
+      ]
+    },
+    {
+      "id": "en-125",
+      "word": "Maghrib Prayer",
+      "forbiddenWords": [
+        "Sunset",
+        "Evening",
+        "Prayer",
+        "Three",
+        "Isha"
+      ]
+    },
+    {
+      "id": "en-126",
+      "word": "Isha Prayer",
+      "forbiddenWords": [
+        "Night",
+        "Last",
+        "Prayer",
+        "Four",
+        "Maghrib"
+      ]
+    },
+    {
+      "id": "en-127",
+      "word": "Tilawah",
+      "forbiddenWords": [
+        "Recitation",
+        "Quran",
+        "Voice",
+        "Beautiful",
+        "Recite"
+      ]
+    },
+    {
+      "id": "en-128",
+      "word": "Qa'dah",
+      "forbiddenWords": [
+        "Sitting",
+        "Tashahhud",
+        "Between",
+        "Prostrations",
+        "Position"
+      ]
+    },
+    {
+      "id": "en-129",
+      "word": "Tashahhud",
+      "forbiddenWords": [
+        "Testimony",
+        "Sitting",
+        "Finger",
+        "Shahada",
+        "Recite"
+      ]
+    },
+    {
+      "id": "en-130",
+      "word": "Salawat",
+      "forbiddenWords": [
+        "Blessings",
+        "Prophet",
+        "Muhammad",
+        "Recite",
+        "Durood"
+      ]
+    },
+    {
+      "id": "en-131",
+      "word": "Tasleem",
+      "forbiddenWords": [
+        "Salam",
+        "End",
+        "Prayer",
+        "Turn",
+        "Right"
+      ]
+    },
+    {
+      "id": "en-132",
+      "word": "Qiyam",
+      "forbiddenWords": [
+        "Standing",
+        "Night",
+        "Tahajjud",
+        "Long",
+        "Optional"
+      ]
+    },
+    {
+      "id": "en-133",
+      "word": "Iqamah",
+      "forbiddenWords": [
+        "Second",
+        "Call",
+        "Prayer",
+        "Ready",
+        "Line"
+      ]
+    },
+    {
+      "id": "en-134",
+      "word": "Niyyah for Wudu",
+      "forbiddenWords": [
+        "Intention",
+        "Before",
+        "Ablution",
+        "Wudu",
+        "Heart"
+      ]
+    },
+    {
+      "id": "en-135",
+      "word": "Tayammum",
+      "forbiddenWords": [
+        "Dry",
+        "Ablution",
+        "Sand",
+        "Dust",
+        "Water"
+      ]
+    },
+    {
+      "id": "en-136",
+      "word": "Ghusl Steps",
+      "forbiddenWords": [
+        "Ritual",
+        "Bath",
+        "Ghusl",
+        "Order",
+        "Wash"
+      ]
+    },
+    {
+      "id": "en-137",
+      "word": "Miswak",
+      "forbiddenWords": [
+        "Toothstick",
+        "Teeth",
+        "Prophet",
+        "Clean",
+        "Sunnah"
+      ]
+    },
+    {
+      "id": "en-138",
+      "word": "Nisab",
+      "forbiddenWords": [
+        "Threshold",
+        "Gold",
+        "Silver",
+        "Zakat",
+        "Minimum"
+      ]
+    },
+    {
+      "id": "en-139",
+      "word": "Zakat al-Fitr",
+      "forbiddenWords": [
+        "Ramadan",
+        "End",
+        "Food",
+        "Poor",
+        "Eid"
+      ]
+    },
+    {
+      "id": "en-140",
+      "word": "Ushr",
+      "forbiddenWords": [
+        "Tenth",
+        "Crop",
+        "Agricultural",
+        "Zakat",
+        "Harvest"
+      ]
+    },
+    {
+      "id": "en-141",
+      "word": "Basmala",
+      "forbiddenWords": [
+        "Start",
+        "Bismillah",
+        "Begin",
+        "Before",
+        "Eat"
+      ]
+    },
+    {
+      "id": "en-142",
+      "word": "Fidyah",
+      "forbiddenWords": [
+        "Expiation",
+        "Missed",
+        "Fast",
+        "Payment",
+        "Unable"
+      ]
+    },
+    {
+      "id": "en-143",
+      "word": "Kaffarah",
+      "forbiddenWords": [
+        "Penalty",
+        "Broken",
+        "Fast",
+        "Expiation",
+        "Intentional"
+      ]
+    },
+    {
+      "id": "en-144",
+      "word": "Mukashafah",
+      "forbiddenWords": [
+        "Spiritual",
+        "Unveiling",
+        "Sufi",
+        "Experience",
+        "Heart"
+      ]
+    },
+    {
+      "id": "en-145",
+      "word": "Salat al-Duha",
+      "forbiddenWords": [
+        "Forenoon",
+        "Morning",
+        "Optional",
+        "Sun",
+        "Voluntary"
+      ]
+    },
+    {
+      "id": "en-146",
+      "word": "Wuquf",
+      "forbiddenWords": [
+        "Standing",
+        "Arafat",
+        "Hajj",
+        "Day",
+        "Pillar"
+      ]
+    },
+    {
+      "id": "en-147",
+      "word": "Sa'y",
+      "forbiddenWords": [
+        "Walk",
+        "Safa",
+        "Marwa",
+        "Seven",
+        "Hagar"
+      ]
+    },
+    {
+      "id": "en-148",
+      "word": "Talbiyah",
+      "forbiddenWords": [
+        "Chant",
+        "Labbayk",
+        "Ihram",
+        "Pilgrim",
+        "Response"
+      ]
+    },
+    {
+      "id": "en-149",
+      "word": "Halq",
+      "forbiddenWords": [
+        "Shave",
+        "Head",
+        "Hajj",
+        "After",
+        "Taqsir"
+      ]
+    },
+    {
+      "id": "en-150",
+      "word": "Taqsir",
+      "forbiddenWords": [
+        "Trim",
+        "Hair",
+        "Hajj",
+        "Shortening",
+        "Halq"
+      ]
+    },
+    {
+      "id": "en-151",
+      "word": "Tahallul",
+      "forbiddenWords": [
+        "Exit",
+        "Ihram",
+        "Permission",
+        "After",
+        "Rituals"
+      ]
+    },
+    {
+      "id": "en-152",
+      "word": "Rami",
+      "forbiddenWords": [
+        "Stoning",
+        "Pillar",
+        "Jamarat",
+        "Devil",
+        "Pebbles"
+      ]
+    },
+    {
+      "id": "en-153",
+      "word": "Mabit",
+      "forbiddenWords": [
+        "Overnight",
+        "Muzdalifah",
+        "Mina",
+        "Stay",
+        "Hajj"
+      ]
+    },
+    {
+      "id": "en-154",
+      "word": "Muzdalifah",
+      "forbiddenWords": [
+        "Between",
+        "Arafat",
+        "Mina",
+        "Night",
+        "Pebbles"
+      ]
+    },
+    {
+      "id": "en-155",
+      "word": "Kalimah",
+      "forbiddenWords": [
+        "Word",
+        "Testimony",
+        "Faith",
+        "First",
+        "Pillar"
+      ]
+    },
+    {
+      "id": "en-156",
+      "word": "La ilaha illallah",
+      "forbiddenWords": [
+        "No",
+        "God",
+        "Except",
+        "Shahada",
+        "Declaration"
+      ]
+    },
+    {
+      "id": "en-157",
+      "word": "Muhammadar Rasulullah",
+      "forbiddenWords": [
+        "Muhammad",
+        "Messenger",
+        "Allah",
+        "Second",
+        "Part"
+      ]
+    },
+    {
+      "id": "en-158",
+      "word": "Sunnah Prayer",
+      "forbiddenWords": [
+        "Optional",
+        "Prophet",
+        "Prayer",
+        "After",
+        "Voluntary"
+      ]
+    },
+    {
+      "id": "en-159",
+      "word": "Witr Prayer",
+      "forbiddenWords": [
+        "Odd",
+        "Night",
+        "Prayer",
+        "Last",
+        "Isha"
+      ]
+    },
+    {
+      "id": "en-160",
+      "word": "Duha Prayer",
+      "forbiddenWords": [
+        "Forenoon",
+        "Morning",
+        "Prayer",
+        "Optional",
+        "Sun"
+      ]
+    },
+    {
+      "id": "en-161",
+      "word": "Tahajjud",
+      "forbiddenWords": [
+        "Night",
+        "Wake",
+        "Late",
+        "Voluntary",
+        "Sleep"
+      ]
+    },
+    {
+      "id": "en-162",
+      "word": "Qunoot",
+      "forbiddenWords": [
+        "Supplication",
+        "Witr",
+        "Night",
+        "Raise",
+        "Hands"
+      ]
+    },
+    {
+      "id": "en-163",
+      "word": "Prayer Times",
+      "forbiddenWords": [
+        "Five",
+        "Schedule",
+        "Adhan",
+        "Prayer",
+        "Clock"
+      ]
+    },
+    {
+      "id": "en-164",
+      "word": "Sutrah",
+      "forbiddenWords": [
+        "Barrier",
+        "Front",
+        "Prayer",
+        "Object",
+        "Distraction"
+      ]
+    },
+    {
+      "id": "en-165",
+      "word": "Congregation",
+      "forbiddenWords": [
+        "Jama'ah",
+        "Together",
+        "Mosque",
+        "Rows",
+        "Imam"
+      ]
+    },
+    {
+      "id": "en-166",
+      "word": "Invalidating Prayer",
+      "forbiddenWords": [
+        "Break",
+        "Nullify",
+        "Laugh",
+        "Prayer",
+        "Turn"
+      ]
+    },
+    {
+      "id": "en-167",
+      "word": "Dhuhr Prayer",
+      "forbiddenWords": [
+        "Noon",
+        "Midday",
+        "Prayer",
+        "Second",
+        "Sun"
+      ]
+    },
+    {
+      "id": "en-168",
+      "word": "Qada Prayer",
+      "forbiddenWords": [
+        "Makeup",
+        "Missed",
+        "Prayer",
+        "Later",
+        "Obligatory"
+      ]
+    },
+    {
+      "id": "en-169",
+      "word": "Eid Prayer",
+      "forbiddenWords": [
+        "Two",
+        "Festival",
+        "Morning",
+        "Prayer",
+        "Takbirs"
+      ]
+    },
+    {
+      "id": "en-170",
+      "word": "Tahiyyat al-Masjid",
+      "forbiddenWords": [
+        "Greeting",
+        "Mosque",
+        "Two",
+        "Enter",
+        "Sit"
+      ]
+    },
+    {
+      "id": "en-171",
+      "word": "Umrah",
+      "forbiddenWords": [
+        "Lesser",
+        "Pilgrimage",
+        "Mecca",
+        "Anytime",
+        "Voluntary"
+      ]
+    },
+    {
+      "id": "en-172",
+      "word": "Miqat",
+      "forbiddenWords": [
+        "Boundary",
+        "Ihram",
+        "Enter",
+        "Pilgrimage",
+        "Point"
+      ]
+    },
+    {
+      "id": "en-173",
+      "word": "Multazam",
+      "forbiddenWords": [
+        "Wall",
+        "Kaaba",
+        "Door",
+        "Black",
+        "Stone"
+      ]
+    },
+    {
+      "id": "en-174",
+      "word": "Hajr al-Aswad",
+      "forbiddenWords": [
+        "Black",
+        "Stone",
+        "Corner",
+        "Kiss",
+        "Kaaba"
+      ]
+    },
+    {
+      "id": "en-175",
+      "word": "Tawassul",
+      "forbiddenWords": [
+        "Seek",
+        "Through",
+        "Means",
+        "Dua",
+        "Closer"
+      ]
+    },
+    {
+      "id": "en-176",
+      "word": "Hady",
+      "forbiddenWords": [
+        "Sacrificial",
+        "Animal",
+        "Hajj",
+        "Pilgrimage",
+        "Slaughter"
+      ]
+    },
+    {
+      "id": "en-177",
+      "word": "Safa and Marwa",
+      "forbiddenWords": [
+        "Hills",
+        "Sa'y",
+        "Mecca",
+        "Hagar",
+        "Ritual"
+      ]
+    },
+    {
+      "id": "en-178",
+      "word": "Tawaf al-Wada",
+      "forbiddenWords": [
+        "Farewell",
+        "Circumambulate",
+        "Leave",
+        "Final",
+        "Mecca"
+      ]
+    },
+    {
+      "id": "en-179",
+      "word": "Ihram Garments",
+      "forbiddenWords": [
+        "White",
+        "Cloth",
+        "Pilgrim",
+        "Ihram",
+        "Seamless"
+      ]
+    },
+    {
+      "id": "en-180",
+      "word": "Days of Hajj",
+      "forbiddenWords": [
+        "Five",
+        "Dhul Hijjah",
+        "Hajj",
+        "Tenth",
+        "Ritual"
+      ]
+    },
+    {
+      "id": "en-181",
+      "word": "Muhammad",
+      "forbiddenWords": [
+        "Last",
+        "Prophet",
+        "Messenger",
+        "Seal",
+        "Islam"
+      ]
+    },
+    {
+      "id": "en-182",
+      "word": "Ishaq",
+      "forbiddenWords": [
+        "Isaac",
+        "Son",
+        "Ibrahim",
+        "Twin",
+        "Jacob"
+      ]
+    },
+    {
+      "id": "en-183",
+      "word": "Yaqub",
+      "forbiddenWords": [
+        "Jacob",
+        "Son",
+        "Isaac",
+        "Father",
+        "Yusuf"
+      ]
+    },
+    {
+      "id": "en-184",
+      "word": "Harun",
+      "forbiddenWords": [
+        "Aaron",
+        "Brother",
+        "Musa",
+        "Assistant",
+        "Egypt"
+      ]
+    },
+    {
+      "id": "en-185",
+      "word": "Ayyub",
+      "forbiddenWords": [
+        "Job",
+        "Patience",
+        "Trial",
+        "Disease",
+        "Reward"
+      ]
+    },
+    {
+      "id": "en-186",
+      "word": "Yunus",
+      "forbiddenWords": [
+        "Jonah",
+        "Whale",
+        "Fish",
+        "Swallowed",
+        "Tasbih"
+      ]
+    },
+    {
+      "id": "en-187",
+      "word": "Zakariya",
+      "forbiddenWords": [
+        "Zechariah",
+        "Father",
+        "Yahya",
+        "Old",
+        "Child"
+      ]
+    },
+    {
+      "id": "en-188",
+      "word": "Yahya",
+      "forbiddenWords": [
+        "John",
+        "Baptist",
+        "Son",
+        "Zakariya",
+        "Prophet"
+      ]
+    },
+    {
+      "id": "en-189",
+      "word": "Idris",
+      "forbiddenWords": [
+        "Enoch",
+        "Raised",
+        "High",
+        "Wisdom",
+        "Early"
+      ]
+    },
+    {
+      "id": "en-190",
+      "word": "Lut",
+      "forbiddenWords": [
+        "Lot",
+        "Nephew",
+        "Ibrahim",
+        "City",
+        "Destroyed"
+      ]
+    },
+    {
+      "id": "en-191",
+      "word": "Shu'ayb",
+      "forbiddenWords": [
+        "Jethro",
+        "Midian",
+        "Merchant",
+        "Fair",
+        "Trade"
+      ]
+    },
+    {
+      "id": "en-192",
+      "word": "Ilyas",
+      "forbiddenWords": [
+        "Elijah",
+        "Fire",
+        "Chariot",
+        "Mount",
+        "Baalbek"
+      ]
+    },
+    {
+      "id": "en-193",
+      "word": "Al-Yasa",
+      "forbiddenWords": [
+        "Elisha",
+        "Prophet",
+        "Successor",
+        "Ilyas",
+        "Israel"
+      ]
+    },
+    {
+      "id": "en-194",
+      "word": "Dhul-Kifl",
+      "forbiddenWords": [
+        "Prophet",
+        "Patient",
+        "Double",
+        "Reward",
+        "Land"
+      ]
+    },
+    {
+      "id": "en-195",
+      "word": "Hud",
+      "forbiddenWords": [
+        "Prophet",
+        "Aad",
+        "Wind",
+        "Destroyed",
+        "Arabian"
+      ]
+    },
+    {
+      "id": "en-196",
+      "word": "Salih",
+      "forbiddenWords": [
+        "Prophet",
+        "Thamud",
+        "Camel",
+        "Stone",
+        "Destroyed"
+      ]
+    },
+    {
+      "id": "en-197",
+      "word": "Musa's Staff",
+      "forbiddenWords": [
+        "Moses",
+        "Rod",
+        "Miracles",
+        "Sea",
+        "Snake"
+      ]
+    },
+    {
+      "id": "en-198",
+      "word": "Ibrahim's Test",
+      "forbiddenWords": [
+        "Abraham",
+        "Sacrifice",
+        "Son",
+        "Fire",
+        "Trial"
+      ]
+    },
+    {
+      "id": "en-199",
+      "word": "Nuh's Ark",
+      "forbiddenWords": [
+        "Noah",
+        "Boat",
+        "Flood",
+        "Animals",
+        "Wood"
+      ]
+    },
+    {
+      "id": "en-200",
+      "word": "People of the Cave",
+      "forbiddenWords": [
+        "Kahf",
+        "Youth",
+        "Sleep",
+        "Years",
+        "Dog"
+      ]
+    },
+    {
+      "id": "en-201",
+      "word": "Dhul-Qarnayn",
+      "forbiddenWords": [
+        "Two",
+        "Horns",
+        "King",
+        "Gog",
+        "Magog"
+      ]
+    },
+    {
+      "id": "en-202",
+      "word": "Khidr",
+      "forbiddenWords": [
+        "Green",
+        "Man",
+        "Musa",
+        "Knowledge",
+        "Mysterious"
+      ]
+    },
+    {
+      "id": "en-203",
+      "word": "Luqman",
+      "forbiddenWords": [
+        "Wise",
+        "Son",
+        "Advice",
+        "Surah",
+        "Wisdom"
+      ]
+    },
+    {
+      "id": "en-204",
+      "word": "Sulayman's Throne",
+      "forbiddenWords": [
+        "Solomon",
+        "Queen",
+        "Sheba",
+        "Transported",
+        "Kingdom"
+      ]
+    },
+    {
+      "id": "en-205",
+      "word": "Dawud's Psalms",
+      "forbiddenWords": [
+        "David",
+        "Zabur",
+        "Scripture",
+        "Sing",
+        "Revealed"
+      ]
+    },
+    {
+      "id": "en-206",
+      "word": "Isa's Miracles",
+      "forbiddenWords": [
+        "Jesus",
+        "Heal",
+        "Blind",
+        "Dead",
+        "Raise"
+      ]
+    },
+    {
+      "id": "en-207",
+      "word": "Yusuf's Brothers",
+      "forbiddenWords": [
+        "Joseph",
+        "Jealous",
+        "Well",
+        "Egypt",
+        "Sell"
+      ]
+    },
+    {
+      "id": "en-208",
+      "word": "Musa and Pharaoh",
+      "forbiddenWords": [
+        "Moses",
+        "Egypt",
+        "Plagues",
+        "Free",
+        "Israelites"
+      ]
+    },
+    {
+      "id": "en-209",
+      "word": "Isra'",
+      "forbiddenWords": [
+        "Night",
+        "Journey",
+        "Mecca",
+        "Jerusalem",
+        "Buraq"
+      ]
+    },
+    {
+      "id": "en-210",
+      "word": "Mi'raj",
+      "forbiddenWords": [
+        "Ascension",
+        "Heavens",
+        "Jerusalem",
+        "Sidra",
+        "Prayer"
+      ]
+    },
+    {
+      "id": "en-211",
+      "word": "Seal of the Prophets",
+      "forbiddenWords": [
+        "Last",
+        "Muhammad",
+        "Khatam",
+        "Final",
+        "No"
+      ]
+    },
+    {
+      "id": "en-212",
+      "word": "Wahy",
+      "forbiddenWords": [
+        "Revelation",
+        "Angel",
+        "Received",
+        "Divine",
+        "Message"
+      ]
+    },
+    {
+      "id": "en-213",
+      "word": "Hikmah",
+      "forbiddenWords": [
+        "Wisdom",
+        "Prophet",
+        "Deep",
+        "Understanding",
+        "Gift"
+      ]
+    },
+    {
+      "id": "en-214",
+      "word": "Nubuwwah",
+      "forbiddenWords": [
+        "Prophethood",
+        "Mission",
+        "Receive",
+        "Divine",
+        "Office"
+      ]
+    },
+    {
+      "id": "en-215",
+      "word": "Risalah",
+      "forbiddenWords": [
+        "Messengership",
+        "Convey",
+        "Message",
+        "Prophet",
+        "Duty"
+      ]
+    },
+    {
+      "id": "en-216",
+      "word": "Ulu al-Azm",
+      "forbiddenWords": [
+        "Five",
+        "Resolute",
+        "Prophets",
+        "Strong",
+        "Willed"
+      ]
+    },
+    {
+      "id": "en-217",
+      "word": "Makki Surah",
+      "forbiddenWords": [
+        "Mecca",
+        "Revealed",
+        "Short",
+        "Early",
+        "Belief"
+      ]
+    },
+    {
+      "id": "en-218",
+      "word": "Madani Surah",
+      "forbiddenWords": [
+        "Medina",
+        "Revealed",
+        "Long",
+        "Law",
+        "Community"
+      ]
+    },
+    {
+      "id": "en-219",
+      "word": "Buraq",
+      "forbiddenWords": [
+        "Mount",
+        "Isra",
+        "Prophet",
+        "Winged",
+        "Night"
+      ]
+    },
+    {
+      "id": "en-220",
+      "word": "Mawlid",
+      "forbiddenWords": [
+        "Birthday",
+        "Prophet",
+        "Celebration",
+        "Rabi",
+        "Commemorate"
+      ]
+    },
+    {
+      "id": "en-221",
+      "word": "Uthman ibn Affan",
+      "forbiddenWords": [
+        "Third",
+        "Caliph",
+        "Quran",
+        "Compiled",
+        "Martyr"
+      ]
+    },
+    {
+      "id": "en-222",
+      "word": "Fatimah",
+      "forbiddenWords": [
+        "Daughter",
+        "Prophet",
+        "Ali",
+        "Hasan",
+        "Husayn"
+      ]
+    },
+    {
+      "id": "en-223",
+      "word": "Salman al-Farisi",
+      "forbiddenWords": [
+        "Persian",
+        "Companion",
+        "Trench",
+        "Idea",
+        "Farsi"
+      ]
+    },
+    {
+      "id": "en-224",
+      "word": "Hamza",
+      "forbiddenWords": [
+        "Uncle",
+        "Prophet",
+        "Lion",
+        "Martyr",
+        "Uhud"
+      ]
+    },
+    {
+      "id": "en-225",
+      "word": "Abdurrahman ibn Awf",
+      "forbiddenWords": [
+        "Wealthy",
+        "Merchant",
+        "Ten",
+        "Promised",
+        "Business"
+      ]
+    },
+    {
+      "id": "en-226",
+      "word": "Mu'adh ibn Jabal",
+      "forbiddenWords": [
+        "Scholar",
+        "Yemen",
+        "Halal",
+        "Teacher",
+        "Judgment"
+      ]
+    },
+    {
+      "id": "en-227",
+      "word": "Sa'd ibn Abi Waqqas",
+      "forbiddenWords": [
+        "Archer",
+        "First",
+        "Blood",
+        "Ten",
+        "Promise"
+      ]
+    },
+    {
+      "id": "en-228",
+      "word": "Zayd ibn Thabit",
+      "forbiddenWords": [
+        "Scribe",
+        "Quran",
+        "Compiler",
+        "Young",
+        "Secretary"
+      ]
+    },
+    {
+      "id": "en-229",
+      "word": "Anas ibn Malik",
+      "forbiddenWords": [
+        "Servant",
+        "Prophet",
+        "Child",
+        "Hadith",
+        "Long"
+      ]
+    },
+    {
+      "id": "en-230",
+      "word": "Ibn Abbas",
+      "forbiddenWords": [
+        "Scholar",
+        "Quran",
+        "Cousin",
+        "Tafsir",
+        "Knowledge"
+      ]
+    },
+    {
+      "id": "en-231",
+      "word": "Ibn Umar",
+      "forbiddenWords": [
+        "Umar",
+        "Son",
+        "Follow",
+        "Sunnah",
+        "Narrator"
+      ]
+    },
+    {
+      "id": "en-232",
+      "word": "Abu Hurayrah",
+      "forbiddenWords": [
+        "Narrator",
+        "Hadith",
+        "Cat",
+        "Companion",
+        "Many"
+      ]
+    },
+    {
+      "id": "en-233",
+      "word": "Zubayr ibn al-Awwam",
+      "forbiddenWords": [
+        "Disciple",
+        "Twelve",
+        "Warrior",
+        "Prophet",
+        "Nephew"
+      ]
+    },
+    {
+      "id": "en-234",
+      "word": "Talha ibn Ubaydullah",
+      "forbiddenWords": [
+        "Generous",
+        "Ten",
+        "Promise",
+        "Shield",
+        "Battle"
+      ]
+    },
+    {
+      "id": "en-235",
+      "word": "Abu Ubaidah",
+      "forbiddenWords": [
+        "Trustee",
+        "Nation",
+        "Commander",
+        "Syria",
+        "General"
+      ]
+    },
+    {
+      "id": "en-236",
+      "word": "Khalid ibn Walid",
+      "forbiddenWords": [
+        "Sword",
+        "Allah",
+        "General",
+        "Undefeated",
+        "Military"
+      ]
+    },
+    {
+      "id": "en-237",
+      "word": "Umar ibn al-Khattab",
+      "forbiddenWords": [
+        "Second",
+        "Caliph",
+        "Strong",
+        "Justice",
+        "Farooq"
+      ]
+    },
+    {
+      "id": "en-238",
+      "word": "Abu Bakr al-Siddiq",
+      "forbiddenWords": [
+        "First",
+        "Caliph",
+        "Truthful",
+        "Cave",
+        "Friend"
+      ]
+    },
+    {
+      "id": "en-239",
+      "word": "Ali ibn Abi Talib",
+      "forbiddenWords": [
+        "Fourth",
+        "Caliph",
+        "Cousin",
+        "Imam",
+        "Lion"
+      ]
+    },
+    {
+      "id": "en-240",
+      "word": "Bilal's Adhan",
+      "forbiddenWords": [
+        "First",
+        "Muezzin",
+        "Voice",
+        "Adhan",
+        "Ethiopia"
+      ]
+    },
+    {
+      "id": "en-241",
+      "word": "Umm Salamah",
+      "forbiddenWords": [
+        "Wife",
+        "Prophet",
+        "Wise",
+        "Companion",
+        "Widow"
+      ]
+    },
+    {
+      "id": "en-242",
+      "word": "Hafsa",
+      "forbiddenWords": [
+        "Wife",
+        "Umar",
+        "Daughter",
+        "Quran",
+        "Kept"
+      ]
+    },
+    {
+      "id": "en-243",
+      "word": "Umm al-Mu'minin",
+      "forbiddenWords": [
+        "Mother",
+        "Believers",
+        "Title",
+        "Prophet's",
+        "Wife"
+      ]
+    },
+    {
+      "id": "en-244",
+      "word": "Aisha's Hadith",
+      "forbiddenWords": [
+        "Narrate",
+        "Mother",
+        "Believers",
+        "Hadith",
+        "Many"
+      ]
+    },
+    {
+      "id": "en-245",
+      "word": "Tabi'in",
+      "forbiddenWords": [
+        "Followers",
+        "Generation",
+        "After",
+        "Companions",
+        "Second"
+      ]
+    },
+    {
+      "id": "en-246",
+      "word": "Jibril",
+      "forbiddenWords": [
+        "Gabriel",
+        "Revelation",
+        "Quran",
+        "Amin",
+        "Strongest"
+      ]
+    },
+    {
+      "id": "en-247",
+      "word": "Mikail",
+      "forbiddenWords": [
+        "Michael",
+        "Rain",
+        "Sustenance",
+        "Angel",
+        "Weather"
+      ]
+    },
+    {
+      "id": "en-248",
+      "word": "Israfil",
+      "forbiddenWords": [
+        "Trumpet",
+        "Blow",
+        "Resurrection",
+        "End",
+        "Last"
+      ]
+    },
+    {
+      "id": "en-249",
+      "word": "Azrail",
+      "forbiddenWords": [
+        "Death",
+        "Soul",
+        "Take",
+        "Angel",
+        "Final"
+      ]
+    },
+    {
+      "id": "en-250",
+      "word": "Munkar and Nakir",
+      "forbiddenWords": [
+        "Grave",
+        "Question",
+        "Two",
+        "Angels",
+        "After"
+      ]
+    },
+    {
+      "id": "en-251",
+      "word": "Iblis",
+      "forbiddenWords": [
+        "Jinn",
+        "Refused",
+        "Prostrate",
+        "Adam",
+        "Expelled"
+      ]
+    },
+    {
+      "id": "en-252",
+      "word": "Jinn",
+      "forbiddenWords": [
+        "Invisible",
+        "Fire",
+        "Created",
+        "Beings",
+        "Hidden"
+      ]
+    },
+    {
+      "id": "en-253",
+      "word": "Kiraman Katibin",
+      "forbiddenWords": [
+        "Recording",
+        "Angels",
+        "Right",
+        "Left",
+        "Deeds"
+      ]
+    },
+    {
+      "id": "en-254",
+      "word": "Hamalat al-Arsh",
+      "forbiddenWords": [
+        "Throne",
+        "Bearers",
+        "Mighty",
+        "Eight",
+        "Carry"
+      ]
+    },
+    {
+      "id": "en-255",
+      "word": "Rizwan",
+      "forbiddenWords": [
+        "Keeper",
+        "Jannah",
+        "Paradise",
+        "Guardian",
+        "Welcome"
+      ]
+    },
+    {
+      "id": "en-256",
+      "word": "Malik",
+      "forbiddenWords": [
+        "Keeper",
+        "Jahannam",
+        "Hell",
+        "Guard",
+        "Fire"
+      ]
+    },
+    {
+      "id": "en-257",
+      "word": "Mala'ikah",
+      "forbiddenWords": [
+        "Angels",
+        "Worship",
+        "Created",
+        "Light",
+        "Obey"
+      ]
+    },
+    {
+      "id": "en-258",
+      "word": "Waswas",
+      "forbiddenWords": [
+        "Whisper",
+        "Shaytan",
+        "Doubt",
+        "Heart",
+        "Evil"
+      ]
+    },
+    {
+      "id": "en-259",
+      "word": "A'udhu Billah",
+      "forbiddenWords": [
+        "Seek",
+        "Refuge",
+        "Shaytan",
+        "Before",
+        "Recite"
+      ]
+    },
+    {
+      "id": "en-260",
+      "word": "Evil Eye",
+      "forbiddenWords": [
+        "Envy",
+        "Nazar",
+        "Eye",
+        "Harm",
+        "Ruqyah"
+      ]
+    },
+    {
+      "id": "en-261",
+      "word": "Hashr",
+      "forbiddenWords": [
+        "Gathering",
+        "Day",
+        "Judgment",
+        "All",
+        "Field"
+      ]
+    },
+    {
+      "id": "en-262",
+      "word": "Barzakh",
+      "forbiddenWords": [
+        "Intermediate",
+        "Grave",
+        "Between",
+        "Death",
+        "Resurrection"
+      ]
+    },
+    {
+      "id": "en-263",
+      "word": "Nufus",
+      "forbiddenWords": [
+        "Souls",
+        "Death",
+        "Gathered",
+        "Collected",
+        "Day"
+      ]
+    },
+    {
+      "id": "en-264",
+      "word": "Al-Mizan",
+      "forbiddenWords": [
+        "Scale",
+        "Deeds",
+        "Weigh",
+        "Balance",
+        "Judgment"
+      ]
+    },
+    {
+      "id": "en-265",
+      "word": "As-Sirat",
+      "forbiddenWords": [
+        "Bridge",
+        "Hell",
+        "Cross",
+        "Thin",
+        "Judgment"
+      ]
+    },
+    {
+      "id": "en-266",
+      "word": "Hawdh al-Kawthar",
+      "forbiddenWords": [
+        "Pool",
+        "Prophet",
+        "Drink",
+        "White",
+        "Paradise"
+      ]
+    },
+    {
+      "id": "en-267",
+      "word": "Tuba Tree",
+      "forbiddenWords": [
+        "Tree",
+        "Paradise",
+        "Giant",
+        "Shade",
+        "Jannah"
+      ]
+    },
+    {
+      "id": "en-268",
+      "word": "Zaqqum Tree",
+      "forbiddenWords": [
+        "Tree",
+        "Hell",
+        "Bitter",
+        "Fruit",
+        "Jahannam"
+      ]
+    },
+    {
+      "id": "en-269",
+      "word": "Firdaws",
+      "forbiddenWords": [
+        "Highest",
+        "Paradise",
+        "Level",
+        "Above",
+        "Throne"
+      ]
+    },
+    {
+      "id": "en-270",
+      "word": "Dar al-Salam",
+      "forbiddenWords": [
+        "Abode",
+        "Peace",
+        "Jannah",
+        "Highest",
+        "Name"
+      ]
+    },
+    {
+      "id": "en-271",
+      "word": "Na'im",
+      "forbiddenWords": [
+        "Bliss",
+        "Paradise",
+        "Jannah",
+        "Name",
+        "Delight"
+      ]
+    },
+    {
+      "id": "en-272",
+      "word": "Dajjal",
+      "forbiddenWords": [
+        "Antichrist",
+        "Blind",
+        "Eye",
+        "Fitna",
+        "End"
+      ]
+    },
+    {
+      "id": "en-273",
+      "word": "Mahdi",
+      "forbiddenWords": [
+        "Guided",
+        "End",
+        "Times",
+        "Appear",
+        "Before"
+      ]
+    },
+    {
+      "id": "en-274",
+      "word": "Ya'juj and Ma'juj",
+      "forbiddenWords": [
+        "Gog",
+        "Magog",
+        "Wall",
+        "End",
+        "Release"
+      ]
+    },
+    {
+      "id": "en-275",
+      "word": "Second Coming of Isa",
+      "forbiddenWords": [
+        "Jesus",
+        "Return",
+        "End",
+        "Dajjal",
+        "Kill"
+      ]
+    },
+    {
+      "id": "en-276",
+      "word": "Resurrection",
+      "forbiddenWords": [
+        "Rise",
+        "Dead",
+        "Day",
+        "Judgment",
+        "Body"
+      ]
+    },
+    {
+      "id": "en-277",
+      "word": "Reckoning",
+      "forbiddenWords": [
+        "Account",
+        "Deeds",
+        "Asked",
+        "Judgment",
+        "Day"
+      ]
+    },
+    {
+      "id": "en-278",
+      "word": "Intercession",
+      "forbiddenWords": [
+        "Shafa'ah",
+        "Prophet",
+        "Allowed",
+        "Ask",
+        "Forgive"
+      ]
+    },
+    {
+      "id": "en-279",
+      "word": "Hellfire Levels",
+      "forbiddenWords": [
+        "Jahannam",
+        "Seven",
+        "Layers",
+        "Depth",
+        "Sinners"
+      ]
+    },
+    {
+      "id": "en-280",
+      "word": "Paradise Levels",
+      "forbiddenWords": [
+        "Jannah",
+        "Eight",
+        "Gates",
+        "Highest",
+        "Firdaws"
+      ]
+    },
+    {
+      "id": "en-281",
+      "word": "Book of Deeds",
+      "forbiddenWords": [
+        "Record",
+        "Right",
+        "Left",
+        "Deeds",
+        "Read"
+      ]
+    },
+    {
+      "id": "en-282",
+      "word": "Questioning in Grave",
+      "forbiddenWords": [
+        "Munkar",
+        "Nakir",
+        "Ask",
+        "Grave",
+        "Lord"
+      ]
+    },
+    {
+      "id": "en-283",
+      "word": "Blowing of Trumpet",
+      "forbiddenWords": [
+        "Israfil",
+        "Twice",
+        "Faint",
+        "Rise",
+        "Trumpet"
+      ]
+    },
+    {
+      "id": "en-284",
+      "word": "Signs of Qiyamah",
+      "forbiddenWords": [
+        "Minor",
+        "Major",
+        "Before",
+        "Signs",
+        "Times"
+      ]
+    },
+    {
+      "id": "en-285",
+      "word": "Smoke",
+      "forbiddenWords": [
+        "Dukhan",
+        "Sign",
+        "Sky",
+        "End",
+        "Qiyamah"
+      ]
+    },
+    {
+      "id": "en-286",
+      "word": "Dabbat al-Ard",
+      "forbiddenWords": [
+        "Beast",
+        "Earth",
+        "Sign",
+        "Emerge",
+        "End"
+      ]
+    },
+    {
+      "id": "en-287",
+      "word": "Sun Rising from West",
+      "forbiddenWords": [
+        "Sign",
+        "Major",
+        "End",
+        "Times",
+        "Tawbah"
+      ]
+    },
+    {
+      "id": "en-288",
+      "word": "Munafiq",
+      "forbiddenWords": [
+        "Hypocrite",
+        "Outside",
+        "Inside",
+        "Double",
+        "Face"
+      ]
+    },
+    {
+      "id": "en-289",
+      "word": "Kufr",
+      "forbiddenWords": [
+        "Disbelief",
+        "Reject",
+        "Cover",
+        "Truth",
+        "Opposite"
+      ]
+    },
+    {
+      "id": "en-290",
+      "word": "Shirk",
+      "forbiddenWords": [
+        "Polytheism",
+        "Associate",
+        "Partner",
+        "Allah",
+        "Greatest"
+      ]
+    },
+    {
+      "id": "en-291",
+      "word": "Istiqamah",
+      "forbiddenWords": [
+        "Steadfast",
+        "Path",
+        "Right",
+        "Consistent",
+        "Remain"
+      ]
+    },
+    {
+      "id": "en-292",
+      "word": "Hamd",
+      "forbiddenWords": [
+        "Praise",
+        "Allah",
+        "Alhamdulillah",
+        "Grateful",
+        "Express"
+      ]
+    },
+    {
+      "id": "en-293",
+      "word": "Khashyah",
+      "forbiddenWords": [
+        "Awe",
+        "Fear",
+        "Allah",
+        "Heart",
+        "Reverence"
+      ]
+    },
+    {
+      "id": "en-294",
+      "word": "Nifaq",
+      "forbiddenWords": [
+        "Hypocrisy",
+        "Two",
+        "Faces",
+        "Hidden",
+        "Heart"
+      ]
+    },
+    {
+      "id": "en-295",
+      "word": "Taqwa",
+      "forbiddenWords": [
+        "God-consciousness",
+        "Fear",
+        "Awareness",
+        "Allah",
+        "Piety"
+      ]
+    },
+    {
+      "id": "en-296",
+      "word": "Zuhd",
+      "forbiddenWords": [
+        "Asceticism",
+        "World",
+        "Detach",
+        "Material",
+        "Simple"
+      ]
+    },
+    {
+      "id": "en-297",
+      "word": "Wara'",
+      "forbiddenWords": [
+        "Caution",
+        "Doubtful",
+        "Avoid",
+        "Scrupulous",
+        "Extra"
+      ]
+    },
+    {
+      "id": "en-298",
+      "word": "Yaqin",
+      "forbiddenWords": [
+        "Certainty",
+        "Belief",
+        "Strong",
+        "Doubt",
+        "None"
+      ]
+    },
+    {
+      "id": "en-299",
+      "word": "Riya",
+      "forbiddenWords": [
+        "Show-off",
+        "Deed",
+        "People",
+        "See",
+        "Hidden"
+      ]
+    },
+    {
+      "id": "en-300",
+      "word": "Ujb",
+      "forbiddenWords": [
+        "Conceit",
+        "Self",
+        "Admire",
+        "Pride",
+        "Deed"
+      ]
+    },
+    {
+      "id": "en-301",
+      "word": "Kibr",
+      "forbiddenWords": [
+        "Arrogance",
+        "Pride",
+        "Look",
+        "Down",
+        "Others"
+      ]
+    },
+    {
+      "id": "en-302",
+      "word": "Hasad",
+      "forbiddenWords": [
+        "Envy",
+        "Jealousy",
+        "Wish",
+        "Gone",
+        "Others"
+      ]
+    },
+    {
+      "id": "en-303",
+      "word": "Fitnah",
+      "forbiddenWords": [
+        "Trial",
+        "Chaos",
+        "Disorder",
+        "Test",
+        "Community"
+      ]
+    },
+    {
+      "id": "en-304",
+      "word": "Namimah",
+      "forbiddenWords": [
+        "Slander",
+        "Carry",
+        "Tale",
+        "Between",
+        "Divide"
+      ]
+    },
+    {
+      "id": "en-305",
+      "word": "Nadam",
+      "forbiddenWords": [
+        "Regret",
+        "Sin",
+        "Repent",
+        "Feel",
+        "Remorse"
+      ]
+    },
+    {
+      "id": "en-306",
+      "word": "Inabah",
+      "forbiddenWords": [
+        "Turning",
+        "Back",
+        "Allah",
+        "Sincere",
+        "Heart"
+      ]
+    },
+    {
+      "id": "en-307",
+      "word": "Muhasabah",
+      "forbiddenWords": [
+        "Self",
+        "Account",
+        "Reflect",
+        "Day",
+        "Before"
+      ]
+    },
+    {
+      "id": "en-308",
+      "word": "Muraqabah",
+      "forbiddenWords": [
+        "Vigilance",
+        "Allah",
+        "Watching",
+        "Aware",
+        "Heart"
+      ]
+    },
+    {
+      "id": "en-309",
+      "word": "Khushoo",
+      "forbiddenWords": [
+        "Humility",
+        "Prayer",
+        "Focus",
+        "Concentration",
+        "Heart"
+      ]
+    },
+    {
+      "id": "en-310",
+      "word": "Mahabbah",
+      "forbiddenWords": [
+        "Love",
+        "Allah",
+        "Prophet",
+        "Heart",
+        "Strongest"
+      ]
+    },
+    {
+      "id": "en-311",
+      "word": "Qana'ah",
+      "forbiddenWords": [
+        "Contentment",
+        "Enough",
+        "Satisfied",
+        "Allah",
+        "Simple"
+      ]
+    },
+    {
+      "id": "en-312",
+      "word": "Sidq",
+      "forbiddenWords": [
+        "Truthfulness",
+        "Honest",
+        "Speech",
+        "Deed",
+        "Always"
+      ]
+    },
+    {
+      "id": "en-313",
+      "word": "Amanah",
+      "forbiddenWords": [
+        "Trustworthiness",
+        "Keep",
+        "Secret",
+        "Return",
+        "Entrust"
+      ]
+    },
+    {
+      "id": "en-314",
+      "word": "Hilm",
+      "forbiddenWords": [
+        "Forbearance",
+        "Gentle",
+        "Anger",
+        "Control",
+        "Character"
+      ]
+    },
+    {
+      "id": "en-315",
+      "word": "Jud",
+      "forbiddenWords": [
+        "Generosity",
+        "Give",
+        "Beyond",
+        "Required",
+        "Freely"
+      ]
+    },
+    {
+      "id": "en-316",
+      "word": "Tawadu'",
+      "forbiddenWords": [
+        "Humility",
+        "Low",
+        "Ego",
+        "Others",
+        "Character"
+      ]
+    },
+    {
+      "id": "en-317",
+      "word": "Birr",
+      "forbiddenWords": [
+        "Righteousness",
+        "Good",
+        "Deed",
+        "Pious",
+        "Act"
+      ]
+    },
+    {
+      "id": "en-318",
+      "word": "Tafakkur",
+      "forbiddenWords": [
+        "Contemplation",
+        "Think",
+        "Creation",
+        "Allah",
+        "Deep"
+      ]
+    },
+    {
+      "id": "en-319",
+      "word": "Tadabbur",
+      "forbiddenWords": [
+        "Ponder",
+        "Quran",
+        "Verses",
+        "Meaning",
+        "Deep"
+      ]
+    },
+    {
+      "id": "en-320",
+      "word": "Uns",
+      "forbiddenWords": [
+        "Intimacy",
+        "Allah",
+        "Heart",
+        "Closeness",
+        "Love"
+      ]
+    },
+    {
+      "id": "en-321",
+      "word": "Ittiba",
+      "forbiddenWords": [
+        "Following",
+        "Prophet",
+        "Example",
+        "Closely",
+        "Sunnah"
+      ]
+    },
+    {
+      "id": "en-322",
+      "word": "Zulm",
+      "forbiddenWords": [
+        "Oppression",
+        "Wrong",
+        "Others",
+        "Sin",
+        "Forbidden"
+      ]
+    },
+    {
+      "id": "en-323",
+      "word": "Israf",
+      "forbiddenWords": [
+        "Waste",
+        "Excess",
+        "Forbidden",
+        "Food",
+        "Money"
+      ]
+    },
+    {
+      "id": "en-324",
+      "word": "Haya",
+      "forbiddenWords": [
+        "Shame",
+        "Guard",
+        "Lower",
+        "Gaze",
+        "Bashful"
+      ]
+    },
+    {
+      "id": "en-325",
+      "word": "Husn al-Zann",
+      "forbiddenWords": [
+        "Good",
+        "Opinion",
+        "Others",
+        "Assume",
+        "Best"
+      ]
+    },
+    {
+      "id": "en-326",
+      "word": "Silat al-Rahim",
+      "forbiddenWords": [
+        "Ties",
+        "Kinship",
+        "Visit",
+        "Relatives",
+        "Maintain"
+      ]
+    },
+    {
+      "id": "en-327",
+      "word": "Tawadu",
+      "forbiddenWords": [
+        "Humility",
+        "Low",
+        "Self",
+        "Others",
+        "Greater"
+      ]
+    },
+    {
+      "id": "en-328",
+      "word": "Hawa",
+      "forbiddenWords": [
+        "Desires",
+        "Follow",
+        "Nafs",
+        "Whims",
+        "Control"
+      ]
+    },
+    {
+      "id": "en-329",
+      "word": "Mujahada",
+      "forbiddenWords": [
+        "Struggle",
+        "Soul",
+        "Nafs",
+        "Inner",
+        "Fight"
+      ]
+    },
+    {
+      "id": "en-330",
+      "word": "Dhikrullah",
+      "forbiddenWords": [
+        "Remembrance",
+        "Allah",
+        "Tongue",
+        "Heart",
+        "Constant"
+      ]
+    },
+    {
+      "id": "en-331",
+      "word": "Fard",
+      "forbiddenWords": [
+        "Obligatory",
+        "Duty",
+        "Mandatory",
+        "Must",
+        "Sin"
+      ]
+    },
+    {
+      "id": "en-332",
+      "word": "Wajib",
+      "forbiddenWords": [
+        "Necessary",
+        "Obligatory",
+        "Slightly",
+        "Below",
+        "Fard"
+      ]
+    },
+    {
+      "id": "en-333",
+      "word": "Sunnah Mu'akkadah",
+      "forbiddenWords": [
+        "Confirmed",
+        "Sunnah",
+        "Strongly",
+        "Recommended",
+        "Practice"
+      ]
+    },
+    {
+      "id": "en-334",
+      "word": "Mustahabb",
+      "forbiddenWords": [
+        "Recommended",
+        "Rewarded",
+        "Optional",
+        "Good",
+        "Extra"
+      ]
+    },
+    {
+      "id": "en-335",
+      "word": "Mubah",
+      "forbiddenWords": [
+        "Permissible",
+        "Neutral",
+        "Neither",
+        "Reward",
+        "Punishment"
+      ]
+    },
+    {
+      "id": "en-336",
+      "word": "Makruh",
+      "forbiddenWords": [
+        "Disliked",
+        "Discouraged",
+        "Avoid",
+        "Better",
+        "Sin"
+      ]
+    },
+    {
+      "id": "en-337",
+      "word": "Ijtihad",
+      "forbiddenWords": [
+        "Independent",
+        "Reasoning",
+        "Scholar",
+        "New",
+        "Ruling"
+      ]
+    },
+    {
+      "id": "en-338",
+      "word": "Fatwa",
+      "forbiddenWords": [
+        "Religious",
+        "Opinion",
+        "Scholar",
+        "Ruling",
+        "Asked"
+      ]
+    },
+    {
+      "id": "en-339",
+      "word": "Qiyas",
+      "forbiddenWords": [
+        "Analogy",
+        "Compare",
+        "New",
+        "Old",
+        "Ruling"
+      ]
+    },
+    {
+      "id": "en-340",
+      "word": "Ijma",
+      "forbiddenWords": [
+        "Consensus",
+        "Scholars",
+        "Agreement",
+        "All",
+        "Ruling"
+      ]
+    },
+    {
+      "id": "en-341",
+      "word": "Hanafi Madhhab",
+      "forbiddenWords": [
+        "School",
+        "Abu",
+        "Hanifa",
+        "Kufa",
+        "Fiqh"
+      ]
+    },
+    {
+      "id": "en-342",
+      "word": "Shafi'i Madhhab",
+      "forbiddenWords": [
+        "School",
+        "Imam",
+        "Shafi'i",
+        "Egypt",
+        "Fiqh"
+      ]
+    },
+    {
+      "id": "en-343",
+      "word": "Maliki Madhhab",
+      "forbiddenWords": [
+        "School",
+        "Imam",
+        "Malik",
+        "Medina",
+        "Fiqh"
+      ]
+    },
+    {
+      "id": "en-344",
+      "word": "Hanbali Madhhab",
+      "forbiddenWords": [
+        "School",
+        "Ibn",
+        "Hanbal",
+        "Strict",
+        "Fiqh"
+      ]
+    },
+    {
+      "id": "en-345",
+      "word": "Wudu Nullifiers",
+      "forbiddenWords": [
+        "Break",
+        "Wudu",
+        "Sleep",
+        "Gas",
+        "Touch"
+      ]
+    },
+    {
+      "id": "en-346",
+      "word": "Prayer Conditions",
+      "forbiddenWords": [
+        "Valid",
+        "Prayer",
+        "Require",
+        "Wudu",
+        "Taharah"
+      ]
+    },
+    {
+      "id": "en-347",
+      "word": "Sawm Breakers",
+      "forbiddenWords": [
+        "Nullify",
+        "Fast",
+        "Eat",
+        "Sawm",
+        "Invalidate"
+      ]
+    },
+    {
+      "id": "en-348",
+      "word": "Taharah",
+      "forbiddenWords": [
+        "Purity",
+        "Ritual",
+        "Clean",
+        "Condition",
+        "Prayer"
+      ]
+    },
+    {
+      "id": "en-349",
+      "word": "Najasah",
+      "forbiddenWords": [
+        "Impurity",
+        "Unclean",
+        "Substance",
+        "Remove",
+        "Wash"
+      ]
+    },
+    {
+      "id": "en-350",
+      "word": "Istinja",
+      "forbiddenWords": [
+        "Cleanse",
+        "After",
+        "Toilet",
+        "Water",
+        "Wash"
+      ]
+    },
+    {
+      "id": "en-351",
+      "word": "Rulings on Food",
+      "forbiddenWords": [
+        "Halal",
+        "Haram",
+        "Food",
+        "Lawful",
+        "Forbidden"
+      ]
+    },
+    {
+      "id": "en-352",
+      "word": "Slaughter Conditions",
+      "forbiddenWords": [
+        "Zabiha",
+        "Halal",
+        "Bismillah",
+        "Slaughter",
+        "Animal"
+      ]
+    },
+    {
+      "id": "en-353",
+      "word": "Riba",
+      "forbiddenWords": [
+        "Interest",
+        "Usury",
+        "Loan",
+        "Forbidden",
+        "Money"
+      ]
+    },
+    {
+      "id": "en-354",
+      "word": "Kafil",
+      "forbiddenWords": [
+        "Guarantor",
+        "Sponsor",
+        "Responsibility",
+        "Obligation",
+        "Take"
+      ]
+    },
+    {
+      "id": "en-355",
+      "word": "Tafaqquh",
+      "forbiddenWords": [
+        "Deep",
+        "Understanding",
+        "Fiqh",
+        "Study",
+        "Scholar"
+      ]
+    },
+    {
+      "id": "en-356",
+      "word": "Talaq",
+      "forbiddenWords": [
+        "Divorce",
+        "Three",
+        "Pronounced",
+        "Husband",
+        "End"
+      ]
+    },
+    {
+      "id": "en-357",
+      "word": "Iddah",
+      "forbiddenWords": [
+        "Waiting",
+        "Period",
+        "Divorced",
+        "Widowed",
+        "Remarry"
+      ]
+    },
+    {
+      "id": "en-358",
+      "word": "Mirath",
+      "forbiddenWords": [
+        "Inheritance",
+        "Share",
+        "Family",
+        "Death",
+        "Distribute"
+      ]
+    },
+    {
+      "id": "en-359",
+      "word": "Wasiyyah",
+      "forbiddenWords": [
+        "Will",
+        "Testament",
+        "Third",
+        "Wealth",
+        "Death"
+      ]
+    },
+    {
+      "id": "en-360",
+      "word": "Waqf",
+      "forbiddenWords": [
+        "Endowment",
+        "Charity",
+        "Permanent",
+        "Property",
+        "Benefit"
+      ]
+    },
+    {
+      "id": "en-361",
+      "word": "Zakat Calculation",
+      "forbiddenWords": [
+        "Two",
+        "Half",
+        "Percent",
+        "Zakat",
+        "Annual"
+      ]
+    },
+    {
+      "id": "en-362",
+      "word": "Sadaqah Jariyah",
+      "forbiddenWords": [
+        "Ongoing",
+        "Charity",
+        "After",
+        "Death",
+        "Reward"
+      ]
+    },
+    {
+      "id": "en-363",
+      "word": "Amanah in Business",
+      "forbiddenWords": [
+        "Trust",
+        "Honest",
+        "Business",
+        "Contract",
+        "Keep"
+      ]
+    },
+    {
+      "id": "en-364",
+      "word": "Qard Hasan",
+      "forbiddenWords": [
+        "Good",
+        "Loan",
+        "Interest",
+        "Free",
+        "Help"
+      ]
+    },
+    {
+      "id": "en-365",
+      "word": "Usul al-Fiqh",
+      "forbiddenWords": [
+        "Principles",
+        "Jurisprudence",
+        "Foundation",
+        "Source",
+        "Science"
+      ]
+    },
+    {
+      "id": "en-366",
+      "word": "Scholarly Consensus",
+      "forbiddenWords": [
+        "Ijma",
+        "Scholars",
+        "Agreement",
+        "Consensus",
+        "Binding"
+      ]
+    },
+    {
+      "id": "en-367",
+      "word": "Maslaha",
+      "forbiddenWords": [
+        "Public",
+        "Interest",
+        "Welfare",
+        "Considered",
+        "Ruling"
+      ]
+    },
+    {
+      "id": "en-368",
+      "word": "Darurah",
+      "forbiddenWords": [
+        "Necessity",
+        "Allows",
+        "Forbidden",
+        "Exception",
+        "Temporary"
+      ]
+    },
+    {
+      "id": "en-369",
+      "word": "Mahram",
+      "forbiddenWords": [
+        "Unmarriageable",
+        "Relative",
+        "Travel",
+        "Female",
+        "Forbid"
+      ]
+    },
+    {
+      "id": "en-370",
+      "word": "Ghaib",
+      "forbiddenWords": [
+        "Unseen",
+        "Unknown",
+        "Hidden",
+        "Belief",
+        "World"
+      ]
+    },
+    {
+      "id": "en-371",
+      "word": "Bid'ah",
+      "forbiddenWords": [
+        "Innovation",
+        "New",
+        "Religion",
+        "Introduced",
+        "Warned"
+      ]
+    },
+    {
+      "id": "en-372",
+      "word": "Aqidah",
+      "forbiddenWords": [
+        "Creed",
+        "Belief",
+        "Foundation",
+        "Six",
+        "Pillars"
+      ]
+    },
+    {
+      "id": "en-373",
+      "word": "Taqlid",
+      "forbiddenWords": [
+        "Following",
+        "Scholar",
+        "Madhab",
+        "Without",
+        "Blind"
+      ]
+    },
+    {
+      "id": "en-374",
+      "word": "Urf",
+      "forbiddenWords": [
+        "Custom",
+        "Local",
+        "Accepted",
+        "Practice",
+        "Considered"
+      ]
+    },
+    {
+      "id": "en-375",
+      "word": "Istihsan",
+      "forbiddenWords": [
+        "Juristic",
+        "Preference",
+        "Override",
+        "Analogy",
+        "Better"
+      ]
+    },
+    {
+      "id": "en-376",
+      "word": "Rukhsah",
+      "forbiddenWords": [
+        "Concession",
+        "Ease",
+        "Difficulty",
+        "Travel",
+        "Allowed"
+      ]
+    },
+    {
+      "id": "en-377",
+      "word": "Azimah",
+      "forbiddenWords": [
+        "Original",
+        "Strict",
+        "Ruling",
+        "Without",
+        "Concession"
+      ]
+    },
+    {
+      "id": "en-378",
+      "word": "Tamlik",
+      "forbiddenWords": [
+        "Ownership",
+        "Transfer",
+        "Property",
+        "Give",
+        "Possession"
+      ]
+    },
+    {
+      "id": "en-379",
+      "word": "Hibah",
+      "forbiddenWords": [
+        "Gift",
+        "Voluntary",
+        "Give",
+        "Property",
+        "Return"
+      ]
+    },
+    {
+      "id": "en-380",
+      "word": "Aqd",
+      "forbiddenWords": [
+        "Contract",
+        "Agreement",
+        "Two",
+        "Parties",
+        "Binding"
+      ]
+    },
+    {
+      "id": "en-381",
+      "word": "Masjid al-Haram",
+      "forbiddenWords": [
+        "Mecca",
+        "Grand",
+        "Mosque",
+        "Kaaba",
+        "Largest"
+      ]
+    },
+    {
+      "id": "en-382",
+      "word": "Masjid al-Nabawi",
+      "forbiddenWords": [
+        "Prophet",
+        "Mosque",
+        "Medina",
+        "Green",
+        "Dome"
+      ]
+    },
+    {
+      "id": "en-383",
+      "word": "Masjid al-Aqsa",
+      "forbiddenWords": [
+        "Jerusalem",
+        "Third",
+        "Holy",
+        "Palestine",
+        "Dome"
+      ]
+    },
+    {
+      "id": "en-384",
+      "word": "Cave of Hira",
+      "forbiddenWords": [
+        "Mountain",
+        "Revelation",
+        "First",
+        "Prophet",
+        "Meditate"
+      ]
+    },
+    {
+      "id": "en-385",
+      "word": "Cave of Thawr",
+      "forbiddenWords": [
+        "Hijrah",
+        "Abu",
+        "Bakr",
+        "Spider",
+        "Hide"
+      ]
+    },
+    {
+      "id": "en-386",
+      "word": "Mount Uhud",
+      "forbiddenWords": [
+        "Battle",
+        "Medina",
+        "Mountain",
+        "Hamza",
+        "Defeat"
+      ]
+    },
+    {
+      "id": "en-387",
+      "word": "Battle of Badr",
+      "forbiddenWords": [
+        "First",
+        "Victory",
+        "Three",
+        "Hundred",
+        "Angels"
+      ]
+    },
+    {
+      "id": "en-388",
+      "word": "Khaybar",
+      "forbiddenWords": [
+        "Jewish",
+        "Fort",
+        "Battle",
+        "Ali",
+        "Conquered"
+      ]
+    },
+    {
+      "id": "en-389",
+      "word": "Masjid Quba",
+      "forbiddenWords": [
+        "First",
+        "Built",
+        "Medina",
+        "Outskirts",
+        "Reward"
+      ]
+    },
+    {
+      "id": "en-390",
+      "word": "Al-Rawdah",
+      "forbiddenWords": [
+        "Garden",
+        "Paradise",
+        "Between",
+        "Pulpit",
+        "Grave"
+      ]
+    },
+    {
+      "id": "en-391",
+      "word": "Maqam Ibrahim",
+      "forbiddenWords": [
+        "Stone",
+        "Footprint",
+        "Abraham",
+        "Near",
+        "Kaaba"
+      ]
+    },
+    {
+      "id": "en-392",
+      "word": "Hatim",
+      "forbiddenWords": [
+        "Wall",
+        "Kaaba",
+        "Semicircle",
+        "Inside",
+        "Ismail"
+      ]
+    },
+    {
+      "id": "en-393",
+      "word": "Safa",
+      "forbiddenWords": [
+        "Hill",
+        "Mecca",
+        "Sa'y",
+        "Start",
+        "Marwa"
+      ]
+    },
+    {
+      "id": "en-394",
+      "word": "Marwa",
+      "forbiddenWords": [
+        "Hill",
+        "End",
+        "Sa'y",
+        "Mecca",
+        "Safa"
+      ]
+    },
+    {
+      "id": "en-395",
+      "word": "Madinah al-Munawwarah",
+      "forbiddenWords": [
+        "Illuminated",
+        "City",
+        "Prophet",
+        "Migrate",
+        "Sacred"
+      ]
+    },
+    {
+      "id": "en-396",
+      "word": "Bayt al-Maqdis",
+      "forbiddenWords": [
+        "Jerusalem",
+        "Holy",
+        "House",
+        "Al-Aqsa",
+        "Sacred"
+      ]
+    },
+    {
+      "id": "en-397",
+      "word": "Dome of the Rock",
+      "forbiddenWords": [
+        "Jerusalem",
+        "Golden",
+        "Mi'raj",
+        "Rock",
+        "Built"
+      ]
+    },
+    {
+      "id": "en-398",
+      "word": "Hijaz",
+      "forbiddenWords": [
+        "Region",
+        "Arabia",
+        "Mecca",
+        "Medina",
+        "Sacred"
+      ]
+    },
+    {
+      "id": "en-399",
+      "word": "Jannat al-Baqi",
+      "forbiddenWords": [
+        "Cemetery",
+        "Medina",
+        "Companions",
+        "Buried",
+        "Graveyard"
+      ]
+    },
+    {
+      "id": "en-400",
+      "word": "Uhud Mountain",
+      "forbiddenWords": [
+        "Medina",
+        "Prophet",
+        "Love",
+        "Martyrs",
+        "Hill"
+      ]
+    },
+    {
+      "id": "en-401",
+      "word": "Qiyam al-Layl",
+      "forbiddenWords": [
+        "Night",
+        "Standing",
+        "Prayer",
+        "Voluntary",
+        "Dark"
+      ]
+    },
+    {
+      "id": "en-402",
+      "word": "Nafl Prayer",
+      "forbiddenWords": [
+        "Extra",
+        "Voluntary",
+        "Prayer",
+        "Reward",
+        "Additional"
+      ]
+    },
+    {
+      "id": "en-403",
+      "word": "Laylat al-Bara'ah",
+      "forbiddenWords": [
+        "Night",
+        "Records",
+        "Sha'ban",
+        "Fifteenth",
+        "Forgiveness"
+      ]
+    },
+    {
+      "id": "en-404",
+      "word": "Night of Ashura",
+      "forbiddenWords": [
+        "Tenth",
+        "Muharram",
+        "Ashura",
+        "Fasting",
+        "Significant"
+      ]
+    },
+    {
+      "id": "en-405",
+      "word": "Fitr Charity",
+      "forbiddenWords": [
+        "Eid",
+        "Obligatory",
+        "Fitr",
+        "Pay",
+        "Before"
+      ]
+    },
+    {
+      "id": "en-406",
+      "word": "Takbir of Eid",
+      "forbiddenWords": [
+        "Allahu",
+        "Akbar",
+        "Chant",
+        "Eid",
+        "Morning"
+      ]
+    },
+    {
+      "id": "en-407",
+      "word": "Rajab",
+      "forbiddenWords": [
+        "Month",
+        "Sacred",
+        "Mi'raj",
+        "Seventh",
+        "Lunar"
+      ]
+    },
+    {
+      "id": "en-408",
+      "word": "Sha'ban",
+      "forbiddenWords": [
+        "Month",
+        "Before",
+        "Ramadan",
+        "Fasting",
+        "Eighth"
+      ]
+    },
+    {
+      "id": "en-409",
+      "word": "Dhul Hijjah",
+      "forbiddenWords": [
+        "Month",
+        "Hajj",
+        "Ten",
+        "Days",
+        "Twelfth"
+      ]
+    },
+    {
+      "id": "en-410",
+      "word": "Muharram",
+      "forbiddenWords": [
+        "First",
+        "Sacred",
+        "Month",
+        "Ashura",
+        "Fasting"
+      ]
+    },
+    {
+      "id": "en-411",
+      "word": "Istikhara",
+      "forbiddenWords": [
+        "Guidance",
+        "Prayer",
+        "Decision",
+        "Two",
+        "Dream"
+      ]
+    },
+    {
+      "id": "en-412",
+      "word": "Eid Takbirs",
+      "forbiddenWords": [
+        "Additional",
+        "Prayer",
+        "Extra",
+        "Seven",
+        "First"
+      ]
+    },
+    {
+      "id": "en-413",
+      "word": "Eid Greeting",
+      "forbiddenWords": [
+        "Mubarak",
+        "Taqabbal",
+        "Congratulate",
+        "Festival",
+        "Say"
+      ]
+    },
+    {
+      "id": "en-414",
+      "word": "Ghusl for Eid",
+      "forbiddenWords": [
+        "Bath",
+        "Before",
+        "Prayer",
+        "Recommended",
+        "Morning"
+      ]
+    },
+    {
+      "id": "en-415",
+      "word": "Sadaqah in Ramadan",
+      "forbiddenWords": [
+        "Give",
+        "Increase",
+        "Month",
+        "Reward",
+        "Extra"
+      ]
+    },
+    {
+      "id": "en-416",
+      "word": "Khatm al-Quran",
+      "forbiddenWords": [
+        "Complete",
+        "Read",
+        "Finish",
+        "Tarawih",
+        "Ramadan"
+      ]
+    },
+    {
+      "id": "en-417",
+      "word": "Nuzul al-Quran",
+      "forbiddenWords": [
+        "Descent",
+        "First",
+        "Revelation",
+        "Ramadan",
+        "Night"
+      ]
+    },
+    {
+      "id": "en-418",
+      "word": "Fasting Six Days of Shawwal",
+      "forbiddenWords": [
+        "Sunnah",
+        "Shawwal",
+        "Ramadan",
+        "Year",
+        "Reward"
+      ]
+    },
+    {
+      "id": "en-419",
+      "word": "Tashreeq Days",
+      "forbiddenWords": [
+        "Eleven",
+        "Twelve",
+        "Days",
+        "Dhul",
+        "Hajj"
+      ]
+    },
+    {
+      "id": "en-420",
+      "word": "Yawm Arafah Fast",
+      "forbiddenWords": [
+        "Ninth",
+        "Arafah",
+        "Hijjah",
+        "Two",
+        "Years"
+      ]
+    },
+    {
+      "id": "en-421",
+      "word": "Al-Baqarah",
+      "forbiddenWords": [
+        "Cow",
+        "Longest",
+        "Surah",
+        "Two",
+        "Throne"
+      ]
+    },
+    {
+      "id": "en-422",
+      "word": "Yasin",
+      "forbiddenWords": [
+        "Heart",
+        "Quran",
+        "Friday",
+        "Recite",
+        "Dead"
+      ]
+    },
+    {
+      "id": "en-423",
+      "word": "Al-Mulk",
+      "forbiddenWords": [
+        "Kingdom",
+        "Sovereignty",
+        "Grave",
+        "Protect",
+        "Night"
+      ]
+    },
+    {
+      "id": "en-424",
+      "word": "Al-Kahf",
+      "forbiddenWords": [
+        "Cave",
+        "Friday",
+        "Youth",
+        "Dajjal",
+        "Surah"
+      ]
+    },
+    {
+      "id": "en-425",
+      "word": "Al-Waqi'ah",
+      "forbiddenWords": [
+        "Event",
+        "Wealth",
+        "Poverty",
+        "Recite",
+        "Night"
+      ]
+    },
+    {
+      "id": "en-426",
+      "word": "Ar-Rahman",
+      "forbiddenWords": [
+        "Merciful",
+        "Favors",
+        "Deny",
+        "Repeated",
+        "Verse"
+      ]
+    },
+    {
+      "id": "en-427",
+      "word": "Al-Ikhlas",
+      "forbiddenWords": [
+        "Sincerity",
+        "Third",
+        "Quran",
+        "Ahad",
+        "Short"
+      ]
+    },
+    {
+      "id": "en-428",
+      "word": "Al-Falaq",
+      "forbiddenWords": [
+        "Dawn",
+        "Seek",
+        "Refuge",
+        "Evil",
+        "Short"
+      ]
+    },
+    {
+      "id": "en-429",
+      "word": "An-Nas",
+      "forbiddenWords": [
+        "Mankind",
+        "Whisper",
+        "Chest",
+        "Jinn",
+        "Last"
+      ]
+    },
+    {
+      "id": "en-430",
+      "word": "Ayat al-Kursi",
+      "forbiddenWords": [
+        "Throne",
+        "Verse",
+        "Protect",
+        "Baqarah",
+        "Greatness"
+      ]
+    },
+    {
+      "id": "en-431",
+      "word": "Surah Al-Jumu'ah",
+      "forbiddenWords": [
+        "Friday",
+        "Prayer",
+        "Called",
+        "Assembly",
+        "Surah"
+      ]
+    },
+    {
+      "id": "en-432",
+      "word": "Juz'",
+      "forbiddenWords": [
+        "Part",
+        "Thirty",
+        "Quran",
+        "Section",
+        "Division"
+      ]
+    },
+    {
+      "id": "en-433",
+      "word": "Hizb",
+      "forbiddenWords": [
+        "Half",
+        "Juz",
+        "Quarter",
+        "Quran",
+        "Section"
+      ]
+    },
+    {
+      "id": "en-434",
+      "word": "Sajdah Ayah",
+      "forbiddenWords": [
+        "Verse",
+        "Prostrate",
+        "Read",
+        "Hear",
+        "Obligatory"
+      ]
+    },
+    {
+      "id": "en-435",
+      "word": "Madd",
+      "forbiddenWords": [
+        "Elongate",
+        "Vowel",
+        "Tajwid",
+        "Long",
+        "Sound"
+      ]
+    },
+    {
+      "id": "en-436",
+      "word": "Idgham",
+      "forbiddenWords": [
+        "Merge",
+        "Nun",
+        "Letter",
+        "Tajwid",
+        "Absorb"
+      ]
+    },
+    {
+      "id": "en-437",
+      "word": "Ikhfa",
+      "forbiddenWords": [
+        "Conceal",
+        "Nun",
+        "Consonant",
+        "Tajwid",
+        "Hidden"
+      ]
+    },
+    {
+      "id": "en-438",
+      "word": "Ghunnah",
+      "forbiddenWords": [
+        "Nasal",
+        "Sound",
+        "Tajwid",
+        "Nose",
+        "Two"
+      ]
+    },
+    {
+      "id": "en-439",
+      "word": "Iqlab",
+      "forbiddenWords": [
+        "Change",
+        "Noon",
+        "Meem",
+        "Before",
+        "Ba"
+      ]
+    },
+    {
+      "id": "en-440",
+      "word": "Qalqalah",
+      "forbiddenWords": [
+        "Echo",
+        "Bounce",
+        "Letters",
+        "Tajwid",
+        "Five"
+      ]
+    },
+    {
+      "id": "en-441",
+      "word": "Tarteel",
+      "forbiddenWords": [
+        "Slow",
+        "Recite",
+        "Measured",
+        "Pace",
+        "Quran"
+      ]
+    },
+    {
+      "id": "en-442",
+      "word": "Tasbih Fatimi",
+      "forbiddenWords": [
+        "Thirty-three",
+        "SubhanAllah",
+        "Alhamdulillah",
+        "Allahu",
+        "Fatimah"
+      ]
+    },
+    {
+      "id": "en-443",
+      "word": "Mushaf",
+      "forbiddenWords": [
+        "Physical",
+        "Copy",
+        "Quran",
+        "Book",
+        "Hold"
+      ]
+    },
+    {
+      "id": "en-444",
+      "word": "Memorization of Quran",
+      "forbiddenWords": [
+        "Hifz",
+        "Quran",
+        "Heart",
+        "Hafiz",
+        "Repeat"
+      ]
+    },
+    {
+      "id": "en-445",
+      "word": "Tazkiyah",
+      "forbiddenWords": [
+        "Purification",
+        "Soul",
+        "Nafs",
+        "Sufi",
+        "Growth"
+      ]
+    },
+    {
+      "id": "en-446",
+      "word": "Wali",
+      "forbiddenWords": [
+        "Guardian",
+        "Marriage",
+        "Father",
+        "Consent",
+        "Contract"
+      ]
+    },
+    {
+      "id": "en-447",
+      "word": "Aqiqah",
+      "forbiddenWords": [
+        "Newborn",
+        "Sacrifice",
+        "Seventh",
+        "Day",
+        "Name"
+      ]
+    },
+    {
+      "id": "en-448",
+      "word": "Khitan",
+      "forbiddenWords": [
+        "Circumcision",
+        "Male",
+        "Sunnah",
+        "Newborn",
+        "Fitrah"
+      ]
+    },
+    {
+      "id": "en-449",
+      "word": "Custody",
+      "forbiddenWords": [
+        "Child",
+        "Divorce",
+        "Mother",
+        "Father",
+        "Hadanah"
+      ]
+    },
+    {
+      "id": "en-450",
+      "word": "Nafaqah",
+      "forbiddenWords": [
+        "Financial",
+        "Support",
+        "Wife",
+        "Obligatory",
+        "Husband"
+      ]
+    },
+    {
+      "id": "en-451",
+      "word": "Rights of Parents",
+      "forbiddenWords": [
+        "Obey",
+        "Honor",
+        "Parents",
+        "Father",
+        "Birr"
+      ]
+    },
+    {
+      "id": "en-452",
+      "word": "Rights of Children",
+      "forbiddenWords": [
+        "Feed",
+        "Educate",
+        "Name",
+        "Children",
+        "Parent"
+      ]
+    },
+    {
+      "id": "en-453",
+      "word": "Halal Earnings",
+      "forbiddenWords": [
+        "Lawful",
+        "Work",
+        "Earnings",
+        "Forbidden",
+        "Provide"
+      ]
+    },
+    {
+      "id": "en-454",
+      "word": "Kafalah",
+      "forbiddenWords": [
+        "Sponsorship",
+        "Care",
+        "Child",
+        "Orphan",
+        "Provide"
+      ]
+    },
+    {
+      "id": "en-455",
+      "word": "Walimah",
+      "forbiddenWords": [
+        "Wedding",
+        "Feast",
+        "Celebrate",
+        "Marriage",
+        "Sunnah"
+      ]
+    },
+    {
+      "id": "en-456",
+      "word": "Kafan",
+      "forbiddenWords": [
+        "Shroud",
+        "White",
+        "Cloth",
+        "Wrap",
+        "Dead"
+      ]
+    },
+    {
+      "id": "en-457",
+      "word": "Burial Rites",
+      "forbiddenWords": [
+        "Wash",
+        "Shroud",
+        "Rites",
+        "Bury",
+        "Muslim"
+      ]
+    },
+    {
+      "id": "en-458",
+      "word": "Condolence",
+      "forbiddenWords": [
+        "Ta'ziyah",
+        "Comfort",
+        "Death",
+        "Visit",
+        "Bereaved"
+      ]
+    },
+    {
+      "id": "en-459",
+      "word": "Khilafah",
+      "forbiddenWords": [
+        "Caliphate",
+        "State",
+        "Successor",
+        "Rule",
+        "Muslim"
+      ]
+    },
+    {
+      "id": "en-460",
+      "word": "Masjid Etiquette",
+      "forbiddenWords": [
+        "Quiet",
+        "Shoes",
+        "Right",
+        "Masjid",
+        "Enter"
+      ]
+    },
+    {
+      "id": "en-461",
+      "word": "Spending on Family",
+      "forbiddenWords": [
+        "Reward",
+        "Family",
+        "Provide",
+        "Home",
+        "Earn"
+      ]
+    },
+    {
+      "id": "en-462",
+      "word": "Polygamy",
+      "forbiddenWords": [
+        "Four",
+        "Wives",
+        "Justice",
+        "Permission",
+        "Limit"
+      ]
+    },
+    {
+      "id": "en-463",
+      "word": "Khul'",
+      "forbiddenWords": [
+        "Woman",
+        "Divorce",
+        "Return",
+        "Mahr",
+        "Initiate"
+      ]
+    },
+    {
+      "id": "en-464",
+      "word": "Fatiha Recitation",
+      "forbiddenWords": [
+        "Opening",
+        "Chapter",
+        "Fatiha",
+        "Pray",
+        "Seven"
+      ]
+    },
+    {
+      "id": "en-465",
+      "word": "Islamic Will",
+      "forbiddenWords": [
+        "Wasiyyah",
+        "Third",
+        "Wealth",
+        "Write",
+        "Will"
+      ]
+    },
+    {
+      "id": "en-466",
+      "word": "Qard",
+      "forbiddenWords": [
+        "Loan",
+        "Return",
+        "Favor",
+        "Islamic",
+        "No interest"
+      ]
+    },
+    {
+      "id": "en-467",
+      "word": "Da'wah",
+      "forbiddenWords": [
+        "Invite",
+        "Islam",
+        "Call",
+        "Spread",
+        "Non-Muslim"
+      ]
+    },
+    {
+      "id": "en-468",
+      "word": "Hikmah in Da'wah",
+      "forbiddenWords": [
+        "Wisdom",
+        "Invite",
+        "Gentle",
+        "Approach",
+        "People"
+      ]
+    },
+    {
+      "id": "en-469",
+      "word": "Ihsan to Neighbors",
+      "forbiddenWords": [
+        "Kindness",
+        "Neighbors",
+        "Door",
+        "Right",
+        "Care"
+      ]
+    },
+    {
+      "id": "en-470",
+      "word": "Feeding the Poor",
+      "forbiddenWords": [
+        "Sadaqah",
+        "Hunger",
+        "Feed",
+        "Poor",
+        "Obligatory"
+      ]
+    },
+    {
+      "id": "en-471",
+      "word": "Hijrah",
+      "forbiddenWords": [
+        "Migration",
+        "Muslims",
+        "Medina",
+        "City",
+        "Leave"
+      ]
+    },
+    {
+      "id": "en-472",
+      "word": "Tabligh",
+      "forbiddenWords": [
+        "Convey",
+        "Message",
+        "Travel",
+        "Group",
+        "Mission"
+      ]
+    },
+    {
+      "id": "en-473",
+      "word": "Madrasah",
+      "forbiddenWords": [
+        "Islamic",
+        "School",
+        "Study",
+        "Children",
+        "Teach"
+      ]
+    },
+    {
+      "id": "en-474",
+      "word": "Alim",
+      "forbiddenWords": [
+        "Scholar",
+        "Knowledge",
+        "Islam",
+        "Religious",
+        "Educated"
+      ]
+    },
+    {
+      "id": "en-475",
+      "word": "Murshid",
+      "forbiddenWords": [
+        "Spiritual",
+        "Guide",
+        "Teacher",
+        "Sufi",
+        "Lead"
+      ]
+    },
+    {
+      "id": "en-476",
+      "word": "Murid",
+      "forbiddenWords": [
+        "Student",
+        "Sufi",
+        "Follow",
+        "Master",
+        "Path"
+      ]
+    },
+    {
+      "id": "en-477",
+      "word": "Halal Certification",
+      "forbiddenWords": [
+        "Food",
+        "Halal",
+        "Approved",
+        "Permissible",
+        "Official"
+      ]
+    },
+    {
+      "id": "en-478",
+      "word": "Islamic Finance",
+      "forbiddenWords": [
+        "No",
+        "Interest",
+        "Finance",
+        "Free",
+        "Banking"
+      ]
+    },
+    {
+      "id": "en-479",
+      "word": "Sulh",
+      "forbiddenWords": [
+        "Reconciliation",
+        "Peace",
+        "Between",
+        "Dispute",
+        "Settle"
+      ]
+    },
+    {
+      "id": "en-480",
+      "word": "Qira'at",
+      "forbiddenWords": [
+        "Recitation",
+        "Styles",
+        "Quran",
+        "Seven",
+        "Read"
+      ]
+    },
+    {
+      "id": "en-481",
+      "word": "Ahlus Sunnah",
+      "forbiddenWords": [
+        "Mainstream",
+        "Sunni",
+        "Follow",
+        "Majority",
+        "Community"
+      ]
+    },
+    {
+      "id": "en-482",
+      "word": "Iftaa",
+      "forbiddenWords": [
+        "Issue",
+        "Fatwa",
+        "Mufti",
+        "Religious",
+        "Ruling"
+      ]
+    },
+    {
+      "id": "en-483",
+      "word": "Ijazah",
+      "forbiddenWords": [
+        "Certificate",
+        "Permission",
+        "Transmit",
+        "Knowledge",
+        "Chain"
+      ]
+    },
+    {
+      "id": "en-484",
+      "word": "Isnad",
+      "forbiddenWords": [
+        "Chain",
+        "Narrators",
+        "Hadith",
+        "Verify",
+        "Authentic"
+      ]
+    },
+    {
+      "id": "en-485",
+      "word": "Tarbiyah",
+      "forbiddenWords": [
+        "Upbringing",
+        "Education",
+        "Islamic",
+        "Child",
+        "Nurture"
+      ]
+    },
+    {
+      "id": "en-486",
+      "word": "Ittihad al-Ummah",
+      "forbiddenWords": [
+        "Unity",
+        "Ummah",
+        "Nations",
+        "Together",
+        "Division"
+      ]
+    },
+    {
+      "id": "en-487",
+      "word": "Fiqh al-Aqalliyyat",
+      "forbiddenWords": [
+        "Minority",
+        "Fiqh",
+        "Muslim",
+        "Non-Muslim",
+        "Country"
+      ]
+    },
+    {
+      "id": "en-488",
+      "word": "Nasheeds",
+      "forbiddenWords": [
+        "Islamic",
+        "Songs",
+        "Vocal",
+        "Praise",
+        "No instruments"
+      ]
+    },
+    {
+      "id": "en-489",
+      "word": "Halaqah",
+      "forbiddenWords": [
+        "Study",
+        "Circle",
+        "Group",
+        "Learn",
+        "Mosque"
+      ]
+    },
+    {
+      "id": "en-490",
+      "word": "Waqt",
+      "forbiddenWords": [
+        "Time",
+        "Prayer",
+        "Due",
+        "Appointed",
+        "Pass"
+      ]
+    },
+    {
+      "id": "en-491",
+      "word": "Tafwid",
+      "forbiddenWords": [
+        "Entrust",
+        "Allah",
+        "Outcome",
+        "Delegate",
+        "After"
+      ]
+    },
+    {
+      "id": "en-492",
+      "word": "Qadr",
+      "forbiddenWords": [
+        "Decree",
+        "Destiny",
+        "Predestination",
+        "Believe",
+        "Allah"
+      ]
+    }
+  ]
+}

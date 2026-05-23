@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import '../../domain/entities/word_entity.dart';
+import '../dialogs/delete_confirmation_dialog.dart';
 
 class WordListItem extends ConsumerWidget {
   final WordEntity word;
@@ -14,49 +16,9 @@ class WordListItem extends ConsumerWidget {
     required this.onDeleteConfirmed,
   });
 
-  Future<void> _showDeleteConfirmationDialog(BuildContext context,
-      WidgetRef ref, String wordId, String wordText) async {
-    final bool? confirmed = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: Colors.blueGrey.shade900,
-        title: Text(
-          '"$wordText" Kelimesini Sil',
-          style: TextStyle(
-              color: Colors.red.shade300, fontWeight: FontWeight.bold),
-        ),
-        content: const Text(
-          'Bu kelimeyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.',
-          style: TextStyle(color: Colors.white),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
-            child: Text(
-              'İptal',
-              style: TextStyle(color: Colors.grey.shade400),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () => Navigator.of(context).pop(true),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red.shade700,
-              foregroundColor: Colors.white,
-            ),
-            child: const Text('Evet, Sil'),
-          ),
-        ],
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-      ),
-    );
-
-    if (confirmed == true) {
-      onDeleteConfirmed(wordId);
-    }
-  }
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     return Card(
       elevation: 4,
       margin: const EdgeInsets.symmetric(vertical: 8),
@@ -84,7 +46,7 @@ class WordListItem extends ConsumerWidget {
           ),
         ),
         subtitle: Text(
-          '${word.forbiddenWords.length} yasaklı kelime',
+          l10n.wordsForbiddenCount(word.forbiddenWords.length),
           style: TextStyle(color: Colors.grey.shade400, fontSize: 14),
         ),
         childrenPadding:
@@ -94,7 +56,7 @@ class WordListItem extends ConsumerWidget {
         collapsedIconColor: Colors.teal.shade400,
         children: [
           Text(
-            'Yasaklı Kelimeler:',
+            l10n.wordsForbiddenList,
             style: TextStyle(
                 color: Colors.teal.shade200, fontWeight: FontWeight.bold),
           ),
@@ -123,16 +85,24 @@ class WordListItem extends ConsumerWidget {
               IconButton(
                 icon:
                     Icon(Icons.edit_note_rounded, color: Colors.amber.shade300),
-                tooltip: 'Düzenle',
+                tooltip: l10n.wordsEdit,
                 onPressed: () => onEdit(word),
               ),
               const SizedBox(width: 8),
               IconButton(
                 icon: Icon(Icons.delete_forever_rounded,
                     color: Colors.red.shade300),
-                tooltip: 'Sil',
-                onPressed: () => _showDeleteConfirmationDialog(
-                    context, ref, word.id, word.word),
+                tooltip: l10n.statisticsDeleteTitle,
+                onPressed: () async {
+                  final confirmed = await showDeleteConfirmationDialog(
+                    context: context,
+                    title: l10n.statisticsDeleteTitle,
+                    content: l10n.wordsDeleteConfirm,
+                  );
+                  if (confirmed) {
+                    onDeleteConfirmed(word.id);
+                  }
+                },
               ),
             ],
           )

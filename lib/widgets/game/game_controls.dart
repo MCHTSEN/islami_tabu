@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
@@ -13,6 +14,7 @@ class GameControls extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     if (state.status == GameStatus.finished) {
       return const SizedBox.shrink();
     }
@@ -27,7 +29,7 @@ class GameControls extends ConsumerWidget {
           onTap: () {
             ref.read(gameViewModelProvider.notifier).startGame();
           },
-          text: 'DEVAM ET',
+          text: l10n.gameResume,
           primaryColor: const Color(0xFF14248A),
           secondaryColor: const Color(0xFF0D1B63),
           shadowColor: const Color(0xFF081140),
@@ -56,7 +58,7 @@ class GameControls extends ConsumerWidget {
                 ref.read(gameViewModelProvider.notifier).skipWord();
               },
               icon: Icons.skip_next,
-              label: 'Pas (${state.passesUsed}/3)',
+              label: '${l10n.gamePass} (${state.passesUsed}/3)',
               color: const Color(0xFFFFA000),
             ),
           ),
@@ -71,7 +73,7 @@ class GameControls extends ConsumerWidget {
                 ref.read(gameViewModelProvider.notifier).tabuWord();
               },
               icon: Icons.block,
-              label: 'Tabu',
+              label: l10n.gameTabu,
               color: const Color(0xFFFA5C5C),
             ),
           ),
@@ -86,7 +88,7 @@ class GameControls extends ConsumerWidget {
                 ref.read(gameViewModelProvider.notifier).correctWord();
               },
               icon: Icons.check,
-              label: 'Doğru',
+              label: l10n.gameCorrect,
               color: const Color(0xFF14248A),
             ),
           ),
@@ -95,3 +97,4 @@ class GameControls extends ConsumerWidget {
     );
   }
 }
+

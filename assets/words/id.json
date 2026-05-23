@@ -1,0 +1,5419 @@
+{
+  "version": 1,
+  "locale": "id",
+  "count": 492,
+  "words": [
+    {
+      "id": "id-1",
+      "word": "Sholat",
+      "forbiddenWords": [
+        "Lima",
+        "Rukun",
+        "Wudhu",
+        "Kiblat",
+        "Rakaat"
+      ]
+    },
+    {
+      "id": "id-2",
+      "word": "Puasa",
+      "forbiddenWords": [
+        "Ramadhan",
+        "Sahur",
+        "Berbuka",
+        "Lapar",
+        "Maghrib"
+      ]
+    },
+    {
+      "id": "id-3",
+      "word": "Zakat",
+      "forbiddenWords": [
+        "Harta",
+        "Sedekah",
+        "Fakir",
+        "Nisab",
+        "Wajib"
+      ]
+    },
+    {
+      "id": "id-4",
+      "word": "Haji",
+      "forbiddenWords": [
+        "Mekkah",
+        "Ka'bah",
+        "Ihram",
+        "Tawaf",
+        "Arafah"
+      ]
+    },
+    {
+      "id": "id-5",
+      "word": "Nabi",
+      "forbiddenWords": [
+        "Rasul",
+        "Muhammad",
+        "Wahyu",
+        "Utusan",
+        "Islam"
+      ]
+    },
+    {
+      "id": "id-6",
+      "word": "Al-Qur'an",
+      "forbiddenWords": [
+        "Kitab",
+        "Wahyu",
+        "Ayat",
+        "Surat",
+        "Membaca"
+      ]
+    },
+    {
+      "id": "id-7",
+      "word": "Allah",
+      "forbiddenWords": [
+        "Tuhan",
+        "Pencipta",
+        "Rabb",
+        "Esa",
+        "Ibadah"
+      ]
+    },
+    {
+      "id": "id-8",
+      "word": "Masjid",
+      "forbiddenWords": [
+        "Sholat",
+        "Imam",
+        "Mihrab",
+        "Menara",
+        "Jum'at"
+      ]
+    },
+    {
+      "id": "id-9",
+      "word": "Wudhu",
+      "forbiddenWords": [
+        "Air",
+        "Tangan",
+        "Wajah",
+        "Sholat",
+        "Suci"
+      ]
+    },
+    {
+      "id": "id-10",
+      "word": "Hadits",
+      "forbiddenWords": [
+        "Nabi",
+        "Bukhari",
+        "Muslim",
+        "Sunnah",
+        "Riwayat"
+      ]
+    },
+    {
+      "id": "id-11",
+      "word": "Sunnah",
+      "forbiddenWords": [
+        "Nabi",
+        "Mengikuti",
+        "Hadits",
+        "Perbuatan",
+        "Anjuran"
+      ]
+    },
+    {
+      "id": "id-12",
+      "word": "Setan",
+      "forbiddenWords": [
+        "Iblis",
+        "Godaan",
+        "Musuh",
+        "Api",
+        "Jahat"
+      ]
+    },
+    {
+      "id": "id-13",
+      "word": "Malaikat",
+      "forbiddenWords": [
+        "Sayap",
+        "Jibril",
+        "Cahaya",
+        "Wahyu",
+        "Langit"
+      ]
+    },
+    {
+      "id": "id-14",
+      "word": "Surga",
+      "forbiddenWords": [
+        "Taman",
+        "Pahala",
+        "Kekal",
+        "Nikmat",
+        "Firdaus"
+      ]
+    },
+    {
+      "id": "id-15",
+      "word": "Neraka",
+      "forbiddenWords": [
+        "Panas",
+        "Api",
+        "Siksa",
+        "Kekal",
+        "Hukuman"
+      ]
+    },
+    {
+      "id": "id-16",
+      "word": "Ramadhan",
+      "forbiddenWords": [
+        "Bulan",
+        "Puasa",
+        "Al-Qur'an",
+        "Berbuka",
+        "Malam"
+      ]
+    },
+    {
+      "id": "id-17",
+      "word": "Idul Fitri",
+      "forbiddenWords": [
+        "Ramadhan",
+        "Syawal",
+        "Ketupat",
+        "Maaf",
+        "Kemenangan"
+      ]
+    },
+    {
+      "id": "id-18",
+      "word": "Idul Adha",
+      "forbiddenWords": [
+        "Kurban",
+        "Haji",
+        "Ibrahim",
+        "Domba",
+        "Sapi"
+      ]
+    },
+    {
+      "id": "id-19",
+      "word": "Berbuka",
+      "forbiddenWords": [
+        "Maghrib",
+        "Kurma",
+        "Air",
+        "Puasa",
+        "Makan"
+      ]
+    },
+    {
+      "id": "id-20",
+      "word": "Sahur",
+      "forbiddenWords": [
+        "Subuh",
+        "Makan",
+        "Ramadhan",
+        "Sebelum",
+        "Puasa"
+      ]
+    },
+    {
+      "id": "id-21",
+      "word": "Adzan",
+      "forbiddenWords": [
+        "Panggilan",
+        "Sholat",
+        "Menara",
+        "Muadzin",
+        "Suara"
+      ]
+    },
+    {
+      "id": "id-22",
+      "word": "Imam",
+      "forbiddenWords": [
+        "Sholat",
+        "Depan",
+        "Masjid",
+        "Mengikuti",
+        "Pemimpin"
+      ]
+    },
+    {
+      "id": "id-23",
+      "word": "Khutbah",
+      "forbiddenWords": [
+        "Jum'at",
+        "Imam",
+        "Mimbar",
+        "Ceramah",
+        "Nasihat"
+      ]
+    },
+    {
+      "id": "id-24",
+      "word": "Kiblat",
+      "forbiddenWords": [
+        "Ka'bah",
+        "Mekkah",
+        "Arah",
+        "Sholat",
+        "Kompas"
+      ]
+    },
+    {
+      "id": "id-25",
+      "word": "Ka'bah",
+      "forbiddenWords": [
+        "Mekkah",
+        "Hitam",
+        "Tawaf",
+        "Haji",
+        "Baitullah"
+      ]
+    },
+    {
+      "id": "id-26",
+      "word": "Mekkah",
+      "forbiddenWords": [
+        "Kota",
+        "Ka'bah",
+        "Haji",
+        "Haram",
+        "Saudi"
+      ]
+    },
+    {
+      "id": "id-27",
+      "word": "Madinah",
+      "forbiddenWords": [
+        "Nabi",
+        "Hijrah",
+        "Masjid",
+        "Nabawi",
+        "Makam"
+      ]
+    },
+    {
+      "id": "id-28",
+      "word": "Jum'at",
+      "forbiddenWords": [
+        "Hari",
+        "Sholat",
+        "Khutbah",
+        "Mingguan",
+        "Berkumpul"
+      ]
+    },
+    {
+      "id": "id-29",
+      "word": "Ibrahim",
+      "forbiddenWords": [
+        "Ismail",
+        "Kurban",
+        "Ka'bah",
+        "Bapak",
+        "Api"
+      ]
+    },
+    {
+      "id": "id-30",
+      "word": "Ismail",
+      "forbiddenWords": [
+        "Ibrahim",
+        "Anak",
+        "Pengorbanan",
+        "Zamzam",
+        "Domba"
+      ]
+    },
+    {
+      "id": "id-31",
+      "word": "Musa",
+      "forbiddenWords": [
+        "Firaun",
+        "Mesir",
+        "Laut",
+        "Tongkat",
+        "Taurat"
+      ]
+    },
+    {
+      "id": "id-32",
+      "word": "Isa",
+      "forbiddenWords": [
+        "Maryam",
+        "Injil",
+        "Nasrani",
+        "Mukjizat",
+        "Nabi"
+      ]
+    },
+    {
+      "id": "id-33",
+      "word": "Nuh",
+      "forbiddenWords": [
+        "Bahtera",
+        "Banjir",
+        "Binatang",
+        "Kapal",
+        "Gunung"
+      ]
+    },
+    {
+      "id": "id-34",
+      "word": "Adam",
+      "forbiddenWords": [
+        "Hawa",
+        "Pertama",
+        "Manusia",
+        "Jannah",
+        "Bumi"
+      ]
+    },
+    {
+      "id": "id-35",
+      "word": "Maryam",
+      "forbiddenWords": [
+        "Ibu",
+        "Isa",
+        "Perawan",
+        "Suci",
+        "Wanita"
+      ]
+    },
+    {
+      "id": "id-36",
+      "word": "Khadijah",
+      "forbiddenWords": [
+        "Istri",
+        "Nabi",
+        "Pertama",
+        "Kaya",
+        "Mukmin"
+      ]
+    },
+    {
+      "id": "id-37",
+      "word": "Aisyah",
+      "forbiddenWords": [
+        "Istri",
+        "Nabi",
+        "Ulama",
+        "Perawi",
+        "Cerdas"
+      ]
+    },
+    {
+      "id": "id-38",
+      "word": "Abu Bakar",
+      "forbiddenWords": [
+        "Pertama",
+        "Khalifah",
+        "Sahabat",
+        "Shiddiq",
+        "Nabi"
+      ]
+    },
+    {
+      "id": "id-39",
+      "word": "Umar",
+      "forbiddenWords": [
+        "Khalifah",
+        "Adil",
+        "Kuat",
+        "Kedua",
+        "Islam"
+      ]
+    },
+    {
+      "id": "id-40",
+      "word": "Ali",
+      "forbiddenWords": [
+        "Sepupu",
+        "Nabi",
+        "Khalifah",
+        "Berani",
+        "Ilmu"
+      ]
+    },
+    {
+      "id": "id-41",
+      "word": "Bilal",
+      "forbiddenWords": [
+        "Pertama",
+        "Muadzin",
+        "Adzan",
+        "Budak",
+        "Merdeka"
+      ]
+    },
+    {
+      "id": "id-42",
+      "word": "Jibril",
+      "forbiddenWords": [
+        "Malaikat",
+        "Wahyu",
+        "Nabi",
+        "Pesan",
+        "Agung"
+      ]
+    },
+    {
+      "id": "id-43",
+      "word": "Iman",
+      "forbiddenWords": [
+        "Percaya",
+        "Hati",
+        "Enam",
+        "Rukun",
+        "Keyakinan"
+      ]
+    },
+    {
+      "id": "id-44",
+      "word": "Islam",
+      "forbiddenWords": [
+        "Agama",
+        "Lima",
+        "Rukun",
+        "Damai",
+        "Muslim"
+      ]
+    },
+    {
+      "id": "id-45",
+      "word": "Tauhid",
+      "forbiddenWords": [
+        "Esa",
+        "Allah",
+        "Satu",
+        "Ibadah",
+        "Syirik"
+      ]
+    },
+    {
+      "id": "id-46",
+      "word": "Syahadat",
+      "forbiddenWords": [
+        "Kesaksian",
+        "Masuk Islam",
+        "Allah",
+        "Muhammad",
+        "Dua kalimat"
+      ]
+    },
+    {
+      "id": "id-47",
+      "word": "Halal",
+      "forbiddenWords": [
+        "Boleh",
+        "Daging",
+        "Makanan",
+        "Diizinkan",
+        "Haram"
+      ]
+    },
+    {
+      "id": "id-48",
+      "word": "Haram",
+      "forbiddenWords": [
+        "Mencuri",
+        "Babi",
+        "Alkohol",
+        "Dosa",
+        "Zina"
+      ]
+    },
+    {
+      "id": "id-49",
+      "word": "Doa",
+      "forbiddenWords": [
+        "Harapan",
+        "Allah",
+        "Tangan",
+        "Komunikasi",
+        "Mengangkat"
+      ]
+    },
+    {
+      "id": "id-50",
+      "word": "Dzikir",
+      "forbiddenWords": [
+        "Ingat",
+        "Tasbih",
+        "Allah",
+        "Ulang",
+        "Lidah"
+      ]
+    },
+    {
+      "id": "id-51",
+      "word": "Tasbih",
+      "forbiddenWords": [
+        "Biji",
+        "Menghitung",
+        "Subhanallah",
+        "Tangan",
+        "Memuji"
+      ]
+    },
+    {
+      "id": "id-52",
+      "word": "Sujud",
+      "forbiddenWords": [
+        "Dahi",
+        "Lantai",
+        "Tunduk",
+        "Sholat",
+        "Khusyu"
+      ]
+    },
+    {
+      "id": "id-53",
+      "word": "Rukuk",
+      "forbiddenWords": [
+        "Membungkuk",
+        "Sholat",
+        "Tangan",
+        "Lutut",
+        "Posisi"
+      ]
+    },
+    {
+      "id": "id-54",
+      "word": "Tawaf",
+      "forbiddenWords": [
+        "Ka'bah",
+        "Tujuh",
+        "Keliling",
+        "Haji",
+        "Berjalan"
+      ]
+    },
+    {
+      "id": "id-55",
+      "word": "Ihram",
+      "forbiddenWords": [
+        "Putih",
+        "Kain",
+        "Haji",
+        "Jamaah",
+        "Pakaian"
+      ]
+    },
+    {
+      "id": "id-56",
+      "word": "Arafah",
+      "forbiddenWords": [
+        "Wukuf",
+        "Haji",
+        "Hari",
+        "Padang",
+        "Doa"
+      ]
+    },
+    {
+      "id": "id-57",
+      "word": "Mina",
+      "forbiddenWords": [
+        "Tenda",
+        "Jamarat",
+        "Kurban",
+        "Melempar",
+        "Haji"
+      ]
+    },
+    {
+      "id": "id-58",
+      "word": "Jamarat",
+      "forbiddenWords": [
+        "Melempar",
+        "Batu",
+        "Setan",
+        "Tiga pilar",
+        "Haji"
+      ]
+    },
+    {
+      "id": "id-59",
+      "word": "Kurban",
+      "forbiddenWords": [
+        "Idul Adha",
+        "Ibrahim",
+        "Domba",
+        "Menyembelih",
+        "Daging"
+      ]
+    },
+    {
+      "id": "id-60",
+      "word": "Sa'i",
+      "forbiddenWords": [
+        "Shafa",
+        "Marwah",
+        "Tujuh",
+        "Berlari kecil",
+        "Hajar"
+      ]
+    },
+    {
+      "id": "id-61",
+      "word": "Muzdalifah",
+      "forbiddenWords": [
+        "Mabit",
+        "Malam",
+        "Batu",
+        "Haji",
+        "Arafah"
+      ]
+    },
+    {
+      "id": "id-62",
+      "word": "Sabar",
+      "forbiddenWords": [
+        "Tabah",
+        "Cobaan",
+        "Kesulitan",
+        "Pahala",
+        "Ikhlas"
+      ]
+    },
+    {
+      "id": "id-63",
+      "word": "Syukur",
+      "forbiddenWords": [
+        "Terima kasih",
+        "Allah",
+        "Nikmat",
+        "Alhamdulillah",
+        "Hati"
+      ]
+    },
+    {
+      "id": "id-64",
+      "word": "Tawakal",
+      "forbiddenWords": [
+        "Percaya",
+        "Allah",
+        "Usaha",
+        "Pasrah",
+        "Bergantung"
+      ]
+    },
+    {
+      "id": "id-65",
+      "word": "Ikhlas",
+      "forbiddenWords": [
+        "Tulus",
+        "Allah",
+        "Hati",
+        "Niat",
+        "Tanpa pamrih"
+      ]
+    },
+    {
+      "id": "id-66",
+      "word": "Niat",
+      "forbiddenWords": [
+        "Niat hati",
+        "Sebelum",
+        "Amal",
+        "Tujuan",
+        "Dalam hati"
+      ]
+    },
+    {
+      "id": "id-67",
+      "word": "Taubat",
+      "forbiddenWords": [
+        "Menyesal",
+        "Dosa",
+        "Ampun",
+        "Allah",
+        "Kembali"
+      ]
+    },
+    {
+      "id": "id-68",
+      "word": "Istighfar",
+      "forbiddenWords": [
+        "Minta ampun",
+        "Allah",
+        "Dosa",
+        "Lidah",
+        "Astaghfirullah"
+      ]
+    },
+    {
+      "id": "id-69",
+      "word": "Jilbab",
+      "forbiddenWords": [
+        "Menutup",
+        "Wanita",
+        "Rambut",
+        "Kerudung",
+        "Syar'i"
+      ]
+    },
+    {
+      "id": "id-70",
+      "word": "Sedekah",
+      "forbiddenWords": [
+        "Memberi",
+        "Fakir",
+        "Sukarela",
+        "Pahala",
+        "Infak"
+      ]
+    },
+    {
+      "id": "id-71",
+      "word": "Jihad",
+      "forbiddenWords": [
+        "Berjuang",
+        "Usaha",
+        "Diri sendiri",
+        "Melawan",
+        "Allah"
+      ]
+    },
+    {
+      "id": "id-72",
+      "word": "Akhirat",
+      "forbiddenWords": [
+        "Kematian",
+        "Dunia",
+        "Abadi",
+        "Hari kiamat",
+        "Kekal"
+      ]
+    },
+    {
+      "id": "id-73",
+      "word": "Kiamat",
+      "forbiddenWords": [
+        "Hari akhir",
+        "Sangkakala",
+        "Kebangkitan",
+        "Akhir zaman",
+        "Alam barzakh"
+      ]
+    },
+    {
+      "id": "id-74",
+      "word": "Mizan",
+      "forbiddenWords": [
+        "Timbangan",
+        "Amal",
+        "Berat",
+        "Hari kiamat",
+        "Adil"
+      ]
+    },
+    {
+      "id": "id-75",
+      "word": "Sirat",
+      "forbiddenWords": [
+        "Jembatan",
+        "Neraka",
+        "Menyeberangi",
+        "Tipis",
+        "Akhirat"
+      ]
+    },
+    {
+      "id": "id-76",
+      "word": "Mihrab",
+      "forbiddenWords": [
+        "Ceruk",
+        "Masjid",
+        "Kiblat",
+        "Imam",
+        "Depan"
+      ]
+    },
+    {
+      "id": "id-77",
+      "word": "Mimbar",
+      "forbiddenWords": [
+        "Panggung",
+        "Jum'at",
+        "Imam",
+        "Khutbah",
+        "Tangga"
+      ]
+    },
+    {
+      "id": "id-78",
+      "word": "Menara Masjid",
+      "forbiddenWords": [
+        "Tinggi",
+        "Adzan",
+        "Panggil",
+        "Muadzin",
+        "Bangunan"
+      ]
+    },
+    {
+      "id": "id-79",
+      "word": "Ayat",
+      "forbiddenWords": [
+        "Al-Qur'an",
+        "Surat",
+        "Tanda",
+        "Allah",
+        "Membaca"
+      ]
+    },
+    {
+      "id": "id-80",
+      "word": "Surat",
+      "forbiddenWords": [
+        "Bab",
+        "Ayat",
+        "Seratus empat belas",
+        "Al-Qur'an",
+        "Hafal"
+      ]
+    },
+    {
+      "id": "id-81",
+      "word": "Al-Fatihah",
+      "forbiddenWords": [
+        "Pembuka",
+        "Al-Qur'an",
+        "Pertama",
+        "Sholat",
+        "Induk"
+      ]
+    },
+    {
+      "id": "id-82",
+      "word": "Hafiz",
+      "forbiddenWords": [
+        "Hafal",
+        "Al-Qur'an",
+        "Hati",
+        "Seluruh",
+        "Penghafal"
+      ]
+    },
+    {
+      "id": "id-83",
+      "word": "Tajwid",
+      "forbiddenWords": [
+        "Membaca",
+        "Al-Qur'an",
+        "Aturan",
+        "Makhraj",
+        "Indah"
+      ]
+    },
+    {
+      "id": "id-84",
+      "word": "Tafsir",
+      "forbiddenWords": [
+        "Penjelasan",
+        "Al-Qur'an",
+        "Makna",
+        "Ulama",
+        "Ayat"
+      ]
+    },
+    {
+      "id": "id-85",
+      "word": "Fiqih",
+      "forbiddenWords": [
+        "Hukum Islam",
+        "Halal",
+        "Ulama",
+        "Fatwa",
+        "Ibadah"
+      ]
+    },
+    {
+      "id": "id-86",
+      "word": "Sahabat Nabi",
+      "forbiddenWords": [
+        "Nabi",
+        "Teman",
+        "Pertama",
+        "Pengikut",
+        "Generasi"
+      ]
+    },
+    {
+      "id": "id-87",
+      "word": "Khalifah",
+      "forbiddenWords": [
+        "Pengganti",
+        "Pemimpin",
+        "Penguasa",
+        "Muslim",
+        "Sesudah Nabi"
+      ]
+    },
+    {
+      "id": "id-88",
+      "word": "Umat Islam",
+      "forbiddenWords": [
+        "Komunitas",
+        "Bangsa",
+        "Bersatu",
+        "Saudara",
+        "Seluruh dunia"
+      ]
+    },
+    {
+      "id": "id-89",
+      "word": "Ukhuwah",
+      "forbiddenWords": [
+        "Persaudaraan",
+        "Muslim",
+        "Bersatu",
+        "Ikatan",
+        "Cinta"
+      ]
+    },
+    {
+      "id": "id-90",
+      "word": "Nikah",
+      "forbiddenWords": [
+        "Pernikahan",
+        "Akad",
+        "Istri",
+        "Suami",
+        "Mahar"
+      ]
+    },
+    {
+      "id": "id-91",
+      "word": "Mahar",
+      "forbiddenWords": [
+        "Uang",
+        "Pernikahan",
+        "Pengantin",
+        "Pemberian",
+        "Akad"
+      ]
+    },
+    {
+      "id": "id-92",
+      "word": "Haya",
+      "forbiddenWords": [
+        "Malu",
+        "Sopan",
+        "Akhlak",
+        "Wanita",
+        "Islam"
+      ]
+    },
+    {
+      "id": "id-93",
+      "word": "Ghibah",
+      "forbiddenWords": [
+        "Gosip",
+        "Bicara",
+        "Di belakang",
+        "Dosa",
+        "Lidah"
+      ]
+    },
+    {
+      "id": "id-94",
+      "word": "Dusta",
+      "forbiddenWords": [
+        "Bohong",
+        "Jujur",
+        "Dosa",
+        "Lidah",
+        "Munafik"
+      ]
+    },
+    {
+      "id": "id-95",
+      "word": "Amanah",
+      "forbiddenWords": [
+        "Jujur",
+        "Dipercaya",
+        "Tanggung jawab",
+        "Hati",
+        "Dipegang"
+      ]
+    },
+    {
+      "id": "id-96",
+      "word": "Keadilan",
+      "forbiddenWords": [
+        "Sama rata",
+        "Hak",
+        "Benar",
+        "Salah",
+        "Pemimpin"
+      ]
+    },
+    {
+      "id": "id-97",
+      "word": "Rahmat",
+      "forbiddenWords": [
+        "Kasih sayang",
+        "Allah",
+        "Ampunan",
+        "Baik hati",
+        "Lembut"
+      ]
+    },
+    {
+      "id": "id-98",
+      "word": "Anak Yatim",
+      "forbiddenWords": [
+        "Orang tua",
+        "Anak",
+        "Merawat",
+        "Sedekah",
+        "Sendiri"
+      ]
+    },
+    {
+      "id": "id-99",
+      "word": "Tetangga",
+      "forbiddenWords": [
+        "Rumah sebelah",
+        "Hak",
+        "Kebaikan",
+        "Berbagi",
+        "Dekat"
+      ]
+    },
+    {
+      "id": "id-100",
+      "word": "Orang Tua",
+      "forbiddenWords": [
+        "Ibu",
+        "Ayah",
+        "Hormat",
+        "Surga",
+        "Taat"
+      ]
+    },
+    {
+      "id": "id-101",
+      "word": "Muadzin",
+      "forbiddenWords": [
+        "Adzan",
+        "Memanggil",
+        "Menara",
+        "Suara",
+        "Bilal"
+      ]
+    },
+    {
+      "id": "id-102",
+      "word": "Sajadah",
+      "forbiddenWords": [
+        "Alas",
+        "Lantai",
+        "Karpet",
+        "Gambar masjid",
+        "Sholat"
+      ]
+    },
+    {
+      "id": "id-103",
+      "word": "Tongkat Musa",
+      "forbiddenWords": [
+        "Kayu",
+        "Mukjizat",
+        "Laut",
+        "Ular",
+        "Firaun"
+      ]
+    },
+    {
+      "id": "id-104",
+      "word": "Zamzam",
+      "forbiddenWords": [
+        "Sumur",
+        "Air",
+        "Mekkah",
+        "Ismail",
+        "Suci"
+      ]
+    },
+    {
+      "id": "id-105",
+      "word": "Itikaf",
+      "forbiddenWords": [
+        "Berdiam diri",
+        "Masjid",
+        "Ramadhan",
+        "Sepuluh malam terakhir",
+        "Ibadah"
+      ]
+    },
+    {
+      "id": "id-106",
+      "word": "Lailatul Qadar",
+      "forbiddenWords": [
+        "Malam kemuliaan",
+        "Ramadhan",
+        "Seribu bulan",
+        "Ganjil",
+        "Khusus"
+      ]
+    },
+    {
+      "id": "id-107",
+      "word": "Tarawih",
+      "forbiddenWords": [
+        "Ramadhan",
+        "Malam",
+        "Berjama'ah",
+        "Masjid",
+        "Panjang"
+      ]
+    },
+    {
+      "id": "id-108",
+      "word": "Sholat Jenazah",
+      "forbiddenWords": [
+        "Meninggal",
+        "Dikubur",
+        "Kain kafan",
+        "Berdiri",
+        "Fardhu kifayah"
+      ]
+    },
+    {
+      "id": "id-109",
+      "word": "Mandi Wajib",
+      "forbiddenWords": [
+        "Junub",
+        "Bersih",
+        "Tubuh",
+        "Air mengalir",
+        "Setelah"
+      ]
+    },
+    {
+      "id": "id-110",
+      "word": "Salam",
+      "forbiddenWords": [
+        "Damai",
+        "Sapaan",
+        "Assalamualaikum",
+        "Saudara",
+        "Muslim"
+      ]
+    },
+    {
+      "id": "id-111",
+      "word": "Bismillah",
+      "forbiddenWords": [
+        "Mulai",
+        "Nama Allah",
+        "Awal",
+        "Membaca",
+        "Perlindungan"
+      ]
+    },
+    {
+      "id": "id-112",
+      "word": "Takbir",
+      "forbiddenWords": [
+        "Allahu Akbar",
+        "Besar",
+        "Idul Adha",
+        "Gema",
+        "Sholat"
+      ]
+    },
+    {
+      "id": "id-113",
+      "word": "Yusuf",
+      "forbiddenWords": [
+        "Mesir",
+        "Penjara",
+        "Mimpi",
+        "Saudara",
+        "Tampan"
+      ]
+    },
+    {
+      "id": "id-114",
+      "word": "Dawud",
+      "forbiddenWords": [
+        "Jalut",
+        "Raja",
+        "Zabur",
+        "Besi",
+        "Kuat"
+      ]
+    },
+    {
+      "id": "id-115",
+      "word": "Sulaiman",
+      "forbiddenWords": [
+        "Raja",
+        "Hikmah",
+        "Jin",
+        "Binatang",
+        "Angin"
+      ]
+    },
+    {
+      "id": "id-116",
+      "word": "Hawa",
+      "forbiddenWords": [
+        "Adam",
+        "Pertama",
+        "Wanita",
+        "Jannah",
+        "Pasangan"
+      ]
+    },
+    {
+      "id": "id-117",
+      "word": "Fitrah",
+      "forbiddenWords": [
+        "Alami",
+        "Lahir",
+        "Suci",
+        "Islam",
+        "Asli"
+      ]
+    },
+    {
+      "id": "id-118",
+      "word": "Berkah",
+      "forbiddenWords": [
+        "Bertambah",
+        "Allah",
+        "Kebaikan",
+        "Makanan",
+        "Tumbuh"
+      ]
+    },
+    {
+      "id": "id-119",
+      "word": "Rezeki",
+      "forbiddenWords": [
+        "Pemberian Allah",
+        "Harta",
+        "Makanan",
+        "Usaha",
+        "Karunia"
+      ]
+    },
+    {
+      "id": "id-120",
+      "word": "Pahala",
+      "forbiddenWords": [
+        "Ganjaran",
+        "Allah",
+        "Akhirat",
+        "Amal",
+        "Berlipat"
+      ]
+    },
+    {
+      "id": "id-121",
+      "word": "Subuh",
+      "forbiddenWords": [
+        "Fajar",
+        "Pagi",
+        "Sholat",
+        "Waktu",
+        "Dini Hari"
+      ]
+    },
+    {
+      "id": "id-122",
+      "word": "Dzuhur",
+      "forbiddenWords": [
+        "Tengah",
+        "Siang",
+        "Waktu",
+        "Sholat",
+        "Matahari"
+      ]
+    },
+    {
+      "id": "id-123",
+      "word": "Ashar",
+      "forbiddenWords": [
+        "Sore",
+        "Waktu",
+        "Sholat",
+        "Petang",
+        "Terbenam"
+      ]
+    },
+    {
+      "id": "id-124",
+      "word": "Maghrib",
+      "forbiddenWords": [
+        "Matahari",
+        "Terbenam",
+        "Waktu",
+        "Sholat",
+        "Senja"
+      ]
+    },
+    {
+      "id": "id-125",
+      "word": "Isya",
+      "forbiddenWords": [
+        "Malam",
+        "Waktu",
+        "Sholat",
+        "Gelap",
+        "Terakhir"
+      ]
+    },
+    {
+      "id": "id-126",
+      "word": "Rakaat",
+      "forbiddenWords": [
+        "Jumlah",
+        "Bilangan",
+        "Urutan",
+        "Rukuk",
+        "Hitungan"
+      ]
+    },
+    {
+      "id": "id-127",
+      "word": "Iqamah",
+      "forbiddenWords": [
+        "Sholat",
+        "Kedua",
+        "Berdiri",
+        "Panggilan",
+        "Sebelum"
+      ]
+    },
+    {
+      "id": "id-128",
+      "word": "Qiyam",
+      "forbiddenWords": [
+        "Berdiri",
+        "Tegak",
+        "Posisi",
+        "Rukun",
+        "Gerakan"
+      ]
+    },
+    {
+      "id": "id-129",
+      "word": "Tasyahud",
+      "forbiddenWords": [
+        "Duduk",
+        "Tahiyat",
+        "Jari",
+        "Telunjuk",
+        "Akhir"
+      ]
+    },
+    {
+      "id": "id-130",
+      "word": "Sholat Tahajud",
+      "forbiddenWords": [
+        "Malam",
+        "Bangun",
+        "Sepertiga",
+        "Sunat",
+        "Tengah Malam"
+      ]
+    },
+    {
+      "id": "id-131",
+      "word": "Sholat Dhuha",
+      "forbiddenWords": [
+        "Pagi",
+        "Matahari",
+        "Naik",
+        "Sunat",
+        "Rezeki"
+      ]
+    },
+    {
+      "id": "id-132",
+      "word": "Sholat Witir",
+      "forbiddenWords": [
+        "Ganjil",
+        "Malam",
+        "Penutup",
+        "Sunat",
+        "Rakaat"
+      ]
+    },
+    {
+      "id": "id-133",
+      "word": "Sholat Tahiyatul Masjid",
+      "forbiddenWords": [
+        "Masuk",
+        "Masjid",
+        "Dua",
+        "Rakaat",
+        "Sunat"
+      ]
+    },
+    {
+      "id": "id-134",
+      "word": "Zakat Fitrah",
+      "forbiddenWords": [
+        "Ramadhan",
+        "Beras",
+        "Idul",
+        "Wajib",
+        "Miskin"
+      ]
+    },
+    {
+      "id": "id-135",
+      "word": "Zakat Mal",
+      "forbiddenWords": [
+        "Harta",
+        "Nisab",
+        "Haul",
+        "Wajib",
+        "Persen"
+      ]
+    },
+    {
+      "id": "id-136",
+      "word": "Mustahiq",
+      "forbiddenWords": [
+        "Penerima",
+        "Berhak",
+        "Delapan",
+        "Asnaf",
+        "Golongan"
+      ]
+    },
+    {
+      "id": "id-137",
+      "word": "Nisab",
+      "forbiddenWords": [
+        "Batas",
+        "Harta",
+        "Minimum",
+        "Wajib",
+        "Ukuran"
+      ]
+    },
+    {
+      "id": "id-138",
+      "word": "Haul",
+      "forbiddenWords": [
+        "Setahun",
+        "Waktu",
+        "Satu",
+        "Harta",
+        "Putaran"
+      ]
+    },
+    {
+      "id": "id-139",
+      "word": "Niat Puasa",
+      "forbiddenWords": [
+        "Malam",
+        "Fajar",
+        "Sebelum",
+        "Hati",
+        "Ramadhan"
+      ]
+    },
+    {
+      "id": "id-140",
+      "word": "Batal Puasa",
+      "forbiddenWords": [
+        "Makan",
+        "Minum",
+        "Sengaja",
+        "Rusak",
+        "Tindakan"
+      ]
+    },
+    {
+      "id": "id-141",
+      "word": "Fidyah",
+      "forbiddenWords": [
+        "Sakit",
+        "Tua",
+        "Ganti",
+        "Memberi",
+        "Makan"
+      ]
+    },
+    {
+      "id": "id-142",
+      "word": "Talbiyah",
+      "forbiddenWords": [
+        "Umrah",
+        "Labbaik",
+        "Ihram",
+        "Lafadz",
+        "Dzikir"
+      ]
+    },
+    {
+      "id": "id-143",
+      "word": "Wukuf",
+      "forbiddenWords": [
+        "Arafah",
+        "Berdiri",
+        "Inti",
+        "Dzulhijjah",
+        "Sore"
+      ]
+    },
+    {
+      "id": "id-144",
+      "word": "Tahallul",
+      "forbiddenWords": [
+        "Cukur",
+        "Ihram",
+        "Selesai",
+        "Rambut",
+        "Potong"
+      ]
+    },
+    {
+      "id": "id-145",
+      "word": "Nafar Awal",
+      "forbiddenWords": [
+        "Mina",
+        "Berangkat",
+        "Lebih Awal",
+        "Tasyrik",
+        "12"
+      ]
+    },
+    {
+      "id": "id-146",
+      "word": "Umrah",
+      "forbiddenWords": [
+        "Mekkah",
+        "Ka'bah",
+        "Ihram",
+        "Kecil",
+        "Tawaf"
+      ]
+    },
+    {
+      "id": "id-147",
+      "word": "Haji Mabrur",
+      "forbiddenWords": [
+        "Diterima",
+        "Sempurna",
+        "Balasan",
+        "Surga",
+        "Ibadah"
+      ]
+    },
+    {
+      "id": "id-148",
+      "word": "Istitha'ah",
+      "forbiddenWords": [
+        "Mampu",
+        "Biaya",
+        "Syarat",
+        "Bekal",
+        "Kemampuan"
+      ]
+    },
+    {
+      "id": "id-149",
+      "word": "La ilaha illallah",
+      "forbiddenWords": [
+        "Tiada",
+        "Tuhan",
+        "Kecuali",
+        "Kalimat",
+        "Tauhid"
+      ]
+    },
+    {
+      "id": "id-150",
+      "word": "Muhammadur Rasulullah",
+      "forbiddenWords": [
+        "Muhammad",
+        "Rasul",
+        "Utusan",
+        "Syahadat",
+        "Kalimat"
+      ]
+    },
+    {
+      "id": "id-151",
+      "word": "Bersuci",
+      "forbiddenWords": [
+        "Thaharah",
+        "Mandi",
+        "Bersih",
+        "Suci",
+        "Kotoran"
+      ]
+    },
+    {
+      "id": "id-152",
+      "word": "Tayamum",
+      "forbiddenWords": [
+        "Debu",
+        "Tanah",
+        "Pengganti",
+        "Air",
+        "Bersuci"
+      ]
+    },
+    {
+      "id": "id-153",
+      "word": "Najis",
+      "forbiddenWords": [
+        "Kotor",
+        "Batal",
+        "Sucikan",
+        "Benda",
+        "Hukum"
+      ]
+    },
+    {
+      "id": "id-154",
+      "word": "Sholat Berjamaah",
+      "forbiddenWords": [
+        "Bersama",
+        "Masjid",
+        "Imam",
+        "Shaf",
+        "Pahala"
+      ]
+    },
+    {
+      "id": "id-155",
+      "word": "Shaf",
+      "forbiddenWords": [
+        "Baris",
+        "Berjamaah",
+        "Lurus",
+        "Belakang",
+        "Rapi"
+      ]
+    },
+    {
+      "id": "id-156",
+      "word": "Makmum",
+      "forbiddenWords": [
+        "Imam",
+        "Mengikuti",
+        "Berjamaah",
+        "Belakang",
+        "Posisi"
+      ]
+    },
+    {
+      "id": "id-157",
+      "word": "Sholat Rawatib",
+      "forbiddenWords": [
+        "Sunat",
+        "Sebelum",
+        "Sesudah",
+        "Mengiringi",
+        "Fardhu"
+      ]
+    },
+    {
+      "id": "id-158",
+      "word": "Sholat Gerhana",
+      "forbiddenWords": [
+        "Bulan",
+        "Matahari",
+        "Gerhana",
+        "Kusuf",
+        "Istimewa"
+      ]
+    },
+    {
+      "id": "id-159",
+      "word": "Sholat Istisqa",
+      "forbiddenWords": [
+        "Hujan",
+        "Kemarau",
+        "Minta",
+        "Lapangan",
+        "Doa"
+      ]
+    },
+    {
+      "id": "id-160",
+      "word": "Sholat Ied",
+      "forbiddenWords": [
+        "Idul",
+        "Lapangan",
+        "Dua",
+        "Pagi",
+        "Takbir"
+      ]
+    },
+    {
+      "id": "id-161",
+      "word": "Nabi Ayyub",
+      "forbiddenWords": [
+        "Sabar",
+        "Penyakit",
+        "Cobaan",
+        "Ujian",
+        "Sembuh"
+      ]
+    },
+    {
+      "id": "id-162",
+      "word": "Nabi Yunus",
+      "forbiddenWords": [
+        "Ikan",
+        "Paus",
+        "Gelap",
+        "Perut",
+        "Ninawa"
+      ]
+    },
+    {
+      "id": "id-163",
+      "word": "Nabi Zakariya",
+      "forbiddenWords": [
+        "Yahya",
+        "Tua",
+        "Pohon",
+        "Doa",
+        "Anak"
+      ]
+    },
+    {
+      "id": "id-164",
+      "word": "Nabi Yahya",
+      "forbiddenWords": [
+        "Zakariya",
+        "Sungai",
+        "Pembunuhan",
+        "Muda",
+        "Kesyahidan"
+      ]
+    },
+    {
+      "id": "id-165",
+      "word": "Nabi Syu'aib",
+      "forbiddenWords": [
+        "Madyan",
+        "Timbangan",
+        "Curang",
+        "Musa",
+        "Keadilan"
+      ]
+    },
+    {
+      "id": "id-166",
+      "word": "Nabi Idris",
+      "forbiddenWords": [
+        "Langit",
+        "Diangkat",
+        "Penjahit",
+        "Tulisan",
+        "Bintang"
+      ]
+    },
+    {
+      "id": "id-167",
+      "word": "Nabi Hud",
+      "forbiddenWords": [
+        "Ad",
+        "Kaum",
+        "Angin",
+        "Kuat",
+        "Azab"
+      ]
+    },
+    {
+      "id": "id-168",
+      "word": "Nabi Saleh",
+      "forbiddenWords": [
+        "Samud",
+        "Unta",
+        "Batu",
+        "Kaum",
+        "Azab"
+      ]
+    },
+    {
+      "id": "id-169",
+      "word": "Nabi Lut",
+      "forbiddenWords": [
+        "Sodom",
+        "Kaum",
+        "Azab",
+        "Istrinya",
+        "Berbalik"
+      ]
+    },
+    {
+      "id": "id-170",
+      "word": "Nabi Ishaq",
+      "forbiddenWords": [
+        "Ibrahim",
+        "Ya'qub",
+        "Harun",
+        "Ismail",
+        "Putra"
+      ]
+    },
+    {
+      "id": "id-171",
+      "word": "Nabi Ya'qub",
+      "forbiddenWords": [
+        "Ishaq",
+        "Yusuf",
+        "Israel",
+        "Dua Belas",
+        "Anak"
+      ]
+    },
+    {
+      "id": "id-172",
+      "word": "Nabi Harun",
+      "forbiddenWords": [
+        "Musa",
+        "Saudara",
+        "Bicara",
+        "Membantu",
+        "Bani"
+      ]
+    },
+    {
+      "id": "id-173",
+      "word": "Nabi Ilyas",
+      "forbiddenWords": [
+        "Baal",
+        "Kaumnya",
+        "Langit",
+        "Diangkat",
+        "Israel"
+      ]
+    },
+    {
+      "id": "id-174",
+      "word": "Nabi Ilyasa",
+      "forbiddenWords": [
+        "Ilyas",
+        "Pengganti",
+        "Israel",
+        "Murid",
+        "Danau"
+      ]
+    },
+    {
+      "id": "id-175",
+      "word": "Nabi Dzulkifli",
+      "forbiddenWords": [
+        "Kafil",
+        "Tugas",
+        "Menanggung",
+        "Hamba",
+        "Sabar"
+      ]
+    },
+    {
+      "id": "id-176",
+      "word": "Ulul Azmi",
+      "forbiddenWords": [
+        "Lima",
+        "Keteguhan",
+        "Nabi",
+        "Ibrahim",
+        "Ketabahan"
+      ]
+    },
+    {
+      "id": "id-177",
+      "word": "Mukjizat",
+      "forbiddenWords": [
+        "Luar Biasa",
+        "Bukti",
+        "Kenabian",
+        "Kekuasaan",
+        "Istimewa"
+      ]
+    },
+    {
+      "id": "id-178",
+      "word": "Wahyu",
+      "forbiddenWords": [
+        "Jibril",
+        "Turun",
+        "Pesan",
+        "Kitab",
+        "Diturunkan"
+      ]
+    },
+    {
+      "id": "id-179",
+      "word": "Isra Mi'raj",
+      "forbiddenWords": [
+        "Malam",
+        "Perjalanan",
+        "Langit",
+        "Bait",
+        "Perintah"
+      ]
+    },
+    {
+      "id": "id-180",
+      "word": "Hijrah",
+      "forbiddenWords": [
+        "Mekkah",
+        "Madinah",
+        "Pindah",
+        "Muhajir",
+        "Kalender"
+      ]
+    },
+    {
+      "id": "id-181",
+      "word": "Sirah Nabawiyah",
+      "forbiddenWords": [
+        "Sejarah",
+        "Kehidupan",
+        "Kisah",
+        "Biografi",
+        "Rasul"
+      ]
+    },
+    {
+      "id": "id-182",
+      "word": "Rasulullah SAW",
+      "forbiddenWords": [
+        "Terakhir",
+        "Mekkah",
+        "Penutup",
+        "Uswah",
+        "Shalawat"
+      ]
+    },
+    {
+      "id": "id-183",
+      "word": "Fatimah az-Zahra",
+      "forbiddenWords": [
+        "Ali",
+        "Putri",
+        "Hasan",
+        "Husain",
+        "Mulia"
+      ]
+    },
+    {
+      "id": "id-184",
+      "word": "Hasan",
+      "forbiddenWords": [
+        "Husain",
+        "Ali",
+        "Fatimah",
+        "Cucu",
+        "Perdamaian"
+      ]
+    },
+    {
+      "id": "id-185",
+      "word": "Husain",
+      "forbiddenWords": [
+        "Hasan",
+        "Karbala",
+        "Syahid",
+        "Ali",
+        "Cucu"
+      ]
+    },
+    {
+      "id": "id-186",
+      "word": "Utsman bin Affan",
+      "forbiddenWords": [
+        "Khalifah",
+        "Ketiga",
+        "Al-Qur'an",
+        "Kaya",
+        "Syahid"
+      ]
+    },
+    {
+      "id": "id-187",
+      "word": "Abdurrahman bin Auf",
+      "forbiddenWords": [
+        "Pedagang",
+        "Dermawan",
+        "Sepuluh",
+        "Sahabat",
+        "Surga"
+      ]
+    },
+    {
+      "id": "id-188",
+      "word": "Salman al-Farisi",
+      "forbiddenWords": [
+        "Persia",
+        "Parit",
+        "Hendek",
+        "Masuk",
+        "Setia"
+      ]
+    },
+    {
+      "id": "id-189",
+      "word": "Hamzah",
+      "forbiddenWords": [
+        "Paman",
+        "Uhud",
+        "Singa",
+        "Syahid",
+        "Sahabat"
+      ]
+    },
+    {
+      "id": "id-190",
+      "word": "Khalid bin Walid",
+      "forbiddenWords": [
+        "Pedang",
+        "Panglima",
+        "Perang",
+        "Syaifullah",
+        "Masuk"
+      ]
+    },
+    {
+      "id": "id-191",
+      "word": "Ammar bin Yasir",
+      "forbiddenWords": [
+        "Disiksa",
+        "Ibu",
+        "Panas",
+        "Surga",
+        "Sabar"
+      ]
+    },
+    {
+      "id": "id-192",
+      "word": "Abu Dzar al-Ghifari",
+      "forbiddenWords": [
+        "Fakir",
+        "Zuhud",
+        "Kekayaan",
+        "Sahabat",
+        "Sederhana"
+      ]
+    },
+    {
+      "id": "id-193",
+      "word": "Muaz bin Jabal",
+      "forbiddenWords": [
+        "Yaman",
+        "Guru",
+        "Fiqih",
+        "Muallim",
+        "Sahabat"
+      ]
+    },
+    {
+      "id": "id-194",
+      "word": "Zaid bin Haritsah",
+      "forbiddenWords": [
+        "Angkat",
+        "Anak",
+        "Usama",
+        "Mu'tah",
+        "Kesayangan"
+      ]
+    },
+    {
+      "id": "id-195",
+      "word": "Abu Hurairah",
+      "forbiddenWords": [
+        "Hadits",
+        "Banyak",
+        "Kucing",
+        "Riwayat",
+        "Hafal"
+      ]
+    },
+    {
+      "id": "id-196",
+      "word": "Abdullah bin Masud",
+      "forbiddenWords": [
+        "Al-Qur'an",
+        "Kaki",
+        "Timbangan",
+        "Hafal",
+        "Sahabat"
+      ]
+    },
+    {
+      "id": "id-197",
+      "word": "Sad bin Abi Waqqas",
+      "forbiddenWords": [
+        "Panah",
+        "Paman",
+        "Persia",
+        "Sepuluh",
+        "Surga"
+      ]
+    },
+    {
+      "id": "id-198",
+      "word": "Ummu Salamah",
+      "forbiddenWords": [
+        "Istri",
+        "Bijaksana",
+        "Riwayat",
+        "Hadits",
+        "Sahabat"
+      ]
+    },
+    {
+      "id": "id-199",
+      "word": "Hafshah binti Umar",
+      "forbiddenWords": [
+        "Istri",
+        "Putri",
+        "Al-Qur'an",
+        "Simpan",
+        "Hafalan"
+      ]
+    },
+    {
+      "id": "id-200",
+      "word": "Zainab binti Jahsy",
+      "forbiddenWords": [
+        "Istri",
+        "Wahyu",
+        "Zaid",
+        "Pernikahan",
+        "Sepupu"
+      ]
+    },
+    {
+      "id": "id-201",
+      "word": "Uwais al-Qarani",
+      "forbiddenWords": [
+        "Yaman",
+        "Ibu",
+        "Merawat",
+        "Bertemu",
+        "Wali"
+      ]
+    },
+    {
+      "id": "id-202",
+      "word": "Shuhaib ar-Rumi",
+      "forbiddenWords": [
+        "Romawi",
+        "Harta",
+        "Hijrah",
+        "Emas",
+        "Sukarela"
+      ]
+    },
+    {
+      "id": "id-203",
+      "word": "Thalhah bin Ubaidillah",
+      "forbiddenWords": [
+        "Sepuluh",
+        "Perisai",
+        "Uhud",
+        "Surga",
+        "Sahabat"
+      ]
+    },
+    {
+      "id": "id-204",
+      "word": "Zubair bin Awwam",
+      "forbiddenWords": [
+        "Sepuluh",
+        "Bibi",
+        "Pedang",
+        "Sahabat",
+        "Hawariyun"
+      ]
+    },
+    {
+      "id": "id-205",
+      "word": "Abu Ubaidah bin Jarrah",
+      "forbiddenWords": [
+        "Kepercayaan",
+        "Syam",
+        "Sepuluh",
+        "Surga",
+        "Sahabat"
+      ]
+    },
+    {
+      "id": "id-206",
+      "word": "Said bin Zaid",
+      "forbiddenWords": [
+        "Sepuluh",
+        "Surga",
+        "Sahabat",
+        "Awal",
+        "Islam"
+      ]
+    },
+    {
+      "id": "id-207",
+      "word": "Ja'far bin Abi Thalib",
+      "forbiddenWords": [
+        "Habasyah",
+        "Sayap",
+        "Mu'tah",
+        "Syahid",
+        "Ali"
+      ]
+    },
+    {
+      "id": "id-208",
+      "word": "Ashabus Syura",
+      "forbiddenWords": [
+        "Enam",
+        "Dipilih",
+        "Khalifah",
+        "Umar",
+        "Musyawarah"
+      ]
+    },
+    {
+      "id": "id-209",
+      "word": "Anshar",
+      "forbiddenWords": [
+        "Madinah",
+        "Menolong",
+        "Muhajirin",
+        "Kaum",
+        "Penolong"
+      ]
+    },
+    {
+      "id": "id-210",
+      "word": "Muhajirin",
+      "forbiddenWords": [
+        "Mekkah",
+        "Pindah",
+        "Madinah",
+        "Hijrah",
+        "Kaum"
+      ]
+    },
+    {
+      "id": "id-211",
+      "word": "Mikail",
+      "forbiddenWords": [
+        "Hujan",
+        "Rezeki",
+        "Awan",
+        "Membagi",
+        "Malaikat"
+      ]
+    },
+    {
+      "id": "id-212",
+      "word": "Israfil",
+      "forbiddenWords": [
+        "Sangkakala",
+        "Tiup",
+        "Kiamat",
+        "Terompet",
+        "Menggemparkan"
+      ]
+    },
+    {
+      "id": "id-213",
+      "word": "Izrail",
+      "forbiddenWords": [
+        "Maut",
+        "Nyawa",
+        "Mencabut",
+        "Kematian",
+        "Tugas"
+      ]
+    },
+    {
+      "id": "id-214",
+      "word": "Munkar dan Nakir",
+      "forbiddenWords": [
+        "Kubur",
+        "Tanya",
+        "Dua",
+        "Malam",
+        "Pertama"
+      ]
+    },
+    {
+      "id": "id-215",
+      "word": "Raqib dan Atid",
+      "forbiddenWords": [
+        "Catat",
+        "Amal",
+        "Kanan",
+        "Kiri",
+        "Mencatat"
+      ]
+    },
+    {
+      "id": "id-216",
+      "word": "Hafazah",
+      "forbiddenWords": [
+        "Jaga",
+        "Penjaga",
+        "Manusia",
+        "Melindungi",
+        "Empat"
+      ]
+    },
+    {
+      "id": "id-217",
+      "word": "Iblis",
+      "forbiddenWords": [
+        "Sujud",
+        "Adam",
+        "Menolak",
+        "Api",
+        "Kafir"
+      ]
+    },
+    {
+      "id": "id-218",
+      "word": "Jin",
+      "forbiddenWords": [
+        "Tersembunyi",
+        "Api",
+        "Halus",
+        "Makhluk",
+        "Gaib"
+      ]
+    },
+    {
+      "id": "id-219",
+      "word": "Waswas",
+      "forbiddenWords": [
+        "Bisikan",
+        "Godaan",
+        "Hati",
+        "Ragu",
+        "Keraguan"
+      ]
+    },
+    {
+      "id": "id-220",
+      "word": "Hajar Aswad",
+      "forbiddenWords": [
+        "Batu",
+        "Hitam",
+        "Ka'bah",
+        "Cium",
+        "Pojok"
+      ]
+    },
+    {
+      "id": "id-221",
+      "word": "Malaikat Penjaga Neraka",
+      "forbiddenWords": [
+        "Malik",
+        "Neraka",
+        "Penjaga",
+        "Jaga",
+        "Api"
+      ]
+    },
+    {
+      "id": "id-222",
+      "word": "Asmaul Husna",
+      "forbiddenWords": [
+        "Nama",
+        "Indah",
+        "Sembilan",
+        "Puluh",
+        "Allah"
+      ]
+    },
+    {
+      "id": "id-223",
+      "word": "Ruh",
+      "forbiddenWords": [
+        "Nyawa",
+        "Jiwa",
+        "Tubuh",
+        "Misteri",
+        "Dihembuskan"
+      ]
+    },
+    {
+      "id": "id-224",
+      "word": "Nefs",
+      "forbiddenWords": [
+        "Jiwa",
+        "Nafsu",
+        "Tingkatan",
+        "Menahan",
+        "Diri"
+      ]
+    },
+    {
+      "id": "id-225",
+      "word": "Jin Qarin",
+      "forbiddenWords": [
+        "Teman",
+        "Selalu",
+        "Bersama",
+        "Setan",
+        "Manusia"
+      ]
+    },
+    {
+      "id": "id-226",
+      "word": "Firdaus",
+      "forbiddenWords": [
+        "Tertinggi",
+        "Mulia",
+        "Arsy",
+        "Tingkatan",
+        "Derajat"
+      ]
+    },
+    {
+      "id": "id-227",
+      "word": "Jahannam",
+      "forbiddenWords": [
+        "Paling",
+        "Dalam",
+        "Tingkatan",
+        "Bawah",
+        "Kafir"
+      ]
+    },
+    {
+      "id": "id-228",
+      "word": "Hawiyah",
+      "forbiddenWords": [
+        "Jurang",
+        "Terjun",
+        "Tingkatan",
+        "Dalam",
+        "Jatuh"
+      ]
+    },
+    {
+      "id": "id-229",
+      "word": "Saqar",
+      "forbiddenWords": [
+        "Panas",
+        "Tingkatan",
+        "Kulit",
+        "Hangus",
+        "Siksa"
+      ]
+    },
+    {
+      "id": "id-230",
+      "word": "Lazza",
+      "forbiddenWords": [
+        "Nyala",
+        "Api",
+        "Tingkatan",
+        "Membakar",
+        "Dalam"
+      ]
+    },
+    {
+      "id": "id-231",
+      "word": "Sidratul Muntaha",
+      "forbiddenWords": [
+        "Langit",
+        "Batas",
+        "Tertinggi",
+        "Jibril",
+        "Pohon"
+      ]
+    },
+    {
+      "id": "id-232",
+      "word": "Arsy",
+      "forbiddenWords": [
+        "Singgasana",
+        "Tertinggi",
+        "Langit",
+        "Agung",
+        "Besar"
+      ]
+    },
+    {
+      "id": "id-233",
+      "word": "Kautsar",
+      "forbiddenWords": [
+        "Telaga",
+        "Sungai",
+        "Keberkahan",
+        "Banyak",
+        "Kebaikan"
+      ]
+    },
+    {
+      "id": "id-234",
+      "word": "Telaga Haudh",
+      "forbiddenWords": [
+        "Air",
+        "Minum",
+        "Surga",
+        "Menunggu",
+        "Umat"
+      ]
+    },
+    {
+      "id": "id-235",
+      "word": "Titian Sirat",
+      "forbiddenWords": [
+        "Jembatan",
+        "Neraka",
+        "Akhirat",
+        "Melintasi",
+        "Seberang"
+      ]
+    },
+    {
+      "id": "id-236",
+      "word": "Catatan Amal",
+      "forbiddenWords": [
+        "Malaikat",
+        "Tulis",
+        "Perbuatan",
+        "Buku",
+        "Kanan"
+      ]
+    },
+    {
+      "id": "id-237",
+      "word": "Barzakh",
+      "forbiddenWords": [
+        "Antara",
+        "Dunia",
+        "Akhirat",
+        "Alam",
+        "Kubur"
+      ]
+    },
+    {
+      "id": "id-238",
+      "word": "Mahsyar",
+      "forbiddenWords": [
+        "Kumpul",
+        "Semua",
+        "Manusia",
+        "Akhirat",
+        "Padang"
+      ]
+    },
+    {
+      "id": "id-239",
+      "word": "Munafik",
+      "forbiddenWords": [
+        "Pura-pura",
+        "Dua",
+        "Muka",
+        "Tersembunyi",
+        "Kafir"
+      ]
+    },
+    {
+      "id": "id-240",
+      "word": "Dajjal",
+      "forbiddenWords": [
+        "Fitnah",
+        "Satu",
+        "Mata",
+        "Akhir",
+        "Buta"
+      ]
+    },
+    {
+      "id": "id-241",
+      "word": "Imam Mahdi",
+      "forbiddenWords": [
+        "Akhir",
+        "Zaman",
+        "Adil",
+        "Pemimpin",
+        "Turun"
+      ]
+    },
+    {
+      "id": "id-242",
+      "word": "Tanda Kiamat",
+      "forbiddenWords": [
+        "Hari",
+        "Besar",
+        "Kecil",
+        "Akhir",
+        "Zaman"
+      ]
+    },
+    {
+      "id": "id-243",
+      "word": "Yajuj Majuj",
+      "forbiddenWords": [
+        "Dinding",
+        "Merusak",
+        "Akhir",
+        "Banyak",
+        "Makhluk"
+      ]
+    },
+    {
+      "id": "id-244",
+      "word": "Turunnya Nabi Isa",
+      "forbiddenWords": [
+        "Akhir",
+        "Dajjal",
+        "Bunuh",
+        "Kembali",
+        "Damaskus"
+      ]
+    },
+    {
+      "id": "id-245",
+      "word": "Zaqqum",
+      "forbiddenWords": [
+        "Pohon",
+        "Buah",
+        "Makanan",
+        "Siksa",
+        "Pahit"
+      ]
+    },
+    {
+      "id": "id-246",
+      "word": "Hisab",
+      "forbiddenWords": [
+        "Perhitungan",
+        "Amal",
+        "Akhirat",
+        "Adil",
+        "Amal Perbuatan"
+      ]
+    },
+    {
+      "id": "id-247",
+      "word": "Syafaat",
+      "forbiddenWords": [
+        "Pertolongan",
+        "Akhirat",
+        "Memohon",
+        "Umat",
+        "Diberikan"
+      ]
+    },
+    {
+      "id": "id-248",
+      "word": "Buku Amal",
+      "forbiddenWords": [
+        "Catatan",
+        "Perbuatan",
+        "Akhirat",
+        "Tangan",
+        "Dibuka"
+      ]
+    },
+    {
+      "id": "id-249",
+      "word": "Sangkakala",
+      "forbiddenWords": [
+        "Israfil",
+        "Tiup",
+        "Kiamat",
+        "Dua",
+        "Terompet"
+      ]
+    },
+    {
+      "id": "id-250",
+      "word": "Pertanyaan Kubur",
+      "forbiddenWords": [
+        "Munkar",
+        "Nakir",
+        "Tanya",
+        "Mati",
+        "Malam"
+      ]
+    },
+    {
+      "id": "id-251",
+      "word": "Nikmat Kubur",
+      "forbiddenWords": [
+        "Orang",
+        "Beriman",
+        "Nyaman",
+        "Luas",
+        "Alam"
+      ]
+    },
+    {
+      "id": "id-252",
+      "word": "Azab Kubur",
+      "forbiddenWords": [
+        "Siksa",
+        "Kafir",
+        "Sempit",
+        "Mati",
+        "Dosa"
+      ]
+    },
+    {
+      "id": "id-253",
+      "word": "Kiamat Besar",
+      "forbiddenWords": [
+        "Tanda",
+        "Dajjal",
+        "Isa",
+        "Turun",
+        "Sangkakala"
+      ]
+    },
+    {
+      "id": "id-254",
+      "word": "Kiamat Kecil",
+      "forbiddenWords": [
+        "Tanda",
+        "Fitnah",
+        "Ilmu",
+        "Kematian",
+        "Individual"
+      ]
+    },
+    {
+      "id": "id-255",
+      "word": "Matahari Terbit dari Barat",
+      "forbiddenWords": [
+        "Tanda",
+        "Besar",
+        "Barat",
+        "Terbit",
+        "Pintu"
+      ]
+    },
+    {
+      "id": "id-256",
+      "word": "Takwa",
+      "forbiddenWords": [
+        "Menjaga Diri",
+        "Iman",
+        "Taat",
+        "Ketaatan",
+        "Hati"
+      ]
+    },
+    {
+      "id": "id-257",
+      "word": "Zuhud",
+      "forbiddenWords": [
+        "Tidak Cinta",
+        "Dunia",
+        "Ibadah",
+        "Kesederhanaan",
+        "Hati"
+      ]
+    },
+    {
+      "id": "id-258",
+      "word": "Wara",
+      "forbiddenWords": [
+        "Hati-hati",
+        "Syubhat",
+        "Menjauhi",
+        "Keraguan",
+        "Berhati"
+      ]
+    },
+    {
+      "id": "id-259",
+      "word": "Yaqin",
+      "forbiddenWords": [
+        "Yakin",
+        "Kuat",
+        "Teguh",
+        "Percaya",
+        "Pasti"
+      ]
+    },
+    {
+      "id": "id-260",
+      "word": "Riya",
+      "forbiddenWords": [
+        "Pamer",
+        "Ibadah",
+        "Orang",
+        "Melihat",
+        "Syirik Kecil"
+      ]
+    },
+    {
+      "id": "id-261",
+      "word": "Ujub",
+      "forbiddenWords": [
+        "Bangga",
+        "Amal",
+        "Merusak",
+        "Sombong",
+        "Diri Sendiri"
+      ]
+    },
+    {
+      "id": "id-262",
+      "word": "Kibir",
+      "forbiddenWords": [
+        "Angkuh",
+        "Tinggi Hati",
+        "Merendahkan",
+        "Orang Lain",
+        "Angkuh"
+      ]
+    },
+    {
+      "id": "id-263",
+      "word": "Hasad",
+      "forbiddenWords": [
+        "Dengki",
+        "Iri",
+        "Nikmat",
+        "Tidak Suka",
+        "Keberhasilan"
+      ]
+    },
+    {
+      "id": "id-264",
+      "word": "Namimah",
+      "forbiddenWords": [
+        "Adu Domba",
+        "Cerita",
+        "Dua Pihak",
+        "Fitnah",
+        "Memecah"
+      ]
+    },
+    {
+      "id": "id-265",
+      "word": "Muraqabah",
+      "forbiddenWords": [
+        "Merasa Diawasi",
+        "Hati",
+        "Ibadah",
+        "Terus",
+        "Kesadaran"
+      ]
+    },
+    {
+      "id": "id-266",
+      "word": "Muhasabah",
+      "forbiddenWords": [
+        "Introspeksi",
+        "Evaluasi",
+        "Amal",
+        "Hisab",
+        "Diri"
+      ]
+    },
+    {
+      "id": "id-267",
+      "word": "Tawadhu",
+      "forbiddenWords": [
+        "Rendah Hati",
+        "Tidak Sombong",
+        "Merendahkan",
+        "Diri",
+        "Sikap"
+      ]
+    },
+    {
+      "id": "id-268",
+      "word": "Qanaah",
+      "forbiddenWords": [
+        "Cukup",
+        "Puas",
+        "Rezeki",
+        "Harta",
+        "Merasa"
+      ]
+    },
+    {
+      "id": "id-269",
+      "word": "Malu",
+      "forbiddenWords": [
+        "Haya",
+        "Sifat",
+        "Menjaga",
+        "Perbuatan",
+        "Buruk"
+      ]
+    },
+    {
+      "id": "id-270",
+      "word": "Jujur",
+      "forbiddenWords": [
+        "Benar",
+        "Amanah",
+        "Bohong",
+        "Lawan",
+        "Siddiq"
+      ]
+    },
+    {
+      "id": "id-271",
+      "word": "Dermawan",
+      "forbiddenWords": [
+        "Murah Hati",
+        "Memberi",
+        "Hartanya",
+        "Miskin",
+        "Kikir"
+      ]
+    },
+    {
+      "id": "id-272",
+      "word": "Pemaaf",
+      "forbiddenWords": [
+        "Memaafkan",
+        "Kesalahan",
+        "Lapang",
+        "Dada",
+        "Ikhlaskan"
+      ]
+    },
+    {
+      "id": "id-273",
+      "word": "Ittiba",
+      "forbiddenWords": [
+        "Mengikuti",
+        "Contoh",
+        "Taat",
+        "Perbuatan",
+        "Jejak"
+      ]
+    },
+    {
+      "id": "id-274",
+      "word": "Khusyuk",
+      "forbiddenWords": [
+        "Fokus",
+        "Hati",
+        "Hadir",
+        "Tenang",
+        "Konsentrasi"
+      ]
+    },
+    {
+      "id": "id-275",
+      "word": "Mahabbah",
+      "forbiddenWords": [
+        "Cinta",
+        "Hati",
+        "Ibadah",
+        "Tulus",
+        "Kasih"
+      ]
+    },
+    {
+      "id": "id-276",
+      "word": "Khauf",
+      "forbiddenWords": [
+        "Takut",
+        "Siksa",
+        "Rasa",
+        "Dosa",
+        "Azab"
+      ]
+    },
+    {
+      "id": "id-277",
+      "word": "Raja'",
+      "forbiddenWords": [
+        "Harap",
+        "Rahmat",
+        "Berharap",
+        "Baik",
+        "Pengampunan"
+      ]
+    },
+    {
+      "id": "id-278",
+      "word": "Tawbah Nasuha",
+      "forbiddenWords": [
+        "Sungguh-sungguh",
+        "Kembali",
+        "Tidak Ulangi",
+        "Berjanji",
+        "Dosa"
+      ]
+    },
+    {
+      "id": "id-279",
+      "word": "Silaturahmi",
+      "forbiddenWords": [
+        "Hubungan",
+        "Keluarga",
+        "Menjaga",
+        "Rezeki",
+        "Umur"
+      ]
+    },
+    {
+      "id": "id-280",
+      "word": "Birrul Walidain",
+      "forbiddenWords": [
+        "Berbakti",
+        "Ibu",
+        "Ayah",
+        "Wajib",
+        "Surga"
+      ]
+    },
+    {
+      "id": "id-281",
+      "word": "Adab",
+      "forbiddenWords": [
+        "Sopan",
+        "Santun",
+        "Tatakrama",
+        "Perilaku",
+        "Etika"
+      ]
+    },
+    {
+      "id": "id-282",
+      "word": "Nifaq",
+      "forbiddenWords": [
+        "Dua Muka",
+        "Tersembunyi",
+        "Bahaya",
+        "Pura-pura",
+        "Munafik"
+      ]
+    },
+    {
+      "id": "id-283",
+      "word": "Syirik",
+      "forbiddenWords": [
+        "Menyekutukan",
+        "Dosa Besar",
+        "Tidak Diampuni",
+        "Musyrik",
+        "Tuhan Lain"
+      ]
+    },
+    {
+      "id": "id-284",
+      "word": "Tafakkur",
+      "forbiddenWords": [
+        "Merenung",
+        "Alam",
+        "Ciptaan",
+        "Pikir",
+        "Renungkan"
+      ]
+    },
+    {
+      "id": "id-285",
+      "word": "Infaq",
+      "forbiddenWords": [
+        "Mengeluarkan",
+        "Harta",
+        "Jalan",
+        "Kebaikan",
+        "Sukarela"
+      ]
+    },
+    {
+      "id": "id-286",
+      "word": "Amar Makruf",
+      "forbiddenWords": [
+        "Ajak",
+        "Kebaikan",
+        "Wajib",
+        "Menyuruh",
+        "Perintah"
+      ]
+    },
+    {
+      "id": "id-287",
+      "word": "Nahi Mungkar",
+      "forbiddenWords": [
+        "Larang",
+        "Kejahatan",
+        "Tangan",
+        "Lisan",
+        "Mencegah"
+      ]
+    },
+    {
+      "id": "id-288",
+      "word": "Husnudzan",
+      "forbiddenWords": [
+        "Baik Sangka",
+        "Prasangka",
+        "Sesama",
+        "Positif",
+        "Baik"
+      ]
+    },
+    {
+      "id": "id-289",
+      "word": "Su'udzan",
+      "forbiddenWords": [
+        "Buruk Sangka",
+        "Dilarang",
+        "Prasangka",
+        "Negatif",
+        "Buruk"
+      ]
+    },
+    {
+      "id": "id-290",
+      "word": "Dosa Besar",
+      "forbiddenWords": [
+        "Syirik",
+        "Membunuh",
+        "Haram",
+        "Zalim",
+        "Kabair"
+      ]
+    },
+    {
+      "id": "id-291",
+      "word": "Dosa Kecil",
+      "forbiddenWords": [
+        "Ringan",
+        "Diampuni",
+        "Berulang",
+        "Menumpuk",
+        "Hati-hati"
+      ]
+    },
+    {
+      "id": "id-292",
+      "word": "Akhlakul Karimah",
+      "forbiddenWords": [
+        "Mulia",
+        "Perilaku",
+        "Contoh",
+        "Teladan",
+        "Terpuji"
+      ]
+    },
+    {
+      "id": "id-293",
+      "word": "Sabar Bersyukur",
+      "forbiddenWords": [
+        "Ujian",
+        "Nikmat",
+        "Keduanya",
+        "Iman",
+        "Kuat"
+      ]
+    },
+    {
+      "id": "id-294",
+      "word": "Menyesal",
+      "forbiddenWords": [
+        "Taubat",
+        "Kembali",
+        "Dosa",
+        "Hati",
+        "Ampun"
+      ]
+    },
+    {
+      "id": "id-295",
+      "word": "Waqaf Baca",
+      "forbiddenWords": [
+        "Tanda",
+        "Al-Qur'an",
+        "Berhenti",
+        "Bacaan",
+        "Huruf"
+      ]
+    },
+    {
+      "id": "id-296",
+      "word": "Fardhu Ain",
+      "forbiddenWords": [
+        "Wajib",
+        "Setiap",
+        "Individu",
+        "Muslim",
+        "Kewajiban"
+      ]
+    },
+    {
+      "id": "id-297",
+      "word": "Fardhu Kifayah",
+      "forbiddenWords": [
+        "Wajib",
+        "Sebagian",
+        "Gugur",
+        "Komunitas",
+        "Bersama"
+      ]
+    },
+    {
+      "id": "id-298",
+      "word": "Sunnah Muakkad",
+      "forbiddenWords": [
+        "Sangat Dianjurkan",
+        "Selalu",
+        "Kerjakan",
+        "Penting",
+        "Rutin"
+      ]
+    },
+    {
+      "id": "id-299",
+      "word": "Mubah",
+      "forbiddenWords": [
+        "Boleh",
+        "Bebas",
+        "Tidak Pahala",
+        "Pilihan",
+        "Perbuatan"
+      ]
+    },
+    {
+      "id": "id-300",
+      "word": "Makruh",
+      "forbiddenWords": [
+        "Tidak Disukai",
+        "Tinggalkan",
+        "Hukum",
+        "Sebaiknya",
+        "Jangan"
+      ]
+    },
+    {
+      "id": "id-301",
+      "word": "Ijtihad",
+      "forbiddenWords": [
+        "Sungguh-sungguh",
+        "Hukum",
+        "Ulama",
+        "Usaha",
+        "Berpikir"
+      ]
+    },
+    {
+      "id": "id-302",
+      "word": "Ijma",
+      "forbiddenWords": [
+        "Sepakat",
+        "Ulama",
+        "Hukum",
+        "Sumber",
+        "Bersama"
+      ]
+    },
+    {
+      "id": "id-303",
+      "word": "Qiyas",
+      "forbiddenWords": [
+        "Perbandingan",
+        "Hukum",
+        "Ilat",
+        "Dalil",
+        "Masalah"
+      ]
+    },
+    {
+      "id": "id-304",
+      "word": "Fatwa",
+      "forbiddenWords": [
+        "Hukum",
+        "Mufti",
+        "Ulama",
+        "Jawaban",
+        "Syariat"
+      ]
+    },
+    {
+      "id": "id-305",
+      "word": "Madzhab Hanafi",
+      "forbiddenWords": [
+        "Imam",
+        "Nu'man",
+        "Irak",
+        "Rasio",
+        "Fiqih"
+      ]
+    },
+    {
+      "id": "id-306",
+      "word": "Madzhab Syafi'i",
+      "forbiddenWords": [
+        "Imam",
+        "Idris",
+        "Indonesia",
+        "Asy-Syafi'i",
+        "Fiqih"
+      ]
+    },
+    {
+      "id": "id-307",
+      "word": "Madzhab Maliki",
+      "forbiddenWords": [
+        "Imam",
+        "Malik",
+        "Madinah",
+        "Hadits",
+        "Fiqih"
+      ]
+    },
+    {
+      "id": "id-308",
+      "word": "Madzhab Hambali",
+      "forbiddenWords": [
+        "Imam",
+        "Ahmad",
+        "Sunnah",
+        "Ketat",
+        "Fiqih"
+      ]
+    },
+    {
+      "id": "id-309",
+      "word": "Pembatal Wudhu",
+      "forbiddenWords": [
+        "Kentut",
+        "Tidur",
+        "Menyentuh",
+        "Batal",
+        "Hadas"
+      ]
+    },
+    {
+      "id": "id-310",
+      "word": "Hadas Kecil",
+      "forbiddenWords": [
+        "Wudhu",
+        "Batal",
+        "Kentut",
+        "Kencing",
+        "Suci"
+      ]
+    },
+    {
+      "id": "id-311",
+      "word": "Hadas Besar",
+      "forbiddenWords": [
+        "Mandi Wajib",
+        "Junub",
+        "Batal",
+        "Suci",
+        "Bersuci"
+      ]
+    },
+    {
+      "id": "id-312",
+      "word": "Syarat Sholat",
+      "forbiddenWords": [
+        "Waktu",
+        "Kiblat",
+        "Suci",
+        "Niat",
+        "Menutup"
+      ]
+    },
+    {
+      "id": "id-313",
+      "word": "Rukun Sholat",
+      "forbiddenWords": [
+        "Niat",
+        "Berdiri",
+        "Takbir",
+        "Baca",
+        "Sujud"
+      ]
+    },
+    {
+      "id": "id-314",
+      "word": "Syarat Sah Puasa",
+      "forbiddenWords": [
+        "Islam",
+        "Baligh",
+        "Sehat",
+        "Berakal",
+        "Berniat"
+      ]
+    },
+    {
+      "id": "id-315",
+      "word": "Pembatal Puasa",
+      "forbiddenWords": [
+        "Makan",
+        "Sengaja",
+        "Minum",
+        "Muntah",
+        "Batal"
+      ]
+    },
+    {
+      "id": "id-316",
+      "word": "Kafarat",
+      "forbiddenWords": [
+        "Denda",
+        "Dosa",
+        "Tebus",
+        "Sumpah",
+        "Wajib"
+      ]
+    },
+    {
+      "id": "id-317",
+      "word": "Aqiqah",
+      "forbiddenWords": [
+        "Bayi",
+        "Lahir",
+        "Kambing",
+        "Cukur",
+        "Tujuh Hari"
+      ]
+    },
+    {
+      "id": "id-318",
+      "word": "Walimah",
+      "forbiddenWords": [
+        "Pesta",
+        "Pernikahan",
+        "Undang",
+        "Makan",
+        "Resepsi"
+      ]
+    },
+    {
+      "id": "id-319",
+      "word": "Talak",
+      "forbiddenWords": [
+        "Cerai",
+        "Istri",
+        "Ucap",
+        "Tiga",
+        "Perceraian"
+      ]
+    },
+    {
+      "id": "id-320",
+      "word": "Iddat",
+      "forbiddenWords": [
+        "Masa",
+        "Cerai",
+        "Tunggu",
+        "Wanita",
+        "Menikah Lagi"
+      ]
+    },
+    {
+      "id": "id-321",
+      "word": "Warisan",
+      "forbiddenWords": [
+        "Harta",
+        "Pewaris",
+        "Ahli Waris",
+        "Faraidh",
+        "Pembagian"
+      ]
+    },
+    {
+      "id": "id-322",
+      "word": "Riba",
+      "forbiddenWords": [
+        "Bunga",
+        "Uang",
+        "Bank",
+        "Tambahan",
+        "Haram"
+      ]
+    },
+    {
+      "id": "id-323",
+      "word": "Wakaf",
+      "forbiddenWords": [
+        "Sumbang",
+        "Tidak Dijual",
+        "Ibadah",
+        "Tanah",
+        "Abadi"
+      ]
+    },
+    {
+      "id": "id-324",
+      "word": "Wasiat",
+      "forbiddenWords": [
+        "Pesan",
+        "Meninggal",
+        "Harta",
+        "Sebelum",
+        "Waris"
+      ]
+    },
+    {
+      "id": "id-325",
+      "word": "Hudud",
+      "forbiddenWords": [
+        "Pidana",
+        "Potong",
+        "Tangan",
+        "Allah",
+        "Syariat"
+      ]
+    },
+    {
+      "id": "id-326",
+      "word": "Qishash",
+      "forbiddenWords": [
+        "Balasan",
+        "Setimpal",
+        "Nyawa",
+        "Hukum",
+        "Pembunuhan"
+      ]
+    },
+    {
+      "id": "id-327",
+      "word": "Ta'zir",
+      "forbiddenWords": [
+        "Hukuman",
+        "Hakim",
+        "Jenis",
+        "Dosa",
+        "Kecil"
+      ]
+    },
+    {
+      "id": "id-328",
+      "word": "Muamalah",
+      "forbiddenWords": [
+        "Jual Beli",
+        "Islam",
+        "Hubungan",
+        "Aturan",
+        "Transaksi"
+      ]
+    },
+    {
+      "id": "id-329",
+      "word": "Nafkah",
+      "forbiddenWords": [
+        "Suami",
+        "Istri",
+        "Biaya",
+        "Keluarga",
+        "Memberi"
+      ]
+    },
+    {
+      "id": "id-330",
+      "word": "Mahram",
+      "forbiddenWords": [
+        "Menikahi",
+        "Keluarga",
+        "Dekat",
+        "Saudara",
+        "Dilarang"
+      ]
+    },
+    {
+      "id": "id-331",
+      "word": "Khulu",
+      "forbiddenWords": [
+        "Gugat",
+        "Cerai",
+        "Tebus",
+        "Mahar",
+        "Kembali"
+      ]
+    },
+    {
+      "id": "id-332",
+      "word": "Syarat Nikah",
+      "forbiddenWords": [
+        "Wali",
+        "Dua Saksi",
+        "Ijab",
+        "Kabul",
+        "Akad"
+      ]
+    },
+    {
+      "id": "id-333",
+      "word": "Wali Nikah",
+      "forbiddenWords": [
+        "Ayah",
+        "Saudara Laki",
+        "Akad",
+        "Pernikahan",
+        "Izin"
+      ]
+    },
+    {
+      "id": "id-334",
+      "word": "Ijab Kabul",
+      "forbiddenWords": [
+        "Akad",
+        "Wali",
+        "Saksi",
+        "Ucap",
+        "Pernikahan"
+      ]
+    },
+    {
+      "id": "id-335",
+      "word": "Nusyuz",
+      "forbiddenWords": [
+        "Durhaka",
+        "Istri",
+        "Nafkah",
+        "Taat",
+        "Melawan"
+      ]
+    },
+    {
+      "id": "id-336",
+      "word": "Fasakh",
+      "forbiddenWords": [
+        "Batal",
+        "Hakim",
+        "Cerai",
+        "Istri",
+        "Pembatalan"
+      ]
+    },
+    {
+      "id": "id-337",
+      "word": "Poligami",
+      "forbiddenWords": [
+        "Empat",
+        "Istri",
+        "Adil",
+        "Syarat",
+        "Lebih Dari Satu"
+      ]
+    },
+    {
+      "id": "id-338",
+      "word": "Muttawif",
+      "forbiddenWords": [
+        "Pembimbing",
+        "Umrah",
+        "Mekkah",
+        "Tawaf",
+        "Pemandu"
+      ]
+    },
+    {
+      "id": "id-339",
+      "word": "Ushul Fiqih",
+      "forbiddenWords": [
+        "Dasar",
+        "Hukum",
+        "Islam",
+        "Sumber",
+        "Metode"
+      ]
+    },
+    {
+      "id": "id-340",
+      "word": "Maqashid Syariah",
+      "forbiddenWords": [
+        "Tujuan",
+        "Hukum",
+        "Islam",
+        "Jiwa",
+        "Akal"
+      ]
+    },
+    {
+      "id": "id-341",
+      "word": "Sadd Dzari'ah",
+      "forbiddenWords": [
+        "Tutup",
+        "Jalan",
+        "Keburukan",
+        "Hukum",
+        "Mencegah"
+      ]
+    },
+    {
+      "id": "id-342",
+      "word": "Hukum Islam",
+      "forbiddenWords": [
+        "Syariah",
+        "Aturan",
+        "Lima",
+        "Fiqih",
+        "Syariat"
+      ]
+    },
+    {
+      "id": "id-343",
+      "word": "Mufti",
+      "forbiddenWords": [
+        "Pemberi Fatwa",
+        "Ulama",
+        "Islam",
+        "Hukum",
+        "Pejabat"
+      ]
+    },
+    {
+      "id": "id-344",
+      "word": "Hakim Syar'i",
+      "forbiddenWords": [
+        "Hakim",
+        "Islam",
+        "Hukum",
+        "Perkara",
+        "Putusan"
+      ]
+    },
+    {
+      "id": "id-345",
+      "word": "Ilmu Fikih",
+      "forbiddenWords": [
+        "Hukum",
+        "Amaliyah",
+        "Islam",
+        "Dalil",
+        "Fardhu"
+      ]
+    },
+    {
+      "id": "id-346",
+      "word": "Masjidil Haram",
+      "forbiddenWords": [
+        "Mekkah",
+        "Ka'bah",
+        "Terbesar",
+        "Tawaf",
+        "Haji"
+      ]
+    },
+    {
+      "id": "id-347",
+      "word": "Masjid Nabawi",
+      "forbiddenWords": [
+        "Madinah",
+        "Makam",
+        "Hijau",
+        "Kubah",
+        "Mulia"
+      ]
+    },
+    {
+      "id": "id-348",
+      "word": "Masjidil Aqsa",
+      "forbiddenWords": [
+        "Palestina",
+        "Yerusalem",
+        "Isra",
+        "Kiblat Pertama",
+        "Suci"
+      ]
+    },
+    {
+      "id": "id-349",
+      "word": "Baitul Maqdis",
+      "forbiddenWords": [
+        "Yerusalem",
+        "Suci",
+        "Al-Aqsa",
+        "Palestina",
+        "Kota"
+      ]
+    },
+    {
+      "id": "id-350",
+      "word": "Gua Hira",
+      "forbiddenWords": [
+        "Wahyu",
+        "Pertama",
+        "Iqra",
+        "Mekkah",
+        "Nuur"
+      ]
+    },
+    {
+      "id": "id-351",
+      "word": "Gua Tsur",
+      "forbiddenWords": [
+        "Hijrah",
+        "Abu Bakar",
+        "Laba-laba",
+        "Sembunyi",
+        "Tiga Hari"
+      ]
+    },
+    {
+      "id": "id-352",
+      "word": "Bukit Uhud",
+      "forbiddenWords": [
+        "Perang",
+        "Madinah",
+        "Syahid",
+        "Memanah",
+        "Bukit"
+      ]
+    },
+    {
+      "id": "id-353",
+      "word": "Badar",
+      "forbiddenWords": [
+        "Perang",
+        "Kemenangan",
+        "Pertama",
+        "Kafir",
+        "313"
+      ]
+    },
+    {
+      "id": "id-354",
+      "word": "Bukit Shafa",
+      "forbiddenWords": [
+        "Sa'i",
+        "Hajar",
+        "Zam-zam",
+        "Masjidil Haram",
+        "Berlari"
+      ]
+    },
+    {
+      "id": "id-355",
+      "word": "Bukit Marwah",
+      "forbiddenWords": [
+        "Sa'i",
+        "Hajar",
+        "Tujuh",
+        "Shafa",
+        "Berlari"
+      ]
+    },
+    {
+      "id": "id-356",
+      "word": "Maqam Ibrahim",
+      "forbiddenWords": [
+        "Bekas",
+        "Kaki",
+        "Ka'bah",
+        "Dua Rakaat",
+        "Batu"
+      ]
+    },
+    {
+      "id": "id-357",
+      "word": "Hijr Ismail",
+      "forbiddenWords": [
+        "Ka'bah",
+        "Separuh",
+        "Tawaf",
+        "Termasuk",
+        "Bangunan"
+      ]
+    },
+    {
+      "id": "id-358",
+      "word": "Maqam Rasulullah",
+      "forbiddenWords": [
+        "Madinah",
+        "Makam",
+        "Masjid",
+        "Nabawi",
+        "Raudah"
+      ]
+    },
+    {
+      "id": "id-359",
+      "word": "Masjid Quba",
+      "forbiddenWords": [
+        "Pertama",
+        "Dibangun",
+        "Islam",
+        "Madinah",
+        "Riwayat"
+      ]
+    },
+    {
+      "id": "id-360",
+      "word": "Jabal Rahmah",
+      "forbiddenWords": [
+        "Bukit",
+        "Arafah",
+        "Rahmat",
+        "Cinta",
+        "Pertemuan"
+      ]
+    },
+    {
+      "id": "id-361",
+      "word": "Multazam",
+      "forbiddenWords": [
+        "Ka'bah",
+        "Doa",
+        "Pintu",
+        "Tempat",
+        "Mustajab"
+      ]
+    },
+    {
+      "id": "id-362",
+      "word": "Khaibar",
+      "forbiddenWords": [
+        "Benteng",
+        "Yahudi",
+        "Madinah",
+        "Ali",
+        "Penaklukan"
+      ]
+    },
+    {
+      "id": "id-363",
+      "word": "Madinah al-Munawwarah",
+      "forbiddenWords": [
+        "Kota",
+        "Cahaya",
+        "Bersinar",
+        "Masjid",
+        "Hijrah"
+      ]
+    },
+    {
+      "id": "id-364",
+      "word": "Raudah",
+      "forbiddenWords": [
+        "Masjid Nabawi",
+        "Makam",
+        "Taman",
+        "Surga",
+        "Hijau"
+      ]
+    },
+    {
+      "id": "id-365",
+      "word": "Maqam Syuhada",
+      "forbiddenWords": [
+        "Makam",
+        "Pejuang",
+        "Uhud",
+        "Badar",
+        "Syahid"
+      ]
+    },
+    {
+      "id": "id-366",
+      "word": "Mikat",
+      "forbiddenWords": [
+        "Batas",
+        "Ihram",
+        "Tempat",
+        "Mulai",
+        "Batas"
+      ]
+    },
+    {
+      "id": "id-367",
+      "word": "Ihram Haji",
+      "forbiddenWords": [
+        "Kain",
+        "Putih",
+        "Larangan",
+        "Niat",
+        "Mekkah"
+      ]
+    },
+    {
+      "id": "id-368",
+      "word": "Tawaf Qudum",
+      "forbiddenWords": [
+        "Pertama",
+        "Tiba",
+        "Datang",
+        "Ka'bah",
+        "Selamat Datang"
+      ]
+    },
+    {
+      "id": "id-369",
+      "word": "Tawaf Ifadhah",
+      "forbiddenWords": [
+        "Rukun",
+        "Setelah",
+        "Wukuf",
+        "Ka'bah",
+        "Inti"
+      ]
+    },
+    {
+      "id": "id-370",
+      "word": "Tawaf Wada",
+      "forbiddenWords": [
+        "Perpisahan",
+        "Sebelum",
+        "Pulang",
+        "Ka'bah",
+        "Terakhir"
+      ]
+    },
+    {
+      "id": "id-371",
+      "word": "Tujuh Putaran",
+      "forbiddenWords": [
+        "Tawaf",
+        "Ka'bah",
+        "Keliling",
+        "Hitungan",
+        "Haji"
+      ]
+    },
+    {
+      "id": "id-372",
+      "word": "Padang Arafah",
+      "forbiddenWords": [
+        "Wukuf",
+        "Doa",
+        "Haji",
+        "Berdiri",
+        "Dzulhijjah"
+      ]
+    },
+    {
+      "id": "id-373",
+      "word": "Mabit di Muzdalifah",
+      "forbiddenWords": [
+        "Bermalam",
+        "Batu",
+        "Kumpul",
+        "Setelah",
+        "Lewat Tengah"
+      ]
+    },
+    {
+      "id": "id-374",
+      "word": "Mabit di Mina",
+      "forbiddenWords": [
+        "Bermalam",
+        "Tasyrik",
+        "Jumrah",
+        "Hukum",
+        "Wajib"
+      ]
+    },
+    {
+      "id": "id-375",
+      "word": "Dam Haji",
+      "forbiddenWords": [
+        "Denda",
+        "Sembelih",
+        "Melanggar",
+        "Larangan",
+        "Ihram"
+      ]
+    },
+    {
+      "id": "id-376",
+      "word": "Cukur Rambut",
+      "forbiddenWords": [
+        "Tahallul",
+        "Selesai",
+        "Gundul",
+        "Pendek",
+        "Ihram Lepas"
+      ]
+    },
+    {
+      "id": "id-377",
+      "word": "Hari Tasyrik",
+      "forbiddenWords": [
+        "11",
+        "12",
+        "13",
+        "Dzulhijjah",
+        "Mina"
+      ]
+    },
+    {
+      "id": "id-378",
+      "word": "Badal Haji",
+      "forbiddenWords": [
+        "Gantikan",
+        "Meninggal",
+        "Sakit",
+        "Orang",
+        "Lain"
+      ]
+    },
+    {
+      "id": "id-379",
+      "word": "Rukun Haji",
+      "forbiddenWords": [
+        "Wukuf",
+        "Tawaf",
+        "Sa'i",
+        "Cukur",
+        "Pokok"
+      ]
+    },
+    {
+      "id": "id-380",
+      "word": "Rukun Umrah",
+      "forbiddenWords": [
+        "Ihram",
+        "Tawaf",
+        "Sa'i",
+        "Cukur",
+        "Lima"
+      ]
+    },
+    {
+      "id": "id-381",
+      "word": "Ifrad",
+      "forbiddenWords": [
+        "Haji Saja",
+        "Tanpa",
+        "Umrah",
+        "Jenis",
+        "Sendiri"
+      ]
+    },
+    {
+      "id": "id-382",
+      "word": "Qiran",
+      "forbiddenWords": [
+        "Umrah",
+        "Bersama",
+        "Sekaligus",
+        "Jenis",
+        "Ihram"
+      ]
+    },
+    {
+      "id": "id-383",
+      "word": "Tamattu",
+      "forbiddenWords": [
+        "Umrah Dahulu",
+        "Jenis",
+        "Ihram",
+        "Lepas",
+        "Dam"
+      ]
+    },
+    {
+      "id": "id-384",
+      "word": "Sholat di Ka'bah",
+      "forbiddenWords": [
+        "Arah",
+        "Langsung",
+        "Mekkah",
+        "Suci",
+        "Menghadap"
+      ]
+    },
+    {
+      "id": "id-385",
+      "word": "Kiswah Ka'bah",
+      "forbiddenWords": [
+        "Kain",
+        "Hitam",
+        "Emas",
+        "Tulisan",
+        "Diganti"
+      ]
+    },
+    {
+      "id": "id-386",
+      "word": "Nuzulul Qur'an",
+      "forbiddenWords": [
+        "Turun",
+        "Lailatul Qadar",
+        "Wahyu",
+        "Ramadhan",
+        "Peringatan"
+      ]
+    },
+    {
+      "id": "id-387",
+      "word": "Malam Nishfu Sya'ban",
+      "forbiddenWords": [
+        "Pertengahan",
+        "Sya'ban",
+        "Doa",
+        "Istimewa",
+        "Pengampunan"
+      ]
+    },
+    {
+      "id": "id-388",
+      "word": "Maulid Nabi",
+      "forbiddenWords": [
+        "Lahir",
+        "Peringatan",
+        "Bulan",
+        "Rabiul Awal",
+        "Merayakan"
+      ]
+    },
+    {
+      "id": "id-389",
+      "word": "Asyura",
+      "forbiddenWords": [
+        "Muharram",
+        "Sepuluh",
+        "Puasa",
+        "Musa",
+        "Nuh"
+      ]
+    },
+    {
+      "id": "id-390",
+      "word": "Malam Idul Fitri",
+      "forbiddenWords": [
+        "Takbiran",
+        "Ketupat",
+        "Syawal",
+        "Besok",
+        "Bedug"
+      ]
+    },
+    {
+      "id": "id-391",
+      "word": "Mudik",
+      "forbiddenWords": [
+        "Lebaran",
+        "Kampung",
+        "Pulang",
+        "Keluarga",
+        "Silaturahmi"
+      ]
+    },
+    {
+      "id": "id-392",
+      "word": "Ketupat",
+      "forbiddenWords": [
+        "Lebaran",
+        "Beras",
+        "Janur",
+        "Lontong",
+        "Makanan"
+      ]
+    },
+    {
+      "id": "id-393",
+      "word": "Takbiran",
+      "forbiddenWords": [
+        "Malam",
+        "Allahu Akbar",
+        "Keliling",
+        "Bedug",
+        "Idul"
+      ]
+    },
+    {
+      "id": "id-394",
+      "word": "Halal Bihalal",
+      "forbiddenWords": [
+        "Maaf",
+        "Silaturahmi",
+        "Sesudah",
+        "Budaya",
+        "Indonesia"
+      ]
+    },
+    {
+      "id": "id-395",
+      "word": "Syawal",
+      "forbiddenWords": [
+        "Bulan",
+        "Puasa Enam",
+        "Setelah",
+        "Lebaran",
+        "Idul"
+      ]
+    },
+    {
+      "id": "id-396",
+      "word": "Dzulhijjah",
+      "forbiddenWords": [
+        "Bulan",
+        "Idul Adha",
+        "Kurban",
+        "Mulia",
+        "Kesepuluh"
+      ]
+    },
+    {
+      "id": "id-397",
+      "word": "Muharram",
+      "forbiddenWords": [
+        "Bulan",
+        "Pertama",
+        "Hijriyah",
+        "Asyura",
+        "Puasa"
+      ]
+    },
+    {
+      "id": "id-398",
+      "word": "Rajab",
+      "forbiddenWords": [
+        "Bulan",
+        "Isra",
+        "Mi'raj",
+        "Mulia",
+        "Peristiwa"
+      ]
+    },
+    {
+      "id": "id-399",
+      "word": "Sya'ban",
+      "forbiddenWords": [
+        "Bulan",
+        "Nishfu",
+        "Sebelum",
+        "Mulia",
+        "Nisfu"
+      ]
+    },
+    {
+      "id": "id-400",
+      "word": "Hari Raya",
+      "forbiddenWords": [
+        "Lebaran",
+        "Perayaan",
+        "Islam",
+        "Dua Kali",
+        "Setahun"
+      ]
+    },
+    {
+      "id": "id-401",
+      "word": "THR",
+      "forbiddenWords": [
+        "Tunjangan",
+        "Hari",
+        "Karyawan",
+        "Lebaran",
+        "Uang"
+      ]
+    },
+    {
+      "id": "id-402",
+      "word": "Buka Bersama",
+      "forbiddenWords": [
+        "Berbuka",
+        "Ramadhan",
+        "Teman",
+        "Bareng",
+        "Makan"
+      ]
+    },
+    {
+      "id": "id-403",
+      "word": "Sholat Tasbih",
+      "forbiddenWords": [
+        "Empat",
+        "Rakaat",
+        "Bacaan",
+        "Istimewa",
+        "Tasbih"
+      ]
+    },
+    {
+      "id": "id-404",
+      "word": "Sholat Hajat",
+      "forbiddenWords": [
+        "Keperluan",
+        "Minta",
+        "Dua",
+        "Rakaat",
+        "Mustajab"
+      ]
+    },
+    {
+      "id": "id-405",
+      "word": "Al-Baqarah",
+      "forbiddenWords": [
+        "Sapi",
+        "Terpanjang",
+        "Kedua",
+        "Betina",
+        "Juz"
+      ]
+    },
+    {
+      "id": "id-406",
+      "word": "Ali Imran",
+      "forbiddenWords": [
+        "Ketiga",
+        "Keluarga",
+        "Imran",
+        "Maryam",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-407",
+      "word": "An-Nisa",
+      "forbiddenWords": [
+        "Wanita",
+        "Keempat",
+        "Warisan",
+        "Perempuan",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-408",
+      "word": "Al-Maidah",
+      "forbiddenWords": [
+        "Hidangan",
+        "Kelima",
+        "Isa",
+        "Surat",
+        "Terakhir"
+      ]
+    },
+    {
+      "id": "id-409",
+      "word": "Al-Kahfi",
+      "forbiddenWords": [
+        "Gua",
+        "Pemuda",
+        "Dajjal",
+        "Jumat",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-410",
+      "word": "Yasin",
+      "forbiddenWords": [
+        "Jantung",
+        "Al-Qur'an",
+        "Kematian",
+        "Bacaan",
+        "Malam"
+      ]
+    },
+    {
+      "id": "id-411",
+      "word": "Ar-Rahman",
+      "forbiddenWords": [
+        "Pengasih",
+        "Nikmat",
+        "Dusta",
+        "Mana",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-412",
+      "word": "Al-Waqiah",
+      "forbiddenWords": [
+        "Kiamat",
+        "Rezeki",
+        "Kaya",
+        "Baca",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-413",
+      "word": "Al-Mulk",
+      "forbiddenWords": [
+        "Kerajaan",
+        "Kubur",
+        "Pelindung",
+        "Malam",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-414",
+      "word": "Al-Ikhlas",
+      "forbiddenWords": [
+        "Ahad",
+        "Samad",
+        "Tauhid",
+        "Tiga Kali",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-415",
+      "word": "Al-Falaq",
+      "forbiddenWords": [
+        "Subuh",
+        "Perlindungan",
+        "Hasad",
+        "Jahat",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-416",
+      "word": "An-Nas",
+      "forbiddenWords": [
+        "Manusia",
+        "Perlindungan",
+        "Bisikan",
+        "Terakhir",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-417",
+      "word": "Al-Fath",
+      "forbiddenWords": [
+        "Kemenangan",
+        "Hudeibiyah",
+        "Penaklukan",
+        "Mekkah",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-418",
+      "word": "Al-Hujurat",
+      "forbiddenWords": [
+        "Kamar",
+        "Adab",
+        "Ukhuwah",
+        "Aturan",
+        "Surat"
+      ]
+    },
+    {
+      "id": "id-419",
+      "word": "Al-Hasyr",
+      "forbiddenWords": [
+        "Pengusiran",
+        "Yahudi",
+        "Bani Nadir",
+        "Surat",
+        "Ayat"
+      ]
+    },
+    {
+      "id": "id-420",
+      "word": "Juz",
+      "forbiddenWords": [
+        "Tiga Puluh",
+        "Bagian",
+        "Pembagian",
+        "Al-Qur'an",
+        "Khatam"
+      ]
+    },
+    {
+      "id": "id-421",
+      "word": "Mad",
+      "forbiddenWords": [
+        "Panjang",
+        "Bacaan",
+        "Vokal",
+        "Huruf",
+        "Dibaca"
+      ]
+    },
+    {
+      "id": "id-422",
+      "word": "Idgham",
+      "forbiddenWords": [
+        "Masuk",
+        "Huruf",
+        "Nun",
+        "Mati",
+        "Lebur"
+      ]
+    },
+    {
+      "id": "id-423",
+      "word": "Ikhfa",
+      "forbiddenWords": [
+        "Samar",
+        "Nun Mati",
+        "Bunyi",
+        "Tersembunyi",
+        "Tajwid"
+      ]
+    },
+    {
+      "id": "id-424",
+      "word": "Ghunnah",
+      "forbiddenWords": [
+        "Dengung",
+        "Hidung",
+        "Bunyi",
+        "Nun",
+        "Suara Hidung"
+      ]
+    },
+    {
+      "id": "id-425",
+      "word": "Iqlab",
+      "forbiddenWords": [
+        "Ganti",
+        "Nun",
+        "Mim",
+        "Mati",
+        "Huruf"
+      ]
+    },
+    {
+      "id": "id-426",
+      "word": "Izhar",
+      "forbiddenWords": [
+        "Jelas",
+        "Bunyi",
+        "Nun",
+        "Enam",
+        "Terang"
+      ]
+    },
+    {
+      "id": "id-427",
+      "word": "Mushaf",
+      "forbiddenWords": [
+        "Al-Qur'an",
+        "Buku",
+        "Dicetak",
+        "Lembaran",
+        "Tulisan"
+      ]
+    },
+    {
+      "id": "id-428",
+      "word": "Hizib",
+      "forbiddenWords": [
+        "Setengah",
+        "Bagian",
+        "Al-Qur'an",
+        "Bacaan",
+        "Pembagian"
+      ]
+    },
+    {
+      "id": "id-429",
+      "word": "Ibu",
+      "forbiddenWords": [
+        "Perempuan",
+        "Surga",
+        "Melahirkan",
+        "Tiga Kali",
+        "Telapak Kaki"
+      ]
+    },
+    {
+      "id": "id-430",
+      "word": "Ayah",
+      "forbiddenWords": [
+        "Bapak",
+        "Kepala",
+        "Laki-laki",
+        "Pemimpin",
+        "Keluarga"
+      ]
+    },
+    {
+      "id": "id-431",
+      "word": "Toleransi",
+      "forbiddenWords": [
+        "Perbedaan",
+        "Sesama",
+        "Hormat",
+        "Rukun",
+        "Islam"
+      ]
+    },
+    {
+      "id": "id-432",
+      "word": "Yatim",
+      "forbiddenWords": [
+        "Anak",
+        "Meninggal",
+        "Jaga",
+        "Islam",
+        "Mulia"
+      ]
+    },
+    {
+      "id": "id-433",
+      "word": "Janda",
+      "forbiddenWords": [
+        "Suami",
+        "Meninggal",
+        "Cerai",
+        "Sendiri",
+        "Perempuan"
+      ]
+    },
+    {
+      "id": "id-434",
+      "word": "Duda",
+      "forbiddenWords": [
+        "Istri",
+        "Meninggal",
+        "Laki-laki",
+        "Cerai",
+        "Sendiri"
+      ]
+    },
+    {
+      "id": "id-435",
+      "word": "Keluarga Sakinah",
+      "forbiddenWords": [
+        "Tenang",
+        "Harmonis",
+        "Islam",
+        "Cinta",
+        "Rumah"
+      ]
+    },
+    {
+      "id": "id-436",
+      "word": "Kerabat",
+      "forbiddenWords": [
+        "Saudara",
+        "Dekat",
+        "Jauh",
+        "Silaturahmi",
+        "Hubungan"
+      ]
+    },
+    {
+      "id": "id-437",
+      "word": "Hak Anak",
+      "forbiddenWords": [
+        "Didik",
+        "Nafkah",
+        "Kewajiban",
+        "Islam",
+        "Perlindungan"
+      ]
+    },
+    {
+      "id": "id-438",
+      "word": "Sedekah Jariyah",
+      "forbiddenWords": [
+        "Pahala",
+        "Mengalir",
+        "Mati",
+        "Amal",
+        "Terus"
+      ]
+    },
+    {
+      "id": "id-439",
+      "word": "Rezeki Halal",
+      "forbiddenWords": [
+        "Mencari",
+        "Kerja",
+        "Berkat",
+        "Jalan",
+        "Bersih"
+      ]
+    },
+    {
+      "id": "id-440",
+      "word": "Musyawarah",
+      "forbiddenWords": [
+        "Mufakat",
+        "Bersama",
+        "Keputusan",
+        "Syura",
+        "Berdiskusi"
+      ]
+    },
+    {
+      "id": "id-441",
+      "word": "Tolong-menolong",
+      "forbiddenWords": [
+        "Ta'awun",
+        "Sesama",
+        "Kebaikan",
+        "Taqwa",
+        "Bersama"
+      ]
+    },
+    {
+      "id": "id-442",
+      "word": "Gharim",
+      "forbiddenWords": [
+        "Berutang",
+        "Miskin",
+        "Tidak Mampu",
+        "Bayar",
+        "Asnaf"
+      ]
+    },
+    {
+      "id": "id-443",
+      "word": "Ibnu Sabil",
+      "forbiddenWords": [
+        "Musafir",
+        "Kehabisan",
+        "Bekal",
+        "Perjalanan",
+        "Asnaf"
+      ]
+    },
+    {
+      "id": "id-444",
+      "word": "Muallaf",
+      "forbiddenWords": [
+        "Masuk",
+        "Islam",
+        "Baru",
+        "Dibina",
+        "Asnaf"
+      ]
+    },
+    {
+      "id": "id-445",
+      "word": "Amil Zakat",
+      "forbiddenWords": [
+        "Pengelola",
+        "Pungut",
+        "Bagikan",
+        "Delapan",
+        "Pengelolaan"
+      ]
+    },
+    {
+      "id": "id-446",
+      "word": "Fisabilillah",
+      "forbiddenWords": [
+        "Jalan",
+        "Pejuang",
+        "Jihad",
+        "Asnaf",
+        "Perjuangan"
+      ]
+    },
+    {
+      "id": "id-447",
+      "word": "Riqab",
+      "forbiddenWords": [
+        "Budak",
+        "Merdeka",
+        "Membebaskan",
+        "Hamba",
+        "Asnaf"
+      ]
+    },
+    {
+      "id": "id-448",
+      "word": "Pesantren",
+      "forbiddenWords": [
+        "Pondok",
+        "Santri",
+        "Kyai",
+        "Belajar",
+        "Islam"
+      ]
+    },
+    {
+      "id": "id-449",
+      "word": "Santri",
+      "forbiddenWords": [
+        "Pondok",
+        "Murid",
+        "Kyai",
+        "Islam",
+        "Belajar"
+      ]
+    },
+    {
+      "id": "id-450",
+      "word": "Kyai",
+      "forbiddenWords": [
+        "Ulama",
+        "Pondok",
+        "Guru",
+        "Indonesia",
+        "Pemimpin"
+      ]
+    },
+    {
+      "id": "id-451",
+      "word": "Ustadz",
+      "forbiddenWords": [
+        "Guru",
+        "Agama",
+        "Masjid",
+        "Islam",
+        "Mengajar"
+      ]
+    },
+    {
+      "id": "id-452",
+      "word": "Dakwah",
+      "forbiddenWords": [
+        "Mengajak",
+        "Kebaikan",
+        "Tabligh",
+        "Menyeru",
+        "Penyebaran"
+      ]
+    },
+    {
+      "id": "id-453",
+      "word": "Makanan Halal",
+      "forbiddenWords": [
+        "Sertifikat",
+        "Boleh",
+        "Islam",
+        "Makan",
+        "Haram"
+      ]
+    },
+    {
+      "id": "id-454",
+      "word": "Muhasabah Diri",
+      "forbiddenWords": [
+        "Introspeksi",
+        "Evaluasi",
+        "Perbuatan",
+        "Akhir Tahun",
+        "Hisab"
+      ]
+    },
+    {
+      "id": "id-455",
+      "word": "Nahdlatul Ulama",
+      "forbiddenWords": [
+        "NU",
+        "Organisasi",
+        "Indonesia",
+        "Terbesar",
+        "Islam"
+      ]
+    },
+    {
+      "id": "id-456",
+      "word": "Muhammadiyah",
+      "forbiddenWords": [
+        "Organisasi",
+        "Indonesia",
+        "Reformis",
+        "Modern",
+        "Islam"
+      ]
+    },
+    {
+      "id": "id-457",
+      "word": "Mushola",
+      "forbiddenWords": [
+        "Tempat",
+        "Kecil",
+        "Masjid",
+        "Perumahan",
+        "Ibadah"
+      ]
+    },
+    {
+      "id": "id-458",
+      "word": "Qiraat",
+      "forbiddenWords": [
+        "Membaca",
+        "Al-Qur'an",
+        "Cara",
+        "Ilmu",
+        "Variasi"
+      ]
+    },
+    {
+      "id": "id-459",
+      "word": "Tartil",
+      "forbiddenWords": [
+        "Membaca",
+        "Pelan",
+        "Jelas",
+        "Indah",
+        "Benar"
+      ]
+    },
+    {
+      "id": "id-460",
+      "word": "Tahfidz",
+      "forbiddenWords": [
+        "Hafal",
+        "Menghafal",
+        "Program",
+        "Ilmu",
+        "Metode"
+      ]
+    },
+    {
+      "id": "id-461",
+      "word": "Majelis Taklim",
+      "forbiddenWords": [
+        "Pengajian",
+        "Ibu",
+        "Rutin",
+        "Belajar",
+        "Kelompok"
+      ]
+    },
+    {
+      "id": "id-462",
+      "word": "Pengajian",
+      "forbiddenWords": [
+        "Belajar",
+        "Rutin",
+        "Majelis",
+        "Kelompok",
+        "Agama"
+      ]
+    },
+    {
+      "id": "id-463",
+      "word": "Tabligh Akbar",
+      "forbiddenWords": [
+        "Ceramah",
+        "Besar",
+        "Banyak",
+        "Massa",
+        "Lapangan"
+      ]
+    },
+    {
+      "id": "id-464",
+      "word": "Dai",
+      "forbiddenWords": [
+        "Penceramah",
+        "Dakwah",
+        "Ulama",
+        "Ajak",
+        "Mubaligh"
+      ]
+    },
+    {
+      "id": "id-465",
+      "word": "Ashabul Kahfi",
+      "forbiddenWords": [
+        "Pemuda",
+        "Gua",
+        "Tidur",
+        "Tiga Ratus",
+        "Anjing"
+      ]
+    },
+    {
+      "id": "id-466",
+      "word": "Qarun",
+      "forbiddenWords": [
+        "Kaya",
+        "Harta",
+        "Tenggelam",
+        "Bumi",
+        "Musa"
+      ]
+    },
+    {
+      "id": "id-467",
+      "word": "Firaun",
+      "forbiddenWords": [
+        "Mesir",
+        "Raja",
+        "Musa",
+        "Tenggelam",
+        "Laut"
+      ]
+    },
+    {
+      "id": "id-468",
+      "word": "Bani Israil",
+      "forbiddenWords": [
+        "Yahudi",
+        "Musa",
+        "Israel",
+        "Kaum",
+        "Kitab"
+      ]
+    },
+    {
+      "id": "id-469",
+      "word": "Kaum Ad",
+      "forbiddenWords": [
+        "Hud",
+        "Angin",
+        "Kuat",
+        "Dihancurkan",
+        "Arab"
+      ]
+    },
+    {
+      "id": "id-470",
+      "word": "Kaum Samud",
+      "forbiddenWords": [
+        "Saleh",
+        "Unta",
+        "Batu",
+        "Dihancurkan",
+        "Arab"
+      ]
+    },
+    {
+      "id": "id-471",
+      "word": "Kaum Lut",
+      "forbiddenWords": [
+        "Lut",
+        "Sodom",
+        "Diazab",
+        "Perilaku",
+        "Dihancurkan"
+      ]
+    },
+    {
+      "id": "id-472",
+      "word": "Tazkiyatun Nafs",
+      "forbiddenWords": [
+        "Penyucian",
+        "Jiwa",
+        "Nafsu",
+        "Tasawuf",
+        "Menyucikan"
+      ]
+    },
+    {
+      "id": "id-473",
+      "word": "Ilmu Kalam",
+      "forbiddenWords": [
+        "Teologi",
+        "Aqidah",
+        "Perdebatan",
+        "Ulama",
+        "Argumen"
+      ]
+    },
+    {
+      "id": "id-474",
+      "word": "Akidah",
+      "forbiddenWords": [
+        "Keyakinan",
+        "Iman",
+        "Dasar",
+        "Rukun",
+        "Pokok"
+      ]
+    },
+    {
+      "id": "id-475",
+      "word": "Sejarah Islam",
+      "forbiddenWords": [
+        "Kisah",
+        "Nabi",
+        "Khalifah",
+        "Peradaban",
+        "Masa"
+      ]
+    },
+    {
+      "id": "id-476",
+      "word": "Perang Badar",
+      "forbiddenWords": [
+        "Kemenangan",
+        "Pertama",
+        "313",
+        "Kafir",
+        "Malaikat"
+      ]
+    },
+    {
+      "id": "id-477",
+      "word": "Perang Uhud",
+      "forbiddenWords": [
+        "Gunung",
+        "Memanah",
+        "Kalah",
+        "Hamzah",
+        "Panah"
+      ]
+    },
+    {
+      "id": "id-478",
+      "word": "Perang Ahzab",
+      "forbiddenWords": [
+        "Parit",
+        "Khandaq",
+        "Madinah",
+        "Koalisi",
+        "Salman"
+      ]
+    },
+    {
+      "id": "id-479",
+      "word": "Fathu Mekkah",
+      "forbiddenWords": [
+        "Penaklukan",
+        "Tanpa",
+        "Darah",
+        "Berhala",
+        "Dihancurkan"
+      ]
+    },
+    {
+      "id": "id-480",
+      "word": "Perjanjian Hudaibiyah",
+      "forbiddenWords": [
+        "Perjanjian",
+        "Mekkah",
+        "Damai",
+        "Umrah",
+        "Kemenangan"
+      ]
+    },
+    {
+      "id": "id-481",
+      "word": "Perang Tabuk",
+      "forbiddenWords": [
+        "Romawi",
+        "Panas",
+        "Munafik",
+        "Jauh",
+        "Sulit"
+      ]
+    },
+    {
+      "id": "id-482",
+      "word": "Perang Mu'tah",
+      "forbiddenWords": [
+        "Romawi",
+        "Ja'far",
+        "Zaid",
+        "Pertama",
+        "Luar Arabia"
+      ]
+    },
+    {
+      "id": "id-483",
+      "word": "Hijriah",
+      "forbiddenWords": [
+        "Kalender",
+        "Islam",
+        "Bulan",
+        "Lunar",
+        "Tahun"
+      ]
+    },
+    {
+      "id": "id-484",
+      "word": "Masehi",
+      "forbiddenWords": [
+        "Kalender",
+        "Matahari",
+        "Kristen",
+        "Tahun",
+        "Berbeda"
+      ]
+    },
+    {
+      "id": "id-485",
+      "word": "Ulama",
+      "forbiddenWords": [
+        "Cendekia",
+        "Islam",
+        "Pesantren",
+        "Berilmu",
+        "Kyai"
+      ]
+    },
+    {
+      "id": "id-486",
+      "word": "Ghazwah",
+      "forbiddenWords": [
+        "Peperangan",
+        "Nabi",
+        "Ikut",
+        "Sendiri",
+        "Perang"
+      ]
+    },
+    {
+      "id": "id-487",
+      "word": "Sariyyah",
+      "forbiddenWords": [
+        "Pasukan",
+        "Nabi",
+        "Tidak",
+        "Perang",
+        "Delegasi"
+      ]
+    },
+    {
+      "id": "id-488",
+      "word": "Khilafah",
+      "forbiddenWords": [
+        "Pemerintahan",
+        "Islam",
+        "Khalifah",
+        "Pemimpin",
+        "Pengganti"
+      ]
+    },
+    {
+      "id": "id-489",
+      "word": "Baiah",
+      "forbiddenWords": [
+        "Janji",
+        "Setia",
+        "Pemimpin",
+        "Islam",
+        "Taat"
+      ]
+    },
+    {
+      "id": "id-490",
+      "word": "Majelis Syura",
+      "forbiddenWords": [
+        "Dewan",
+        "Musyawarah",
+        "Islam",
+        "Pemerintah",
+        "Pendapat"
+      ]
+    },
+    {
+      "id": "id-491",
+      "word": "Ummah",
+      "forbiddenWords": [
+        "Komunitas",
+        "Seluruh",
+        "Muslim",
+        "Dunia",
+        "Satu"
+      ]
+    },
+    {
+      "id": "id-492",
+      "word": "Ummul Mukminin",
+      "forbiddenWords": [
+        "Ibu",
+        "Kaum",
+        "Beriman",
+        "Istri",
+        "Nabi"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
@@ -12,6 +13,7 @@ class GameReadySection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final highestScore = state.teams.fold<int>(
       0,
       (prev, team) => team.score > prev ? team.score : prev,
@@ -49,9 +51,9 @@ class GameReadySection extends ConsumerWidget {
                 const Icon(Icons.leaderboard_rounded,
                     color: Colors.amber, size: 40),
                 const SizedBox(height: 16),
-                const Text(
-                  'GÜNCEL SKORLAR',
-                  style: TextStyle(
+                Text(
+                  l10n.gameReadyHeader,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 14,
                     fontWeight: FontWeight.w900,
@@ -126,9 +128,9 @@ class GameReadySection extends ConsumerWidget {
         // Next Team Info
         Column(
           children: [
-            const Text(
-              'SIRADAKİ TAKIM',
-              style: TextStyle(
+            Text(
+              l10n.gameReadyNextTeam,
+              style: const TextStyle(
                 color: Colors.white54,
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
@@ -152,7 +154,7 @@ class GameReadySection extends ConsumerWidget {
         // Start Button
         App3DButton(
           onTap: () => ref.read(gameViewModelProvider.notifier).startGame(),
-          text: 'BAŞLA',
+          text: l10n.gameReadyStart,
           primaryColor: const Color(0xFF14248A),
           secondaryColor: const Color(0xFF0D1B63),
           shadowColor: const Color(0xFF081140),

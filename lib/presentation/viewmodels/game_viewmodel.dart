@@ -68,7 +68,7 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
         data: (words) async {
           if (words.isEmpty) {
             state = AsyncValue.error(
-              'Kelime bulunamadı. Lütfen kelime yönetimi sayfasından kelime ekleyin.',
+              'NO_WORDS',
               StackTrace.current,
             );
             return; // Exit if no words
@@ -96,17 +96,13 @@ class GameViewModel extends StateNotifier<AsyncValue<GameStateEntity>> {
           // Re-read after delay:
           final freshWordState = _ref.read(inMemoryWordProvider);
           if (freshWordState is AsyncData<List<WordEntity>>) {
-            await initialize(); // Re-run initialize with loaded data
+            await initialize();
           } else {
-            state =
-                AsyncValue.error('Kelimeler yüklenemedi.', StackTrace.current);
+            state = AsyncValue.error('WORDS_LOAD_FAIL', StackTrace.current);
           }
         },
         error: (error, stackTrace) {
-          state = AsyncValue.error(
-            'Kelimeler yüklenirken hata oluştu: $error',
-            stackTrace,
-          );
+          state = AsyncValue.error('WORDS_LOAD_ERROR:$error', stackTrace);
         },
       );
     } catch (e, stackTrace) {

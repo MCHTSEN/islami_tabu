@@ -1,0 +1,180 @@
+{
+  "@@locale": "tr",
+  "appTitle": "Tabubu",
+  "@appTitle": {"description": "App display title"},
+
+  "homeStartGame": "Oyunu Başlat",
+  "homeSettings": "Ayarlar",
+  "homeWords": "Kelimeler",
+  "homeStatistics": "İstatistikler",
+
+  "settingsTitle": "Oyun Ayarları",
+  "settingsLoadError": "Ayarlar yüklenirken hata oluştu: ",
+  "settingsGameDuration": "Oyun Süresi",
+  "settingsMaxPasses": "Maksimum Pas: {count}",
+  "@settingsMaxPasses": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassesLabel": "{count} pas",
+  "@settingsPassesLabel": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassSettings": "Pas Geçme Ayarları",
+  "settingsPassPenalty": "Pas Cezası: {seconds} saniye",
+  "@settingsPassPenalty": {
+    "placeholders": {"seconds": {"type": "int"}}
+  },
+  "settingsWordSettings": "Kelime Ayarları",
+  "settingsShuffleWords": "Kelimeleri Karıştır",
+  "settingsShuffleHint": "Her oyun başlangıcında kelime sırası rastgele olur.",
+  "settingsLanguage": "Dil",
+  "settingsLanguageTurkish": "Türkçe",
+  "settingsLanguageEnglish": "İngilizce",
+  "settingsLanguageArabic": "Arapça",
+  "settingsLanguageGerman": "Almanca",
+  "settingsLanguageFrench": "Fransızca",
+  "settingsLanguageIndonesian": "Endonezce",
+
+  "statisticsTitle": "İstatistikler",
+  "statisticsLoadError": "İstatistikler yüklenirken hata oluştu: ",
+  "statisticsEmptyTitle": "Henüz İstatistik Yok",
+  "statisticsEmptySubtitle": "Oyun bitince istatistikler burada görünecek",
+  "statisticsDeleteTitle": "İstatistiği Sil",
+  "statisticsDeleteSuccess": "İstatistik başarıyla silindi",
+  "statisticsDeleteConfirm": "{date} tarihli oyuna ait istatistiği silmek istediğinizden emin misiniz?",
+  "@statisticsDeleteConfirm": {
+    "placeholders": {"date": {"type": "String"}}
+  },
+  "statisticsDetailedTitle": "Detaylı İstatistikler",
+  "statisticsCorrectWords": "Doğru Bilinen Kelimeler",
+  "statisticsCorrect": "Doğru Bilinen",
+  "statisticsPassedWords": "Pas Geçilen Kelimeler",
+  "statisticsPassed": "Pas Geçilen",
+  "statisticsHighScore": "En Yüksek Skor",
+  "statisticsTime": "Süre",
+  "statisticsTeamScores": "Takım Skorları",
+  "statisticsWinnerTeam": "Kazanan Takım",
+  "statisticsTeamPerformance": "Takım Performansları",
+  "statisticsWordDetails": "Kelime Detayları",
+  "statisticsCorrectCount": "Doğru Sayısı",
+  "statisticsPassCount": "Pas Sayısı",
+  "statisticsTabuCount": "Tabu Sayısı",
+  "statisticsGameDate": "Oyun Tarihi",
+  "statisticsScore": "Skor",
+  "statisticsNone": "Yok",
+  "statisticsDurationSeconds": "{count} saniye",
+  "@statisticsDurationSeconds": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "commonClose": "Kapat",
+
+  "teamSetupTitle": "TAKIMLARINI OLUŞTUR",
+  "teamSetupHowMany": "Kaç takım yarışacak?",
+  "teamSetupDefaultName": "{index}. Takım",
+  "@teamSetupDefaultName": {
+    "placeholders": {"index": {"type": "int"}}
+  },
+
+  "gameErrorOccurred": "Bir Hata Oluştu:\n\n",
+  "gameNewGame": "YENİ OYUN",
+  "gameOver": "OYUN BİTTİ",
+  "gameOverHero": "MUHTEŞEM BİR MÜCADELEYDİ",
+  "gameOverExit": "ÇIKIŞ",
+  "gameOverAgain": "BİR DAHA",
+  "gameReadyHeader": "GÜNCEL SKORLAR",
+  "gameReadyNextTeam": "SIRADAKİ TAKIM",
+  "gameReadyStart": "BAŞLA",
+  "gameTeamReady": "{teamName} Hazır",
+  "@gameTeamReady": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameTeamPlaying": "{teamName} Oynuyor",
+  "@gameTeamPlaying": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameStatusFinished": "Oyun Bitti",
+  "gameTeamSelection": "Takım Seçimi",
+  "gamePaused": "Duraklatıldı",
+  "gameCorrect": "Doğru",
+  "gamePass": "Pas",
+  "gameTabu": "Tabu",
+  "gameResume": "DEVAM ET",
+  "gamePassCount": "Pas ({used}/{max})",
+  "@gamePassCount": {
+    "placeholders": {
+      "used": {"type": "int"},
+      "max": {"type": "int"}
+    }
+  },
+  "gameForbiddenHeader": "YASAKLI KELİMELER",
+  "gameNoWordsFound": "Kelime bulunamadı.",
+  "gameWordsLoadFail": "Kelimeler yüklenemedi.",
+  "gameWordsLoadError": "Kelimeler yüklenirken hata oluştu: {error}",
+  "@gameWordsLoadError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "gameNoWordsAddPrompt": "Kelime bulunamadı. Lütfen kelime yönetimi sayfasından kelime ekleyin.",
+
+  "exitConfirmExitTitle": "Oyunu bitirip skor tablosuna gitmek istediğinize emin misiniz?",
+  "exitConfirmUnevenTitle": "Her takım eşit sayıda tur oynamadı. Yine de çıkmak istediğinize emin misiniz?",
+
+  "wordsTitle": "Kelime Yönetimi",
+  "wordsEditTitle": "Kelimeyi Düzenle",
+  "wordsResetList": "Listeyi Sıfırla",
+  "wordsBulkImport": "Toplu Yükleme",
+  "wordsBulkImportTitle": "Toplu Kelime Yükleme",
+  "wordsLabel": "Kelime",
+  "wordsCancelEdit": "Düzenlemeyi İptal Et",
+  "wordsSave": "Kaydet",
+  "wordsUpdate": "Güncelle",
+  "wordsEdit": "Düzenle",
+  "wordsAddButton": "Ekle",
+  "wordsForbiddenLabel": "Yasaklı Kelime",
+  "wordsForbiddenList": "Yasaklı Kelimeler:",
+  "wordsForbiddenEmpty": "Henüz yasaklı kelime eklenmedi.",
+  "wordsForbiddenCount": "{count, plural, =1{{count} yasaklı kelime} other{{count} yasaklı kelime}}",
+  "@wordsForbiddenCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "wordsAddPrompt": "Kelimeyi girin ve en az bir yasaklı kelime ekleyin",
+  "wordsAddSuccess": "Yeni kelime başarıyla eklendi",
+  "wordsUpdateSuccess": "Kelime başarıyla güncellendi",
+  "wordsDeleteSuccess": "Kelime başarıyla silindi",
+  "wordsDeleteConfirm": "Bu kelimeyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+  "wordsForbiddenDuplicate": "Bu yasaklı kelime zaten eklenmiş",
+  "wordsEmpty": "Henüz kaydedilmiş kelime yok.",
+  "wordsSavedCount": "Kaydedilmiş Kelimeler ({count})",
+  "@wordsSavedCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+
+  "bulkPasteHint": "JSON verisini buraya yapıştırın...",
+  "bulkPaste": "Yapıştır",
+  "bulkCancel": "İptal",
+  "bulkImport": "İçe Aktar",
+  "bulkEmpty": "Lütfen JSON verisini girin.",
+  "bulkInvalidFormat": "Geçersiz JSON formatı. Her öğe \"word\" ve \"forbiddenWords\" (liste) içermelidir.",
+  "bulkJsonError": "JSON Format Hatası: {message}",
+  "@bulkJsonError": {
+    "placeholders": {"message": {"type": "String"}}
+  },
+  "bulkImportError": "İçe aktarma sırasında bir hata oluştu: {error}",
+  "@bulkImportError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "bulkImportResult": "{success} kelime başarıyla, {errors} kelime hatayla içe aktarıldı.",
+  "@bulkImportResult": {
+    "placeholders": {
+      "success": {"type": "int"},
+      "errors": {"type": "int"}
+    }
+  },
+
+  "dialogConfirmDelete": "Evet, Sil",
+  "dialogCancel": "İptal",
+  "dialogWarning": "Dikkat!",
+  "dialogYes": "EVET",
+  "dialogNo": "HAYIR",
+
+  "easterEggSurprise": "Sürpriz!"
+}

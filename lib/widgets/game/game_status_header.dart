@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 import '../../domain/entities/game_state_entity.dart';
 
@@ -9,28 +10,29 @@ class GameStatusHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     String statusText;
     Color statusColor;
 
     switch (state.status) {
       case GameStatus.setup:
-        statusText = 'Takım Seçimi';
+        statusText = l10n.gameTeamSelection;
         statusColor = Colors.blue;
         break;
       case GameStatus.ready:
-        statusText = '${state.currentTeam!.name} Hazır';
+        statusText = l10n.gameTeamReady(state.currentTeam!.name);
         statusColor = Colors.amber;
         break;
       case GameStatus.playing:
-        statusText = '${state.currentTeam!.name} Oynuyor';
+        statusText = l10n.gameTeamPlaying(state.currentTeam!.name);
         statusColor = Colors.green;
         break;
       case GameStatus.paused:
-        statusText = 'Duraklatıldı';
+        statusText = l10n.gamePaused;
         statusColor = Colors.orange;
         break;
       case GameStatus.finished:
-        statusText = 'Oyun Bitti';
+        statusText = l10n.gameOver;
         statusColor = Colors.red;
         break;
     }
@@ -75,10 +77,7 @@ class GameStatusHeader extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                statusText
-                    .split(' ')
-                    .last
-                    .toUpperCase(), // e.g., "OYNANIYOR" or "HAZIR"
+                statusText.split(' ').last.toUpperCase(),
                 style: TextStyle(
                   color: statusColor,
                   fontWeight: FontWeight.w900,

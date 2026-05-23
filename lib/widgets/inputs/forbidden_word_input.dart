@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 class ForbiddenWordInput extends StatelessWidget {
   final TextEditingController controller;
@@ -14,6 +15,7 @@ class ForbiddenWordInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Row(
       children: [
         Expanded(
@@ -22,7 +24,7 @@ class ForbiddenWordInput extends StatelessWidget {
             focusNode: focusNode,
             style: const TextStyle(color: Colors.white),
             decoration: InputDecoration(
-              labelText: 'Yasaklı Kelime',
+              labelText: l10n.wordsForbiddenLabel,
               labelStyle: TextStyle(color: Colors.teal.shade200),
               filled: true,
               fillColor: Colors.blueGrey.shade800.withOpacity(0.5),
@@ -44,7 +46,7 @@ class ForbiddenWordInput extends StatelessWidget {
         ElevatedButton.icon(
           onPressed: onAdd,
           icon: const Icon(Icons.add_circle_outline, size: 20),
-          label: const Text('Ekle'),
+          label: Text(l10n.wordsAddButton),
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.teal.shade700,
             foregroundColor: Colors.white,

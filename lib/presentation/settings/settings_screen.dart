@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../core/di/service_locator.dart';
-import '../../domain/entities/game_settings_entity.dart';
-import '../../domain/usecases/get_game_settings_usecase.dart';
-import '../../domain/usecases/save_game_settings_usecase.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import '../viewmodels/settings_viewmodel.dart';
 
 // Import new widgets
@@ -16,12 +13,14 @@ class SettingsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final settingsState = ref.watch(settingsViewModelProvider);
+    final l10n = AppLocalizations.of(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Oyun Ayarları',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        title: Text(
+          l10n.settingsTitle,
+          style: const TextStyle(
+              color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.teal.shade900,
         elevation: 0,
@@ -42,7 +41,7 @@ class SettingsScreen extends ConsumerWidget {
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: 'Ayarlar yüklenirken hata oluştu: ',
+                      text: l10n.settingsLoadError,
                       style:
                           TextStyle(color: Colors.red.shade300, fontSize: 16),
                     ),

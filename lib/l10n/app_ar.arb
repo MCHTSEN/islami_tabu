@@ -1,0 +1,179 @@
+{
+  "@@locale": "ar",
+  "appTitle": "تابوبو",
+
+  "homeStartGame": "ابدأ اللعبة",
+  "homeSettings": "الإعدادات",
+  "homeWords": "الكلمات",
+  "homeStatistics": "الإحصائيات",
+
+  "settingsTitle": "إعدادات اللعبة",
+  "settingsLoadError": "فشل تحميل الإعدادات: ",
+  "settingsGameDuration": "مدة الجولة",
+  "settingsMaxPasses": "الحد الأقصى للتمرير: {count}",
+  "@settingsMaxPasses": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassesLabel": "{count} تمرير",
+  "@settingsPassesLabel": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassSettings": "إعدادات التمرير",
+  "settingsPassPenalty": "عقوبة التمرير: {seconds} ثانية",
+  "@settingsPassPenalty": {
+    "placeholders": {"seconds": {"type": "int"}}
+  },
+  "settingsWordSettings": "إعدادات الكلمات",
+  "settingsShuffleWords": "خلط الكلمات",
+  "settingsShuffleHint": "يتم تغيير ترتيب الكلمات بشكل عشوائي في بداية كل لعبة.",
+  "settingsLanguage": "اللغة",
+  "settingsLanguageTurkish": "التركية",
+  "settingsLanguageEnglish": "الإنجليزية",
+  "settingsLanguageArabic": "العربية",
+  "settingsLanguageGerman": "الألمانية",
+  "settingsLanguageFrench": "الفرنسية",
+  "settingsLanguageIndonesian": "الإندونيسية",
+
+  "statisticsTitle": "الإحصائيات",
+  "statisticsLoadError": "فشل تحميل الإحصائيات: ",
+  "statisticsEmptyTitle": "لا توجد إحصائيات بعد",
+  "statisticsEmptySubtitle": "ستظهر الإحصائيات هنا بعد انتهاء اللعبة",
+  "statisticsDeleteTitle": "حذف الإحصائية",
+  "statisticsDeleteSuccess": "تم حذف الإحصائية بنجاح",
+  "statisticsDeleteConfirm": "هل أنت متأكد من حذف إحصائية لعبة {date}؟",
+  "@statisticsDeleteConfirm": {
+    "placeholders": {"date": {"type": "String"}}
+  },
+  "statisticsDetailedTitle": "إحصائيات مفصلة",
+  "statisticsCorrectWords": "الكلمات المخمنة بشكل صحيح",
+  "statisticsCorrect": "صحيح",
+  "statisticsPassedWords": "الكلمات المتجاوزة",
+  "statisticsPassed": "تم تجاوزها",
+  "statisticsHighScore": "أعلى نتيجة",
+  "statisticsTime": "الوقت",
+  "statisticsTeamScores": "نتائج الفرق",
+  "statisticsWinnerTeam": "الفريق الفائز",
+  "statisticsTeamPerformance": "أداء الفريق",
+  "statisticsWordDetails": "تفاصيل الكلمة",
+  "statisticsCorrectCount": "صحيح",
+  "statisticsPassCount": "تمرير",
+  "statisticsTabuCount": "تابو",
+  "statisticsGameDate": "تاريخ اللعبة",
+  "statisticsScore": "النتيجة",
+  "statisticsNone": "لا يوجد",
+  "statisticsDurationSeconds": "{count} ثانية",
+  "@statisticsDurationSeconds": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "commonClose": "إغلاق",
+
+  "teamSetupTitle": "كوّن فرقك",
+  "teamSetupHowMany": "كم فريقاً سيتنافس؟",
+  "teamSetupDefaultName": "الفريق {index}",
+  "@teamSetupDefaultName": {
+    "placeholders": {"index": {"type": "int"}}
+  },
+
+  "gameErrorOccurred": "حدث خطأ:\n\n",
+  "gameNewGame": "لعبة جديدة",
+  "gameOver": "انتهت اللعبة",
+  "gameOverHero": "يا لها من مباراة!",
+  "gameOverExit": "خروج",
+  "gameOverAgain": "مرة أخرى",
+  "gameReadyHeader": "النتائج الحالية",
+  "gameReadyNextTeam": "الفريق التالي",
+  "gameReadyStart": "ابدأ",
+  "gameTeamReady": "{teamName} جاهز",
+  "@gameTeamReady": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameTeamPlaying": "{teamName} يلعب",
+  "@gameTeamPlaying": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameStatusFinished": "انتهت اللعبة",
+  "gameTeamSelection": "اختر الفريق",
+  "gamePaused": "متوقف مؤقتاً",
+  "gameCorrect": "صحيح",
+  "gamePass": "تمرير",
+  "gameTabu": "تابو",
+  "gameResume": "استئناف",
+  "gamePassCount": "تمرير ({used}/{max})",
+  "@gamePassCount": {
+    "placeholders": {
+      "used": {"type": "int"},
+      "max": {"type": "int"}
+    }
+  },
+  "gameForbiddenHeader": "الكلمات الممنوعة",
+  "gameNoWordsFound": "لم يتم العثور على كلمات.",
+  "gameWordsLoadFail": "فشل تحميل الكلمات.",
+  "gameWordsLoadError": "خطأ في تحميل الكلمات: {error}",
+  "@gameWordsLoadError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "gameNoWordsAddPrompt": "لم يتم العثور على كلمات. الرجاء إضافة كلمات من صفحة إدارة الكلمات.",
+
+  "exitConfirmExitTitle": "هل أنت متأكد من إنهاء اللعبة والذهاب إلى لوحة النتائج؟",
+  "exitConfirmUnevenTitle": "لم تلعب كل الفرق نفس عدد الجولات. هل ما زلت تريد الخروج؟",
+
+  "wordsTitle": "إدارة الكلمات",
+  "wordsEditTitle": "تعديل الكلمة",
+  "wordsResetList": "إعادة تعيين القائمة",
+  "wordsBulkImport": "استيراد جماعي",
+  "wordsBulkImportTitle": "استيراد كلمات جماعي",
+  "wordsLabel": "الكلمة",
+  "wordsCancelEdit": "إلغاء التعديل",
+  "wordsSave": "حفظ",
+  "wordsUpdate": "تحديث",
+  "wordsEdit": "تعديل",
+  "wordsAddButton": "إضافة",
+  "wordsForbiddenLabel": "كلمة ممنوعة",
+  "wordsForbiddenList": "الكلمات الممنوعة:",
+  "wordsForbiddenEmpty": "لم تتم إضافة أي كلمات ممنوعة بعد.",
+  "wordsForbiddenCount": "{count, plural, =1{كلمة ممنوعة واحدة} =2{كلمتان ممنوعتان} other{{count} كلمات ممنوعة}}",
+  "@wordsForbiddenCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "wordsAddPrompt": "أدخل كلمة وأضف كلمة ممنوعة واحدة على الأقل",
+  "wordsAddSuccess": "تمت إضافة الكلمة الجديدة بنجاح",
+  "wordsUpdateSuccess": "تم تحديث الكلمة بنجاح",
+  "wordsDeleteSuccess": "تم حذف الكلمة بنجاح",
+  "wordsDeleteConfirm": "هل أنت متأكد من حذف هذه الكلمة؟ لا يمكن التراجع عن هذا الإجراء.",
+  "wordsForbiddenDuplicate": "هذه الكلمة الممنوعة مضافة بالفعل",
+  "wordsEmpty": "لا توجد كلمات محفوظة بعد.",
+  "wordsSavedCount": "الكلمات المحفوظة ({count})",
+  "@wordsSavedCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+
+  "bulkPasteHint": "الصق بيانات JSON هنا...",
+  "bulkPaste": "لصق",
+  "bulkCancel": "إلغاء",
+  "bulkImport": "استيراد",
+  "bulkEmpty": "الرجاء إدخال بيانات JSON.",
+  "bulkInvalidFormat": "تنسيق JSON غير صالح. يجب أن يحتوي كل عنصر على \"word\" و \"forbiddenWords\" (قائمة).",
+  "bulkJsonError": "خطأ في تنسيق JSON: {message}",
+  "@bulkJsonError": {
+    "placeholders": {"message": {"type": "String"}}
+  },
+  "bulkImportError": "حدث خطأ أثناء الاستيراد: {error}",
+  "@bulkImportError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "bulkImportResult": "تم استيراد {success} كلمة بنجاح، فشل {errors}.",
+  "@bulkImportResult": {
+    "placeholders": {
+      "success": {"type": "int"},
+      "errors": {"type": "int"}
+    }
+  },
+
+  "dialogConfirmDelete": "نعم، احذف",
+  "dialogCancel": "إلغاء",
+  "dialogWarning": "تنبيه!",
+  "dialogYes": "نعم",
+  "dialogNo": "لا",
+
+  "easterEggSurprise": "مفاجأة!"
+}

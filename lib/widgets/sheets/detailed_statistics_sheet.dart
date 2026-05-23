@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import '../../domain/entities/game_statistics_entity.dart';
 import '../../domain/entities/team_entity.dart';
-import '../statistics/statistic_info_row.dart'; // Use the extracted row widget
+import '../statistics/statistic_info_row.dart';
 
 Future<void> showDetailedStatisticsSheet(
   BuildContext context,
@@ -12,8 +13,8 @@ Future<void> showDetailedStatisticsSheet(
     context: context,
     isScrollControlled: true,
     backgroundColor: Colors.transparent,
-    builder: (context) => _DetailedStatisticsContent(
-        statistic: statistic), // Use private content widget
+    builder: (context) =>
+        _DetailedStatisticsContent(statistic: statistic),
   );
 }
 
@@ -24,6 +25,7 @@ class _DetailedStatisticsContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final dateFormat = DateFormat('dd MMMM yyyy, HH:mm');
 
     return DraggableScrollableSheet(
@@ -34,7 +36,8 @@ class _DetailedStatisticsContent extends StatelessWidget {
         return Container(
           decoration: BoxDecoration(
             color: Colors.blueGrey.shade900,
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(25)),
+            borderRadius:
+                const BorderRadius.vertical(top: Radius.circular(25)),
             border: Border.all(color: Colors.teal.shade700, width: 1),
             boxShadow: [
               BoxShadow(
@@ -46,7 +49,6 @@ class _DetailedStatisticsContent extends StatelessWidget {
           ),
           child: Column(
             children: [
-              // Draggable Handle
               Container(
                 width: 50,
                 height: 5,
@@ -56,7 +58,6 @@ class _DetailedStatisticsContent extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              // Header
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -64,7 +65,7 @@ class _DetailedStatisticsContent extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Detaylı İstatistikler',
+                      l10n.statisticsDetailedTitle,
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -74,55 +75,62 @@ class _DetailedStatisticsContent extends StatelessWidget {
                     IconButton(
                       icon: Icon(Icons.close, color: Colors.grey.shade400),
                       onPressed: () => Navigator.pop(context),
-                      tooltip: 'Kapat',
+                      tooltip: l10n.commonClose,
                     ),
                   ],
                 ),
               ),
               Divider(color: Colors.teal.shade700.withOpacity(0.5)),
-              // Scrollable Content
               Expanded(
                 child: ListView(
                   controller: scrollController,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20, vertical: 16),
                   children: [
                     StatisticInfoRow(
-                      label: 'Oyun Tarihi',
+                      label: l10n.statisticsGameDate,
                       value: dateFormat.format(statistic.timestamp),
                     ),
                     StatisticInfoRow(
-                      label: 'Oyun Süresi',
-                      value: '${statistic.gameDuration} saniye',
+                      label: l10n.settingsGameDuration,
+                      value: l10n
+                          .statisticsDurationSeconds(statistic.gameDuration),
                     ),
                     StatisticInfoRow(
-                      label: 'Kazanan Takım',
+                      label: l10n.statisticsWinnerTeam,
                       value: statistic.winningTeam,
                     ),
                     StatisticInfoRow(
-                      label: 'En Yüksek Skor',
+                      label: l10n.statisticsHighScore,
                       value: '${statistic.highestScore}',
                     ),
                     const SizedBox(height: 16),
-                    Text('Takım Performansları',
+                    Text(l10n.statisticsTeamPerformance,
                         style: TextStyle(
                             color: Colors.teal.shade200,
                             fontSize: 16,
                             fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
-                    ...statistic.teams.map((team) => _buildTeamDetail(team)),
+                    ...statistic.teams
+                        .map((team) => _buildTeamDetail(team, l10n)),
                     const SizedBox(height: 16),
-                    Text('Kelime Detayları',
+                    Text(l10n.statisticsWordDetails,
                         style: TextStyle(
                             color: Colors.teal.shade200,
                             fontSize: 16,
                             fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
-                    _buildWordList('Doğru Bilinen Kelimeler',
-                        statistic.correctWords, Colors.green.shade300),
+                    _buildWordList(
+                        l10n.statisticsCorrectWords,
+                        statistic.correctWords,
+                        Colors.green.shade300,
+                        l10n.statisticsNone),
                     const SizedBox(height: 12),
-                    _buildWordList('Pas Geçilen Kelimeler',
-                        statistic.skippedWords, Colors.orange.shade300),
+                    _buildWordList(
+                        l10n.statisticsPassedWords,
+                        statistic.skippedWords,
+                        Colors.orange.shade300,
+                        l10n.statisticsNone),
                   ],
                 ),
               ),
@@ -133,7 +141,7 @@ class _DetailedStatisticsContent extends StatelessWidget {
     );
   }
 
-  Widget _buildTeamDetail(TeamEntity team) {
+  Widget _buildTeamDetail(TeamEntity team, AppLocalizations l10n) {
     return Card(
       color: Colors.blueGrey.shade800.withOpacity(0.6),
       margin: const EdgeInsets.only(bottom: 12),
@@ -153,18 +161,25 @@ class _DetailedStatisticsContent extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            StatisticInfoRow(label: 'Skor', value: '${team.score}'),
             StatisticInfoRow(
-                label: 'Doğru Sayısı', value: '${team.correctCount}'),
-            StatisticInfoRow(label: 'Pas Sayısı', value: '${team.passCount}'),
-            StatisticInfoRow(label: 'Tabu Sayısı', value: '${team.tabuCount}'),
+                label: l10n.statisticsScore, value: '${team.score}'),
+            StatisticInfoRow(
+                label: l10n.statisticsCorrectCount,
+                value: '${team.correctCount}'),
+            StatisticInfoRow(
+                label: l10n.statisticsPassCount,
+                value: '${team.passCount}'),
+            StatisticInfoRow(
+                label: l10n.statisticsTabuCount,
+                value: '${team.tabuCount}'),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildWordList(String title, List<String> words, Color color) {
+  Widget _buildWordList(
+      String title, List<String> words, Color color, String emptyLabel) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -173,8 +188,9 @@ class _DetailedStatisticsContent extends StatelessWidget {
         const SizedBox(height: 8),
         if (words.isEmpty)
           Padding(
-            padding: const EdgeInsets.only(left: 8.0, top: 4.0),
-            child: Text('Yok', style: TextStyle(color: Colors.grey.shade500)),
+            padding: const EdgeInsetsDirectional.only(start: 8.0, top: 4.0),
+            child:
+                Text(emptyLabel, style: TextStyle(color: Colors.grey.shade500)),
           )
         else
           Wrap(

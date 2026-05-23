@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import 'package:islami_tabu/presentation/game_screen/game_screen.dart';
 import 'package:islami_tabu/presentation/settings/settings_screen.dart';
 import 'package:islami_tabu/presentation/statistics/statistics_page.dart';
@@ -63,6 +64,7 @@ class _HomePageState extends ConsumerState<HomePage>
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+    final l10n = AppLocalizations.of(context);
 
     return Scaffold(
       body: HomeBackground(
@@ -79,7 +81,7 @@ class _HomePageState extends ConsumerState<HomePage>
                   children: [
                     _buildFloatingButton(
                       child: OrbButton(
-                        text: 'Oyunu Başlat',
+                        text: l10n.homeStartGame,
                         onTap: () => _navigateTo(context, const GameScreen()),
                         size: screenWidth * 0.35,
                         controller: _controller,
@@ -92,7 +94,7 @@ class _HomePageState extends ConsumerState<HomePage>
                       children: [
                         _buildFloatingButton(
                           child: OrbButton(
-                            text: 'Ayarlar',
+                            text: l10n.homeSettings,
                             onTap: () =>
                                 _navigateTo(context, const SettingsScreen()),
                             size: screenWidth * 0.28,
@@ -103,7 +105,7 @@ class _HomePageState extends ConsumerState<HomePage>
                         SizedBox(width: screenWidth * 0.08),
                         _buildFloatingButton(
                           child: OrbButton(
-                            text: 'Kelimeler',
+                            text: l10n.homeWords,
                             onTap: () => _navigateTo(
                                 context, const WordManagementScreen()),
                             size: screenWidth * 0.28,
@@ -116,7 +118,7 @@ class _HomePageState extends ConsumerState<HomePage>
                     SizedBox(height: screenHeight * 0.04),
                     _buildFloatingButton(
                       child: OrbButton(
-                        text: 'İstatistikler',
+                        text: l10n.homeStatistics,
                         onTap: () =>
                             _navigateTo(context, const StatisticsPage()),
                         size: screenWidth * 0.32,

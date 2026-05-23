@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 import '../../domain/entities/game_state_entity.dart';
 
@@ -13,10 +14,11 @@ class GamePlaySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     if (state.currentWord == null) {
       return Center(
         child: Text(
-          'Kelime bulunamadı.',
+          l10n.gameNoWordsFound,
           style: TextStyle(
             color: Colors.amber.shade300,
             fontSize: 20,
@@ -109,7 +111,7 @@ class GamePlaySection extends StatelessWidget {
             SizedBox(height: isSmallScreen ? 16 : 24),
 
             // Forbidden Words Label
-            _buildForbiddenLabel(),
+            _buildForbiddenLabel(l10n),
 
             SizedBox(height: isSmallScreen ? 8 : 12),
 
@@ -208,7 +210,7 @@ class GamePlaySection extends StatelessWidget {
     );
   }
 
-  Widget _buildForbiddenLabel() {
+  Widget _buildForbiddenLabel(AppLocalizations l10n) {
     return Row(
       children: [
         Container(
@@ -224,7 +226,7 @@ class GamePlaySection extends StatelessWidget {
               const Icon(Icons.lock_rounded, color: Colors.redAccent, size: 12),
               const SizedBox(width: 6),
               Text(
-                'YASAKLI KELİMELER',
+                l10n.gameForbiddenHeader,
                 style: TextStyle(
                   color: Colors.red.shade200,
                   fontSize: 10,

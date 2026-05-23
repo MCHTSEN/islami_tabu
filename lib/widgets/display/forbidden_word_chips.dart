@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 class ForbiddenWordChips extends StatelessWidget {
   final List<String> forbiddenWords;
@@ -17,7 +18,7 @@ class ForbiddenWordChips extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 16),
         alignment: Alignment.center,
         child: Text(
-          'Henüz yasaklı kelime eklenmedi.',
+          AppLocalizations.of(context).wordsForbiddenEmpty,
           style: TextStyle(color: Colors.grey.shade500),
         ),
       );

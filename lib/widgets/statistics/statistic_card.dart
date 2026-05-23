@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import '../../domain/entities/game_statistics_entity.dart';
 import '../../presentation/viewmodels/statistics_viewmodel.dart'; // Needed for delete
 import 'statistic_info_row.dart';
@@ -16,11 +17,13 @@ class StatisticCard extends ConsumerWidget {
   // Helper to show delete confirmation
   Future<void> _confirmDeleteStatistic(
       BuildContext context, WidgetRef ref) async {
+    final l10n = AppLocalizations.of(context);
     final bool confirmed = await showDeleteConfirmationDialog(
       context: context,
-      title: 'İstatistiği Sil',
-      content:
-          '${DateFormat('dd MMMM yyyy').format(statistic.timestamp)} tarihli oyuna ait istatistiği silmek istediğinizden emin misiniz?',
+      title: l10n.statisticsDeleteTitle,
+      content: l10n.statisticsDeleteConfirm(
+          DateFormat('dd MMMM yyyy', l10n.localeName)
+              .format(statistic.timestamp)),
     );
 
     if (confirmed) {
@@ -29,7 +32,7 @@ class StatisticCard extends ConsumerWidget {
           .deleteStatistics(statistic.id);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text('İstatistik başarıyla silindi'),
+          content: Text(l10n.statisticsDeleteSuccess),
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.red.shade700,
           margin: const EdgeInsets.all(16),
@@ -41,7 +44,8 @@ class StatisticCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final dateFormat = DateFormat('dd MMMM yyyy, HH:mm');
+    final l10n = AppLocalizations.of(context);
+    final dateFormat = DateFormat('dd MMMM yyyy, HH:mm', l10n.localeName);
 
     return Card(
       margin: const EdgeInsets.only(bottom: 16),
@@ -72,7 +76,7 @@ class StatisticCard extends ConsumerWidget {
                 ),
                 IconButton(
                   icon: const Icon(Icons.delete_outline, color: Colors.red),
-                  tooltip: 'İstatistiği Sil',
+                  tooltip: l10n.statisticsDeleteTitle,
                   onPressed: () => _confirmDeleteStatistic(context, ref),
                 ),
               ],
@@ -82,24 +86,28 @@ class StatisticCard extends ConsumerWidget {
 
             // Game Details using StatisticInfoRow
             StatisticInfoRow(
-                label: 'Süre', value: '${statistic.gameDuration} saniye'),
+                label: l10n.statisticsTime,
+                value: '${statistic.gameDuration} saniye'),
             StatisticInfoRow(
-                label: 'Toplam Kelime', value: '${statistic.totalWords}'),
+                label: l10n.wordsLabel, value: '${statistic.totalWords}'),
             StatisticInfoRow(
-                label: 'Doğru Bilinen',
+                label: l10n.statisticsCorrect,
                 value: '${statistic.totalCorrectWords}'),
             StatisticInfoRow(
-                label: 'Pas Geçilen', value: '${statistic.totalSkippedWords}'),
-            StatisticInfoRow(label: 'Kazanan', value: statistic.winningTeam),
+                label: l10n.statisticsPassed,
+                value: '${statistic.totalSkippedWords}'),
             StatisticInfoRow(
-                label: 'En Yüksek Skor', value: '${statistic.highestScore}'),
+                label: l10n.statisticsWinnerTeam, value: statistic.winningTeam),
+            StatisticInfoRow(
+                label: l10n.statisticsHighScore,
+                value: '${statistic.highestScore}'),
 
             const SizedBox(height: 16),
 
             // Team Scores using TeamScoreRow
-            const Text(
-              'Takım Skorları',
-              style: TextStyle(
+            Text(
+              l10n.statisticsTeamScores,
+              style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
@@ -118,7 +126,7 @@ class StatisticCard extends ConsumerWidget {
                 onPressed: () =>
                     showDetailedStatisticsSheet(context, statistic),
                 icon: const Icon(Icons.bar_chart, size: 20),
-                label: const Text('Detaylı İstatistikler'),
+                label: Text(l10n.statisticsDetailedTitle),
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.amber.shade200,
                 ),

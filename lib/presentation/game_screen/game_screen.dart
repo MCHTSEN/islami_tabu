@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import 'package:islami_tabu/widgets/decorations/premium_game_background.dart';
 import 'package:islami_tabu/widgets/dialogs/exit_confirmation_dialog.dart';
 import 'package:islami_tabu/widgets/game/game_controls.dart';
@@ -156,7 +157,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
                   TextSpan(
                     style: TextStyle(fontSize: 16, color: Colors.red.shade300),
                     children: [
-                      const TextSpan(text: 'Bir Hata Oluştu:\n\n'),
+                      TextSpan(text: AppLocalizations.of(context).gameWordsLoadError('')),
                       TextSpan(
                         text: '$error',
                         style: const TextStyle(fontWeight: FontWeight.bold),
@@ -202,9 +203,9 @@ class _GameScreenState extends ConsumerState<GameScreen>
 
           // Center: Title based on State
           if (state.status == GameStatus.setup)
-            const Text(
-              'YENİ OYUN',
-              style: TextStyle(
+            Text(
+              AppLocalizations.of(context).gameNewGame,
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.w900,
@@ -212,9 +213,9 @@ class _GameScreenState extends ConsumerState<GameScreen>
               ),
             )
           else if (state.status == GameStatus.finished)
-            const Text(
-              'OYUN BİTTİ',
-              style: TextStyle(
+            Text(
+              AppLocalizations.of(context).gameOver,
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
                 fontWeight: FontWeight.w900,

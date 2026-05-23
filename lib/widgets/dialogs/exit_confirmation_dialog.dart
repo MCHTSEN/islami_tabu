@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import '../buttons/app_3d_buton.dart';
 
 Future<bool> showExitConfirmationDialog(
@@ -21,6 +22,7 @@ class _ExitConfirmationDialog extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     return Dialog(
       backgroundColor: Colors.transparent,
       child: Container(
@@ -87,7 +89,7 @@ class _ExitConfirmationDialog extends ConsumerWidget {
 
               // Title
               Text(
-                hasEqualRounds ? 'Oyunu Bitir' : 'Dikkat!',
+                hasEqualRounds ? l10n.gameOver : l10n.dialogWarning,
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -100,8 +102,8 @@ class _ExitConfirmationDialog extends ConsumerWidget {
               // Content
               Text(
                 hasEqualRounds
-                    ? 'Oyunu bitirip skor tablosuna gitmek istediğinize emin misiniz?'
-                    : 'Her takım eşit sayıda tur oynamadı. Yine de çıkmak istediğinize emin misiniz?',
+                    ? l10n.exitConfirmExitTitle
+                    : l10n.exitConfirmUnevenTitle,
                 style: TextStyle(
                   color: Colors.white.withOpacity(0.85),
                   fontSize: 16,
@@ -117,7 +119,7 @@ class _ExitConfirmationDialog extends ConsumerWidget {
                   // Hayır butonu (Mavi)
                   Expanded(
                     child: App3DButton(
-                      text: 'HAYIR',
+                      text: l10n.dialogNo,
                       height: 52,
                       borderRadius: 14,
                       primaryColor: const Color(0xFF14248A),
@@ -138,7 +140,7 @@ class _ExitConfirmationDialog extends ConsumerWidget {
                   // Evet butonu (Kırmızı)
                   Expanded(
                     child: App3DButton(
-                      text: 'EVET',
+                      text: l10n.dialogYes,
                       height: 52,
                       borderRadius: 14,
                       primaryColor: const Color(0xFFE53935),

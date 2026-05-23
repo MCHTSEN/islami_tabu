@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 Future<bool> showDeleteConfirmationDialog({
   required BuildContext context,
   required String title,
   required String content,
-  String confirmButtonText = 'Evet, Sil',
-  String cancelButtonText = 'İptal',
 }) async {
+  final l10n = AppLocalizations.of(context);
   return await showDialog<bool>(
         context: context,
         builder: (context) => AlertDialog(
@@ -28,7 +28,7 @@ Future<bool> showDeleteConfirmationDialog({
             TextButton(
               onPressed: () => Navigator.of(context).pop(false),
               child: Text(
-                cancelButtonText,
+                l10n.dialogCancel,
                 style: TextStyle(color: Colors.grey.shade400),
               ),
             ),
@@ -38,7 +38,7 @@ Future<bool> showDeleteConfirmationDialog({
                 backgroundColor: Colors.red.shade700,
                 foregroundColor: Colors.white,
               ),
-              child: Text(confirmButtonText),
+              child: Text(l10n.dialogConfirmDelete),
             ),
           ],
         ),

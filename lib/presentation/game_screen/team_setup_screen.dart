@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 import '../../domain/entities/team_entity.dart';
 import '../viewmodels/game_viewmodel.dart';
@@ -14,31 +15,37 @@ class TeamSetupScreen extends ConsumerStatefulWidget {
 class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
   int _teamCount = 2;
   final List<TeamEntity> _teams = [];
+  bool _isInitialized = false;
 
   @override
-  void initState() {
-    super.initState();
-    _initializeTeams();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_isInitialized) {
+      _initializeTeams(context);
+      _isInitialized = true;
+    }
   }
 
-  void _initializeTeams() {
+  void _initializeTeams(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     _teams.clear();
     for (int i = 0; i < _teamCount; i++) {
-      _teams.add(TeamEntity(name: '${i + 1}. Takım'));
+      _teams.add(TeamEntity(name: l10n.teamSetupDefaultName(i + 1)));
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // Header
-          const Text(
-            'TAKIMLARINI OLUŞTUR',
-            style: TextStyle(
+          Text(
+            l10n.teamSetupTitle,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 20,
               fontWeight: FontWeight.w900,
@@ -57,9 +64,9 @@ class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
             ),
             child: Column(
               children: [
-                const Text(
-                  'Kaç takım yarışacak?',
-                  style: TextStyle(
+                Text(
+                  l10n.teamSetupHowMany,
+                  style: const TextStyle(
                     color: Colors.white70,
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
@@ -75,7 +82,7 @@ class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
                           ? () {
                               setState(() {
                                 _teamCount--;
-                                _initializeTeams();
+                                _initializeTeams(context);
                               });
                             }
                           : null,
@@ -96,7 +103,7 @@ class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
                           ? () {
                               setState(() {
                                 _teamCount++;
-                                _initializeTeams();
+                                _initializeTeams(context);
                               });
                             }
                           : null,
@@ -185,10 +192,10 @@ class _TeamSetupScreenState extends ConsumerState<TeamSetupScreen> {
                   ),
                 ],
               ),
-              child: const Text(
-                'HAZIRIZ',
+              child: Text(
+                l10n.gameReadyStart,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.w900,

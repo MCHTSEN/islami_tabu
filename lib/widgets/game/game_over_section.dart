@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 
 import '../../domain/entities/game_state_entity.dart';
 import '../../domain/entities/team_entity.dart';
@@ -13,6 +14,7 @@ class GameOverSection extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context);
     final sortedTeams = List<TeamEntity>.from(state.teams)
       ..sort((a, b) => b.score.compareTo(a.score));
 
@@ -35,9 +37,9 @@ class GameOverSection extends ConsumerWidget {
               const Icon(Icons.emoji_events_rounded,
                   color: Colors.amber, size: 56),
               const SizedBox(height: 12),
-              const Text(
-                'OYUN BİTTİ',
-                style: TextStyle(
+              Text(
+                l10n.gameOver,
+                style: const TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.w900,
                   color: Colors.white,
@@ -45,9 +47,9 @@ class GameOverSection extends ConsumerWidget {
                 ),
               ),
               const SizedBox(height: 6),
-              const Text(
-                'MUHTEŞEM BİR MÜCADELEYDİ',
-                style: TextStyle(
+              Text(
+                l10n.gameOverHero,
+                style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w500,
                   color: Colors.white54,
@@ -114,7 +116,7 @@ class GameOverSection extends ConsumerWidget {
                 children: [
                   Expanded(
                     child: App3DButton(
-                      text: 'ÇIKIŞ',
+                      text: l10n.gameOverExit,
                       primaryColor: const Color(0xFFFA5C5C),
                       secondaryColor: const Color(0xFFE04444),
                       shadowColor: const Color(0xFFB03030),
@@ -136,7 +138,7 @@ class GameOverSection extends ConsumerWidget {
                   const SizedBox(width: 12),
                   Expanded(
                     child: App3DButton(
-                      text: 'BİR DAHA',
+                      text: l10n.gameOverAgain,
                       primaryColor: const Color(0xFF14248A),
                       secondaryColor: const Color(0xFF0D1B63),
                       shadowColor: const Color(0xFF081140),

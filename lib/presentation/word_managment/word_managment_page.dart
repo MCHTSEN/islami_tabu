@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 // import 'dart:convert'; // No longer needed here
 import '../../domain/entities/word_entity.dart';
 // Remove WordViewModel import
@@ -66,7 +67,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
       if (_forbiddenWords.contains(forbiddenWord)) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: const Text('Bu yasaklı kelime zaten eklenmiş'),
+            content: Text(AppLocalizations.of(context).wordsForbiddenDuplicate),
             behavior: SnackBarBehavior.floating,
             backgroundColor: Colors.orange.shade800,
             margin: const EdgeInsets.all(16),
@@ -92,12 +93,12 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
 
   void _submitForm() {
     final word = _wordController.text.trim();
+    final l10n = AppLocalizations.of(context);
 
     if (word.isEmpty || _forbiddenWords.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content:
-              const Text('Kelimeyi girin ve en az bir yasaklı kelime ekleyin'),
+          content: Text(l10n.wordsAddPrompt),
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.red.shade800,
           margin: const EdgeInsets.all(16),
@@ -117,7 +118,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
       ref.read(inMemoryWordProvider.notifier).updateWord(updatedWord);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text('Kelime başarıyla güncellendi'),
+          content: Text(l10n.wordsUpdateSuccess),
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.green.shade800,
           margin: const EdgeInsets.all(16),
@@ -129,7 +130,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
       ref.read(inMemoryWordProvider.notifier).addWord(word, _forbiddenWords);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text('Yeni kelime başarıyla eklendi'),
+          content: Text(l10n.wordsAddSuccess),
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.green.shade800,
           margin: const EdgeInsets.all(16),
@@ -157,7 +158,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
     ref.read(inMemoryWordProvider.notifier).deleteWord(wordId);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: const Text('Kelime başarıyla silindi'),
+        content: Text(AppLocalizations.of(context).wordsDeleteSuccess),
         behavior: SnackBarBehavior.floating,
         backgroundColor: Colors.red.shade700,
         margin: const EdgeInsets.all(16),
@@ -176,11 +177,12 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
   Widget build(BuildContext context) {
     // Watch the inMemoryWordProvider directly
     final wordState = ref.watch(inMemoryWordProvider);
+    final l10n = AppLocalizations.of(context);
 
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          _isEditMode ? 'Kelimeyi Düzenle' : 'Kelime Yönetimi',
+          _isEditMode ? l10n.wordsEditTitle : l10n.wordsTitle,
           style:
               const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
@@ -191,14 +193,14 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
           // Bulk Import Button
           IconButton(
             icon: const Icon(Icons.file_upload_outlined),
-            tooltip: 'Toplu Yükleme',
+            tooltip: l10n.wordsBulkImport,
             onPressed: () =>
                 showBulkImportDialog(context), // Use extracted dialog function
           ),
           // Refresh Button
           IconButton(
             icon: const Icon(Icons.refresh_rounded),
-            tooltip: 'Listeyi Sıfırla', // Updated tooltip
+            tooltip: l10n.wordsResetList, // Updated tooltip
             // Call refreshWords on the provider notifier (resets to hardcoded)
             onPressed: () =>
                 ref.read(inMemoryWordProvider.notifier).refreshWords(),
@@ -233,6 +235,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
 
   // Keep form building logic here for now, using extracted widgets
   Widget _buildWordForm(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -249,7 +252,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
             focusNode: _wordFocusNode,
             style: const TextStyle(color: Colors.white, fontSize: 16),
             decoration: InputDecoration(
-              labelText: 'Kelime',
+              labelText: l10n.wordsLabel,
               labelStyle: TextStyle(color: Colors.teal.shade200),
               filled: true,
               fillColor: Colors.blueGrey.shade800.withOpacity(0.5),
@@ -265,7 +268,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
                   ? IconButton(
                       icon: Icon(Icons.cancel_outlined,
                           color: Colors.grey.shade400),
-                      tooltip: 'Düzenlemeyi İptal Et',
+                      tooltip: l10n.wordsCancelEdit,
                       onPressed: _resetForm,
                     )
                   : null,
@@ -295,7 +298,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
             icon: Icon(
                 _isEditMode ? Icons.save_alt_rounded : Icons.add_task_rounded,
                 size: 20),
-            label: Text(_isEditMode ? 'Güncelle' : 'Kaydet'),
+            label: Text(_isEditMode ? l10n.wordsUpdate : l10n.wordsSave),
             style: ElevatedButton.styleFrom(
               backgroundColor:
                   _isEditMode ? Colors.amber.shade800 : Colors.green.shade700,
@@ -316,15 +319,16 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
   // Keep word list building logic here, using extracted WordListItem
   Widget _buildWordList(
       BuildContext context, AsyncValue<List<WordEntity>> wordState) {
+    final l10n = AppLocalizations.of(context);
     return wordState.when(
       data: (words) {
         if (words.isEmpty) {
-          return const Center(
+          return Center(
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 40.0),
+              padding: const EdgeInsets.symmetric(vertical: 40.0),
               child: Text(
-                'Henüz kaydedilmiş kelime yok.',
-                style: TextStyle(color: Colors.grey, fontSize: 16),
+                l10n.wordsEmpty,
+                style: const TextStyle(color: Colors.grey, fontSize: 16),
               ),
             ),
           );
@@ -333,7 +337,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Kaydedilmiş Kelimeler (${words.length})',
+              l10n.wordsSavedCount(words.length),
               style: TextStyle(
                 color: Colors.teal.shade200,
                 fontSize: 18,
@@ -371,7 +375,7 @@ class _WordManagementScreenState extends ConsumerState<WordManagementScreen> {
             TextSpan(
               children: [
                 TextSpan(
-                  text: 'Kelimeler yüklenirken hata oluştu: \n',
+                  text: '${l10n.gameWordsLoadError('')}\n',
                   style: TextStyle(color: Colors.red.shade300, fontSize: 16),
                 ),
                 TextSpan(

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import '../../domain/entities/word_entity.dart';
 import '../../providers/in_memory_word_provider.dart';
 
@@ -34,11 +35,12 @@ class _BulkImportDialogContentState
 
   Future<void> _importWords() async {
     final jsonData = _bulkImportController.text.trim();
+    final l10n = AppLocalizations.of(context);
     if (jsonData.isEmpty) {
       if (!_isMounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: const Text('Lütfen JSON verisini girin.'),
+          content: Text(l10n.bulkEmpty),
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.red.shade800,
           margin: const EdgeInsets.all(16),
@@ -55,8 +57,7 @@ class _BulkImportDialogContentState
             !item.containsKey('word') ||
             !item.containsKey('forbiddenWords') ||
             item['forbiddenWords'] is! List) {
-          throw const FormatException(
-              'Geçersiz JSON formatı. Her öğe "word" ve "forbiddenWords" (liste) içermelidir.');
+          throw FormatException(l10n.bulkInvalidFormat);
         }
         return WordEntity(
           id: '',
@@ -84,8 +85,7 @@ class _BulkImportDialogContentState
       if (!_isMounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(
-              '$successCount kelime başarıyla, $errorCount kelime hatayla içe aktarıldı.'),
+          content: Text(l10n.bulkImportResult(successCount, errorCount)),
           behavior: SnackBarBehavior.floating,
           backgroundColor: successCount == wordsToImport.length
               ? Colors.green.shade800
@@ -98,7 +98,7 @@ class _BulkImportDialogContentState
       if (!_isMounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('JSON Format Hatası: ${e.message}'),
+          content: Text(l10n.bulkJsonError(e.message)),
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.red.shade800,
           margin: const EdgeInsets.all(16),
@@ -109,7 +109,7 @@ class _BulkImportDialogContentState
       if (!_isMounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('İçe aktarma sırasında bir hata oluştu: $e'),
+          content: Text(l10n.bulkImportError(e.toString())),
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.red.shade800,
           margin: const EdgeInsets.all(16),
@@ -121,6 +121,7 @@ class _BulkImportDialogContentState
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Dialog(
       backgroundColor: Colors.blueGrey.shade900,
       shape: RoundedRectangleBorder(
@@ -150,7 +151,7 @@ class _BulkImportDialogContentState
                 const SizedBox(width: 16),
                 Expanded(
                   child: Text(
-                    'Toplu Kelime Yükleme',
+                    l10n.wordsBulkImportTitle,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -164,7 +165,7 @@ class _BulkImportDialogContentState
                     color: Colors.grey.shade400,
                   ),
                   onPressed: () => Navigator.pop(context),
-                  tooltip: 'Kapat',
+                  tooltip: l10n.dialogCancel,
                 ),
               ],
             ),
@@ -188,7 +189,7 @@ class _BulkImportDialogContentState
                   fontSize: 15,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'JSON verisini buraya yapıştırın...',
+                  hintText: l10n.bulkPasteHint,
                   hintStyle: TextStyle(
                     color: Colors.grey.shade500,
                     fontSize: 15,
@@ -211,7 +212,7 @@ class _BulkImportDialogContentState
                         }
                       },
                       icon: const Icon(Icons.paste_rounded),
-                      tooltip: 'Yapıştır',
+                      tooltip: l10n.bulkPaste,
                       color: Colors.amber.shade300,
                     ),
                   ),
@@ -228,13 +229,13 @@ class _BulkImportDialogContentState
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.grey.shade400,
                   ),
-                  child: const Text('İptal'),
+                  child: Text(l10n.dialogCancel),
                 ),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(
                   onPressed: _importWords,
                   icon: const Icon(Icons.download_done_rounded),
-                  label: const Text('İçe Aktar'),
+                  label: Text(l10n.bulkImport),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green.shade700,
                     foregroundColor: Colors.white,

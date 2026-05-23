@@ -1,0 +1,179 @@
+{
+  "@@locale": "en",
+  "appTitle": "Tabubu",
+
+  "homeStartGame": "Start Game",
+  "homeSettings": "Settings",
+  "homeWords": "Words",
+  "homeStatistics": "Statistics",
+
+  "settingsTitle": "Game Settings",
+  "settingsLoadError": "Failed to load settings: ",
+  "settingsGameDuration": "Round Duration",
+  "settingsMaxPasses": "Maximum Passes: {count}",
+  "@settingsMaxPasses": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassesLabel": "{count} passes",
+  "@settingsPassesLabel": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "settingsPassSettings": "Pass Settings",
+  "settingsPassPenalty": "Pass penalty: {seconds} seconds",
+  "@settingsPassPenalty": {
+    "placeholders": {"seconds": {"type": "int"}}
+  },
+  "settingsWordSettings": "Word Settings",
+  "settingsShuffleWords": "Shuffle Words",
+  "settingsShuffleHint": "Word order is randomized at the start of every game.",
+  "settingsLanguage": "Language",
+  "settingsLanguageTurkish": "Turkish",
+  "settingsLanguageEnglish": "English",
+  "settingsLanguageArabic": "Arabic",
+  "settingsLanguageGerman": "German",
+  "settingsLanguageFrench": "French",
+  "settingsLanguageIndonesian": "Indonesian",
+
+  "statisticsTitle": "Statistics",
+  "statisticsLoadError": "Failed to load statistics: ",
+  "statisticsEmptyTitle": "No Statistics Yet",
+  "statisticsEmptySubtitle": "Statistics will appear here after a game ends",
+  "statisticsDeleteTitle": "Delete Statistic",
+  "statisticsDeleteSuccess": "Statistic deleted successfully",
+  "statisticsDeleteConfirm": "Are you sure you want to delete the statistic from {date}?",
+  "@statisticsDeleteConfirm": {
+    "placeholders": {"date": {"type": "String"}}
+  },
+  "statisticsDetailedTitle": "Detailed Statistics",
+  "statisticsCorrectWords": "Correctly Guessed Words",
+  "statisticsCorrect": "Correct",
+  "statisticsPassedWords": "Passed Words",
+  "statisticsPassed": "Passed",
+  "statisticsHighScore": "Highest Score",
+  "statisticsTime": "Time",
+  "statisticsTeamScores": "Team Scores",
+  "statisticsWinnerTeam": "Winning Team",
+  "statisticsTeamPerformance": "Team Performance",
+  "statisticsWordDetails": "Word Details",
+  "statisticsCorrectCount": "Correct",
+  "statisticsPassCount": "Pass",
+  "statisticsTabuCount": "Taboo",
+  "statisticsGameDate": "Game Date",
+  "statisticsScore": "Score",
+  "statisticsNone": "None",
+  "statisticsDurationSeconds": "{count} seconds",
+  "@statisticsDurationSeconds": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "commonClose": "Close",
+
+  "teamSetupTitle": "CREATE YOUR TEAMS",
+  "teamSetupHowMany": "How many teams will play?",
+  "teamSetupDefaultName": "Team {index}",
+  "@teamSetupDefaultName": {
+    "placeholders": {"index": {"type": "int"}}
+  },
+
+  "gameErrorOccurred": "An error occurred:\n\n",
+  "gameNewGame": "NEW GAME",
+  "gameOver": "GAME OVER",
+  "gameOverHero": "WHAT A MATCH!",
+  "gameOverExit": "EXIT",
+  "gameOverAgain": "PLAY AGAIN",
+  "gameReadyHeader": "CURRENT SCORES",
+  "gameReadyNextTeam": "NEXT TEAM",
+  "gameReadyStart": "START",
+  "gameTeamReady": "{teamName} is Ready",
+  "@gameTeamReady": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameTeamPlaying": "{teamName} is Playing",
+  "@gameTeamPlaying": {
+    "placeholders": {"teamName": {"type": "String"}}
+  },
+  "gameStatusFinished": "Game Over",
+  "gameTeamSelection": "Choose Team",
+  "gamePaused": "Paused",
+  "gameCorrect": "Correct",
+  "gamePass": "Pass",
+  "gameTabu": "Taboo",
+  "gameResume": "RESUME",
+  "gamePassCount": "Pass ({used}/{max})",
+  "@gamePassCount": {
+    "placeholders": {
+      "used": {"type": "int"},
+      "max": {"type": "int"}
+    }
+  },
+  "gameForbiddenHeader": "FORBIDDEN WORDS",
+  "gameNoWordsFound": "No words found.",
+  "gameWordsLoadFail": "Failed to load words.",
+  "gameWordsLoadError": "Error loading words: {error}",
+  "@gameWordsLoadError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "gameNoWordsAddPrompt": "No words found. Please add words from the word management page.",
+
+  "exitConfirmExitTitle": "Are you sure you want to end the game and go to the scoreboard?",
+  "exitConfirmUnevenTitle": "Not every team played an equal number of rounds. Are you sure you want to exit?",
+
+  "wordsTitle": "Word Management",
+  "wordsEditTitle": "Edit Word",
+  "wordsResetList": "Reset List",
+  "wordsBulkImport": "Bulk Import",
+  "wordsBulkImportTitle": "Bulk Word Import",
+  "wordsLabel": "Word",
+  "wordsCancelEdit": "Cancel Edit",
+  "wordsSave": "Save",
+  "wordsUpdate": "Update",
+  "wordsEdit": "Edit",
+  "wordsAddButton": "Add",
+  "wordsForbiddenLabel": "Forbidden Word",
+  "wordsForbiddenList": "Forbidden Words:",
+  "wordsForbiddenEmpty": "No forbidden words added yet.",
+  "wordsForbiddenCount": "{count, plural, =1{{count} forbidden word} other{{count} forbidden words}}",
+  "@wordsForbiddenCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+  "wordsAddPrompt": "Enter a word and add at least one forbidden word",
+  "wordsAddSuccess": "New word added successfully",
+  "wordsUpdateSuccess": "Word updated successfully",
+  "wordsDeleteSuccess": "Word deleted successfully",
+  "wordsDeleteConfirm": "Are you sure you want to delete this word? This action cannot be undone.",
+  "wordsForbiddenDuplicate": "This forbidden word is already added",
+  "wordsEmpty": "No saved words yet.",
+  "wordsSavedCount": "Saved Words ({count})",
+  "@wordsSavedCount": {
+    "placeholders": {"count": {"type": "int"}}
+  },
+
+  "bulkPasteHint": "Paste your JSON data here...",
+  "bulkPaste": "Paste",
+  "bulkCancel": "Cancel",
+  "bulkImport": "Import",
+  "bulkEmpty": "Please enter JSON data.",
+  "bulkInvalidFormat": "Invalid JSON format. Each item must contain \"word\" and \"forbiddenWords\" (list).",
+  "bulkJsonError": "JSON format error: {message}",
+  "@bulkJsonError": {
+    "placeholders": {"message": {"type": "String"}}
+  },
+  "bulkImportError": "An error occurred during import: {error}",
+  "@bulkImportError": {
+    "placeholders": {"error": {"type": "String"}}
+  },
+  "bulkImportResult": "{success} words imported successfully, {errors} failed.",
+  "@bulkImportResult": {
+    "placeholders": {
+      "success": {"type": "int"},
+      "errors": {"type": "int"}
+    }
+  },
+
+  "dialogConfirmDelete": "Yes, Delete",
+  "dialogCancel": "Cancel",
+  "dialogWarning": "Warning!",
+  "dialogYes": "YES",
+  "dialogNo": "NO",
+
+  "easterEggSurprise": "Surprise!"
+}

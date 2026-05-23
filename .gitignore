@@ -4,6 +4,11 @@
 *.pyc
 *.swp
 .DS_Store
+
+# Claude Code / CCW workflow artifacts
+.workflow/
+.ccw/
+
 .atom/
 .build/
 .buildlog/

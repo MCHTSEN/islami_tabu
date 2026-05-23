@@ -16,7 +16,7 @@ class TeamScoreRow extends StatelessWidget {
     final bool isWinner = team.name == winningTeamName;
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 4, left: 8), // Indent slightly
+      padding: const EdgeInsetsDirectional.only(bottom: 4, start: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

@@ -1,0 +1,5419 @@
+{
+  "version": 1,
+  "locale": "tr",
+  "count": 492,
+  "words": [
+    {
+      "id": "1",
+      "word": "Namaz",
+      "forbiddenWords": [
+        "Secde",
+        "Rüku",
+        "Kıyam",
+        "Abdest",
+        "Vakit"
+      ]
+    },
+    {
+      "id": "2",
+      "word": "Oruç",
+      "forbiddenWords": [
+        "Ramazan",
+        "Sahur",
+        "İftar",
+        "Açlık",
+        "İmsak"
+      ]
+    },
+    {
+      "id": "3",
+      "word": "Zekat",
+      "forbiddenWords": [
+        "Sadaka",
+        "Mal",
+        "Zengin",
+        "Fakir",
+        "Yardım"
+      ]
+    },
+    {
+      "id": "4",
+      "word": "Hac",
+      "forbiddenWords": [
+        "Kabe",
+        "Mekke",
+        "Medine",
+        "İhram",
+        "Tavaf"
+      ]
+    },
+    {
+      "id": "5",
+      "word": "Peygamber",
+      "forbiddenWords": [
+        "Resul",
+        "Nebi",
+        "Elçi",
+        "Vahiy",
+        "Hz Muhammed"
+      ]
+    },
+    {
+      "id": "6",
+      "word": "Kuran",
+      "forbiddenWords": [
+        "Kitap",
+        "Ayet",
+        "Sure",
+        "Vahiy",
+        "Allah Kelamı"
+      ]
+    },
+    {
+      "id": "7",
+      "word": "Allah",
+      "forbiddenWords": [
+        "Tanrı",
+        "Rab",
+        "İlah",
+        "Yaratıcı",
+        "Tek"
+      ]
+    },
+    {
+      "id": "8",
+      "word": "Mescit",
+      "forbiddenWords": [
+        "Cami",
+        "Namazgah",
+        "İbadet",
+        "Mihrap",
+        "Minber"
+      ]
+    },
+    {
+      "id": "9",
+      "word": "Abdest",
+      "forbiddenWords": [
+        "Namaz",
+        "Temizlik",
+        "Su",
+        "El",
+        "Yüz"
+      ]
+    },
+    {
+      "id": "10",
+      "word": "Hadis",
+      "forbiddenWords": [
+        "Söz",
+        "Peygamber",
+        "Rivayet",
+        "Sünnet",
+        "Kaynak"
+      ]
+    },
+    {
+      "id": "11",
+      "word": "Sünnet",
+      "forbiddenWords": [
+        "Peygamber",
+        "Davranış",
+        "Adet",
+        "Gelenek",
+        "Yaşam"
+      ]
+    },
+    {
+      "id": "12",
+      "word": "Şeytan",
+      "forbiddenWords": [
+        "İblis",
+        "Kötülük",
+        "Vesvese",
+        "Günah",
+        "Şer"
+      ]
+    },
+    {
+      "id": "13",
+      "word": "Melek",
+      "forbiddenWords": [
+        "Cebrail",
+        "Kanat",
+        "Nur",
+        "Vahiy",
+        "Görev"
+      ]
+    },
+    {
+      "id": "14",
+      "word": "Cennet",
+      "forbiddenWords": [
+        "Uçmak",
+        "Huri",
+        "Ebedi",
+        "Güzellik",
+        "Mükafat"
+      ]
+    },
+    {
+      "id": "15",
+      "word": "Cehennem",
+      "forbiddenWords": [
+        "Ateş",
+        "Azap",
+        "Kötü",
+        "Ebedi",
+        "Günahkar"
+      ]
+    },
+    {
+      "id": "16",
+      "word": "Secde",
+      "forbiddenWords": [
+        "Namaz",
+        "Alın",
+        "Yer",
+        "Yüz",
+        "Kapanmak"
+      ]
+    },
+    {
+      "id": "17",
+      "word": "Tesbih",
+      "forbiddenWords": [
+        "Zikir",
+        "İp",
+        "Boncuk",
+        "Sayı",
+        "Allah"
+      ]
+    },
+    {
+      "id": "18",
+      "word": "Hutbe",
+      "forbiddenWords": [
+        "Cuma",
+        "Vaaz",
+        "Minber",
+        "Konuşma",
+        "Nasihat"
+      ]
+    },
+    {
+      "id": "19",
+      "word": "Kıble",
+      "forbiddenWords": [
+        "Yön",
+        "Kabe",
+        "Namaz",
+        "Mekke",
+        "Dönmek"
+      ]
+    },
+    {
+      "id": "20",
+      "word": "Müslüman",
+      "forbiddenWords": [
+        "İslam",
+        "İnanan",
+        "Ümmet",
+        "Din",
+        "Allah"
+      ]
+    },
+    {
+      "id": "21",
+      "word": "Vakıf",
+      "forbiddenWords": [
+        "Bağış",
+        "Yardım",
+        "Hayır",
+        "Kurum",
+        "Eser"
+      ]
+    },
+    {
+      "id": "22",
+      "word": "Helal",
+      "forbiddenWords": [
+        "Caiz",
+        "Uygun",
+        "Din",
+        "Serbest",
+        "Yiyecek"
+      ]
+    },
+    {
+      "id": "23",
+      "word": "Haram",
+      "forbiddenWords": [
+        "Yas",
+        "Yasak",
+        "Günah",
+        "Din",
+        "Uygunsuz"
+      ]
+    },
+    {
+      "id": "24",
+      "word": "Şehit",
+      "forbiddenWords": [
+        "Ölüm",
+        "Savaş",
+        "Vatan",
+        "Din",
+        "Kahraman"
+      ]
+    },
+    {
+      "id": "25",
+      "word": "Gusül",
+      "forbiddenWords": [
+        "Boy",
+        "Abdest",
+        "Temizlik",
+        "Niyet",
+        "Su"
+      ]
+    },
+    {
+      "id": "26",
+      "word": "Kelime-i Şehadet",
+      "forbiddenWords": [
+        "Eşhedü",
+        "Allah",
+        "Peygamber",
+        "İslam",
+        "İman"
+      ]
+    },
+    {
+      "id": "27",
+      "word": "Salavat",
+      "forbiddenWords": [
+        "Peygamber",
+        "Dua",
+        "Allahümme",
+        "Salli",
+        "Bereket"
+      ]
+    },
+    {
+      "id": "28",
+      "word": "Tilavet",
+      "forbiddenWords": [
+        "Kuran",
+        "Okumak",
+        "Ses",
+        "Güzel",
+        "Tecvid"
+      ]
+    },
+    {
+      "id": "29",
+      "word": "Tecvid",
+      "forbiddenWords": [
+        "Kuran",
+        "Okuma",
+        "Kuralları",
+        "Harf",
+        "Mahreç"
+      ]
+    },
+    {
+      "id": "30",
+      "word": "Mahreç",
+      "forbiddenWords": [
+        "Harf",
+        "Ses",
+        "Çıkış",
+        "Yer",
+        "Tecvid"
+      ]
+    },
+    {
+      "id": "31",
+      "word": "Ezan",
+      "forbiddenWords": [
+        "Namaz",
+        "Çağrı",
+        "Müezzin",
+        "Vakit",
+        "Ses"
+      ]
+    },
+    {
+      "id": "32",
+      "word": "Kamet",
+      "forbiddenWords": [
+        "Namaz",
+        "Başlama",
+        "İkaz",
+        "Ezan",
+        "Sözler"
+      ]
+    },
+    {
+      "id": "33",
+      "word": "Müezzin",
+      "forbiddenWords": [
+        "Ezan",
+        "Okuyan",
+        "Cami",
+        "Ses",
+        "Namaz"
+      ]
+    },
+    {
+      "id": "34",
+      "word": "İmam",
+      "forbiddenWords": [
+        "Namaz",
+        "Ön",
+        "Kıldırmak",
+        "Cami",
+        "Lider"
+      ]
+    },
+    {
+      "id": "35",
+      "word": "Cemaat",
+      "forbiddenWords": [
+        "Namaz",
+        "Topluluk",
+        "Cami",
+        "Birlikte",
+        "Saf"
+      ]
+    },
+    {
+      "id": "36",
+      "word": "Mihrap",
+      "forbiddenWords": [
+        "Cami",
+        "Yön",
+        "Kıble",
+        "İmam",
+        "Oyuk"
+      ]
+    },
+    {
+      "id": "37",
+      "word": "Minber",
+      "forbiddenWords": [
+        "Cami",
+        "Hutbe",
+        "Yüksek",
+        "Merdiven",
+        "Konuşma"
+      ]
+    },
+    {
+      "id": "38",
+      "word": "Vaaz",
+      "forbiddenWords": [
+        "Hutbe",
+        "Nasihat",
+        "Konuşma",
+        "Cami",
+        "Din"
+      ]
+    },
+    {
+      "id": "39",
+      "word": "Kadir Gecesi",
+      "forbiddenWords": [
+        "Ramazan",
+        "Bin",
+        "Ay",
+        "Değerli",
+        "İbadet"
+      ]
+    },
+    {
+      "id": "40",
+      "word": "Bayram",
+      "forbiddenWords": [
+        "Ramazan",
+        "Kurban",
+        "Sevinç",
+        "Tatil",
+        "Ziyaret"
+      ]
+    },
+    {
+      "id": "41",
+      "word": "Fitre",
+      "forbiddenWords": [
+        "Sadaka",
+        "Ramazan",
+        "Bayram",
+        "Para",
+        "Fakir"
+      ]
+    },
+    {
+      "id": "42",
+      "word": "Kefaret",
+      "forbiddenWords": [
+        "Günah",
+        "Ödeme",
+        "Oruç",
+        "Sadaka",
+        "Ceza"
+      ]
+    },
+    {
+      "id": "43",
+      "word": "Tevekkül",
+      "forbiddenWords": [
+        "Allah",
+        "Güvenmek",
+        "Dayanmak",
+        "Sabır",
+        "İş"
+      ]
+    },
+    {
+      "id": "44",
+      "word": "Şükür",
+      "forbiddenWords": [
+        "Nimet",
+        "Hamd",
+        "Allah",
+        "Teşekkür",
+        "İyilik"
+      ]
+    },
+    {
+      "id": "45",
+      "word": "Tövbe",
+      "forbiddenWords": [
+        "Pişmanlık",
+        "Günah",
+        "Af",
+        "Allah",
+        "İstiğfar"
+      ]
+    },
+    {
+      "id": "46",
+      "word": "İhlas",
+      "forbiddenWords": [
+        "Samimiyet",
+        "Allah",
+        "Rıza",
+        "Kalp",
+        "Niyet"
+      ]
+    },
+    {
+      "id": "47",
+      "word": "Takva",
+      "forbiddenWords": [
+        "Sakınmak",
+        "Allah",
+        "Korku",
+        "Hassasiyet",
+        "Günah"
+      ]
+    },
+    {
+      "id": "48",
+      "word": "Zikir",
+      "forbiddenWords": [
+        "Allah",
+        "Anmak",
+        "Tekrar",
+        "Tesbih",
+        "Kalp"
+      ]
+    },
+    {
+      "id": "49",
+      "word": "Dua",
+      "forbiddenWords": [
+        "İstemek",
+        "Allah",
+        "Yakarmak",
+        "El",
+        "Açmak"
+      ]
+    },
+    {
+      "id": "50",
+      "word": "Sabır",
+      "forbiddenWords": [
+        "Dayanmak",
+        "Zorluk",
+        "Tahammül",
+        "Allah",
+        "Beklemek"
+      ]
+    },
+    {
+      "id": "51",
+      "word": "Kanaat",
+      "forbiddenWords": [
+        "Yetinmek",
+        "Az",
+        "Şükür",
+        "Memnun",
+        "Hal"
+      ]
+    },
+    {
+      "id": "52",
+      "word": "Tefekkür",
+      "forbiddenWords": [
+        "Düşünmek",
+        "Evren",
+        "Allah",
+        "Akıl",
+        "Yaratılış"
+      ]
+    },
+    {
+      "id": "53",
+      "word": "İstiğfar",
+      "forbiddenWords": [
+        "Af",
+        "Dilemek",
+        "Günah",
+        "Tövbe",
+        "Allah"
+      ]
+    },
+    {
+      "id": "54",
+      "word": "Mümin",
+      "forbiddenWords": [
+        "İnanan",
+        "Allah",
+        "Kalp",
+        "İman",
+        "Güven"
+      ]
+    },
+    {
+      "id": "55",
+      "word": "Kafir",
+      "forbiddenWords": [
+        "İnkar",
+        "Allah",
+        "Red",
+        "İman",
+        "Ateist"
+      ]
+    },
+    {
+      "id": "56",
+      "word": "Münafık",
+      "forbiddenWords": [
+        "İki",
+        "Yüzlü",
+        "Gizlemek",
+        "İnanç",
+        "Davranış"
+      ]
+    },
+    {
+      "id": "57",
+      "word": "Fasık",
+      "forbiddenWords": [
+        "Günahkar",
+        "Açık",
+        "Bozmak",
+        "Kural",
+        "Yol"
+      ]
+    },
+    {
+      "id": "58",
+      "word": "Ehli Sünnet",
+      "forbiddenWords": [
+        "Sünnet",
+        "Cemaat",
+        "Yol",
+        "İzlemek",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "59",
+      "word": "Bidat",
+      "forbiddenWords": [
+        "Yenilik",
+        "Din",
+        "Sonradan",
+        "Çıkarmak",
+        "Uygunsuz"
+      ]
+    },
+    {
+      "id": "60",
+      "word": "İcma",
+      "forbiddenWords": [
+        "Ulema",
+        "Görüş",
+        "Birliği",
+        "Din",
+        "Kaynak"
+      ]
+    },
+    {
+      "id": "61",
+      "word": "Kıyas",
+      "forbiddenWords": [
+        "Benzer",
+        "Durum",
+        "Hüküm",
+        "Çıkarmak",
+        "Akıl"
+      ]
+    },
+    {
+      "id": "62",
+      "word": "Fetva",
+      "forbiddenWords": [
+        "Hüküm",
+        "Soru",
+        "Cevap",
+        "Din",
+        "Alim"
+      ]
+    },
+    {
+      "id": "63",
+      "word": "Müftü",
+      "forbiddenWords": [
+        "Fetva",
+        "Veren",
+        "Alim",
+        "Din",
+        "Görevli"
+      ]
+    },
+    {
+      "id": "64",
+      "word": "Kadı",
+      "forbiddenWords": [
+        "Hakim",
+        "Şeriat",
+        "Hukuk",
+        "Karar",
+        "Adalet"
+      ]
+    },
+    {
+      "id": "65",
+      "word": "Şahit",
+      "forbiddenWords": [
+        "Tanık",
+        "Görmek",
+        "Duyumak",
+        "Söylemek",
+        "Doğru"
+      ]
+    },
+    {
+      "id": "66",
+      "word": "Vasiyet",
+      "forbiddenWords": [
+        "Ölüm",
+        "Sonra",
+        "İstek",
+        "Mal",
+        "Paylaşım"
+      ]
+    },
+    {
+      "id": "67",
+      "word": "Miras",
+      "forbiddenWords": [
+        "Ölüm",
+        "Kalan",
+        "Mal",
+        "Paylaşım",
+        "Hak"
+      ]
+    },
+    {
+      "id": "68",
+      "word": "Nikah",
+      "forbiddenWords": [
+        "Evlilik",
+        "Sözleşme",
+        "Kadın",
+        "Erkek",
+        "İmza"
+      ]
+    },
+    {
+      "id": "69",
+      "word": "Talak",
+      "forbiddenWords": [
+        "Boşanma",
+        "Ayrılık",
+        "Kadın",
+        "Erkek",
+        "Söz"
+      ]
+    },
+    {
+      "id": "70",
+      "word": "Mehr",
+      "forbiddenWords": [
+        "Evlilik",
+        "Para",
+        "Kadın",
+        "Hak",
+        "Verilen"
+      ]
+    },
+    {
+      "id": "71",
+      "word": "İddet",
+      "forbiddenWords": [
+        "Boşanma",
+        "Süre",
+        "Beklemek",
+        "Evlilik",
+        "Kadın"
+      ]
+    },
+    {
+      "id": "72",
+      "word": "Nafaka",
+      "forbiddenWords": [
+        "Boşanma",
+        "Sonra",
+        "Para",
+        "Kadın",
+        "Çocuk"
+      ]
+    },
+    {
+      "id": "73",
+      "word": "Hicap",
+      "forbiddenWords": [
+        "Utanmak",
+        "Edep",
+        "Haya",
+        "Göz",
+        "Sakınmak"
+      ]
+    },
+    {
+      "id": "74",
+      "word": "Tesettür",
+      "forbiddenWords": [
+        "Örtünmek",
+        "Kadın",
+        "Giyim",
+        "Vücut",
+        "Hicap"
+      ]
+    },
+    {
+      "id": "75",
+      "word": "Mahrem",
+      "forbiddenWords": [
+        "Yakın",
+        "Akraba",
+        "Evlilik",
+        "Uygun",
+        "Görmek"
+      ]
+    },
+    {
+      "id": "76",
+      "word": "Harem",
+      "forbiddenWords": [
+        "Kutsal",
+        "Yasak",
+        "Bölge",
+        "Mekke",
+        "Medine"
+      ]
+    },
+    {
+      "id": "77",
+      "word": "Cihad",
+      "forbiddenWords": [
+        "Savaş",
+        "Mücadele",
+        "Din",
+        "Uğruna",
+        "Çaba"
+      ]
+    },
+    {
+      "id": "78",
+      "word": "Ganimet",
+      "forbiddenWords": [
+        "Savaş",
+        "Elde",
+        "Edilen",
+        "Mal",
+        "Paylaşım"
+      ]
+    },
+    {
+      "id": "79",
+      "word": "Hilafet",
+      "forbiddenWords": [
+        "Yönetim",
+        "İslam",
+        "Devlet",
+        "Halife",
+        "Lider"
+      ]
+    },
+    {
+      "id": "80",
+      "word": "Şeriat",
+      "forbiddenWords": [
+        "Hukuk",
+        "İslam",
+        "Kuralları",
+        "Din",
+        "Kanun"
+      ]
+    },
+    {
+      "id": "81",
+      "word": "Ehl-i Kitap",
+      "forbiddenWords": [
+        "Kitap",
+        "İnanan",
+        "Hristiyan",
+        "Yahudi",
+        "Din"
+      ]
+    },
+    {
+      "id": "82",
+      "word": "Zımmi",
+      "forbiddenWords": [
+        "Gayrimüslim",
+        "İslam",
+        "Devlet",
+        "Yaşayan",
+        "Vergi"
+      ]
+    },
+    {
+      "id": "83",
+      "word": "Cizye",
+      "forbiddenWords": [
+        "Vergi",
+        "Gayrimüslim",
+        "İslam",
+        "Devlet",
+        "Ödeme"
+      ]
+    },
+    {
+      "id": "84",
+      "word": "Darülharp",
+      "forbiddenWords": [
+        "Savaş",
+        "Bölge",
+        "İslam",
+        "Olmayan",
+        "Ülke"
+      ]
+    },
+    {
+      "id": "85",
+      "word": "Darülislam",
+      "forbiddenWords": [
+        "İslam",
+        "Bölge",
+        "Ülke",
+        "Yönetim",
+        "Hukuk"
+      ]
+    },
+    {
+      "id": "86",
+      "word": "Sırat Köprüsü",
+      "forbiddenWords": [
+        "Cehennem",
+        "Cennet",
+        "Geçmek",
+        "İnce",
+        "Kıl"
+      ]
+    },
+    {
+      "id": "87",
+      "word": "Mahşer",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Toplanmak",
+        "Hesap",
+        "Gün",
+        "Yer"
+      ]
+    },
+    {
+      "id": "88",
+      "word": "Mizan",
+      "forbiddenWords": [
+        "Terazi",
+        "Tartmak",
+        "Amel",
+        "Günah",
+        "Hesap"
+      ]
+    },
+    {
+      "id": "89",
+      "word": "Arş",
+      "forbiddenWords": [
+        "Allah",
+        "Taht",
+        "Gökyüzü",
+        "En",
+        "Yüksek"
+      ]
+    },
+    {
+      "id": "90",
+      "word": "Kevser",
+      "forbiddenWords": [
+        "Cennet",
+        "Irmak",
+        "Su",
+        "Peygamber",
+        "İkram"
+      ]
+    },
+    {
+      "id": "91",
+      "word": "Tuba Ağacı",
+      "forbiddenWords": [
+        "Cennet",
+        "Ağaç",
+        "Gölge",
+        "Büyük",
+        "Kök"
+      ]
+    },
+    {
+      "id": "92",
+      "word": "Huri",
+      "forbiddenWords": [
+        "Cennet",
+        "Kadın",
+        "Güzel",
+        "Eş",
+        "Mükafat"
+      ]
+    },
+    {
+      "id": "93",
+      "word": "Gılman",
+      "forbiddenWords": [
+        "Cennet",
+        "Erkek",
+        "Hizmet",
+        "Genç",
+        "Ebedi"
+      ]
+    },
+    {
+      "id": "94",
+      "word": "Kabir",
+      "forbiddenWords": [
+        "Mezar",
+        "Ölüm",
+        "Toprak",
+        "Sorgu",
+        "Alem"
+      ]
+    },
+    {
+      "id": "95",
+      "word": "Münker Nekir",
+      "forbiddenWords": [
+        "Melek",
+        "Sorgu",
+        "Kabir",
+        "Soru",
+        "Cevap"
+      ]
+    },
+    {
+      "id": "96",
+      "word": "Berzah",
+      "forbiddenWords": [
+        "Kabir",
+        "Alem",
+        "Dünya",
+        "Ahiret",
+        "Arası"
+      ]
+    },
+    {
+      "id": "97",
+      "word": "Sura Üflemek",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Melek",
+        "Ses",
+        "Borazan",
+        "İsrafil"
+      ]
+    },
+    {
+      "id": "98",
+      "word": "Deccal",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Alameti",
+        "Fitne",
+        "Kötü",
+        "Zaman"
+      ]
+    },
+    {
+      "id": "99",
+      "word": "Mehdi",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Önce",
+        "Gelecek",
+        "Kurtarıcı",
+        "Zaman"
+      ]
+    },
+    {
+      "id": "100",
+      "word": "Yecüc Mecüc",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Alameti",
+        "Kavim",
+        "Set",
+        "Aşmak"
+      ]
+    },
+    {
+      "id": "101",
+      "word": "Dabbet-ül Arz",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Alameti",
+        "Hayvan",
+        "Yer",
+        "Çıkmak"
+      ]
+    },
+    {
+      "id": "102",
+      "word": "Güneşin Batıdan Doğması",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Alameti",
+        "Ters",
+        "Doğa",
+        "Olay"
+      ]
+    },
+    {
+      "id": "103",
+      "word": "Ahiret",
+      "forbiddenWords": [
+        "Ölüm",
+        "Sonrası",
+        "Yaşam",
+        "Cennet",
+        "Cehennem"
+      ]
+    },
+    {
+      "id": "104",
+      "word": "Amel Defteri",
+      "forbiddenWords": [
+        "Yazılan",
+        "İyi",
+        "Kötü",
+        "Günah",
+        "Sevab"
+      ]
+    },
+    {
+      "id": "105",
+      "word": "Hesap Günü",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Sorgu",
+        "Amel",
+        "Karşılık",
+        "Ödeme"
+      ]
+    },
+    {
+      "id": "106",
+      "word": "Kıyamet Alametleri",
+      "forbiddenWords": [
+        "Küçük",
+        "Büyük",
+        "Belirti",
+        "Son",
+        "Zaman"
+      ]
+    },
+    {
+      "id": "107",
+      "word": "İslamın Şartları",
+      "forbiddenWords": [
+        "Beş",
+        "Temel",
+        "Esas",
+        "Namaz",
+        "Oruç"
+      ]
+    },
+    {
+      "id": "108",
+      "word": "İmanın Şartları",
+      "forbiddenWords": [
+        "Altı",
+        "Temel",
+        "Esas",
+        "Allah",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "109",
+      "word": "Melekler",
+      "forbiddenWords": [
+        "Cebrail",
+        "Azrail",
+        "Görevli",
+        "Nur",
+        "Kanat"
+      ]
+    },
+    {
+      "id": "110",
+      "word": "Kitaplar",
+      "forbiddenWords": [
+        "Kuran",
+        "Tevrat",
+        "İncil",
+        "Zebur",
+        "Vahiy"
+      ]
+    },
+    {
+      "id": "111",
+      "word": "Peygamberler",
+      "forbiddenWords": [
+        "Hz. Muhammed",
+        "Hz. İsa",
+        "Hz. Musa",
+        "Elçi",
+        "Vahiy"
+      ]
+    },
+    {
+      "id": "112",
+      "word": "Kader",
+      "forbiddenWords": [
+        "Alın",
+        "Yazısı",
+        "Allah",
+        "Takdir",
+        "Olacak"
+      ]
+    },
+    {
+      "id": "113",
+      "word": "Ahiret Günü",
+      "forbiddenWords": [
+        "Kıyamet",
+        "Ölüm",
+        "Sonra",
+        "Yaşam",
+        "Sonsuz"
+      ]
+    },
+    {
+      "id": "114",
+      "word": "İslam Alimleri",
+      "forbiddenWords": [
+        "Bilgin",
+        "Din",
+        "Ulema",
+        "Fetva",
+        "Hüküm"
+      ]
+    },
+    {
+      "id": "115",
+      "word": "Tasavvuf",
+      "forbiddenWords": [
+        "İrfan",
+        "Kalp",
+        "Allah",
+        "Aşk",
+        "Yol"
+      ]
+    },
+    {
+      "id": "116",
+      "word": "Seyyid",
+      "forbiddenWords": [
+        "Peygamber",
+        "Soy",
+        "Torun",
+        "Aile",
+        "Ünvan"
+      ]
+    },
+    {
+      "id": "117",
+      "word": "Şerif",
+      "forbiddenWords": [
+        "Peygamber",
+        "Soy",
+        "Temiz",
+        "Ünvan",
+        "Aile"
+      ]
+    },
+    {
+      "id": "118",
+      "word": "Evliya",
+      "forbiddenWords": [
+        "Allah",
+        "Dost",
+        "Keramet",
+        "Velilik",
+        "Kişi"
+      ]
+    },
+    {
+      "id": "119",
+      "word": "Kutub",
+      "forbiddenWords": [
+        "Evliya",
+        "En",
+        "Büyük",
+        "Lider",
+        "Zaman"
+      ]
+    },
+    {
+      "id": "120",
+      "word": "Mürşid",
+      "forbiddenWords": [
+        "Yol",
+        "Gösteren",
+        "Tasavvuf",
+        "Rehber",
+        "Öğretmen"
+      ]
+    },
+    {
+      "id": "121",
+      "word": "Mürit",
+      "forbiddenWords": [
+        "Tasavvuf",
+        "Öğrenci",
+        "Yol",
+        "İzleyen",
+        "Takip"
+      ]
+    },
+    {
+      "id": "122",
+      "word": "Zaviye",
+      "forbiddenWords": [
+        "Tekke",
+        "Tasavvuf",
+        "Yer",
+        "İbadet",
+        "Toplanma"
+      ]
+    },
+    {
+      "id": "123",
+      "word": "Tekke",
+      "forbiddenWords": [
+        "Zaviye",
+        "Tasavvuf",
+        "Yer",
+        "Derviş",
+        "İkamet"
+      ]
+    },
+    {
+      "id": "124",
+      "word": "Derviş",
+      "forbiddenWords": [
+        "Tasavvuf",
+        "Yol",
+        "Giren",
+        "Fakir",
+        "Hayat"
+      ]
+    },
+    {
+      "id": "125",
+      "word": "Sufi",
+      "forbiddenWords": [
+        "Tasavvuf",
+        "İle",
+        "Uğraşan",
+        "Kalp",
+        "Aşk"
+      ]
+    },
+    {
+      "id": "126",
+      "word": "Vahdet-i Vücud",
+      "forbiddenWords": [
+        "Birlik",
+        "Allah",
+        "Evren",
+        "Tek",
+        "Varoluş"
+      ]
+    },
+    {
+      "id": "127",
+      "word": "Fenafillah",
+      "forbiddenWords": [
+        "Allah",
+        "İçinde",
+        "Yok",
+        "Olmak",
+        "Ermek"
+      ]
+    },
+    {
+      "id": "128",
+      "word": "Alevi",
+      "forbiddenWords": [
+        "Hz. Ali",
+        "On İki İmam",
+        "Cem",
+        "Semah",
+        "Dede"
+      ]
+    },
+    {
+      "id": "130",
+      "word": "Cem",
+      "forbiddenWords": [
+        "Alevi",
+        "Toplantı",
+        "İbadet",
+        "Semah",
+        "Dede"
+      ]
+    },
+    {
+      "id": "131",
+      "word": "Semah",
+      "forbiddenWords": [
+        "Alevi",
+        "Dönmek",
+        "Zikir",
+        "Cem",
+        "Müzik"
+      ]
+    },
+    {
+      "id": "132",
+      "word": "Dede",
+      "forbiddenWords": [
+        "Alevi",
+        "Lider",
+        "Din",
+        "Önder",
+        "Cem"
+      ]
+    },
+    {
+      "id": "133",
+      "word": "On İki İmam",
+      "forbiddenWords": [
+        "Hz. Ali",
+        "Torun",
+        "Alevi",
+        "İnanç",
+        "Kutsal"
+      ]
+    },
+    {
+      "id": "134",
+      "word": "Muharrem",
+      "forbiddenWords": [
+        "Ay",
+        "Hicri",
+        "Kerbela",
+        "Oruç",
+        "Matem"
+      ]
+    },
+    {
+      "id": "135",
+      "word": "Kerbela",
+      "forbiddenWords": [
+        "Şehir",
+        "Irak",
+        "Hz. Hüseyin",
+        "Şehit",
+        "Muharrem"
+      ]
+    },
+    {
+      "id": "136",
+      "word": "Aşura",
+      "forbiddenWords": [
+        "Muharrem",
+        "Oruç",
+        "Tatlı",
+        "Nuh",
+        "Gemi"
+      ]
+    },
+    {
+      "id": "137",
+      "word": "Mevlid",
+      "forbiddenWords": [
+        "Doğum",
+        "Peygamber",
+        "Kutlama",
+        "Kandil",
+        "Şiir"
+      ]
+    },
+    {
+      "id": "138",
+      "word": "Kandil",
+      "forbiddenWords": [
+        "Mevlid",
+        "Miraç",
+        "Berat",
+        "Regai",
+        "Kutlama"
+      ]
+    },
+    {
+      "id": "139",
+      "word": "Miraç",
+      "forbiddenWords": [
+        "Peygamber",
+        "Gökyüzü",
+        "Yükselmek",
+        "Allah",
+        "Gece"
+      ]
+    },
+    {
+      "id": "140",
+      "word": "Berat",
+      "forbiddenWords": [
+        "Affetmek",
+        "Günah",
+        "Temizlenmek",
+        "Kandil",
+        "Gece"
+      ]
+    },
+    {
+      "id": "141",
+      "word": "Regai",
+      "forbiddenWords": [
+        "Arzu",
+        "İstek",
+        "Kandil",
+        "Gece",
+        "Dua"
+      ]
+    },
+    {
+      "id": "142",
+      "word": "Üç Aylar",
+      "forbiddenWords": [
+        "Recep",
+        "Şaban",
+        "Ramazan",
+        "Oruç",
+        "İbadet"
+      ]
+    },
+    {
+      "id": "143",
+      "word": "Receb",
+      "forbiddenWords": [
+        "Üç",
+        "Aylar",
+        "İlk",
+        "Kandil",
+        "Miraç"
+      ]
+    },
+    {
+      "id": "144",
+      "word": "Şaban",
+      "forbiddenWords": [
+        "Üç",
+        "Aylar",
+        "Ortası",
+        "Berat",
+        "Gece"
+      ]
+    },
+    {
+      "id": "145",
+      "word": "Arefe",
+      "forbiddenWords": [
+        "Bayram",
+        "Önce",
+        "Gün",
+        "Hazırlık",
+        "Ziyaret"
+      ]
+    },
+    {
+      "id": "146",
+      "word": "Kabir Ziyareti",
+      "forbiddenWords": [
+        "Ölüm",
+        "Hatırlamak",
+        "Dua",
+        "Fatiha",
+        "Okumak"
+      ]
+    },
+    {
+      "id": "147",
+      "word": "Sadaka-i Cariye",
+      "forbiddenWords": [
+        "Devamlı",
+        "Yardım",
+        "Hayır",
+        "Ölüm",
+        "Sonrası"
+      ]
+    },
+    {
+      "id": "148",
+      "word": "Veda Hutbesi",
+      "forbiddenWords": [
+        "Peygamber",
+        "Son",
+        "Konuşma",
+        "Nasihat",
+        "Önemli"
+      ]
+    },
+    {
+      "id": "149",
+      "word": "Hılful Fudul",
+      "forbiddenWords": [
+        "Peygamber",
+        "Katıldığı",
+        "Antlaşma",
+        "Adalet",
+        "Yardım"
+      ]
+    },
+    {
+      "id": "150",
+      "word": "Darül Erkam",
+      "forbiddenWords": [
+        "İlk",
+        "Okul",
+        "Mekke",
+        "Eğitim",
+        "Gizli"
+      ]
+    },
+    {
+      "id": "151",
+      "word": "Hicret",
+      "forbiddenWords": [
+        "Mekke",
+        "Medine",
+        "Göç",
+        "Peygamber",
+        "Sahabe"
+      ]
+    },
+    {
+      "id": "152",
+      "word": "Ensar",
+      "forbiddenWords": [
+        "Medine",
+        "Yardım",
+        "Muhacir",
+        "Ev",
+        "Paylaşmak"
+      ]
+    },
+    {
+      "id": "153",
+      "word": "Muhacir",
+      "forbiddenWords": [
+        "Mekke",
+        "Göç",
+        "Medine",
+        "Terketmek",
+        "Ev"
+      ]
+    },
+    {
+      "id": "154",
+      "word": "Bedir Savaşı",
+      "forbiddenWords": [
+        "İlk",
+        "Savaş",
+        "Müslüman",
+        "Zafer",
+        "Mekke"
+      ]
+    },
+    {
+      "id": "155",
+      "word": "Uhud Savaşı",
+      "forbiddenWords": [
+        "Savaş",
+        "Okçu",
+        "Hata",
+        "Yenilgi",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "156",
+      "word": "Hendek Savaşı",
+      "forbiddenWords": [
+        "Çukur",
+        "Savunma",
+        "Medine",
+        "Kuşatma",
+        "Düşman"
+      ]
+    },
+    {
+      "id": "157",
+      "word": "Teravih",
+      "forbiddenWords": [
+        "Ramazan",
+        "Namaz",
+        "Gece",
+        "Yirmi",
+        "Rekat"
+      ]
+    },
+    {
+      "id": "158",
+      "word": "Sahabe",
+      "forbiddenWords": [
+        "Peygamber",
+        "Arkadaş",
+        "Gören",
+        "Dost",
+        "Ashab"
+      ]
+    },
+    {
+      "id": "159",
+      "word": "Hacer-ül Esved",
+      "forbiddenWords": [
+        "Kabe",
+        "Taş",
+        "Siyah",
+        "Öpmek",
+        "Köşe"
+      ]
+    },
+    {
+      "id": "160",
+      "word": "Makam-ı İbrahim",
+      "forbiddenWords": [
+        "Kabe",
+        "Taş",
+        "Ayak",
+        "İzi",
+        "Namaz"
+      ]
+    },
+    {
+      "id": "161",
+      "word": "Safa Merve",
+      "forbiddenWords": [
+        "Hac",
+        "Tepe",
+        "Koşmak",
+        "Say",
+        "Hacer"
+      ]
+    },
+    {
+      "id": "162",
+      "word": "Umre",
+      "forbiddenWords": [
+        "Hac",
+        "Küçük",
+        "Ziyaret",
+        "Kabe",
+        "Tavaf"
+      ]
+    },
+    {
+      "id": "163",
+      "word": "Kurban",
+      "forbiddenWords": [
+        "Bayram",
+        "Kesmek",
+        "Hayvan",
+        "Allah",
+        "İbadet"
+      ]
+    },
+    {
+      "id": "164",
+      "word": "Esma-ül Hüsna",
+      "forbiddenWords": [
+        "Allah",
+        "İsim",
+        "Doksan",
+        "Dokuz",
+        "Güzel"
+      ]
+    },
+    {
+      "id": "165",
+      "word": "Besmele",
+      "forbiddenWords": [
+        "Bismillah",
+        "Başlamak",
+        "Rahman",
+        "Rahim",
+        "Söz"
+      ]
+    },
+    {
+      "id": "166",
+      "word": "Fatiha",
+      "forbiddenWords": [
+        "Sure",
+        "İlk",
+        "Açılış",
+        "Namaz",
+        "Okumak"
+      ]
+    },
+    {
+      "id": "167",
+      "word": "Ayetel Kürsi",
+      "forbiddenWords": [
+        "Bakara",
+        "Ayet",
+        "Koruma",
+        "Uzun",
+        "Okumak"
+      ]
+    },
+    {
+      "id": "168",
+      "word": "Yasin",
+      "forbiddenWords": [
+        "Sure",
+        "Kalp",
+        "Kuran",
+        "Okumak",
+        "Ölü"
+      ]
+    },
+    {
+      "id": "169",
+      "word": "Mucize",
+      "forbiddenWords": [
+        "Peygamber",
+        "Olağanüstü",
+        "Allah",
+        "İzin",
+        "Kanıt"
+      ]
+    },
+    {
+      "id": "170",
+      "word": "Keramet",
+      "forbiddenWords": [
+        "Evliya",
+        "Olağanüstü",
+        "Allah",
+        "Dost",
+        "İkram"
+      ]
+    },
+    {
+      "id": "171",
+      "word": "Ruh",
+      "forbiddenWords": [
+        "Can",
+        "Beden",
+        "Ölüm",
+        "Yaşam",
+        "Üflemek"
+      ]
+    },
+    {
+      "id": "172",
+      "word": "Nefs",
+      "forbiddenWords": [
+        "Benlik",
+        "Arzu",
+        "Kötü",
+        "Mücadele",
+        "Terbiye"
+      ]
+    },
+    {
+      "id": "173",
+      "word": "Hidayet",
+      "forbiddenWords": [
+        "Doğru",
+        "Yol",
+        "Allah",
+        "Rehber",
+        "Bulmak"
+      ]
+    },
+    {
+      "id": "174",
+      "word": "Dalalet",
+      "forbiddenWords": [
+        "Sapkınlık",
+        "Yol",
+        "Yanlış",
+        "Kaybolmak",
+        "Şaşmak"
+      ]
+    },
+    {
+      "id": "175",
+      "word": "Şirk",
+      "forbiddenWords": [
+        "Allah",
+        "Ortak",
+        "Koşmak",
+        "Günah",
+        "Büyük"
+      ]
+    },
+    {
+      "id": "176",
+      "word": "Riya",
+      "forbiddenWords": [
+        "Gösteriş",
+        "İbadet",
+        "İnsanlar",
+        "Samimiyetsiz",
+        "Gizli"
+      ]
+    },
+    {
+      "id": "177",
+      "word": "Kibir",
+      "forbiddenWords": [
+        "Büyüklenmek",
+        "Gurur",
+        "Üstünlük",
+        "Günah",
+        "Şeytan"
+      ]
+    },
+    {
+      "id": "178",
+      "word": "Haset",
+      "forbiddenWords": [
+        "Kıskançlık",
+        "İstemek",
+        "Başkası",
+        "Nimet",
+        "Günah"
+      ]
+    },
+    {
+      "id": "179",
+      "word": "Gıybet",
+      "forbiddenWords": [
+        "Arkadan",
+        "Konuşmak",
+        "Kötü",
+        "Söz",
+        "Günah"
+      ]
+    },
+    {
+      "id": "180",
+      "word": "İftira",
+      "forbiddenWords": [
+        "Yalan",
+        "Suçlamak",
+        "Atmak",
+        "Günah",
+        "Büyük"
+      ]
+    },
+    {
+      "id": "181",
+      "word": "Faiz",
+      "forbiddenWords": [
+        "Para",
+        "Fazla",
+        "Haram",
+        "Borç",
+        "Kazanç"
+      ]
+    },
+    {
+      "id": "182",
+      "word": "Kumar",
+      "forbiddenWords": [
+        "Şans",
+        "Oyun",
+        "Para",
+        "Haram",
+        "Bahis"
+      ]
+    },
+    {
+      "id": "183",
+      "word": "Adak",
+      "forbiddenWords": [
+        "Söz",
+        "Vermek",
+        "Allah",
+        "Yerine",
+        "Getirmek"
+      ]
+    },
+    {
+      "id": "184",
+      "word": "Yemin",
+      "forbiddenWords": [
+        "Allah",
+        "Söz",
+        "Ant",
+        "Kefaret",
+        "Bozmak"
+      ]
+    },
+    {
+      "id": "185",
+      "word": "Emanet",
+      "forbiddenWords": [
+        "Güven",
+        "Vermek",
+        "Saklamak",
+        "İade",
+        "Sorumluluk"
+      ]
+    },
+    {
+      "id": "186",
+      "word": "Farz",
+      "forbiddenWords": [
+        "Zorunlu",
+        "İbadet",
+        "Allah",
+        "Emir",
+        "Yapılması"
+      ]
+    },
+    {
+      "id": "187",
+      "word": "Vacip",
+      "forbiddenWords": [
+        "Gerekli",
+        "Farz",
+        "Yakın",
+        "İbadet",
+        "Yapılması"
+      ]
+    },
+    {
+      "id": "188",
+      "word": "Müstehap",
+      "forbiddenWords": [
+        "Sevap",
+        "Tavsiye",
+        "Edilen",
+        "Güzel",
+        "İbadet"
+      ]
+    },
+    {
+      "id": "189",
+      "word": "Mekruh",
+      "forbiddenWords": [
+        "Hoş",
+        "Görülmeyen",
+        "Çirkin",
+        "Yapmamak",
+        "Tercih"
+      ]
+    },
+    {
+      "id": "190",
+      "word": "Mübah",
+      "forbiddenWords": [
+        "Serbest",
+        "Günah",
+        "Sevap",
+        "Değil",
+        "İzin"
+      ]
+    },
+    {
+      "id": "191",
+      "word": "Sevap",
+      "forbiddenWords": [
+        "İyi",
+        "Amel",
+        "Mükafat",
+        "Allah",
+        "Kazanmak"
+      ]
+    },
+    {
+      "id": "192",
+      "word": "Huşu",
+      "forbiddenWords": [
+        "Namaz",
+        "Saygı",
+        "Korku",
+        "Kalp",
+        "Huzur"
+      ]
+    },
+    {
+      "id": "193",
+      "word": "Vesvese",
+      "forbiddenWords": [
+        "Şeytan",
+        "Fısıldamak",
+        "Şüphe",
+        "Kötü",
+        "Düşünce"
+      ]
+    },
+    {
+      "id": "194",
+      "word": "Ravza",
+      "forbiddenWords": [
+        "Medine",
+        "Peygamber",
+        "Kabir",
+        "Cennet",
+        "Bahçe"
+      ]
+    },
+    {
+      "id": "195",
+      "word": "Zemzem",
+      "forbiddenWords": [
+        "Su",
+        "Kabe",
+        "Kuyu",
+        "İçmek",
+        "Hacer"
+      ]
+    },
+    {
+      "id": "196",
+      "word": "Arafat",
+      "forbiddenWords": [
+        "Hac",
+        "Dağ",
+        "Vakfe",
+        "Durmak",
+        "Dua"
+      ]
+    },
+    {
+      "id": "197",
+      "word": "Müzdelife",
+      "forbiddenWords": [
+        "Hac",
+        "Gecelemek",
+        "Arafat",
+        "Mina",
+        "Arası"
+      ]
+    },
+    {
+      "id": "198",
+      "word": "Mina",
+      "forbiddenWords": [
+        "Hac",
+        "Şeytan",
+        "Taşlamak",
+        "Çadır",
+        "Kurban"
+      ]
+    },
+    {
+      "id": "199",
+      "word": "Cemre",
+      "forbiddenWords": [
+        "Şeytan",
+        "Taşlamak",
+        "Hac",
+        "Mina",
+        "Yedi"
+      ]
+    },
+    {
+      "id": "200",
+      "word": "Telbiye",
+      "forbiddenWords": [
+        "Lebbeyk",
+        "Hac",
+        "Söylemek",
+        "Çağrı",
+        "Cevap"
+      ]
+    },
+    {
+      "id": "201",
+      "word": "Mikat",
+      "forbiddenWords": [
+        "Hac",
+        "İhram",
+        "Sınır",
+        "Giyinmek",
+        "Yer"
+      ]
+    },
+    {
+      "id": "202",
+      "word": "Rükn-ü Yemani",
+      "forbiddenWords": [
+        "Kabe",
+        "Köşe",
+        "Yemen",
+        "Dokunmak",
+        "Tavaf"
+      ]
+    },
+    {
+      "id": "203",
+      "word": "Hicr-i İsmail",
+      "forbiddenWords": [
+        "Kabe",
+        "Duvar",
+        "Yarım",
+        "Daire",
+        "İçinde"
+      ]
+    },
+    {
+      "id": "204",
+      "word": "Mültezem",
+      "forbiddenWords": [
+        "Kabe",
+        "Kapı",
+        "Duvar",
+        "Yapışmak",
+        "Dua"
+      ]
+    },
+    {
+      "id": "205",
+      "word": "Kıssa",
+      "forbiddenWords": [
+        "Hikaye",
+        "Kuran",
+        "Anlatmak",
+        "Peygamber",
+        "Ders"
+      ]
+    },
+    {
+      "id": "206",
+      "word": "Hz. Adem",
+      "forbiddenWords": [
+        "İlk",
+        "İnsan",
+        "Peygamber",
+        "Cennet",
+        "Yasak"
+      ]
+    },
+    {
+      "id": "207",
+      "word": "Hz. Nuh",
+      "forbiddenWords": [
+        "Tufan",
+        "Gemi",
+        "Su",
+        "Peygamber",
+        "Oğul"
+      ]
+    },
+    {
+      "id": "208",
+      "word": "Hz. İbrahim",
+      "forbiddenWords": [
+        "Ateş",
+        "Kabe",
+        "Kurban",
+        "Halil",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "209",
+      "word": "Hz. Musa",
+      "forbiddenWords": [
+        "Firavun",
+        "Asa",
+        "Deniz",
+        "Tevrat",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "210",
+      "word": "Hz. İsa",
+      "forbiddenWords": [
+        "İncil",
+        "Meryem",
+        "Göğe",
+        "Çekilmek",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "211",
+      "word": "Hz. Yusuf",
+      "forbiddenWords": [
+        "Kuyu",
+        "Rüya",
+        "Mısır",
+        "Güzel",
+        "Kardeş"
+      ]
+    },
+    {
+      "id": "212",
+      "word": "Hz. Süleyman",
+      "forbiddenWords": [
+        "Kral",
+        "Cin",
+        "Hayvan",
+        "Konuşmak",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "213",
+      "word": "Hz. Davud",
+      "forbiddenWords": [
+        "Zebur",
+        "Kral",
+        "Ses",
+        "Güzel",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "214",
+      "word": "Hz. Eyyüp",
+      "forbiddenWords": [
+        "Sabır",
+        "Hastalık",
+        "Sınav",
+        "Şifa",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "215",
+      "word": "Hz. Yunus",
+      "forbiddenWords": [
+        "Balık",
+        "Deniz",
+        "Karın",
+        "Dua",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "216",
+      "word": "Hz. Yakup",
+      "forbiddenWords": [
+        "İsrail",
+        "Yusuf",
+        "Göz",
+        "Ağlamak",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "217",
+      "word": "Hz. İsmail",
+      "forbiddenWords": [
+        "Kurban",
+        "İbrahim",
+        "Oğul",
+        "Kabe",
+        "Hacer"
+      ]
+    },
+    {
+      "id": "218",
+      "word": "Hz. Zekeriya",
+      "forbiddenWords": [
+        "Yahya",
+        "Baba",
+        "Dua",
+        "Yaşlı",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "219",
+      "word": "Hz. Yahya",
+      "forbiddenWords": [
+        "Zekeriya",
+        "Oğul",
+        "Şehit",
+        "Genç",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "220",
+      "word": "Hz. Meryem",
+      "forbiddenWords": [
+        "İsa",
+        "Anne",
+        "Bakire",
+        "Kutsal",
+        "Kadın"
+      ]
+    },
+    {
+      "id": "221",
+      "word": "Hz. Hatice",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "İlk",
+        "Müslüman",
+        "Kadın"
+      ]
+    },
+    {
+      "id": "222",
+      "word": "Hz. Aişe",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "Hadis",
+        "Rivayet",
+        "Alim"
+      ]
+    },
+    {
+      "id": "223",
+      "word": "Hz. Fatıma",
+      "forbiddenWords": [
+        "Peygamber",
+        "Kız",
+        "Ali",
+        "Eş",
+        "Cennet"
+      ]
+    },
+    {
+      "id": "224",
+      "word": "Hz. Ali",
+      "forbiddenWords": [
+        "Halife",
+        "Dördüncü",
+        "Fatıma",
+        "Eş",
+        "Kahraman"
+      ]
+    },
+    {
+      "id": "225",
+      "word": "Hz. Ömer",
+      "forbiddenWords": [
+        "Halife",
+        "İkinci",
+        "Adalet",
+        "Güçlü",
+        "Fetih"
+      ]
+    },
+    {
+      "id": "226",
+      "word": "Hz. Osman",
+      "forbiddenWords": [
+        "Halife",
+        "Üçüncü",
+        "Kuran",
+        "Toplama",
+        "Hayâ"
+      ]
+    },
+    {
+      "id": "227",
+      "word": "Hz. Ebubekir",
+      "forbiddenWords": [
+        "Halife",
+        "İlk",
+        "Sıddık",
+        "Dost",
+        "Hicret"
+      ]
+    },
+    {
+      "id": "228",
+      "word": "Cebrail",
+      "forbiddenWords": [
+        "Melek",
+        "Vahiy",
+        "Getiren",
+        "Kanat",
+        "Büyük"
+      ]
+    },
+    {
+      "id": "229",
+      "word": "Mikail",
+      "forbiddenWords": [
+        "Melek",
+        "Rızık",
+        "Yağmur",
+        "Görevli",
+        "Tabiat"
+      ]
+    },
+    {
+      "id": "230",
+      "word": "Azrail",
+      "forbiddenWords": [
+        "Melek",
+        "Ölüm",
+        "Can",
+        "Almak",
+        "Görevli"
+      ]
+    },
+    {
+      "id": "231",
+      "word": "İsrafil",
+      "forbiddenWords": [
+        "Melek",
+        "Sur",
+        "Üflemek",
+        "Kıyamet",
+        "Görevli"
+      ]
+    },
+    {
+      "id": "232",
+      "word": "Kiramen Katibin",
+      "forbiddenWords": [
+        "Melek",
+        "Yazmak",
+        "Amel",
+        "Sağ",
+        "Sol"
+      ]
+    },
+    {
+      "id": "233",
+      "word": "Vitir",
+      "forbiddenWords": [
+        "Namaz",
+        "Tek",
+        "Rekat",
+        "Gece",
+        "Yatsı"
+      ]
+    },
+    {
+      "id": "234",
+      "word": "Kuşluk",
+      "forbiddenWords": [
+        "Namaz",
+        "Sabah",
+        "Sonra",
+        "Güneş",
+        "Vakit"
+      ]
+    },
+    {
+      "id": "235",
+      "word": "Teheccüd",
+      "forbiddenWords": [
+        "Namaz",
+        "Gece",
+        "Kalkmak",
+        "Uyku",
+        "İbadet"
+      ]
+    },
+    {
+      "id": "236",
+      "word": "Cuma Namazı",
+      "forbiddenWords": [
+        "Hafta",
+        "Cami",
+        "Erkek",
+        "Farz",
+        "Hutbe"
+      ]
+    },
+    {
+      "id": "237",
+      "word": "Cenaze Namazı",
+      "forbiddenWords": [
+        "Ölü",
+        "Kılmak",
+        "Ayakta",
+        "Dua",
+        "Farz"
+      ]
+    },
+    {
+      "id": "238",
+      "word": "Secdei Sahv",
+      "forbiddenWords": [
+        "Namaz",
+        "Hata",
+        "Unutmak",
+        "Telafi",
+        "Son"
+      ]
+    },
+    {
+      "id": "239",
+      "word": "Secdei Tilavet",
+      "forbiddenWords": [
+        "Kuran",
+        "Okumak",
+        "Ayet",
+        "Secde",
+        "Duymak"
+      ]
+    },
+    {
+      "id": "240",
+      "word": "Secdei Şükür",
+      "forbiddenWords": [
+        "Nimet",
+        "Teşekkür",
+        "Allah",
+        "Sevinç",
+        "Haber"
+      ]
+    },
+    {
+      "id": "241",
+      "word": "İtikaf",
+      "forbiddenWords": [
+        "Cami",
+        "Kalmak",
+        "Ramazan",
+        "Son",
+        "On"
+      ]
+    },
+    {
+      "id": "242",
+      "word": "Fidye",
+      "forbiddenWords": [
+        "Oruç",
+        "Tutamayan",
+        "Para",
+        "Ödeme",
+        "Fakir"
+      ]
+    },
+    {
+      "id": "243",
+      "word": "Nisap",
+      "forbiddenWords": [
+        "Zekat",
+        "Sınır",
+        "Miktar",
+        "Altın",
+        "Gümüş"
+      ]
+    },
+    {
+      "id": "244",
+      "word": "Öşür",
+      "forbiddenWords": [
+        "Zekat",
+        "Tarım",
+        "Ürün",
+        "Onda",
+        "Bir"
+      ]
+    },
+    {
+      "id": "245",
+      "word": "Uşur",
+      "forbiddenWords": [
+        "Vergi",
+        "Ticaret",
+        "Mal",
+        "Gümrük",
+        "Ödeme"
+      ]
+    },
+    {
+      "id": "246",
+      "word": "Haraç",
+      "forbiddenWords": [
+        "Vergi",
+        "Toprak",
+        "Gayrimüslim",
+        "Ödeme",
+        "Devlet"
+      ]
+    },
+    {
+      "id": "247",
+      "word": "Teyemmüm",
+      "forbiddenWords": [
+        "Toprak",
+        "Su",
+        "Bulamayan",
+        "Abdest",
+        "Temiz"
+      ]
+    },
+    {
+      "id": "248",
+      "word": "Mesh",
+      "forbiddenWords": [
+        "Abdest",
+        "Çorap",
+        "Sıvazlamak",
+        "Baş",
+        "Ayak"
+      ]
+    },
+    {
+      "id": "249",
+      "word": "Cenabet",
+      "forbiddenWords": [
+        "Gusül",
+        "Gerektiren",
+        "Hal",
+        "Temizlik",
+        "Hüküm"
+      ]
+    },
+    {
+      "id": "250",
+      "word": "Hayız",
+      "forbiddenWords": [
+        "Kadın",
+        "Adet",
+        "Dönem",
+        "Namaz",
+        "Oruç"
+      ]
+    },
+    {
+      "id": "251",
+      "word": "Nifas",
+      "forbiddenWords": [
+        "Kadın",
+        "Doğum",
+        "Sonra",
+        "Kanama",
+        "Dönem"
+      ]
+    },
+    {
+      "id": "252",
+      "word": "İstihaze",
+      "forbiddenWords": [
+        "Kadın",
+        "Kanama",
+        "Adet",
+        "Dışı",
+        "Hastalık"
+      ]
+    },
+    {
+      "id": "253",
+      "word": "Keffaret-i Yemin",
+      "forbiddenWords": [
+        "Yemin",
+        "Bozma",
+        "Ödeme",
+        "Fakir",
+        "Doyurmak"
+      ]
+    },
+    {
+      "id": "254",
+      "word": "Keffaret-i Savm",
+      "forbiddenWords": [
+        "Oruç",
+        "Bozma",
+        "Altmış",
+        "Gün",
+        "Tutmak"
+      ]
+    },
+    {
+      "id": "255",
+      "word": "Akika Kurbanı",
+      "forbiddenWords": [
+        "Bebek",
+        "Doğum",
+        "Yedinci",
+        "Gün",
+        "Kesmek"
+      ]
+    },
+    {
+      "id": "256",
+      "word": "Sadaka",
+      "forbiddenWords": [
+        "Yardım",
+        "Para",
+        "Fakir",
+        "Vermek",
+        "Gönüllü"
+      ]
+    },
+    {
+      "id": "257",
+      "word": "İnfak",
+      "forbiddenWords": [
+        "Harcamak",
+        "Allah",
+        "Yolunda",
+        "Mal",
+        "Vermek"
+      ]
+    },
+    {
+      "id": "258",
+      "word": "Rıza",
+      "forbiddenWords": [
+        "Allah",
+        "Memnuniyet",
+        "Hoşnutluk",
+        "Kazanmak",
+        "Amaç"
+      ]
+    },
+    {
+      "id": "259",
+      "word": "Bereket",
+      "forbiddenWords": [
+        "Bolluk",
+        "Allah",
+        "Artmak",
+        "Hayır",
+        "Nimet"
+      ]
+    },
+    {
+      "id": "260",
+      "word": "Rahmet",
+      "forbiddenWords": [
+        "Allah",
+        "Merhamet",
+        "Acımak",
+        "Bağışlamak",
+        "Yağmur"
+      ]
+    },
+    {
+      "id": "261",
+      "word": "Mağfiret",
+      "forbiddenWords": [
+        "Allah",
+        "Bağışlamak",
+        "Günah",
+        "Af",
+        "Örtmek"
+      ]
+    },
+    {
+      "id": "262",
+      "word": "Kelam",
+      "forbiddenWords": [
+        "Allah",
+        "Söz",
+        "İlim",
+        "Akaid",
+        "İnanç"
+      ]
+    },
+    {
+      "id": "263",
+      "word": "Fıkıh",
+      "forbiddenWords": [
+        "İslam",
+        "Hukuk",
+        "İlim",
+        "Hüküm",
+        "Amel"
+      ]
+    },
+    {
+      "id": "264",
+      "word": "Tefsir",
+      "forbiddenWords": [
+        "Kuran",
+        "Açıklama",
+        "Yorum",
+        "İlim",
+        "Anlam"
+      ]
+    },
+    {
+      "id": "265",
+      "word": "Siyer",
+      "forbiddenWords": [
+        "Peygamber",
+        "Hayat",
+        "Tarih",
+        "İlim",
+        "Anlatmak"
+      ]
+    },
+    {
+      "id": "266",
+      "word": "Akaid",
+      "forbiddenWords": [
+        "İnanç",
+        "Esaslar",
+        "İlim",
+        "İman",
+        "Temel"
+      ]
+    },
+    {
+      "id": "267",
+      "word": "Usul-ü Fıkıh",
+      "forbiddenWords": [
+        "Hukuk",
+        "Metot",
+        "İlim",
+        "Kaynak",
+        "Hüküm"
+      ]
+    },
+    {
+      "id": "268",
+      "word": "Hanefi",
+      "forbiddenWords": [
+        "Mezhep",
+        "Ebu Hanife",
+        "Fıkıh",
+        "Türkiye",
+        "İmam"
+      ]
+    },
+    {
+      "id": "269",
+      "word": "Şafii",
+      "forbiddenWords": [
+        "Mezhep",
+        "İmam Şafii",
+        "Fıkıh",
+        "Arap",
+        "Hadis"
+      ]
+    },
+    {
+      "id": "270",
+      "word": "Maliki",
+      "forbiddenWords": [
+        "Mezhep",
+        "İmam Malik",
+        "Fıkıh",
+        "Afrika",
+        "Medine"
+      ]
+    },
+    {
+      "id": "271",
+      "word": "Hanbeli",
+      "forbiddenWords": [
+        "Mezhep",
+        "Ahmed bin Hanbel",
+        "Fıkıh",
+        "Suudi",
+        "Hadis"
+      ]
+    },
+    {
+      "id": "272",
+      "word": "Maturidi",
+      "forbiddenWords": [
+        "Akaid",
+        "Mezhep",
+        "İmam",
+        "İnanç",
+        "Kelam"
+      ]
+    },
+    {
+      "id": "273",
+      "word": "Eşari",
+      "forbiddenWords": [
+        "Akaid",
+        "Mezhep",
+        "İmam",
+        "İnanç",
+        "Kelam"
+      ]
+    },
+    {
+      "id": "274",
+      "word": "Hak",
+      "forbiddenWords": [
+        "Allah",
+        "İsim",
+        "Doğru",
+        "Gerçek",
+        "Adalet"
+      ]
+    },
+    {
+      "id": "280",
+      "word": "Batıl",
+      "forbiddenWords": [
+        "Yanlış",
+        "Hak",
+        "Olmayan",
+        "Geçersiz",
+        "Boş"
+      ]
+    },
+    {
+      "id": "281",
+      "word": "Küfür",
+      "forbiddenWords": [
+        "İnkar",
+        "Allah",
+        "Örtmek",
+        "Kafir",
+        "Nankörlük"
+      ]
+    },
+    {
+      "id": "282",
+      "word": "İrtidat",
+      "forbiddenWords": [
+        "Dinden",
+        "Çıkmak",
+        "Dönen",
+        "Mürted",
+        "Terk"
+      ]
+    },
+    {
+      "id": "283",
+      "word": "Ridde",
+      "forbiddenWords": [
+        "Dinden",
+        "Dönmek",
+        "Savaş",
+        "Ebubekir",
+        "İsyan"
+      ]
+    },
+    {
+      "id": "284",
+      "word": "Fitne",
+      "forbiddenWords": [
+        "Kargaşa",
+        "Bozgunculuk",
+        "İmtihan",
+        "Fesat",
+        "Kötülük"
+      ]
+    },
+    {
+      "id": "285",
+      "word": "Nifak",
+      "forbiddenWords": [
+        "Münafıklık",
+        "İki",
+        "Yüzlülük",
+        "Gizli",
+        "Küfür"
+      ]
+    },
+    {
+      "id": "286",
+      "word": "Ricat",
+      "forbiddenWords": [
+        "Geri",
+        "Dönmek",
+        "Boşanma",
+        "Evlilik",
+        "İddet"
+      ]
+    },
+    {
+      "id": "287",
+      "word": "Hulu",
+      "forbiddenWords": [
+        "Boşanma",
+        "Kadın",
+        "İstemek",
+        "Mehr",
+        "İade"
+      ]
+    },
+    {
+      "id": "288",
+      "word": "Zıhar",
+      "forbiddenWords": [
+        "Eş",
+        "Anne",
+        "Benzetmek",
+        "Haram",
+        "Kefaret"
+      ]
+    },
+    {
+      "id": "289",
+      "word": "İla",
+      "forbiddenWords": [
+        "Yemin",
+        "Eş",
+        "Yaklaşmamak",
+        "Dört",
+        "Ay"
+      ]
+    },
+    {
+      "id": "290",
+      "word": "Lian",
+      "forbiddenWords": [
+        "Lanetleşmek",
+        "Eş",
+        "Suçlama",
+        "Zina",
+        "Şahit"
+      ]
+    },
+    {
+      "id": "291",
+      "word": "Velime",
+      "forbiddenWords": [
+        "Düğün",
+        "Yemek",
+        "Davet",
+        "Evlilik",
+        "Kutlama"
+      ]
+    },
+    {
+      "id": "292",
+      "word": "Veli",
+      "forbiddenWords": [
+        "Evlilik",
+        "İzin",
+        "Veren",
+        "Baba",
+        "Koruyucu"
+      ]
+    },
+    {
+      "id": "293",
+      "word": "Şahitlik",
+      "forbiddenWords": [
+        "Görmek",
+        "Tanık",
+        "Doğru",
+        "Söylemek",
+        "Adalet"
+      ]
+    },
+    {
+      "id": "294",
+      "word": "Kısas",
+      "forbiddenWords": [
+        "Ceza",
+        "Aynı",
+        "Öldürmek",
+        "Yaralamak",
+        "Eşit"
+      ]
+    },
+    {
+      "id": "295",
+      "word": "Diyet",
+      "forbiddenWords": [
+        "Kan",
+        "Parası",
+        "Ödeme",
+        "Öldürmek",
+        "Tazminat"
+      ]
+    },
+    {
+      "id": "296",
+      "word": "Hadd",
+      "forbiddenWords": [
+        "Ceza",
+        "Sınır",
+        "Kuran",
+        "Belirlenen",
+        "Kesin"
+      ]
+    },
+    {
+      "id": "297",
+      "word": "Tazir",
+      "forbiddenWords": [
+        "Ceza",
+        "Hakim",
+        "Belirlenen",
+        "Caydırıcı",
+        "Takdir"
+      ]
+    },
+    {
+      "id": "298",
+      "word": "Recm",
+      "forbiddenWords": [
+        "Zina",
+        "Evli",
+        "Ceza",
+        "Taşlamak",
+        "Ölüm"
+      ]
+    },
+    {
+      "id": "299",
+      "word": "Tevhid",
+      "forbiddenWords": [
+        "Birlik",
+        "Allah",
+        "Tek",
+        "İnanç",
+        "Esas"
+      ]
+    },
+    {
+      "id": "300",
+      "word": "Uluhiyet",
+      "forbiddenWords": [
+        "İlahlık",
+        "Allah",
+        "Sıfat",
+        "Kulluk",
+        "Hak"
+      ]
+    },
+    {
+      "id": "301",
+      "word": "Rububiyet",
+      "forbiddenWords": [
+        "Rab",
+        "Allah",
+        "Sıfat",
+        "Yaratmak",
+        "İdare"
+      ]
+    },
+    {
+      "id": "302",
+      "word": "Sıfat-ı Zatiye",
+      "forbiddenWords": [
+        "Allah",
+        "Özellik",
+        "Varlık",
+        "Kıdem",
+        "Beka"
+      ]
+    },
+    {
+      "id": "303",
+      "word": "Sıfat-ı Subutiye",
+      "forbiddenWords": [
+        "Allah",
+        "Özellik",
+        "Hayat",
+        "İlim",
+        "Kudret"
+      ]
+    },
+    {
+      "id": "304",
+      "word": "Levh-i Mahfuz",
+      "forbiddenWords": [
+        "Yazılı",
+        "Kader",
+        "Korunan",
+        "Tablet",
+        "Allah"
+      ]
+    },
+    {
+      "id": "305",
+      "word": "Kalem",
+      "forbiddenWords": [
+        "Yazmak",
+        "Kader",
+        "İlk",
+        "Yaratılan",
+        "Sure"
+      ]
+    },
+    {
+      "id": "306",
+      "word": "Kürsü",
+      "forbiddenWords": [
+        "Allah",
+        "Taht",
+        "Gökyüzü",
+        "Yer",
+        "Kaplamak"
+      ]
+    },
+    {
+      "id": "307",
+      "word": "Sidretül Münteha",
+      "forbiddenWords": [
+        "Ağaç",
+        "Gökyüzü",
+        "Son",
+        "Sınır",
+        "Miraç"
+      ]
+    },
+    {
+      "id": "308",
+      "word": "Beytül Mamur",
+      "forbiddenWords": [
+        "Gökyüzü",
+        "Kabe",
+        "Melek",
+        "Tavaf",
+        "Yedinci"
+      ]
+    },
+    {
+      "id": "309",
+      "word": "Arş-ı Ala",
+      "forbiddenWords": [
+        "Allah",
+        "Taht",
+        "En",
+        "Yüksek",
+        "Gökyüzü"
+      ]
+    },
+    {
+      "id": "310",
+      "word": "Felak Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Koruma",
+        "Sabah",
+        "Şer",
+        "Sığınmak"
+      ]
+    },
+    {
+      "id": "311",
+      "word": "Nas Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Koruma",
+        "İnsan",
+        "Şeytan",
+        "Sığınmak"
+      ]
+    },
+    {
+      "id": "312",
+      "word": "İhlas Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Allah",
+        "Bir",
+        "Tek",
+        "Samediyet"
+      ]
+    },
+    {
+      "id": "313",
+      "word": "Kafirun Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kafir",
+        "İnanç",
+        "Ayrılık",
+        "Din"
+      ]
+    },
+    {
+      "id": "314",
+      "word": "Nasr Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yardım",
+        "Zafer",
+        "Fetih",
+        "Mekke"
+      ]
+    },
+    {
+      "id": "315",
+      "word": "Tebbet Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Ebu Leheb",
+        "Lanet",
+        "Amca",
+        "Ateş"
+      ]
+    },
+    {
+      "id": "316",
+      "word": "Fil Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Ebrehe",
+        "Kabe",
+        "Ordu",
+        "Kuş"
+      ]
+    },
+    {
+      "id": "317",
+      "word": "Kureyş Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kabile",
+        "Mekke",
+        "Ticaret",
+        "Güvenlik"
+      ]
+    },
+    {
+      "id": "318",
+      "word": "Maun Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yardım",
+        "Yetim",
+        "Namaz",
+        "Gösteriş"
+      ]
+    },
+    {
+      "id": "319",
+      "word": "Kevser Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Bolluk",
+        "Irmak",
+        "Namaz",
+        "Kurban"
+      ]
+    },
+    {
+      "id": "320",
+      "word": "Asr Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Zaman",
+        "Hüsran",
+        "İman",
+        "Sabır"
+      ]
+    },
+    {
+      "id": "321",
+      "word": "Tekasür Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Çokluk",
+        "Yarış",
+        "Dünya",
+        "Ahiret"
+      ]
+    },
+    {
+      "id": "322",
+      "word": "Karia Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kıyamet",
+        "Kapı",
+        "Çalmak",
+        "Korku"
+      ]
+    },
+    {
+      "id": "323",
+      "word": "Adiyat Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "At",
+        "Koşmak",
+        "Savaş",
+        "Nankör"
+      ]
+    },
+    {
+      "id": "324",
+      "word": "Zilzal Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Deprem",
+        "Kıyamet",
+        "Yer",
+        "Zerre"
+      ]
+    },
+    {
+      "id": "325",
+      "word": "Beyyine Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Delil",
+        "Açık",
+        "Ehli Kitap",
+        "Müşrik"
+      ]
+    },
+    {
+      "id": "326",
+      "word": "Tin Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "İncir",
+        "Zeytin",
+        "İnsan",
+        "Yaratılış"
+      ]
+    },
+    {
+      "id": "327",
+      "word": "İnşirah Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Göğüs",
+        "Açmak",
+        "Kolaylık",
+        "Zorluk"
+      ]
+    },
+    {
+      "id": "328",
+      "word": "Duha Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kuşluk",
+        "Peygamber",
+        "Yetim",
+        "Nimet"
+      ]
+    },
+    {
+      "id": "329",
+      "word": "Leyl Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Gece",
+        "Vermek",
+        "Cimrilik",
+        "Yol"
+      ]
+    },
+    {
+      "id": "330",
+      "word": "Şems Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Güneş",
+        "Ay",
+        "Nefs",
+        "Temizlemek"
+      ]
+    },
+    {
+      "id": "331",
+      "word": "Beled Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Şehir",
+        "Mekke",
+        "İnsan",
+        "Zorluk"
+      ]
+    },
+    {
+      "id": "332",
+      "word": "Fecr Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Şafak",
+        "Ad",
+        "Semud",
+        "Firavun"
+      ]
+    },
+    {
+      "id": "333",
+      "word": "Gaşiye Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kıyamet",
+        "Örtmek",
+        "Yüz",
+        "Cennet"
+      ]
+    },
+    {
+      "id": "334",
+      "word": "Ala Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yüce",
+        "Tesbih",
+        "Temizlenmek",
+        "Hatırlatmak"
+      ]
+    },
+    {
+      "id": "335",
+      "word": "Tarık Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yıldız",
+        "Gece",
+        "Gelen",
+        "Delici"
+      ]
+    },
+    {
+      "id": "336",
+      "word": "Buruc Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Burç",
+        "Gökyüzü",
+        "Ashab-ı Uhdud",
+        "Ateş"
+      ]
+    },
+    {
+      "id": "337",
+      "word": "İnşikak Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Gökyüzü",
+        "Yarılmak",
+        "Kıyamet",
+        "Kitap"
+      ]
+    },
+    {
+      "id": "338",
+      "word": "Mutaffifin Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Ölçü",
+        "Eksik",
+        "Tartı",
+        "Hile"
+      ]
+    },
+    {
+      "id": "339",
+      "word": "İnfitar Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Gökyüzü",
+        "Yarılmak",
+        "Kıyamet",
+        "Melek"
+      ]
+    },
+    {
+      "id": "340",
+      "word": "Tekvir Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Güneş",
+        "Dürülmek",
+        "Kıyamet",
+        "Yıldız"
+      ]
+    },
+    {
+      "id": "341",
+      "word": "Abese Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yüz",
+        "Çevirmek",
+        "Kör",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "342",
+      "word": "Naziat Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Melek",
+        "Can",
+        "Çekmek",
+        "Kıyamet"
+      ]
+    },
+    {
+      "id": "343",
+      "word": "Nebe Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Haber",
+        "Büyük",
+        "Kıyamet",
+        "Sormak"
+      ]
+    },
+    {
+      "id": "344",
+      "word": "Mürselat Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Gönderilenler",
+        "Rüzgar",
+        "Melek",
+        "Kıyamet"
+      ]
+    },
+    {
+      "id": "345",
+      "word": "İnsan Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Dehr",
+        "Yaratılış",
+        "İmtihan",
+        "Cennet"
+      ]
+    },
+    {
+      "id": "346",
+      "word": "Kıyamet Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Diriliş",
+        "Hesap",
+        "Nefs",
+        "Yemin"
+      ]
+    },
+    {
+      "id": "347",
+      "word": "Müddessir Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Örtünen",
+        "Peygamber",
+        "Uyarı",
+        "Kalk"
+      ]
+    },
+    {
+      "id": "348",
+      "word": "Müzzemmil Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Bürünen",
+        "Peygamber",
+        "Gece",
+        "Namaz"
+      ]
+    },
+    {
+      "id": "349",
+      "word": "Cin Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Cin",
+        "Dinlemek",
+        "İman",
+        "Gizli"
+      ]
+    },
+    {
+      "id": "350",
+      "word": "Nuh Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Peygamber",
+        "Davet",
+        "Tufan",
+        "Kavim"
+      ]
+    },
+    {
+      "id": "351",
+      "word": "Mearic Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yükseliş",
+        "Derece",
+        "Azap",
+        "Melek"
+      ]
+    },
+    {
+      "id": "352",
+      "word": "Hakka Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Gerçek",
+        "Kıyamet",
+        "Ad",
+        "Semud"
+      ]
+    },
+    {
+      "id": "353",
+      "word": "Kalem Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yazmak",
+        "Nun",
+        "Ahlak",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "354",
+      "word": "Mülk Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Hükümranlık",
+        "Allah",
+        "Ölüm",
+        "Hayat"
+      ]
+    },
+    {
+      "id": "355",
+      "word": "Tahrim Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Haram",
+        "Kılmak",
+        "Peygamber",
+        "Eş"
+      ]
+    },
+    {
+      "id": "356",
+      "word": "Talak Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Boşanma",
+        "İddet",
+        "Kadın",
+        "Hüküm"
+      ]
+    },
+    {
+      "id": "357",
+      "word": "Tegabün Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Aldanma",
+        "Kıyamet",
+        "Gün",
+        "İman"
+      ]
+    },
+    {
+      "id": "358",
+      "word": "Münafikun Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Münafık",
+        "İki",
+        "Yüzlü",
+        "Yalan"
+      ]
+    },
+    {
+      "id": "359",
+      "word": "Cuma Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Namaz",
+        "Hutbe",
+        "Toplanmak",
+        "Gün"
+      ]
+    },
+    {
+      "id": "360",
+      "word": "Saff Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Sıra",
+        "Savaş",
+        "Allah",
+        "Yolunda"
+      ]
+    },
+    {
+      "id": "361",
+      "word": "Mümtehine Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "İmtihan",
+        "Kadın",
+        "Müşrik",
+        "Dostluk"
+      ]
+    },
+    {
+      "id": "362",
+      "word": "Haşr Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Toplanmak",
+        "Yahudi",
+        "Sürgün",
+        "Esma"
+      ]
+    },
+    {
+      "id": "363",
+      "word": "Mücadele Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Tartışma",
+        "Kadın",
+        "Zıhar",
+        "Şikayet"
+      ]
+    },
+    {
+      "id": "364",
+      "word": "Hadid Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Demir",
+        "Savaş",
+        "İnfak",
+        "Dünya"
+      ]
+    },
+    {
+      "id": "365",
+      "word": "Vakıa Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kıyamet",
+        "Olay",
+        "Üç",
+        "Grup"
+      ]
+    },
+    {
+      "id": "366",
+      "word": "Rahman Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Allah",
+        "Nimet",
+        "Yalanlama",
+        "Cennet"
+      ]
+    },
+    {
+      "id": "367",
+      "word": "Kamer Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Ay",
+        "Yarılmak",
+        "Mucize",
+        "Kıyamet"
+      ]
+    },
+    {
+      "id": "368",
+      "word": "Necm Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yıldız",
+        "Miraç",
+        "Vahiy",
+        "Sidre"
+      ]
+    },
+    {
+      "id": "369",
+      "word": "Tur Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Dağ",
+        "Sina",
+        "Yemin",
+        "Azap"
+      ]
+    },
+    {
+      "id": "370",
+      "word": "Zariyat Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Rüzgar",
+        "Savuran",
+        "Yaratılış",
+        "İbrahim"
+      ]
+    },
+    {
+      "id": "371",
+      "word": "Kaf Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Harf",
+        "Diriliş",
+        "Yakın",
+        "Melek"
+      ]
+    },
+    {
+      "id": "372",
+      "word": "Hucurat Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Odalar",
+        "Edep",
+        "Alay",
+        "Kardeşlik"
+      ]
+    },
+    {
+      "id": "373",
+      "word": "Fetih Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Zafer",
+        "Mekke",
+        "Hudeybiye",
+        "Biat"
+      ]
+    },
+    {
+      "id": "374",
+      "word": "Muhammed Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Peygamber",
+        "Savaş",
+        "Kafir",
+        "Cennet"
+      ]
+    },
+    {
+      "id": "375",
+      "word": "Ahkaf Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kum",
+        "Tepe",
+        "Ad",
+        "Kavmi"
+      ]
+    },
+    {
+      "id": "376",
+      "word": "Casiye Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Diz",
+        "Çökmek",
+        "Kıyamet",
+        "Hesap"
+      ]
+    },
+    {
+      "id": "377",
+      "word": "Duhan Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Duman",
+        "Kıyamet",
+        "Alamet",
+        "Firavun"
+      ]
+    },
+    {
+      "id": "378",
+      "word": "Zuhruf Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Süs",
+        "Altın",
+        "Dünya",
+        "Ahiret"
+      ]
+    },
+    {
+      "id": "379",
+      "word": "Şura Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Danışma",
+        "İstişare",
+        "Vahiy",
+        "Birlik"
+      ]
+    },
+    {
+      "id": "380",
+      "word": "Fussilet Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Açıklamak",
+        "Ayet",
+        "Secde",
+        "Yaratılış"
+      ]
+    },
+    {
+      "id": "381",
+      "word": "Mümin Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "İnanan",
+        "Firavun",
+        "Musa",
+        "Azap"
+      ]
+    },
+    {
+      "id": "382",
+      "word": "Zümer Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Gruplar",
+        "Cennet",
+        "Cehennem",
+        "İhlas"
+      ]
+    },
+    {
+      "id": "383",
+      "word": "Sad Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Harf",
+        "Davud",
+        "Süleyman",
+        "İblis"
+      ]
+    },
+    {
+      "id": "384",
+      "word": "Saffat Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Sıra",
+        "Melek",
+        "Şeytan",
+        "İbrahim"
+      ]
+    },
+    {
+      "id": "385",
+      "word": "Fatır Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Yaratan",
+        "Melek",
+        "Kanat",
+        "Nimet"
+      ]
+    },
+    {
+      "id": "386",
+      "word": "Sebe Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Krallık",
+        "Yemen",
+        "Süleyman",
+        "Sel"
+      ]
+    },
+    {
+      "id": "387",
+      "word": "Ahzab Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Hendek",
+        "Savaş",
+        "Gruplar",
+        "Peygamber"
+      ]
+    },
+    {
+      "id": "388",
+      "word": "Secde Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kapanmak",
+        "Yaratılış",
+        "Kıyamet",
+        "Gece"
+      ]
+    },
+    {
+      "id": "389",
+      "word": "Lokman Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Hikmet",
+        "Nasihat",
+        "Oğul",
+        "Şükür"
+      ]
+    },
+    {
+      "id": "390",
+      "word": "Rum Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Bizans",
+        "Savaş",
+        "Zafer",
+        "Yenilgi"
+      ]
+    },
+    {
+      "id": "391",
+      "word": "Ankebut Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Örümcek",
+        "Ev",
+        "İmtihan",
+        "Fitne"
+      ]
+    },
+    {
+      "id": "392",
+      "word": "Kasas Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Hikaye",
+        "Musa",
+        "Firavun",
+        "Karun"
+      ]
+    },
+    {
+      "id": "393",
+      "word": "Neml Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Karınca",
+        "Süleyman",
+        "Hüdhüd",
+        "Sebe"
+      ]
+    },
+    {
+      "id": "394",
+      "word": "Şuara Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Şair",
+        "Musa",
+        "İbrahim",
+        "Nuh"
+      ]
+    },
+    {
+      "id": "395",
+      "word": "Furkan Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Ayırt",
+        "Edici",
+        "Hak",
+        "Batıl"
+      ]
+    },
+    {
+      "id": "396",
+      "word": "Nur Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Işık",
+        "Örtünme",
+        "İfk",
+        "Zina"
+      ]
+    },
+    {
+      "id": "397",
+      "word": "Müminun Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "İnananlar",
+        "Kurtuluş",
+        "Namaz",
+        "Huşu"
+      ]
+    },
+    {
+      "id": "398",
+      "word": "Hacc Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Hac",
+        "İbrahim",
+        "Kabe",
+        "Kurban"
+      ]
+    },
+    {
+      "id": "399",
+      "word": "Enbiya Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Peygamberler",
+        "Kıssa",
+        "Tevhid",
+        "Hesap"
+      ]
+    },
+    {
+      "id": "400",
+      "word": "Taha Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Musa",
+        "Firavun",
+        "Asa",
+        "Vadii Tuva"
+      ]
+    },
+    {
+      "id": "401",
+      "word": "Meryem Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Hz. Meryem",
+        "İsa",
+        "Zekeriya",
+        "Yahya"
+      ]
+    },
+    {
+      "id": "402",
+      "word": "Kehf Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Mağara",
+        "Ashab",
+        "Cuma",
+        "Zülkarneyn"
+      ]
+    },
+    {
+      "id": "403",
+      "word": "İsra Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Gece",
+        "Yürüyüş",
+        "Mescidi Aksa",
+        "Miraç"
+      ]
+    },
+    {
+      "id": "404",
+      "word": "Nahl Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Arı",
+        "Bal",
+        "Nimet",
+        "Şükür"
+      ]
+    },
+    {
+      "id": "405",
+      "word": "Hicr Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Taşlık",
+        "Bölge",
+        "Semud",
+        "Koruma"
+      ]
+    },
+    {
+      "id": "406",
+      "word": "İbrahim Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Peygamber",
+        "Dua",
+        "Nimet",
+        "Şükür"
+      ]
+    },
+    {
+      "id": "407",
+      "word": "Rad Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Gök",
+        "Gürültüsü",
+        "Şimşek",
+        "Tesbih"
+      ]
+    },
+    {
+      "id": "408",
+      "word": "Yusuf Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Peygamber",
+        "Rüya",
+        "Kardeş",
+        "Mısır"
+      ]
+    },
+    {
+      "id": "409",
+      "word": "Hud Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Peygamber",
+        "Ad",
+        "Kavmi",
+        "Nuh"
+      ]
+    },
+    {
+      "id": "410",
+      "word": "Yunus Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Peygamber",
+        "Balık",
+        "Tövbe",
+        "Kavim"
+      ]
+    },
+    {
+      "id": "411",
+      "word": "Tevbe Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Pişmanlık",
+        "Besmele",
+        "Savaş",
+        "Münafık"
+      ]
+    },
+    {
+      "id": "412",
+      "word": "Enfal Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Ganimet",
+        "Bedir",
+        "Savaş",
+        "Zafer"
+      ]
+    },
+    {
+      "id": "413",
+      "word": "Araf Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Sınır",
+        "Cennet",
+        "Cehennem",
+        "Arası"
+      ]
+    },
+    {
+      "id": "414",
+      "word": "Enam Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Hayvan",
+        "Tevhid",
+        "Şirk",
+        "Yaratılış"
+      ]
+    },
+    {
+      "id": "415",
+      "word": "Maide Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Sofra",
+        "İsa",
+        "Havari",
+        "Akit"
+      ]
+    },
+    {
+      "id": "416",
+      "word": "Nisa Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Kadın",
+        "Miras",
+        "Evlilik",
+        "Hukuk"
+      ]
+    },
+    {
+      "id": "417",
+      "word": "Ali İmran Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "Aile",
+        "Meryem",
+        "Uhud",
+        "İmran"
+      ]
+    },
+    {
+      "id": "418",
+      "word": "Bakara Suresi",
+      "forbiddenWords": [
+        "Kuran",
+        "İnek",
+        "En",
+        "Uzun",
+        "Musa"
+      ]
+    },
+    {
+      "id": "419",
+      "word": "Ashab-ı Kehf",
+      "forbiddenWords": [
+        "Mağara",
+        "Uyku",
+        "Yıl",
+        "Genç",
+        "Köpek"
+      ]
+    },
+    {
+      "id": "420",
+      "word": "Zülkarneyn",
+      "forbiddenWords": [
+        "Kral",
+        "Doğu",
+        "Batı",
+        "Set",
+        "Yecüc"
+      ]
+    },
+    {
+      "id": "421",
+      "word": "Hızır",
+      "forbiddenWords": [
+        "Musa",
+        "Yolculuk",
+        "İlim",
+        "Ledün",
+        "Gemi"
+      ]
+    },
+    {
+      "id": "422",
+      "word": "Karun",
+      "forbiddenWords": [
+        "Zengin",
+        "Musa",
+        "Hazine",
+        "Kibir",
+        "Yerin"
+      ]
+    },
+    {
+      "id": "423",
+      "word": "Firavun",
+      "forbiddenWords": [
+        "Mısır",
+        "Kral",
+        "Musa",
+        "Zulüm",
+        "Deniz"
+      ]
+    },
+    {
+      "id": "424",
+      "word": "Haman",
+      "forbiddenWords": [
+        "Firavun",
+        "Vezir",
+        "Mısır",
+        "Kule",
+        "Musa"
+      ]
+    },
+    {
+      "id": "425",
+      "word": "Nemrut",
+      "forbiddenWords": [
+        "Kral",
+        "İbrahim",
+        "Ateş",
+        "Kibir",
+        "Allah"
+      ]
+    },
+    {
+      "id": "426",
+      "word": "Ad Kavmi",
+      "forbiddenWords": [
+        "Hud",
+        "Rüzgar",
+        "Helak",
+        "Dev",
+        "Güçlü"
+      ]
+    },
+    {
+      "id": "427",
+      "word": "Semud Kavmi",
+      "forbiddenWords": [
+        "Salih",
+        "Deve",
+        "Kaya",
+        "Ev",
+        "Helak"
+      ]
+    },
+    {
+      "id": "428",
+      "word": "Lut Kavmi",
+      "forbiddenWords": [
+        "Sodom",
+        "Gomore",
+        "Günah",
+        "Helak",
+        "Taş"
+      ]
+    },
+    {
+      "id": "429",
+      "word": "Ashab-ı Fil",
+      "forbiddenWords": [
+        "Ebrehe",
+        "Kabe",
+        "Fil",
+        "Ordu",
+        "Kuş"
+      ]
+    },
+    {
+      "id": "430",
+      "word": "Ashab-ı Uhdud",
+      "forbiddenWords": [
+        "Hendek",
+        "Ateş",
+        "Mümin",
+        "Yakmak",
+        "Şehit"
+      ]
+    },
+    {
+      "id": "431",
+      "word": "Havari",
+      "forbiddenWords": [
+        "İsa",
+        "Öğrenci",
+        "On iki",
+        "Yardımcı",
+        "Sofra"
+      ]
+    },
+    {
+      "id": "432",
+      "word": "Talut",
+      "forbiddenWords": [
+        "Kral",
+        "İsrail",
+        "Calut",
+        "Savaş",
+        "Davud"
+      ]
+    },
+    {
+      "id": "433",
+      "word": "Calut",
+      "forbiddenWords": [
+        "Dev",
+        "Savaş",
+        "Davud",
+        "Taş",
+        "Öldürmek"
+      ]
+    },
+    {
+      "id": "434",
+      "word": "Belkıs",
+      "forbiddenWords": [
+        "Sebe",
+        "Kraliçe",
+        "Süleyman",
+        "Taht",
+        "Güneş"
+      ]
+    },
+    {
+      "id": "435",
+      "word": "Asiye",
+      "forbiddenWords": [
+        "Firavun",
+        "Eş",
+        "Musa",
+        "Büyütmek",
+        "Cennet"
+      ]
+    },
+    {
+      "id": "436",
+      "word": "Hacer",
+      "forbiddenWords": [
+        "İbrahim",
+        "Cariye",
+        "İsmail",
+        "Anne",
+        "Zemzem"
+      ]
+    },
+    {
+      "id": "437",
+      "word": "Mescid-i Aksa",
+      "forbiddenWords": [
+        "Kudüs",
+        "Kıble",
+        "İlk",
+        "Miraç",
+        "Filistin"
+      ]
+    },
+    {
+      "id": "438",
+      "word": "Mescid-i Haram",
+      "forbiddenWords": [
+        "Mekke",
+        "Kabe",
+        "Kutsal",
+        "Hac",
+        "Tavaf"
+      ]
+    },
+    {
+      "id": "439",
+      "word": "Mescid-i Nebevi",
+      "forbiddenWords": [
+        "Medine",
+        "Peygamber",
+        "Cami",
+        "Ravza",
+        "Minber"
+      ]
+    },
+    {
+      "id": "440",
+      "word": "Kuba Mescidi",
+      "forbiddenWords": [
+        "Medine",
+        "İlk",
+        "Cami",
+        "İslam",
+        "Hicret"
+      ]
+    },
+    {
+      "id": "441",
+      "word": "Kıbleteyn Mescidi",
+      "forbiddenWords": [
+        "İki",
+        "Kıble",
+        "Medine",
+        "Değişim",
+        "Namaz"
+      ]
+    },
+    {
+      "id": "442",
+      "word": "Hudeybiye",
+      "forbiddenWords": [
+        "Antlaşma",
+        "Mekke",
+        "Barış",
+        "Fetih",
+        "Biat"
+      ]
+    },
+    {
+      "id": "443",
+      "word": "Biat-ı Rıdvan",
+      "forbiddenWords": [
+        "Ağaç",
+        "Altında",
+        "Biat",
+        "Hudeybiye",
+        "Sahabe"
+      ]
+    },
+    {
+      "id": "444",
+      "word": "Akabe Biatı",
+      "forbiddenWords": [
+        "Medine",
+        "Biat",
+        "Gece",
+        "Hicret",
+        "Söz"
+      ]
+    },
+    {
+      "id": "445",
+      "word": "Mekke Fethi",
+      "forbiddenWords": [
+        "Zafer",
+        "Kabe",
+        "Put",
+        "Kırılmak",
+        "Af"
+      ]
+    },
+    {
+      "id": "446",
+      "word": "Hayber Fethi",
+      "forbiddenWords": [
+        "Yahudi",
+        "Kale",
+        "Zafer",
+        "Ali",
+        "Kapı"
+      ]
+    },
+    {
+      "id": "447",
+      "word": "Taif Kuşatması",
+      "forbiddenWords": [
+        "Şehir",
+        "Kuşatma",
+        "Taşlamak",
+        "Sakif",
+        "Dua"
+      ]
+    },
+    {
+      "id": "448",
+      "word": "Tebük Seferi",
+      "forbiddenWords": [
+        "Son",
+        "Sefer",
+        "Bizans",
+        "Sıcak",
+        "Uzak"
+      ]
+    },
+    {
+      "id": "449",
+      "word": "Mute Savaşı",
+      "forbiddenWords": [
+        "Bizans",
+        "Şehit",
+        "Üç",
+        "Komutan",
+        "Halid"
+      ]
+    },
+    {
+      "id": "450",
+      "word": "Halid bin Velid",
+      "forbiddenWords": [
+        "Komutan",
+        "Kılıç",
+        "Allah",
+        "Seyfullah",
+        "Zafer"
+      ]
+    },
+    {
+      "id": "451",
+      "word": "Ammar bin Yasir",
+      "forbiddenWords": [
+        "Sahabe",
+        "Şehit",
+        "İlk",
+        "Aile",
+        "İşkence"
+      ]
+    },
+    {
+      "id": "452",
+      "word": "Bilal-i Habeşi",
+      "forbiddenWords": [
+        "Müezzin",
+        "İlk",
+        "Ezan",
+        "Köle",
+        "Ehad"
+      ]
+    },
+    {
+      "id": "453",
+      "word": "Selman-ı Farisi",
+      "forbiddenWords": [
+        "Sahabe",
+        "İran",
+        "Hendek",
+        "Fikir",
+        "Ehli Beyt"
+      ]
+    },
+    {
+      "id": "454",
+      "word": "Ebu Zer Gıfari",
+      "forbiddenWords": [
+        "Sahabe",
+        "Zühd",
+        "Fakir",
+        "Doğru",
+        "Sözlü"
+      ]
+    },
+    {
+      "id": "455",
+      "word": "Ebu Hureyre",
+      "forbiddenWords": [
+        "Sahabe",
+        "Hadis",
+        "Rivayet",
+        "En",
+        "Çok"
+      ]
+    },
+    {
+      "id": "456",
+      "word": "Abdullah bin Mesud",
+      "forbiddenWords": [
+        "Sahabe",
+        "Kuran",
+        "Hafız",
+        "Alim",
+        "Kıraat"
+      ]
+    },
+    {
+      "id": "457",
+      "word": "Muaz bin Cebel",
+      "forbiddenWords": [
+        "Sahabe",
+        "Alim",
+        "Yemen",
+        "Vali",
+        "Fetva"
+      ]
+    },
+    {
+      "id": "458",
+      "word": "Sad bin Ebi Vakkas",
+      "forbiddenWords": [
+        "Sahabe",
+        "Ok",
+        "Atan",
+        "İlk",
+        "Cennetle"
+      ]
+    },
+    {
+      "id": "459",
+      "word": "Talha bin Ubeydullah",
+      "forbiddenWords": [
+        "Sahabe",
+        "Cennetle",
+        "Müjdelenen",
+        "Uhud",
+        "Kalkan"
+      ]
+    },
+    {
+      "id": "460",
+      "word": "Zübeyr bin Avvam",
+      "forbiddenWords": [
+        "Sahabe",
+        "Cennetle",
+        "Müjdelenen",
+        "Havari",
+        "Kılıç"
+      ]
+    },
+    {
+      "id": "461",
+      "word": "Abdurrahman bin Avf",
+      "forbiddenWords": [
+        "Sahabe",
+        "Cennetle",
+        "Müjdelenen",
+        "Zengin",
+        "Cömert"
+      ]
+    },
+    {
+      "id": "462",
+      "word": "Ebu Ubeyde bin Cerrah",
+      "forbiddenWords": [
+        "Sahabe",
+        "Cennetle",
+        "Müjdelenen",
+        "Emin",
+        "Komutan"
+      ]
+    },
+    {
+      "id": "463",
+      "word": "Said bin Zeyd",
+      "forbiddenWords": [
+        "Sahabe",
+        "Cennetle",
+        "Müjdelenen",
+        "Ömer",
+        "Enişte"
+      ]
+    },
+    {
+      "id": "465",
+      "word": "Hamza",
+      "forbiddenWords": [
+        "Amca",
+        "Peygamber",
+        "Şehit",
+        "Aslan",
+        "Uhud"
+      ]
+    },
+    {
+      "id": "466",
+      "word": "Cafer bin Ebi Talib",
+      "forbiddenWords": [
+        "Sahabe",
+        "Habeşistan",
+        "Hicret",
+        "Mute",
+        "Şehit"
+      ]
+    },
+    {
+      "id": "467",
+      "word": "Ümmü Seleme",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "Sahabe",
+        "Kadın",
+        "Hikmet"
+      ]
+    },
+    {
+      "id": "468",
+      "word": "Ümmü Hani",
+      "forbiddenWords": [
+        "Mekke",
+        "Fetih",
+        "Eman",
+        "Peygamber",
+        "Miraç"
+      ]
+    },
+    {
+      "id": "469",
+      "word": "Rukiye",
+      "forbiddenWords": [
+        "Peygamber",
+        "Kız",
+        "Osman",
+        "Eş",
+        "Habeşistan"
+      ]
+    },
+    {
+      "id": "470",
+      "word": "Ümmü Gülsüm",
+      "forbiddenWords": [
+        "Peygamber",
+        "Kız",
+        "Osman",
+        "Eş",
+        "İkinci"
+      ]
+    },
+    {
+      "id": "471",
+      "word": "Zeynep bint Muhammed",
+      "forbiddenWords": [
+        "Peygamber",
+        "Kız",
+        "Büyük",
+        "Ebu\\",
+        ", "
+      ]
+    },
+    {
+      "id": "472",
+      "word": "Hasan bin Ali",
+      "forbiddenWords": [
+        "Torun",
+        "Peygamber",
+        "Halife",
+        "Beşinci",
+        "Barış"
+      ]
+    },
+    {
+      "id": "473",
+      "word": "Hüseyin bin Ali",
+      "forbiddenWords": [
+        "Torun",
+        "Peygamber",
+        "Kerbela",
+        "Şehit",
+        "İmam"
+      ]
+    },
+    {
+      "id": "474",
+      "word": "Ebu Talib",
+      "forbiddenWords": [
+        "Amca",
+        "Peygamber",
+        "Korumak",
+        "Mekke",
+        "Boykot"
+      ]
+    },
+    {
+      "id": "475",
+      "word": "Ebu Leheb",
+      "forbiddenWords": [
+        "Amca",
+        "Peygamber",
+        "Düşman",
+        "Tebbet",
+        "Ateş"
+      ]
+    },
+    {
+      "id": "476",
+      "word": "Ebu Cehil",
+      "forbiddenWords": [
+        "Düşman",
+        "Mekke",
+        "Bedir",
+        "Öldürülmek",
+        "Firavun"
+      ]
+    },
+    {
+      "id": "477",
+      "word": "Ebu Süfyan",
+      "forbiddenWords": [
+        "Mekke",
+        "Lider",
+        "Müslüman",
+        "Fetih",
+        "Ümeyye"
+      ]
+    },
+    {
+      "id": "478",
+      "word": "Vahşi",
+      "forbiddenWords": [
+        "Hamza",
+        "Şehit",
+        "Mızrak",
+        "Tövbe",
+        "Müslüman"
+      ]
+    },
+    {
+      "id": "479",
+      "word": "Hind bint Utbe",
+      "forbiddenWords": [
+        "Ebu Süfyan",
+        "Eş",
+        "Hamza",
+        "Müslüman",
+        "Fetih"
+      ]
+    },
+    {
+      "id": "480",
+      "word": "Suheyb-i Rumi",
+      "forbiddenWords": [
+        "Sahabe",
+        "Rum",
+        "Hicret",
+        "Mal",
+        "Bırakmak"
+      ]
+    },
+    {
+      "id": "481",
+      "word": "Zeyd bin Harise",
+      "forbiddenWords": [
+        "Evlatlık",
+        "Peygamber",
+        "Azat",
+        "Mute",
+        "Şehit"
+      ]
+    },
+    {
+      "id": "482",
+      "word": "Usame bin Zeyd",
+      "forbiddenWords": [
+        "Komutan",
+        "Genç",
+        "Ordu",
+        "Son",
+        "Sefer"
+      ]
+    },
+    {
+      "id": "483",
+      "word": "Ümmü Eymen",
+      "forbiddenWords": [
+        "Dadı",
+        "Peygamber",
+        "Habeşistan",
+        "Sahabe",
+        "Kadın"
+      ]
+    },
+    {
+      "id": "485",
+      "word": "Hafsa bint Ömer",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "Ömer",
+        "Kız",
+        "Kuran"
+      ]
+    },
+    {
+      "id": "486",
+      "word": "Zeynep bint Huzeyme",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "Yoksul",
+        "Anne",
+        "Vefat"
+      ]
+    },
+    {
+      "id": "487",
+      "word": "Zeynep bint Cahş",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "Zeyd",
+        "Ayet",
+        "İnen"
+      ]
+    },
+    {
+      "id": "488",
+      "word": "Cüveyriye bint Haris",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "Esir",
+        "Serbest",
+        "Kabile"
+      ]
+    },
+    {
+      "id": "489",
+      "word": "Safiyye bint Huyey",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "Yahudi",
+        "Hayber",
+        "Müslüman"
+      ]
+    },
+    {
+      "id": "490",
+      "word": "Meymune bint Haris",
+      "forbiddenWords": [
+        "Peygamber",
+        "Eş",
+        "Son",
+        "Mekke",
+        "Umre"
+      ]
+    },
+    {
+      "id": "491",
+      "word": "Mariye",
+      "forbiddenWords": [
+        "Peygamber",
+        "Cariye",
+        "Mısır",
+        "İbrahim",
+        "Anne"
+      ]
+    },
+    {
+      "id": "492",
+      "word": "İbrahim bin Muhammed",
+      "forbiddenWords": [
+        "Peygamber",
+        "Oğul",
+        "Bebek",
+        "Vefat",
+        "Güneş"
+      ]
+    },
+    {
+      "id": "493",
+      "word": "Kasım bin Muhammed",
+      "forbiddenWords": [
+        "Peygamber",
+        "Oğul",
+        "İlk",
+        "Vefat",
+        "Bebek"
+      ]
+    },
+    {
+      "id": "494",
+      "word": "Abdullah bin Muhammed",
+      "forbiddenWords": [
+        "Peygamber",
+        "Oğul",
+        "Tayyib",
+        "Tahir",
+        "Vefat"
+      ]
+    },
+    {
+      "id": "495",
+      "word": "Veda Haccı",
+      "forbiddenWords": [
+        "Son",
+        "Hac",
+        "Peygamber",
+        "Hutbe",
+        "Arafat"
+      ]
+    },
+    {
+      "id": "496",
+      "word": "Gadir Hum",
+      "forbiddenWords": [
+        "Yer",
+        "Ali",
+        "Hutbe",
+        "Veda",
+        "Dönüş"
+      ]
+    },
+    {
+      "id": "497",
+      "word": "Sakife",
+      "forbiddenWords": [
+        "Toplantı",
+        "Halife",
+        "Seçim",
+        "Ebubekir",
+        "Medine"
+      ]
+    },
+    {
+      "id": "498",
+      "word": "Sıffin Savaşı",
+      "forbiddenWords": [
+        "Ali",
+        "Muaviye",
+        "Savaş",
+        "Hakem",
+        "Fitne"
+      ]
+    },
+    {
+      "id": "499",
+      "word": "Cemel Savaşı",
+      "forbiddenWords": [
+        "Ali",
+        "Aişe",
+        "Deve",
+        "Savaş",
+        "Fitne"
+      ]
+    },
+    {
+      "id": "500",
+      "word": "Hariciler",
+      "forbiddenWords": [
+        "Grup",
+        "Ayrılmak",
+        "Ali",
+        "Tekfir",
+        "Aşırı"
+      ]
+    }
+  ]
+}

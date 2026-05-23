@@ -28,11 +28,11 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-def kotlin_version = '1.8.10'
+def kotlin_version = '2.1.0'
 
 android {
-    namespace "com.mucahitsen.islami_tabu"
-    compileSdk 35
+    namespace "com.mucahitsen.tabubu"
+    compileSdk 36
     ndkVersion flutter.ndkVersion
 
     signingConfigs {
@@ -45,12 +45,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     sourceSets {
@@ -59,7 +59,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.mucahitsen.islami_tabu"
+        applicationId "com.mucahitsen.tabubu"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion

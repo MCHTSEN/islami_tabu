@@ -1,13 +1,15 @@
 name: islami_tabu
 description: "İslami Tabu Oyunu."
 publish_to: "none"
-version: 1.4.0+9
+version: 1.4.0+10
 
 environment:
   sdk: ">=3.3.2 <4.0.0"
 
 dependencies:
   flutter:
+    sdk: flutter
+  flutter_localizations:
     sdk: flutter
 
   flutter_riverpod: ^2.6.1
@@ -29,11 +31,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/
     - assets/icons/
     - assets/sfx/
+    - assets/words/
 
 flutter_launcher_icons:
   android: true

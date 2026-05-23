@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:intl/intl.dart'; // No longer needed here
+import 'package:islami_tabu/l10n/generated/app_localizations.dart';
 import '../../domain/entities/game_statistics_entity.dart';
-// import '../../domain/entities/team_entity.dart'; // No longer needed here
 import '../viewmodels/statistics_viewmodel.dart';
 
 // Import new widgets
@@ -16,12 +15,13 @@ class StatisticsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final statisticsState = ref.watch(statisticsViewModelProvider);
+    final l10n = AppLocalizations.of(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'İstatistikler',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        title: Text(
+          l10n.statisticsTitle,
+          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.teal.shade900,
         elevation: 0,
@@ -50,7 +50,7 @@ class StatisticsScreen extends ConsumerWidget {
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: 'İstatistikler yüklenirken hata oluştu: \n',
+                      text: '${l10n.statisticsLoadError}\n',
                       style:
                           TextStyle(color: Colors.red.shade300, fontSize: 16),
                     ),
