@@ -119,7 +119,16 @@ class _App3DButtonState extends ConsumerState<App3DButton> {
                   widget.leading!,
                   const SizedBox(width: 12),
                 ],
-                Text(widget.text, style: widget.textStyle),
+                Flexible(
+                  child: Text(
+                    widget.text,
+                    style: widget.textStyle,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    softWrap: false,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
                 if (widget.icon != null) ...[
                   const SizedBox(width: 12),
                   Icon(

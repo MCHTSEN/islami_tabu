@@ -397,4 +397,17 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get easterEggSurprise => 'Kejutan!';
+
+  @override
+  String get reviewPromptTitle => 'Suka dengan Tabubu?';
+
+  @override
+  String get reviewPromptMessage =>
+      'Jika ya, maukah mendukung kami dengan memberi ulasan di toko?';
+
+  @override
+  String get reviewPromptRate => 'Beri Ulasan';
+
+  @override
+  String get reviewPromptLater => 'Nanti';
 }

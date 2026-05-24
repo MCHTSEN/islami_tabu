@@ -396,4 +396,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get easterEggSurprise => 'مفاجأة!';
+
+  @override
+  String get reviewPromptTitle => 'هل أعجبك تابوبو؟';
+
+  @override
+  String get reviewPromptMessage => 'إذا أعجبك، هل تدعمنا بتقييمنا في المتجر؟';
+
+  @override
+  String get reviewPromptRate => 'قيِّم';
+
+  @override
+  String get reviewPromptLater => 'لاحقًا';
 }

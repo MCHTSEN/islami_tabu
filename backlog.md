@@ -1,5 +1,86 @@
 # Tabubu — Backlog
 
+## 2026-05-23 — In-app review prompt + UI overflow fix
+
+### Tamamlanan
+- **`in_app_review: ^2.0.10`** paketi eklendi (`pubspec.yaml`).
+- **`lib/services/review_prompt_service.dart`** (yeni): Hive `review_prompt` box ile durum yönetimi.
+  - `recordGameCompleted()` — oyun bitince `games_played` sayacını artırır.
+  - `shouldShowPrompt()` — `rated==true` ise hiç gösterme; aksi halde `games_played >= _minGames` (şu an **1**) → göster. **Cooldown YOK** — kullanıcı isteğiyle yorum verene/Apple gizleyene kadar her oyun sonu tetiklenir.
+  - `launchReview()` — `InAppReview.requestReview()` çağırır. `rated` flag'i biz set ETMİYORUZ; platform throttle'ına (iOS yılda 3 kez) güveniliyor.
+  - NOT: `markPromptShown()` ve `_kLastShownAt` artık kullanılmıyor (cooldown kaldırıldı), dead-code olarak duruyor — temizlenebilir.
+- **`lib/widgets/dialogs/review_prompt_dialog.dart`** (yeni): branded custom popup ("Tabubu'yu beğendin mi?"). **ŞU AN KULLANILMIYOR** — kullanıcı "değerlendirmek ister misin demeden direkt native popup çıksın" dedi. Dosya ileride lazım olursa diye duruyor; game_screen artık direkt `launchReview()` çağırıyor.
+- **`game_screen.dart`** entegrasyon: `ref.listen` ile `GameStatus.finished` transition yakalanır → `_onGameFinished()` → 1.5s bekle (game-over animasyonu görünsün) → `launchReview()`.
+- **6 ARB** (`reviewPromptTitle/Message/Rate/Later`) — TR/EN/AR/DE/FR/ID, `flutter gen-l10n` çalıştırıldı. (Şu an custom dialog kapalı olduğu için string'ler kullanılmıyor ama hazır.)
+- **UI overflow fix**: `lib/widgets/buttons/app_3d_buton.dart` — Row içindeki Text `Flexible` + `ellipsis` + `maxLines:1` ile sarıldı. iPhone'da çalışırken 78px overflow vardı (uzun çevirili buton text'leri), giderildi. (Ayrıca 0.0352px sub-pixel overflow başka bir yerde duruyor — görsel etkisi yok, debug-only.)
+
+### Neden
+- ASO/retention: pozitif anda (oyun sonu) native rating prompt → store rating sayısı artar.
+- Kullanıcı kararı: custom "ister misin" dialog'u YOK, direkt native overlay. Her oyun sonu (yorum verene kadar) — agresif ama kullanıcı böyle istedi.
+
+### Karar Notları
+- **Native review prod'da Apple kontrolünde**: `requestReview()` debug'da her seferinde çıkabilir ama TestFlight/App Store'da Apple yılda max 3 kez + "uygun zamanda" gösterir, bazen hiç göstermez. Bu Apple politikası, paket garanti etmez.
+- **iOS bundle id hâlâ `com.islamitabu`** (Android `com.mucahitsen.tabubu`). openStoreListing kullanılmadı (App Store ID gerektiriyor, native requestReview ID gerektirmiyor).
+- **Test edilemedi (iPhone deploy)**: Kod `flutter analyze` 0 error geçti ama **gerçek cihazda doğrulanamadı** — bkz. aşağıdaki risk.
+
+### ⚠️ ÇÖZÜLMEYEN SORUN: iPhone deploy hang
+- `flutter run -d <iPhone>` ilk seferde başarılı oldu (app açıldı, VM Service bağlandı), ancak **sonraki tüm denemeler** "Installing and launching..." adımında takıldı veya şu hatayı verdi:
+  - `Error starting debug session in Xcode: Timed out waiting for CONFIGURATION_BUILD_DIR to update.`
+  - `Failed to get CONFIGURATION_BUILD_DIR: Error: Nesne alınamıyor.`
+- Denenenler: `flutter clean`, `pod install`, `rm -rf DerivedData/Runner-*` — hiçbiri kalıcı çözmedi.
+- iOS 26.1 + mevcut Flutter/Xcode kombinasyonu intermittent bug. Çözüm adayları (sonraki session):
+  1. Xcode'u GUI'den aç (`ios/Runner.xcworkspace`), bir kez **Cmd+B** ile build et, sonra `flutter run`.
+  2. iPhone'u reboot + USB yeniden tak.
+  3. Xcode tamamen restart.
+  4. iOS Simulator'da test (signing yok, hızlı).
+- **Review prompt davranışı bu yüzden cihazda görsel olarak doğrulanamadı.** Kod review'dan geçti ama runtime test bekliyor.
+
+### Sıradaki Adımlar
+1. **iPhone deploy sorununu çöz** + review prompt'u canlı test et (1 oyun bitir → native overlay).
+2. Review prompt davranış kararı: prod için `_minGames` 1 fazla agresif olabilir — 3'e çıkarmak + cooldown geri eklemek düşünülebilir (App Store "her oyunda rating sorma" demese de Apple zaten gösterimi kısıtlar).
+3. Custom dialog'u tamamen sil veya ileride "soft ask → native" pattern için sakla.
+4. ASO assets (6 dil store metadata).
+5. iOS App Store Connect + Play Console upload.
+
+### Commit Durumu
+- **HENÜZ COMMIT EDİLMEDİ.** Tüm review-prompt + overflow-fix + Hive-migration değişiklikleri working tree'de duruyor (`geri` branch).
+- Yeni dosyalar: `lib/services/review_prompt_service.dart`, `lib/widgets/dialogs/review_prompt_dialog.dart`, `lib/data/datasources/hive_custom_words_data_source.dart`
+- `.workflow/` ve `.ccw/` gitignore'da (önceki commit'te eklendi).
+
+---
+
+## 2026-05-23 — Hive migration: locale-scoped custom kelime persistence
+
+### Tamamlanan
+- **Yeni data source**: `lib/data/datasources/hive_custom_words_data_source.dart` — `user_words` box, key formatı `{locale}_custom`, value `List<Map>`. CRUD: `loadForLocale / saveAll / upsert / delete`. Custom id prefix: `custom-{uuid}`.
+- **InMemoryWordProvider rewrite**: Asset + Hive merge — `_loadForLocale` her iki kaynağı oku, `addWord` Hive'a persist (`custom-{uuid}` prefix), `updateWord/deleteWord` sadece custom id'ler için persist, asset id'ler in-memory kalır (asset değişmez).
+- **Migration**: `main.dart`'a `user_words_v1_initialized` flag eklendi. Eski `words` box (pre-1f2e7b2 schema, WordModel removal'dan kalma) varsa silinir — adapter yok, veri zaten unreadable.
+- **Doğrulama**: `flutter analyze` 0 error, `flutter build apk --debug` ✅ başarılı.
+
+### Neden
+- Localization commit'i (807eccd) sonrası `addWord/update/delete` sadece in-memory'di (kod yorumu: "User add/edit/delete sadece çalışan oturum için geçerli (kalıcı değil)"). App restart = custom kelimeler kayıp.
+- Pre-1f2e7b2 versiyonda `WordModel` + Hive box vardı, "Remove WordModel" refactor'unda silindi → kullanıcı verileri kayboldu (geri kazanılamaz, device-local).
+- Bu migration **bundan sonrası için** persistence kuruyor: yeni eklenen custom kelimeler artık locale-scoped olarak persist edilecek.
+
+### Karar Notları
+- **Asset kelimeler değişmez**: kullanıcı asset kelimeyi edit/delete ederse in-memory değişir ama persist edilmez (restart → asset default'a döner). Asset edit override sistemi v2'ye bırakıldı.
+- **Locale switching**: TR'de eklenen custom, EN seçilince görünmez (locale-scoped key). Doğru davranış.
+- **Async fire-and-forget**: UI callers `await` etmiyor (snackbar hemen göründüğü için OK). Hive write hızlı (<10ms), app crash riski düşük.
+- **Eski veri recovery YAPILMADI**: device-local Hive box silindiğinden geri kazanılamaz. Kullanıcı verisi zaten 1f2e7b2 commit'inden beri kayıp.
+
+### Sıradaki Adımlar
+1. ASO assets (EN + AR + diğer 3 dil)
+2. iOS App Store Connect + Play Console upload
+3. (İleride) Asset edit override sistemi (v2)
+4. (İleride) AR için in-app "yanlış kelime" feedback butonu
+
+### Risk
+- DÜŞÜK: Yeni install user'lar için clean baseline.
+- DÜŞÜK-ORTA: Mevcut user'lar custom kelimelerini zaten kaybetmişti (1f2e7b2'den beri); şimdi yeni eklemeler persist olacak.
+- Hive box corruption fallback EKLENMEDİ (statistics box'taki gibi try-catch + delete). Eğer custom kelime box bozulursa app silmek zorunda kalabilir. v2'de eklenebilir.
+
+---
+
 ## 2026-05-22 — Kelime sayısı 5 dil için 492'ye eşitlendi
 
 ### Tamamlanan

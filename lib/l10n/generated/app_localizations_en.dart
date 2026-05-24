@@ -396,4 +396,17 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get easterEggSurprise => 'Surprise!';
+
+  @override
+  String get reviewPromptTitle => 'Enjoying Tabubu?';
+
+  @override
+  String get reviewPromptMessage =>
+      'If you like it, would you support us with a rating in the store?';
+
+  @override
+  String get reviewPromptRate => 'Rate';
+
+  @override
+  String get reviewPromptLater => 'Later';
 }

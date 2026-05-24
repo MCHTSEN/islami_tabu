@@ -175,5 +175,10 @@
   "dialogYes": "نعم",
   "dialogNo": "لا",
 
-  "easterEggSurprise": "مفاجأة!"
+  "easterEggSurprise": "مفاجأة!",
+
+  "reviewPromptTitle": "هل أعجبك تابوبو؟",
+  "reviewPromptMessage": "إذا أعجبك، هل تدعمنا بتقييمنا في المتجر؟",
+  "reviewPromptRate": "قيِّم",
+  "reviewPromptLater": "لاحقًا"
 }

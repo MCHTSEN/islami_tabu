@@ -3,25 +3,31 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
 
 import '../data/datasources/asset_word_data_source.dart';
+import '../data/datasources/hive_custom_words_data_source.dart';
 import '../domain/entities/word_entity.dart';
 import 'locale_provider.dart';
 
 /// Notifier — aktif locale'in kelime listesini in-memory tutar.
-/// User add/edit/delete sadece çalışan oturum için geçerli (kalıcı değil).
+/// Asset (default) kelimeler her yüklemede asset dosyasından okunur.
+/// Custom (kullanıcı eklemesi, `custom-` id prefix) kelimeler Hive'da
+/// locale-scoped olarak persist edilir ve asset listesine append edilir.
 class InMemoryWordNotifier extends StateNotifier<AsyncValue<List<WordEntity>>> {
-  InMemoryWordNotifier(this._locale, this._dataSource)
+  InMemoryWordNotifier(this._locale, this._assets, this._customStore)
       : super(const AsyncValue.loading()) {
     _loadForLocale();
   }
 
   final Locale _locale;
-  final AssetWordDataSource _dataSource;
+  final AssetWordDataSource _assets;
+  final HiveCustomWordsDataSource _customStore;
   final Uuid _uuid = const Uuid();
 
   Future<void> _loadForLocale() async {
     try {
-      final words = await _dataSource.loadForLocale(_locale.languageCode);
-      state = AsyncValue.data(List<WordEntity>.from(words));
+      final assetWords = await _assets.loadForLocale(_locale.languageCode);
+      final customWords =
+          await _customStore.loadForLocale(_locale.languageCode);
+      state = AsyncValue.data([...assetWords, ...customWords]);
     } catch (e, st) {
       state = AsyncValue.error(e, st);
     }
@@ -29,31 +35,38 @@ class InMemoryWordNotifier extends StateNotifier<AsyncValue<List<WordEntity>>> {
 
   List<WordEntity> getCurrentWords() => state.value ?? <WordEntity>[];
 
-  void addWord(String word, List<String> forbiddenWords) {
-    state.whenData((words) {
-      final newWord = WordEntity(
-        id: _uuid.v4(),
-        word: word,
-        forbiddenWords: forbiddenWords,
-      );
-      state = AsyncValue.data([...words, newWord]);
-    });
+  Future<void> addWord(String word, List<String> forbiddenWords) async {
+    final newWord = WordEntity(
+      id: '${HiveCustomWordsDataSource.customIdPrefix}${_uuid.v4()}',
+      word: word,
+      forbiddenWords: forbiddenWords,
+    );
+    final current = state.value ?? const <WordEntity>[];
+    state = AsyncValue.data([...current, newWord]);
+    await _customStore.upsert(_locale.languageCode, newWord);
   }
 
-  void updateWord(WordEntity updatedWord) {
-    state.whenData((words) {
-      final updated = words
-          .map((w) => w.id == updatedWord.id ? updatedWord : w)
-          .toList();
-      state = AsyncValue.data(updated);
-    });
+  Future<void> updateWord(WordEntity updatedWord) async {
+    final current = state.value;
+    if (current == null) return;
+    final updated = current
+        .map((w) => w.id == updatedWord.id ? updatedWord : w)
+        .toList();
+    state = AsyncValue.data(updated);
+    // Sadece custom id'ler persist edilir; asset edit'i in-memory kalır.
+    if (HiveCustomWordsDataSource.isCustomId(updatedWord.id)) {
+      await _customStore.upsert(_locale.languageCode, updatedWord);
+    }
   }
 
-  void deleteWord(String wordId) {
-    state.whenData((words) {
-      final updated = words.where((w) => w.id != wordId).toList();
-      state = AsyncValue.data(updated);
-    });
+  Future<void> deleteWord(String wordId) async {
+    final current = state.value;
+    if (current == null) return;
+    final updated = current.where((w) => w.id != wordId).toList();
+    state = AsyncValue.data(updated);
+    if (HiveCustomWordsDataSource.isCustomId(wordId)) {
+      await _customStore.delete(_locale.languageCode, wordId);
+    }
   }
 
   void refreshWords() {
@@ -66,10 +79,16 @@ class InMemoryWordNotifier extends StateNotifier<AsyncValue<List<WordEntity>>> {
 final _assetWordDataSourceProvider =
     Provider<AssetWordDataSource>((_) => const AssetWordDataSource());
 
+/// Hive custom-words data source — singleton.
+final _customWordsDataSourceProvider =
+    Provider<HiveCustomWordsDataSource>(
+        (_) => const HiveCustomWordsDataSource());
+
 /// Locale değişince otomatik yeniden yüklenir.
 final inMemoryWordProvider = StateNotifierProvider<InMemoryWordNotifier,
     AsyncValue<List<WordEntity>>>((ref) {
   final locale = ref.watch(localeProvider);
-  final ds = ref.watch(_assetWordDataSourceProvider);
-  return InMemoryWordNotifier(locale, ds);
+  final assets = ref.watch(_assetWordDataSourceProvider);
+  final custom = ref.watch(_customWordsDataSourceProvider);
+  return InMemoryWordNotifier(locale, assets, custom);
 });

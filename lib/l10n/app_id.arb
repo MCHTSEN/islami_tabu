@@ -175,5 +175,10 @@
   "dialogYes": "YA",
   "dialogNo": "TIDAK",
 
-  "easterEggSurprise": "Kejutan!"
+  "easterEggSurprise": "Kejutan!",
+
+  "reviewPromptTitle": "Suka dengan Tabubu?",
+  "reviewPromptMessage": "Jika ya, maukah mendukung kami dengan memberi ulasan di toko?",
+  "reviewPromptRate": "Beri Ulasan",
+  "reviewPromptLater": "Nanti"
 }

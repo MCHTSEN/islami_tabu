@@ -399,4 +399,17 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get easterEggSurprise => 'Überraschung!';
+
+  @override
+  String get reviewPromptTitle => 'Gefällt dir Tabubu?';
+
+  @override
+  String get reviewPromptMessage =>
+      'Wenn ja, würdest du uns mit einer Bewertung im Store unterstützen?';
+
+  @override
+  String get reviewPromptRate => 'Bewerten';
+
+  @override
+  String get reviewPromptLater => 'Später';
 }

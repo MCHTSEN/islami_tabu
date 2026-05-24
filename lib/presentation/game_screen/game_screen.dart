@@ -10,6 +10,7 @@ import 'package:islami_tabu/widgets/game/game_ready_section.dart';
 
 import '../../domain/entities/game_state_entity.dart';
 import '../../presentation/viewmodels/game_viewmodel.dart';
+import '../../services/review_prompt_service.dart';
 import 'team_setup_screen.dart';
 
 class GameScreen extends ConsumerStatefulWidget {
@@ -23,6 +24,7 @@ class _GameScreenState extends ConsumerState<GameScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;
+  static const _reviewService = ReviewPromptService();
 
   @override
   void initState() {
@@ -42,6 +44,18 @@ class _GameScreenState extends ConsumerState<GameScreen>
     });
   }
 
+  Future<void> _onGameFinished() async {
+    await _reviewService.recordGameCompleted();
+    if (!mounted) return;
+    if (!await _reviewService.shouldShowPrompt()) return;
+    // GameOverSection animasyonu görünür kalsın diye küçük bekleme.
+    await Future.delayed(const Duration(milliseconds: 1500));
+    if (!mounted) return;
+    // Custom dialog olmadan direkt native review UI'a git.
+    // Apple/Google kendi throttle'ını uygular.
+    await _reviewService.launchReview();
+  }
+
   @override
   void dispose() {
     _animationController.dispose();
@@ -52,6 +66,15 @@ class _GameScreenState extends ConsumerState<GameScreen>
   Widget build(BuildContext context) {
     final gameState = ref.watch(gameViewModelProvider);
     final screenHeight = MediaQuery.of(context).size.height;
+
+    ref.listen<AsyncValue<GameStateEntity>>(gameViewModelProvider,
+        (prev, next) {
+      final wasFinished = prev?.value?.status == GameStatus.finished;
+      final isFinished = next.value?.status == GameStatus.finished;
+      if (!wasFinished && isFinished) {
+        _onGameFinished();
+      }
+    });
 
     return PopScope(
       canPop: false,

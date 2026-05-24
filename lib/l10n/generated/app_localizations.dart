@@ -795,6 +795,30 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Sürpriz!'**
   String get easterEggSurprise;
+
+  /// No description provided for @reviewPromptTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tabubu\'yu beğendin mi?'**
+  String get reviewPromptTitle;
+
+  /// No description provided for @reviewPromptMessage.
+  ///
+  /// In tr, this message translates to:
+  /// **'Beğendiysen mağazada değerlendirerek bizi destekleyebilir misin?'**
+  String get reviewPromptMessage;
+
+  /// No description provided for @reviewPromptRate.
+  ///
+  /// In tr, this message translates to:
+  /// **'Değerlendir'**
+  String get reviewPromptRate;
+
+  /// No description provided for @reviewPromptLater.
+  ///
+  /// In tr, this message translates to:
+  /// **'Daha sonra'**
+  String get reviewPromptLater;
 }
 
 class _AppLocalizationsDelegate

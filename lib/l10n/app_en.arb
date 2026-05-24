@@ -175,5 +175,10 @@
   "dialogYes": "YES",
   "dialogNo": "NO",
 
-  "easterEggSurprise": "Surprise!"
+  "easterEggSurprise": "Surprise!",
+
+  "reviewPromptTitle": "Enjoying Tabubu?",
+  "reviewPromptMessage": "If you like it, would you support us with a rating in the store?",
+  "reviewPromptRate": "Rate",
+  "reviewPromptLater": "Later"
 }

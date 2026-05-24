@@ -176,5 +176,10 @@
   "dialogYes": "OUI",
   "dialogNo": "NON",
 
-  "easterEggSurprise": "Surprise !"
+  "easterEggSurprise": "Surprise !",
+
+  "reviewPromptTitle": "Tabubu te plaît ?",
+  "reviewPromptMessage": "Si oui, peux-tu nous soutenir avec une évaluation sur la boutique ?",
+  "reviewPromptRate": "Évaluer",
+  "reviewPromptLater": "Plus tard"
 }

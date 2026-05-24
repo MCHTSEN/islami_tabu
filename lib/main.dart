@@ -26,7 +26,21 @@ void main() async {
     await Hive.deleteBoxFromDisk('statistics');
     await migrationBox.put(migrationKey, true);
   }
+
+  // Migration: locale-scoped custom words storage baseline.
+  // Eski `words` box'ı (pre-1f2e7b2 schema) varsa sil — adapter kayıtlı değil,
+  // veri zaten erişilemez durumda; box'ı temiz tut.
+  const customWordsMigrationKey = 'user_words_v1_initialized';
+  if (migrationBox.get(customWordsMigrationKey) != true) {
+    if (await Hive.boxExists('words')) {
+      await Hive.deleteBoxFromDisk('words');
+    }
+    await migrationBox.put(customWordsMigrationKey, true);
+  }
   await migrationBox.close();
+
+  // Custom words box'ı önceden aç — provider sync okuyabilsin.
+  await Hive.openBox('user_words');
 
   Hive.registerAdapter(GameSettingsModelAdapter());
   Hive.registerAdapter(TeamModelAdapter());

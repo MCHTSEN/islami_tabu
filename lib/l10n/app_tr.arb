@@ -176,5 +176,10 @@
   "dialogYes": "EVET",
   "dialogNo": "HAYIR",
 
-  "easterEggSurprise": "Sürpriz!"
+  "easterEggSurprise": "Sürpriz!",
+
+  "reviewPromptTitle": "Tabubu'yu beğendin mi?",
+  "reviewPromptMessage": "Beğendiysen mağazada değerlendirerek bizi destekleyebilir misin?",
+  "reviewPromptRate": "Değerlendir",
+  "reviewPromptLater": "Daha sonra"
 }
