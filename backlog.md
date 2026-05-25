@@ -1,5 +1,35 @@
 # Tabubu — Backlog
 
+## 2026-05-25 — ASO 6 dil metadata + build 10 upload (App Store 1.4.1)
+
+### Tamamlanan
+- **ASO metadata 6 dil** (`store/{locale}/`, fastlane convention): tr/en-US/ar-SA/de-DE/fr-FR/id. Her dilde 6 dosya: name, subtitle, keywords, promotional_text, description, release_notes.
+  - **Bulgu**: App Store'da daha önce SADECE tr metadata vardı; en/ar/de/fr/id hiç yoktu → 5 yeni locale açıldı.
+  - TR optimize (eski "İslami Tabu" → "Tabubu" markası, boşluksuz keyword), 5 dil sıfırdan native üretim (Gemini delege, char-limit + native ASO).
+  - Char limitleri: name≤30, subtitle≤30, keywords≤100, promo≤170, desc≤4000 — hepsi uygun.
+- **App Store Connect push** (`asc` CLI, MucahitSen profili, app 6744872600, version 1.4.1 = `f975688a...`):
+  - version localizations (keywords/desc/promo/whatsNew/supportUrl): tr update, 5 dil `upload` ile create.
+  - app-info localizations (name/subtitle/privacyPolicyUrl): 6 dil update.
+- **Build 10 upload**: pubspec `1.4.0+10`→`1.4.1+10` + `ios/project.pbxproj` MARKETING_VERSION 1.4.0→1.4.1, CURRENT_PROJECT_VERSION 9→10 (version pbxproj'da HARDCODED, pubspec'ten gelmiyor — ilk build yanlışlıkla build 9 üretti). `flutter build ipa --release` → `asc builds upload` → VALID → `asc versions attach-build` ile 1.4.1'e bağlandı.
+
+### asc CLI notları (sonraki sefer)
+- Yeni locale ekleme `update` ile OLMUYOR ("no existing localization") → `localizations upload` (.strings dosyası) ile `create` edilir.
+- app-info update: `--app` VE `--app-info` ID birlikte gerekli (multiple app infos).
+- attach-build flag: `--version-id` (`--version` değil).
+- `asc builds upload --ipa ... --wait` binary yükler (asc kendi keychain auth'u, issuer derdi yok).
+
+### ⚠️ Submit ÖNCESİ (kullanıcı panelden)
+- **What's New 6 dil yazıldı** ✓ (kalıcı özel kelimeler + UI düzeltmeleri + akıcı deneyim).
+- **Screenshot**: yeni 5 locale primary (tr) fallback kullanır; panel ayrıca isteyebilir.
+- **Export compliance** (encryption) sorusu submit'te çıkar.
+- Version 1.4.1 PREPARE_FOR_SUBMISSION, build 10 VALID+attached. SUBMIT EDİLMEDİ.
+
+### Risk
+- ar metadata native human review YAPILMADI (kelime dataset riskinin aynısı).
+- iPhone launch image hâlâ default placeholder (build uyarısı, blocker değil).
+
+---
+
 ## 2026-05-23 — In-app review prompt + UI overflow fix
 
 ### Tamamlanan
@@ -43,9 +73,10 @@
 5. iOS App Store Connect + Play Console upload.
 
 ### Commit Durumu
-- **HENÜZ COMMIT EDİLMEDİ.** Tüm review-prompt + overflow-fix + Hive-migration değişiklikleri working tree'de duruyor (`geri` branch).
-- Yeni dosyalar: `lib/services/review_prompt_service.dart`, `lib/widgets/dialogs/review_prompt_dialog.dart`, `lib/data/datasources/hive_custom_words_data_source.dart`
-- `.workflow/` ve `.ccw/` gitignore'da (önceki commit'te eklendi).
+- **COMMIT EDİLDİ + PUSH (2026-05-24)**: `484c629` — `geri` branch. Mesaj: "feat: Hive custom-word persistence + native review prompt + button overflow fix". 32 dosya, +714/-91.
+- Kullanıcı kararı: **runtime test ATLANDI** (iPhone deploy hang çözülmedi), kod `flutter analyze` 0 error + debug build OK'e güvenilerek commit edildi.
+- iOS `UISceneDelegate` migration (FlutterSceneDelegate, FlutterImplicitEngineDelegate) Flutter SDK upgrade kaynaklı — commit'e dahil edildi.
+- **HÂLÂ AÇIK**: review prompt cihazda görsel doğrulanmadı; `_minGames=1`+cooldown-yok prod agresifliği test edilince gözden geçirilebilir.
 
 ---
 
