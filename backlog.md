@@ -1,5 +1,29 @@
 # Tabubu — Backlog
 
+## 2026-05-26 — Play Store 6 dil metadata push (fastlane supply)
+
+### Tamamlanan
+- **Play Store metadata 6 dil** (`android/fastlane/metadata/android/{tr-TR,en-US,ar,de-DE,fr-FR,id}/`): title, short_description, full_description, changelogs/10.txt. App Store `store/` içeriğinden Play formatına uyarlandı (Gemini delege).
+  - **Play farkı**: keyword alanı YOK → keyword'ler full_description'a doğal gömüldü. short_description 80 char (App Store subtitle 30'dan farklı, daha zengin).
+  - Char limitleri: title≤30, short≤80, full≤4000, changelog≤500 — hepsi uygun (de-DE short 85→75 düzeltildi).
+- **CANLI push** (`fastlane supply`): `--validate_only` PASS → gerçek push `Successfully finished`. Listing + changelog (versionCode 10) 6 dile yazıldı.
+  - `--skip_upload_apk/aab/images/screenshots` (sadece listing metadata, AAB göndermedim — versionCode 10 zaten yayında).
+  - `--version_code 10` changelog için ZORUNLU (yoksa "no version code given").
+- Önceden Play'de SADECE tr-TR vardı → 5 yeni dil açıldı.
+
+### Auth notları (sonraki sefer)
+- Service account JSON: `~/Downloads/gen-lang-client-0169913284-13247d78ea27.json` (email `google-play-api-service@gen-lang-client-0169913284.iam.gserviceaccount.com`).
+- Bu SA'ya Play Console'dan Tabubu app erişimi VERİLDİ (kullanıcı, bu session). Diğer SA'lar (catchpad/revenuecat/codemagic) Tabubu'ya erişMİYOR.
+- Test/auth doğrulama: `fastlane run download_from_play_store package_name:... json_key:... metadata_path:/tmp/...` (mevcut metadata'ya dokunmaz).
+- Android versionCode/Name Flutter'dan gelir (local.properties) — iOS'un aksine pbxproj-hardcoded DEĞİL.
+
+### ⚠️ Açık
+- Play listing değişiklikleri Play otomatik review'dan geçer (genelde hızlı).
+- Screenshot push edilmedi (`--skip_upload_images`); yeni 5 dil mevcut tr-TR screenshot'larını kullanır.
+- ar metadata native human review YAPILMADI (aynı risk).
+
+---
+
 ## 2026-05-25 — ASO 6 dil metadata + build 10 upload (App Store 1.4.1)
 
 ### Tamamlanan
