@@ -81,3 +81,24 @@ Key providers:
 ## Language
 
 The app is in **Turkish**. Error messages, UI text, and word content are all in Turkish. The word list contains Islamic terminology in Turkish.
+
+## iOS Simulator — simslim
+
+Bu makinedeki iOS simülatörleri `simslim` ile slimlenmiş: simülatör başına ~170
+Apple arka plan daemon'u kapalı (Siri, Spotlight, iCloud/Mail/Safari sync, Photos
+analizi, widget/wallpaper). RAM ~5 GB yerine ~1.2 GB. Simülatörler **varsayılan
+olarak kapalı** tutulur — iş bitince kapat, gerektiğinde aç.
+
+```sh
+simslim list              # simülatörler, UDID'ler ve slim durumu
+simslim boot <udid>       # aç
+simslim shutdown <udid>   # kapat (Simulator penceresini 'x' ile kapatmak da shutdown eder)
+simslim measure <udid>    # gerçek RAM ayak izi (phys_footprint)
+```
+
+### Bu projenin ihtiyacı: ekstra kategori yok
+
+Taramada push, StoreKit/IAP, universal link veya photo-picker kanıtı çıkmadı —
+tam slim (170/170) simülatörde çalışması bekleniyor. iOS tarafına bu
+özelliklerden biri eklenirse bu bölümü güncelle: `simslim on <udid> --except
+<kategori>` ile ilgili kategori açık bırakılır.

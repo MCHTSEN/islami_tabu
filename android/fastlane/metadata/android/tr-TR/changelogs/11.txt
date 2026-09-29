@@ -1,0 +1,3 @@
+• Eklediğiniz özel kelimeler artık kalıcı olarak saklanıyor.
+• Arayüz iyileştirmeleri ve hata düzeltmeleri.
+• Daha akıcı bir oyun deneyimi.

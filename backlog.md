@@ -1,5 +1,24 @@
 # Tabubu — Backlog
 
+## 2026-09-23 — Flutter 3.47.5 + Xcode 27 / iOS 27 uyumu
+
+### Tamamlanan
+- **Android** (Flutter 3.47 alt sınırları): Gradle wrapper 8.11.1 → `8.14.3`, AGP 8.9.1 → `8.11.1`, Kotlin 2.1.0 → `2.2.20` (`android/settings.gradle`, `gradle-wrapper.properties`). Flutter migrator `gradle.properties`'e `android.builtInKotlin=false` / `android.newDsl=false` ekledi (normal).
+- **iOS**: Flutter 3.47 migrator uygulamanın min iOS'unu **13.0 → 15.0**'a çekti (`project.pbxproj`, Podfile yorum satırı) — Flutter 3.47'nin kendi alt sınırı; elle yapılmadı.
+- `flutter pub get` `analysis_options.yaml`'a build/platform dizinleri için `analyzer.exclude` ekledi (otomatik).
+- UIScene: AppDelegate (`FlutterImplicitEngineDelegate`) + Info.plist `UIApplicationSceneManifest` zaten vardı, değişiklik gerekmedi. Plugin denetimi: yalnız `in_app_review` `openURL` kullanıyor, o da giden çağrı (App Store açma) — scene'de etkilenmez.
+
+### Doğrulandı
+- `flutter analyze`: 0 error. `test/` dizini yok.
+- `flutter build apk --debug` ✅ → emülatörde (cp_test) ana menü açıldı, FATAL yok.
+- `flutter build ios --simulator --debug` ✅ → iPhone 17 / iOS 27 simülatörde ana menü açıldı, crash raporu yok.
+
+### ⚠️ Açık
+- Flutter uyarısı: Gradle ≥ 9.1.0, AGP ≥ 9.0.1, Kotlin ≥ 2.3.20 desteği yakında zorunlu olacak.
+- Release build / fiziksel cihaz / store yüklemesi denenmedi. Min iOS 15.0'a çıktığı için iOS 13–14 kullanıcıları yeni sürümü alamaz.
+
+---
+
 ## 2026-05-26 — Play Store 6 dil metadata push (fastlane supply)
 
 ### Tamamlanan
